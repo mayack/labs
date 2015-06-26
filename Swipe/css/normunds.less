@@ -1,0 +1,407 @@
+// ==========================================================
+// Includes
+// ==========================================================
+
+@import "swipe.less";
+
+
+// ==========================================================
+// Additional to swipe.less
+// ==========================================================
+
+// fix for correct centred text
+.margin-left-reset {
+	margin-left: 0px !important;
+}
+
+// for text inside button
+.input-right-text {
+	margin-left: 265px;
+	position: relative;
+	top: -41px;
+}
+
+// buttom mod for .button-right-text
+.input-right-text-mod {
+	padding-right: 50px !important;
+}
+
+// warning message below input box
+.warning-message {
+	color: @swatchWarning;
+	top: -13px;
+	position: relative;
+}
+
+.fix-padding-login {
+	padding-right: 0px;
+	margin-bottom: 0px !important;
+	padding-top: 0px !important;
+	padding-bottom: 14px;
+}
+
+
+/* warning message top */
+
+.warning {
+  position: absolute;
+  margin-top: 0px;
+  top:-80px;
+  background-color: @swatchWarning;
+  width:100%;
+  /* height:80px */
+}
+
+.success{
+  background-color: @swatchMint;
+}
+
+.warning .warning-close {
+  position: absolute;
+    right: 2em;
+    top: 2em;
+}
+
+.warning .warning-body {
+  color: @swatchWhite;
+  margin-top: 1.3em;
+  padding-bottom: 1.3em;
+}
+
+
+.warning .warning-close,
+.warning .warning-closea,
+.warning .warning-close a, .warning a {
+  color: #ffffff;
+}
+.warning .warning-close a:hover,
+a.warning .warning-close:hover, .warning a:hover, {
+  color: #e2e2e2;
+}
+
+
+.hr-black {
+	border-color: @swatchGray-15;
+	margin: 0 auto;
+}
+
+
+// ==========================================================
+// Custom
+// ==========================================================
+
+// for login pages top margin
+.top-margin-more {
+	margin-top: 86px;
+}
+
+.mod-input-text {
+	height:1px;
+}
+
+.mod-input-text .input-right-text {
+	top: -43px !important;
+}
+
+.margin-reset .input-right-text {
+	top: -34px !important;
+}
+
+
+/* for payments_add  */
+.payment_top {
+	padding:20px 20px 25px 20px
+}
+
+.payment_add_table {
+	margin: 29px 15px 18px 37px; 
+}
+
+.payment_add_table tr td {
+	padding-bottom: 11px;
+}
+
+.payment_add_table tr th {
+	padding-bottom: 2px;
+	height:20px;
+}
+
+.payment_total_table {
+	margin: 25px 15px 21px 609px;
+}
+
+.payment_total_table tr td {
+	padding-bottom: 2px;
+}
+
+.payment_total_table tfoot tr td {
+	padding-top: 2px;
+}
+
+.payment_notes {
+    padding: 20px 39px 36px;
+}
+
+
+.payment_title_table {
+	margin: 24px 15px 18px 37px; 
+
+}
+
+.payment_title_table tr td {
+	padding-bottom: 1px;
+}
+
+
+
+.tb_500 {
+	width:500px;
+}
+.tb_70 {
+	width:70px;
+}
+
+.tb_80 {
+	width:80px;
+}
+.tb_150 {
+	width:140px;
+}
+.tb_140 {
+	width:150px;
+}
+.tb_210 {
+	width:210px;
+}
+
+
+.w-490 {
+	width:490px;
+}
+.w-140 {
+	width:140px;
+}
+.w-60 {
+	width:60px;
+}
+.w-74 {
+	width:74px;
+}
+.w-56 {
+	width:56px;
+}
+
+.w-106 {
+	width:106px
+}
+
+/* fox select top */
+.ms-parent.w-56.select-single {
+	top: 0px; /* -2 px FF */
+	/*float: right; /* fix for select */
+}
+
+/* for date picker */
+#due_date {
+    padding-right: 23px;
+}
+
+.over_calendar_icon {
+	position:relative;
+	top:57px;
+	left:116px;
+    cursor:pointer;
+}
+
+/* temporary button's */
+#discard {
+	padding-left:10px;
+	padding-right:40px;
+}
+#save {
+	padding-left:10px;
+}
+
+.payment_vat {
+	float:right;
+	padding:5px 0px 0px 5px;
+}
+
+/* datepicker */
+.datepicker-swipe {
+	width:260px;
+	font-weight: 300;
+	float:right;
+}
+
+.radio--input {
+    cursor: pointer;
+    opacity: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.radio-row:last-of-type {
+    padding-bottom: 0;
+}
+.radio-row {
+    display: inline-block;
+    padding: 0 0 0 6px;
+    position: relative;
+}
+
+
+.list_item {
+    border-top: 1px solid #f2f4f5;
+    display: block;
+    padding: 13px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+	height: 46px;
+}
+
+.list_item>div {
+    display:inline-block;
+    vertical-align:middle;
+}
+
+
+
+
+
+.list_item:first-child {
+	border-top: 1px solid #ffffff;
+}
+
+
+.input_item {
+    border-top: 1px solid #f2f4f5;
+    display: block;
+    padding: 13px 10px 13px 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+	height: 46px;
+}
+
+.input_item>div {
+    display:inline-block;
+    vertical-align:middle;
+}
+
+
+
+
+
+.input_item:first-child {
+	border-top: 1px solid #ffffff;
+}
+
+
+.radio {
+    cursor: pointer;
+    display: inline-block;
+    height: 14px;
+    position: relative;
+    vertical-align: middle;
+    width: 14px;
+}
+.radio--mark {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #c2c7cc;
+    border-radius: 14px;
+    height: 14px;
+    left: 0;
+    margin-top: -7px;
+    position: absolute;
+    top: 50%;
+    width: 14px;
+}
+
+.radio-is-active > .radio--mark:before {
+    background: none repeat scroll 0 0 #00c2c8;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    bottom: 2px;
+    content: "";
+    height: 6px;
+    left: 2px;
+    position: absolute;
+    width: 6px;
+}
+
+.list_item:hover {
+    background-color: #f2f4f5
+}
+
+label,
+.option {
+    cursor: pointer
+}
+
+
+.radio-row-date {
+	color: #c2c7cc;
+	display:inline-block;
+	float:right;
+	margin:auto 0;
+}
+
+/* Firefox */
+@-moz-document url-prefix() {
+    .radio-row-date {
+        position:relative;
+		top:-20px;
+    }
+}
+
+.swipe_fill th {
+	background-color: #eef3f3;
+	border-bottom: #dfe6e6;
+}
+
+.radio-date {
+    display: inline-block;
+	float:right;
+    padding: 0 6px 0 0;
+    position: relative;
+}
+
+.datepicker th {
+	font-weight:400;
+}
+.dow {
+	color:@swatchGray-60;
+	font-size:@textSize-12;
+}
+
+/* mod for select */
+.ms-parent .ms-choice {
+	min-height:39px;
+}
+
+.ms-drop input[type="checkbox"] {
+	margin-right:5px;
+}
+
+/* temporaty icon */
+.temp_ico_1 {
+    background: url("../images/icon-mastercard.png") no-repeat scroll 265px center;
+	padding-left:22px;
+}
+
+.temp_ico_2 {
+    background: url("../images/ico_bank_swb.png") no-repeat scroll center center;
+	padding-left:22px;
+}
+
+.temp_ico_3 {
+    background: url("../images/ico_bank_seb.png") no-repeat scroll center center;
+	padding-left:22px;
+}
+
+.temp_ico_4 {
+    background: url("../images/ico_bank_citadele.png") no-repeat scroll center center;
+	padding-left:22px;
+}

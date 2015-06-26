@@ -1,0 +1,490 @@
+body {
+  min-width: 320px;
+}
+
+.fix-button-center{
+    position: relative;
+    display: inline-block;
+    width: auto;
+}
+
+.button-pay-align{
+    float: right;
+}
+
+.button-reject-align{
+    float: left;
+}
+
+.margin-side-4{
+	margin-right: 4px;
+	margin-left: 4px;
+}
+
+.payer {
+	margin-top:20px;
+    margin-left: auto;
+    margin-right: auto;
+	width: 780px;
+}
+.payer_specific_text {
+	width: 320px;
+	margin: 30px auto 20px;
+}
+
+.payer_wrong_text {
+	width: 290px;
+	margin: 30px auto 0px;
+}
+
+.payer_top_image {
+	margin:23px auto 35px;
+    height: 40px;
+    position:relative;
+}
+
+.payer_top_image:after { /* for center line */
+    content:"";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    border-left: 1px solid #cfdada;
+}
+
+.text-upper {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-top: -2px;
+}
+
+.payer_body {
+	padding:20px 0px 10px 0px
+}
+
+.top_20 {
+	margin-top:20px;
+}
+
+.top_30 {
+	margin-top:30px;
+}
+
+.top_60 {
+	margin-top:60px !important;
+}
+.payer_button_div {
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+.payer_botom_div {
+	width:300px;
+	margin-top: 60px;
+	margin-bottom:20px;
+}
+
+.side_auto {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.payer_botom_div img {
+	margin-bottom:17px;
+	opacity:0.4;
+}
+
+.payer_button {
+	border:1px solid #cfdada !important;
+	height:83px;
+	padding-right:12px;
+	cursor:pointer;
+}
+.payer_button span {
+	padding-top:26px;
+}
+
+
+.btn_payer_botton_inside {
+    background: url("../images/btn_payer.png") no-repeat scroll 18px center #ffffff;
+    padding-left: 70px;
+	padding-top: 18px;
+	/*padding-right: 35px;*/
+	height: 100%;
+	width:250px;
+}
+
+.btn_payer_botton_inside:hover {
+	background-color:#f8f8f8;
+}
+
+
+.payer_button:hover .btn_payer_botton_inside {
+	background-color:#f8f8f8;
+}
+
+.ico_lock {
+	margin-top:12px;
+	margin-right:8px;
+}
+
+
+
+.payer_cards_div {
+margin-top:40px;
+margin-bottom:50px
+}
+
+.payer_bank_div {
+	margin-top:45px;
+	margin-bottom:50px
+}
+
+.btn_bank_ico {
+    border: 1px solid #cfdada;
+    border-radius: 3px;
+    display: inline-block;
+    height: 70px;
+    margin: 0 7px;
+    width: 140px;
+}
+
+
+
+.payer_top_message {
+	padding-top:44px;
+	/*padding-left:110px;*/
+	padding-bottom:63px;
+	display: table;
+    margin: 0 auto;
+}
+
+.payer_ok {
+    background: url("../images/message_ok.png") no-repeat scroll 23px 40px #ffffff;
+}
+
+.payer_no {
+    background: url("../images/message_no.png") no-repeat scroll 23px 40px #ffffff;
+}
+
+
+.warning-message-small {
+	display:none;
+}
+
+.hidden {
+	display:none;
+}
+
+.payer_alert {
+position:absolute;
+	/*background: url("../images/ico_alert.png") no-repeat scroll 0 0 #ffffff;*/
+    height: 16px;
+    width: 16px;
+	color: #ee5757;
+	font-size:15px;
+}
+
+.modal_popup {
+    background-color: #fff;
+    border-radius: 4px;
+    display: none;
+    width: 640px;
+    padding: 40px;
+}
+
+.invoice_view{
+	background-color: #fff;
+    border-radius: 4px;
+    width: auto;
+    padding: 40px;
+}
+
+.button.b-close, .button.bClose {
+    height: 24px;
+    width: 24px;
+    padding: 0;
+    position: absolute;
+    right: -45px;
+    top: 0px;
+	cursor:pointer;
+}
+
+
+/* modal data */
+.payment_title_table_modal {
+	margin: 25px 0px 25px 0px; 
+	width:100%;
+}
+
+.payment_title_table_modal tr td {
+	padding-bottom: 1px;
+}
+
+.payment_add_table_modal {
+	margin: 25px 0px 15px 0px; 
+	width:100%;
+}
+
+.payment_add_table_modal tr td {
+	padding-bottom: 9px;
+}
+
+.payment_add_table_modal tr th {
+	padding-bottom: 9px;
+	height:20px;
+}
+
+
+.payment_total_table_modal {
+	margin: 25px auto 21px 0px;
+	float:right;
+	width: 210px;
+}
+
+.payment_total_table_modal tr td {
+	padding-bottom: 2px;
+}
+
+.payment_total_table_modal tfoot tr td {
+	padding-top: 2px;
+}
+
+.payment_notes_modal {
+    padding: 25px 0px 0px;
+}
+
+.payment_notes_modal_title {
+	padding-bottom: 8px;
+}
+
+
+.clear {clear: both;}
+
+.card_div {
+	margin-top:-13px;
+}
+.card_div span {
+	font-size:32px;
+}
+
+.card_split {
+	padding:5px;
+	top:-3px;
+	position:relative;
+	font-size:24px !important;
+}
+
+.payer-ico-left {
+	float:left;
+	width:100px;
+	margin-top: -15px;
+}
+.payer-text-left {
+	float:left;
+	max-width:400px;
+}
+
+.login_show_ico {
+	position:relative;
+	top:-33px;
+	padding-right:15px
+}
+
+.login_swipe_logo {
+    padding-bottom: 30px;
+    padding-top: 30px;	
+}
+.fix_login_1 {
+	top:-7px;
+	position:relative;
+}
+
+.fix_two_col input {
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.fix_two_col div2 {
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.fix_two_col_1 {margin-right:10px;margin-top:-5px;}
+
+.fix_two_col_2 {margin-right:20px;}
+
+.fix_two_col_3 {margin-top:-20px;}
+
+/* iPhone 5 */
+@media (min-width: 200px) and (max-width: 799px) {
+
+.fix_two_col.media-small {
+	margin-top:5px;
+	margin-bottom:20px;
+
+}
+
+.fix_two_col_1 {margin-right:0px;margin-top:0px;}
+
+.fix_two_col_2 {margin-right:0px;}
+
+.fix_two_col_3 {margin-top:0px;}
+
+.hr-smallmove-center.media-small {
+	margin-top:25px !important;
+}
+
+.login_swipe_logo {
+    padding-bottom: 0px;
+    padding-top: 10px;	
+}
+
+.payer-ico-left {
+	float:left;
+	width:300px;
+}
+.payer-text-left {
+	float:left;
+	width:300px;
+}
+
+.text-48.media-small {
+	font-size: 30px;
+}
+
+.text-32.media-small {
+	font-size: 20px;
+}
+
+.text-24.media-small {
+	font-size: 18px;
+}
+
+.icon-preview.text-24 {
+	font-size: 24px;
+}
+
+
+.payer {
+	margin-top:0px;
+	width: 320px;
+}
+.payer-invoice {
+	width: auto;
+}
+.payer_specific_text {
+	width: 300px;
+	margin: 10px auto 10px;
+}
+
+.payer_wrong_text {
+	width: 290px;
+	margin: 10px auto 10px;
+
+}
+
+.payer_top_image {
+	margin: 13px auto 0;
+}
+.payer_button_div {
+	margin-top: 10px;
+	margin-bottom:10px;
+}
+
+.top_60 {
+	margin-top:20px !important;
+}
+
+.payer_botom_div {
+	margin: 20px auto 20px;
+}
+
+.payer_cards_div {
+	margin-top:10px;
+	margin-bottom:5px
+}
+
+.payer_bank_div {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+.btn_bank_ico {
+    border: 1px solid #cfdada;
+    border-radius: 3px;
+    display: inline-block;
+    height: 50px;
+    margin: 5px 30px;
+    width: 140px;
+}
+
+.payer_botom_div.text-16 {
+	font-size:14px;
+	font-weight:300;
+}
+
+.payer_top_message {
+    padding-bottom: 20px;
+    padding-left: 0;
+    padding-top: 0px; /* top a1 */
+    text-align: center;
+    width: 300px;
+}
+
+.payer_ok {
+    background: url("../images/message_ok.png") no-repeat scroll center top #ffffff;
+}
+
+.payer_no {
+    background: url("../images/message_no.png") no-repeat scroll center top #ffffff;
+}
+
+.warning-message-small {
+	display:block;
+	margin: 10px 10px 0;
+}
+.warning-message-small.hidden {
+	display:none;
+}
+
+.payer_alert {
+	display:none !important;
+}
+
+
+
+.modal_popup {
+    border-radius: 0px;
+    width: 100%;
+    padding: 20px;
+	left:0px ! important;
+}
+
+.button.b-close, .button.bClose {
+    right: 15px;
+    top: 15px;
+}
+.too_big {
+	display:none;
+}
+
+/* printer section */
+@media print {
+  .noprint {display:none}
+  .modal_popup {top:0px !important;width:100% !important;left:0px !important;}
+}
+
+/*Fix Buttons Align For Pay Button At Top*/
+@media (min-width: 0px) and (max-width: 633px) {
+
+.fix-button-center{
+    position: relative;
+    display: inline-block;
+    width: 307px;
+}
+
+
+
