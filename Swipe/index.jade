@@ -165,13 +165,20 @@ html
             section.margin-large.wrapper
               .box.padding-reset
                 section.padding-large
-                  p Настоящим заявлением прошу акционерное общество «Rietumu Banka», единый регистрационный № 40003074497, юридический адрес: ул. Весетас 7, Рига, LV-1013, Латвийская Республика, (далее – Банк) предоставить услугу перевода денежных средств (swipe.lv) (далее – Услуга) в соответствии с «Правилами предоставления услуги перевода денежных средств (swipe.lv)» (далее – Правила).
-                  p Прошу открыть Транзитный счет для получения денежных средств в рамках Услуги.
-                  p Прошу перечислять денежные средства с Транзитного счета на следующий Счет торговца:
-                  strong bic
-                  input(type='text')
-                  strong iban
-                  input(type='text')
+                  .cells.cells-gutter-small.valign-top.expand
+                    aside.cell.form-side-label
+                      .text-medium.margin-xsmall Реквизиты
+                      p.margin-reset.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
+                    .cell
+                      //- p Настоящим заявлением прошу акционерное общество «Rietumu Banka», единый регистрационный № 40003074497, юридический адрес: ул. Весетас 7, Рига, LV-1013, Латвийская Республика, (далее – Банк) предоставить услугу перевода денежных средств (swipe.lv) (далее – Услуга) в соответствии с «Правилами предоставления услуги перевода денежных средств (swipe.lv)» (далее – Правила).
+                      //- p Прошу открыть Транзитный счет для получения денежных средств в рамках Услуги.
+                      //- p Прошу перечислять денежные средства с Транзитного счета на следующий Счет торговца:
+                      .cells.cells-gutter-xsmall.margin-xsmall.expand
+                        .cell
+                          input.expand(type='text', placeholder='BIC')
+                        .cell
+                          input.expand(type='text', placeholder='IBAN')
+                hr.hr-nomargin
                 section.padding-large
                   .cells.cells-gutter-small.valign-top.expand
                     aside.cell.form-side-label
@@ -183,11 +190,14 @@ html
                           input.expand(type='text', placeholder='Имя')
                         .cell
                           input.expand(type='text', placeholder='Фамилия')
-                      .cells.cells-gutter-xsmall.expand
+                      .cells.cells-gutter-xsmall.expand.cells-justified
                         .cell
                           input.expand(type='text', placeholder='Персональный код')
                         .cell
-                          input.expand(type='text', placeholder='Номер паспорта или ID документа')
+                          //- input.expand(type='text', placeholder='Номер паспорта или ID документа')
+                          button.button.expand
+                            span.icon-upload
+                            | &nbsp;&nbsp;Закачать идентификационный док.
                 hr.hr-nomargin
                 section.padding-large
                   .cells.cells-gutter-small.valign-top.expand
@@ -216,14 +226,18 @@ html
                   .cells.cells-gutter-small.valign-top
                     aside.cell.form-side-label
                       .text-medium.margin-xsmall Соглашение с правами
-                      p.margin-reset.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
+                      p.margin-reset.text-12 Также настоящим заявлением подтверждаю, что:
                     .cell
-                      p Также настоящим заявлением подтверждаю, что:
-                      p ознакомился и согласен с Правилами и Тарифами Услуги;
-                      p согласен, что предоставленная информация может быть использована Банком в маркетинговых и деловых целях, а также быть передана лицам в рамках группы предприятий Банка;
-                      p права и обязанности Банка и Торговца в рамках Услуги регулируются материальным правом Латвийской Республики.
-                      p.margin-reset бые споры относительно Услуги разрешаются в соответствии с Правилами.
-
+                      //- p Также настоящим заявлением подтверждаю, что:
+                      .cells.cells-gutter-xsmall
+                        .cell
+                          input(type='checkbox')
+                        .cell
+                          | Ознакомился и согласен с Правилами и Тарифами Услуги;
+                      ul
+                        li согласен, что предоставленная информация может быть использована Банком в маркетинговых и деловых целях, а также быть передана лицам в рамках группы предприятий Банка;
+                        li права и обязанности Банка и Торговца в рамках Услуги регулируются материальным правом Латвийской Республики.
+                        li.margin-reset бые споры относительно Услуги разрешаются в соответствии с Правилами.
                   //- .settings-row
                   //-   .settings-left-block.text-medium
                   //-     span.margin-reset Ответственная персона

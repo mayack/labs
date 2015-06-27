@@ -1159,17 +1159,30 @@ button:disabled {
 .cells .cell[class*='col'] {
   box-sizing: content-box;
 }
-.cells.cells-gutter-xsmall > .cell + .cell {
+.cells[class*=cells-gutter].cells-gutter-xsmall > .cell {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.cells[class*=cells-gutter].cells-gutter-small > .cell {
   padding-left: 10px;
+  padding-right: 10px;
 }
-.cells.cells-gutter-small > .cell + .cell {
+.cells[class*=cells-gutter].cells-gutter > .cell {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.cells[class*=cells-gutter].cells-gutter-large > .cell {
   padding-left: 20px;
+  padding-right: 20px;
 }
-.cells.cells-gutter > .cell + .cell {
-  padding-left: 30px;
+.cells[class*=cells-gutter] > .cell:first-child {
+  padding-left: 0;
 }
-.cells.cells-gutter-large > .cell + .cell {
-  padding-left: 40px;
+.cells[class*=cells-gutter] > .cell:last-child {
+  padding-right: 0;
+}
+.cells.cells-justified {
+  table-layout: fixed;
 }
 *[class*='padding'] {
   padding: 30px;
@@ -1649,5 +1662,8 @@ a.notification .notification-close:hover {
   color: #2c3535;
 }
 .form-side-label {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
   width: 180px;
 }
