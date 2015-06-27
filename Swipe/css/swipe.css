@@ -1055,6 +1055,11 @@ section {
 a.button,
 input.button,
 button.button {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   background: #f2f5f5;
   border: 1px solid #c0cccc;
   border-radius: 2px;
@@ -1085,11 +1090,6 @@ button.button.outline:hover {
 a.button.button-loading,
 input.button.button-loading,
 button.button.button-loading {
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
   cursor: static;
   pointer-events: none;
 }
@@ -1111,30 +1111,47 @@ input.button.button-loading > *,
 button.button.button-loading > * {
   display: none;
 }
-a.button.button-loading:before,
-input.button.button-loading:before,
-button.button.button-loading:before,
+a.button.button-loading > *:first-child,
+input.button.button-loading > *:first-child,
+button.button.button-loading > *:first-child,
 a.button.button-loading:after,
 input.button.button-loading:after,
 button.button.button-loading:after {
-  color: #fff;
   display: inline-block;
-  font-size: inherit;
 }
-a.button.button-loading:before,
-input.button.button-loading:before,
-button.button.button-loading:before {
-  -webkit-animation: rotateEndlessly 0.7s infinite ease;
-  animation: rotateEndlessly 0.7s infinite ease;
-  content: '\e812';
-  font-family: "fontello";
-  font-style: normal;
-  font-weight: normal;
+a.button.button-loading > *:first-child,
+input.button.button-loading > *:first-child,
+button.button.button-loading > *:first-child {
+  font-size: 1em;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 0.2em solid rgba(255, 255, 255, 0.2);
+  border-right: 0.2em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0.2em solid rgba(255, 255, 255, 0.2);
+  border-left: 0.2em solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: rotateEndlessly 1s infinite linear;
+  animation: rotateEndlessly 1s infinite linear;
+  line-height: 1;
+  top: 0.2em;
   margin-right: 0.5em;
 }
+a.button.button-loading > *:first-child,
+input.button.button-loading > *:first-child,
+button.button.button-loading > *:first-child,
+a.button.button-loading > *:first-child:after,
+input.button.button-loading > *:first-child:after,
+button.button.button-loading > *:first-child:after {
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+}
 a.button.button-loading:after,
 input.button.button-loading:after,
 button.button.button-loading:after {
+  color: #ffffff;
   content: attr(data-loading-label);
 }
 input:disabled {
