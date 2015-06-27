@@ -577,7 +577,7 @@ button:disabled {
     padding-bottom: 0 !important;
   }
 }
-*[class^='margin']:not([class^='margin-top']) {
+*[class*='margin']:not([class*=margin-top]):not([class*=hr-nomargin]) {
   margin-bottom: @padding;
   &.margin-xxsmall {
     margin-bottom: @paddingSmall/3;

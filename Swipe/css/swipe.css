@@ -1211,25 +1211,25 @@ button:disabled {
 *[class*='section'].section-bottom-reset {
   padding-bottom: 0 !important;
 }
-*[class^='margin']:not([class^='margin-top']) {
+*[class*='margin']:not([class*=margin-top]):not([class*=hr-nomargin]) {
   margin-bottom: 30px;
 }
-*[class^='margin']:not([class^='margin-top']).margin-xxsmall {
+*[class*='margin']:not([class*=margin-top]):not([class*=hr-nomargin]).margin-xxsmall {
   margin-bottom: 6.66666667px;
 }
-*[class^='margin']:not([class^='margin-top']).margin-xsmall {
+*[class*='margin']:not([class*=margin-top]):not([class*=hr-nomargin]).margin-xsmall {
   margin-bottom: 10px;
 }
-*[class^='margin']:not([class^='margin-top']).margin-small {
+*[class*='margin']:not([class*=margin-top]):not([class*=hr-nomargin]).margin-small {
   margin-bottom: 20px;
 }
-*[class^='margin']:not([class^='margin-top']).margin-large {
+*[class*='margin']:not([class*=margin-top]):not([class*=hr-nomargin]).margin-large {
   margin-bottom: 40px;
 }
-*[class^='margin']:not([class^='margin-top']).margin-xlarge {
+*[class*='margin']:not([class*=margin-top]):not([class*=hr-nomargin]).margin-xlarge {
   margin-bottom: 60px;
 }
-*[class^='margin']:not([class^='margin-top']).margin-reset {
+*[class*='margin']:not([class*=margin-top]):not([class*=hr-nomargin]).margin-reset {
   margin-bottom: 0 !important;
 }
 .box {
