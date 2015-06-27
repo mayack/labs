@@ -1092,6 +1092,8 @@ button.button.button-loading {
   transition: 0.4s;
   background: #c0cccc;
   color: #f2f5f5;
+  cursor: static;
+  pointer-events: none;
 }
 a.button.button-loading > *,
 input.button.button-loading > *,
