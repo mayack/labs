@@ -436,6 +436,33 @@ button {
         color: @swatchWhite;
       }
     }
+    &.button-loading {
+      .transition(0.4s);
+      background: @swatchGray-80;
+      color: @swatchGray-96;
+      // cursor: static;
+      // pointer-events: none;
+      >* {
+        display: none;
+      }
+      &:before, &:after {
+        color: #fff;
+        display: inline-block;
+        font-size: inherit;
+      }
+      &:before {
+        -webkit-animation: rotateEndlessly 0.7s infinite ease;
+        animation: rotateEndlessly 0.7s infinite ease;
+        content: '\e812';
+        font-family: "fontello";
+        font-style: normal;
+        font-weight: normal;
+        margin-right: 0.5em;
+      }
+      &:after {
+        content: attr(data-loading-label);
+      }
+    }
   }
 }
 
@@ -765,6 +792,7 @@ input, textarea {
   }
   &.input-icon-read-only {
     input {
+      border-color: @swatchGray-90;
       overflow: hidden;
       pointer-events: none;
       text-overflow: ellipsis;
@@ -987,6 +1015,29 @@ button.warning-input{
     background-image: none !important;
   color: @swatchGray-80 !important;
 }
+
+
+
+
+// ==========================================================
+// Animations
+// ==========================================================
+
+@-webkit-keyframes rotateEndlessly
+{
+    from 
+    {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to 
+    {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
 
 // ==========================================================
 // Custom

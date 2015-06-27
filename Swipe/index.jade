@@ -190,18 +190,11 @@ html
                           input.expand(type='text', placeholder='Имя и Фамилия')
                         .cell
                           input.expand(type='text', placeholder='Персональный код')
-                      //- .cells.cells-gutter-xsmall.expand.cells-justified
-                      //-   .cell
-                      //-     input.expand(type='text', placeholder='Персональный код')
-                      //-   .cell
-                      //-     button.button.expand
-                      //-       span.icon-upload
-                      //-       | &nbsp;&nbsp;Закачать идентификационный док.
                       .cells.expand.cells-justified.cells-gutter-small.valign-top
                         .cell
-                          button.button.expand.margin-xsmall
+                          button.button.margin-xsmall.expand(data-loading-label="Loading...", onClick="$(this).toggleClass('button-loading')")
                             span.icon-upload
-                            | &nbsp;&nbsp;Закачать идентификационный док.
+                            span &nbsp;&nbsp;Закачать идентификационный док.
                           //- span.input-icon.expand.margin-xsmall.input-icon-primary.input-icon-secondary.input-icon-read-only
                           //-   span.icon-draft.text-aqua.move-left
                           //-   a.icon-cross.text-gray-60.text-12.move-right(href='javascript:void(0)')
