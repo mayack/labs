@@ -437,11 +437,14 @@ button {
       }
     }
     &.button-loading {
-      .transition(0.4s);
-      background: @swatchGray-80;
-      color: @swatchGray-96;
+      .transition(0.3s);
       cursor: static;
       pointer-events: none;
+      &, &:hover, &:active {
+        background: @swatchGray-80;
+        border-color: @swatchGray-80;
+        color: @swatchGray-96;
+      }
       >* {
         display: none;
       }

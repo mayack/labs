@@ -1085,15 +1085,26 @@ button.button.outline:hover {
 a.button.button-loading,
 input.button.button-loading,
 button.button.button-loading {
-  -webkit-transition: 0.4s;
-  -moz-transition: 0.4s;
-  -ms-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-  background: #c0cccc;
-  color: #f2f5f5;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   cursor: static;
   pointer-events: none;
+}
+a.button.button-loading,
+input.button.button-loading,
+button.button.button-loading,
+a.button.button-loading:hover,
+input.button.button-loading:hover,
+button.button.button-loading:hover,
+a.button.button-loading:active,
+input.button.button-loading:active,
+button.button.button-loading:active {
+  background: #c0cccc;
+  border-color: #c0cccc;
+  color: #f2f5f5;
 }
 a.button.button-loading > *,
 input.button.button-loading > *,
