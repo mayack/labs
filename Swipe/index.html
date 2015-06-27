@@ -36,11 +36,6 @@
                     <input id="change-person-last-name" type="text" name="responsible_person_last_name" value="" placeholder="Фамилия" class="text-14 text-gray-33"><span id="modal-change-person-data-error-last-name" class="warning-text"></span>
                   </div>
                   <div class="modal-input upload-button">
-                    <!--
-                    !!!
-                    ...
-                    !!!
-                    -->
                     <input id="input-new-document" name="new-logo" type="file" accept="image/*, application/pdf" style="display:none">
                     <button id="new-upload-button" class="button text-14 text-medium margin-reset margin-top-20"><span class="icon-upload"></span> Загрузить скан паспорта</button>
                     <div id="new-upload-document-view" style="display: none;" class="input-dummy-bg input-dummy-document-upload margin-top-20 margin-reset text-gray-33"><span class="icon-user text-aqua"></span><span id="new-file-name"></span></div><span id="modal-change-person-data-error-document" class="warning-text"></span>
@@ -147,20 +142,6 @@
                     <div class="cells expand">
                       <div style="padding-right:7px;" class="cell username"><a href="javascript:void(0)" onclick="showLoggedUserActions(this)"><span class="icon-user text-aqua"></span>Mayack<span class="icon-arrow-small-south"></span></a>
                         <div tabindex="-2" style="display:none" class="client-tooltip logged-user-tooltip logged-user-tooltip-opened">
-                          <!--
-                          <div class="found-search-row text-14 remove-bottom-border row-height-35">
-                          <div class="found-text text-gray-25">Profile</div>
-                          </div>
-                          <div class="found-search-row text-14 row-height-35">
-                          <div class="found-text text-gray-25">Products</div>
-                          </div>
-                          <div class="found-search-row text-14 remove-bottom-border row-height-35">
-                          <div class="found-text text-gray-25">Invite a Friend</div>
-                          </div>
-                          <div class="found-search-row text-14 remove-bottom-border row-height-35">
-                          <div class="found-text text-gray-25">Pricing Plan</div>
-                          </div>
-                          -->
                           <div onclick="actionSettings(this, '/ru/merchant/settings/info/')" class="found-search-row text-14">
                             <div class="found-text text-gray-25">Настройки</div>
                           </div>
@@ -184,62 +165,96 @@
             </section>
             <hr class="hr-client-top">
             <input type="hidden" name="csrfmiddlewaretoken" value="dHRm837hYXN5VTjcRcEMuHAmu0A5Jx7T">
-            <section class="section-large section-reset wrapper">
+            <!-- Mayack's Code Begins-->
+            <section class="margin-large wrapper">
               <div class="box padding-reset">
-                <div class="padding-large section-reset">Testing the test test test #5
-                  <div class="settings-row">
-                    <div class="settings-left-block text-medium"><span class="margin-reset">Ответственная персона</span><span class="margin-top-10 text-regular text-12 text-gray-25">Вы должны подтвердить, что Swipe использует персона с правом подписи от лица компании "SIA "Mayack"".</span></div>
-                    <div class="settings-right-block text-gray-33 upload-button">
-                      <div class="column-1">
-                        <input id="responsible_person_first_name" type="text" name="responsible_person_first_name" placeholder="Имя" value="" class="text-14 text-gray-33">
-                        <button id="upload-button" class="button text-14 text-medium margin-reset margin-top-20 width-315"><span class="icon-upload"></span> Загрузить скан паспорта</button>
-                        <input id="input-document" style="display:none" name="logo" type="file" accept="image/*, application/pdf">
-                        <div id="upload-document-view" style="display: none;" class="input-dummy-bg input-dummy-document-upload margin-top-20 margin-reset text-gray-33"><span class="icon-user text-aqua"></span><span id="file-name">None</span></div>
-                        <div id="upload-info-text" class="settings-under-input-text text-gray-60 margin-top-15">Загрузите копию паспорта представителя компании, ответственного за использование Swipe, и отправьте нам на проверку.</div>
+                <section class="padding-large fill-gray-15">
+                  <p>Настоящим заявлением прошу акционерное общество «Rietumu Banka», единый регистрационный № 40003074497, юридический адрес: ул. Весетас 7, Рига, LV-1013, Латвийская Республика, (далее – Банк) предоставить услугу перевода денежных средств (swipe.lv) (далее – Услуга) в соответствии с «Правилами предоставления услуги перевода денежных средств (swipe.lv)» (далее – Правила).</p>
+                  <p>Прошу открыть Транзитный счет для получения денежных средств в рамках Услуги.</p>
+                  <p>Прошу перечислять денежные средства с Транзитного счета на следующий Счет торговца:</p><strong>bic</strong>
+                  <input type="text"><strong>iban</strong>
+                  <input type="text">
+                </section>
+                <section class="padding-large">
+                  <div class="cells cells-gutter-small valign-top">
+                    <aside class="cell form-side-label">
+                      <h6 class="margin-xsmall">Торговец в лице</h6>
+                      <p class="text-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.</p>
+                    </aside>
+                    <div class="cell">
+                      <div class="cells">
+                        <div class="cell"><strong>imja</strong>
+                          <input type="text">
+                        </div>
+                        <div class="cell"><strong>familija</strong>
+                          <input type="text">
+                        </div>
                       </div>
-                      <div class="column-2">
-                        <input id="responsible_person_last_name" type="text" name="responsible_person_last_name" placeholder="Фамилия" value="" class="text-14 text-gray-33 move-right">
-                        <div class="input-dummy-bg input-dummy-document-upload move-right margin-top-20 margin-reset padding-left-reset border-reset"><span id="delete-document" style="display: none;" class="icon-cross text-gray-60"></span><span id="pending-document" style="display: none;"><span class="text-gray-60 text-regular">Ожидание</span><span class="icon-help text-gray-60"></span></span></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="settings-row">
-                    <div class="settings-left-block text-medium margin-top-5 margin-reset"><span class="margin-reset">Метод вывода средств</span><span class="margin-top-10 text-regular text-12 text-gray-25">Банковский счёт "SIA "Mayack"", на который Swipe будет перечислять полученные средства.</span></div>
-                    <div id="bank-account-view" class="settings-right-block"><span id="bank-account-header" class="text-18 text-gray-25 move-left">Банковские счета</span><a id="add-bank-account-button" asdasd="" href="javascript:void(0)" onclick="$('#modal-add-bank').bPopup()" class="text-14 move-right margin-bottom-5 margin-top-5">+ Добавить банковский счёт</a>
-                      <div id="bank-account-placeholder" class="move-left expand">
-                        <div class="block text-60 text-aqua icon-bank_account move-left margin-top-15 margin-xxsmall"> </div><span class="block text-gray-25 margin-top-20">Swipe перечислит 0,10 € на указанный банковский счёт. Чтобы подтвердить, что счёт принадлежит компании "SIA "Mayack"", перечислите эту сумму обратно на счёт Swipe. Если у вас есть вопросы, свяжитесь с нами по телефону <span class="text-medium">+371 22045239</span> или пишите на <a href="mailto:support@swipe.lv"><span class="text-medium">support@swipe.lv</span></a>.</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div style="display: none;" class="settings-row">
-                    <div class="settings-left-block text-medium"><span class="margin-top-5">Частота вывода средств</span></div>
-                    <input id="automatic_transfers" type="hidden" name="automatic_transfers" value="7">
-                    <div class="settings-right-block">
-                      <div class="column-1">
-                        <input id="radio-transfer-fixed" onclick="$('input[name=radio-transfer-group]').val(1); checkChanges(); $('#automatic_transfers').val($('#transfer-days').val());" value="1" name="radio-transfer-group" type="radio" checked="" class="radio-custom margin-top-5 move-left radio-width">
-                        <label for="radio-transfer-fixed" class="radio-custom-label margin-top-5"></label><span class="move-left margin-top-5 margin-bottom-10">   Переводить каждые</span>
-                        <input id="transfer-days" type="text" value="7" onchange="checkChanges(); $('#automatic_transfers').val($('#transfer-days').val());" onkeyup="checkChanges()" placeholder="" class="text-14 text-gray-33 move-left withdrawal-days-input margin-bottom-5"><span class="move-left margin-top-5 margin-bottom-10">дней</span>
-                        <div class="settings-under-input-text text-gray-60 margin-top-15 margin-bottom-10">Swipe будет автоматически перечислять средства на выбранный метод вывода средств.</div>
-                      </div>
-                      <div class="column-2">
-                        <input id="radio-transfer-stop" onclick="$('input[name=radio-transfer-group]').val(2);checkChanges();$('#automatic_transfers').val(0);" value="1" name="radio-transfer-group" type="radio" class="radio-custom margin-top-5 radio-width">
-                        <label for="radio-transfer-stop" class="radio-custom-label margin-top-5"></label><span class="move-left margin-top-5 margin-bottom-10">   Приостановить переводы</span>
-                        <div class="settings-under-input-text text-gray-60 margin-top-15">Swipe будет перечислять средства только по вашему запросу.</div>
+                      <div class="cells">
+                        <div class="cell"><strong>personaljnij kod</strong>
+                          <input type="text">
+                        </div>
+                        <div class="cell"><strong>id doc</strong>
+                          <input type="text">
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="settings-row section-small">
-                    <div class="settings-left-block text-medium"><span> </span></div>
-                    <div class="settings-right-block">
-                      <div class="column-1"><span>
-                          <button id="submit-button" onclick="postMainFormData()" disabled="disabled" class="button fill-mint text-medium text-18">Отправить данные</button></span></div>
-                      <div class="column-2"></div>
+                </section>
+                <hr class="hr-nomargin">
+                <section class="padding-large">
+                  <div class="cells cells-gutter-small valign-top">
+                    <aside class="cell form-side-label">
+                      <h6 class="margin-xsmall">Торговец в лице</h6>
+                      <p class="text-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.</p>
+                    </aside>
+                    <div class="cell">
+                      <div class="cells">
+                        <div class="cell"><strong>Address</strong>
+                          <input type="text">
+                        </div>
+                        <div class="cell"><strong>???</strong>
+                          <input type="text">
+                        </div>
+                      </div>
+                      <div class="cells">
+                        <div class="cell"><strong>Phone</strong>
+                          <input type="text">
+                        </div>
+                        <div class="cell"><strong>Email</strong>
+                          <input type="text">
+                        </div>
+                      </div>
+                      <div class="cells">
+                        <div class="cell"><strong>Kommerchiskaja Dejatelknostj</strong>
+                          <input type="text">
+                        </div>
+                        <div class="cell"><strong>???</strong>
+                          <input type="text">
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </section>
+                <hr class="hr-nomargin">
+                <section class="padding-large">
+                  <div class="cells cells-gutter-small valign-top">
+                    <aside class="cell form-side-label">
+                      <h6 class="margin-xsmall">Торговец в лице</h6>
+                      <p class="text-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.</p>
+                    </aside>
+                    <div class="cell">
+                      <p>Также настоящим заявлением подтверждаю, что:</p>
+                      <p>ознакомился и согласен с Правилами и Тарифами Услуги;</p>
+                      <p>согласен, что предоставленная информация может быть использована Банком в маркетинговых и деловых целях, а также быть передана лицам в рамках группы предприятий Банка;</p>
+                      <p>права и обязанности Банка и Торговца в рамках Услуги регулируются материальным правом Латвийской Республики.</p>
+                      <p>бые споры относительно Услуги разрешаются в соответствии с Правилами.</p>
+                    </div>
+                  </div>
+                </section>
               </div>
             </section>
-            <div class="padding-small"></div>
+            <!-- Mayack's Code Ends-->
           </div>
         </div>
       </div>
@@ -247,20 +262,6 @@
         <div class="layout-cell">
           <hr class="hr-nomargin">
           <footer class="wrapper section-large text-gray-60 text-caps">
-            <!--
-            <div class="cells margin expand">
-            <div class="cell">
-            <nav class="languages divider-small text-kilo"><a href="javascript:void(0)" onclick="changeLanguage('lv')" >Lv</a><a href="javascript:void(0)" onclick="changeLanguage('en')" >En</a><a href="javascript:void(0)" onclick="changeLanguage('ru')" class="active">Ru</a></nav>
-            </div>
-            <div class="cell align-right">
-            <div class="cells cells-gutter move-right">
-            <div class="cell"><a href="http://www.rietumu.com/" target="_blank" class="logo-rietumu"><img src="images/logo-rietumu.svg" width="125" height="22"></a></div>
-            <div class="cell"><a href="https://decta.com/" target="_blank" class="logo-decta"><img src="images/logo-decta.svg" width="85" height="16"></a></div>
-            <div class="cell"><a href="http://www.latvijaslabums.lv/" target="_blank" class="logo-labums"><img src="images/logo-latvijas-labums.svg" width="48" height="48"></a></div>
-            </div>
-            </div>
-            </div>
-            -->
             <div class="cells expand text-12 text-medium">
               <div class="cell divider text-regular"><a href="/ru/pricing/" target="_blank">Тарифы</a>
                 <!-- <a href="javascript:void(0)" target="_blank">Support Center</a>--><a href="/ru/terms_and_conditions/" target="_blank">Правила использования</a>

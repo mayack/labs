@@ -38,10 +38,6 @@ html
                     input#change-person-last-name.text-14.text-gray-33(type='text', name='responsible_person_last_name', value='', placeholder='Фамилия')
                     span#modal-change-person-data-error-last-name.warning-text
                   .modal-input.upload-button
-                    //
-                      !!!
-                      ...
-                      !!!
                     input#input-new-document(name='new-logo', type='file', accept='image/*, application/pdf', style='display:none')
                     button#new-upload-button.button.text-14.text-medium.margin-reset.margin-top-20
                       span.icon-upload
@@ -145,19 +141,6 @@ html
                           | Mayack
                           span.icon-arrow-small-south
                         .client-tooltip.logged-user-tooltip.logged-user-tooltip-opened(tabindex='-2', style='display:none')
-                          //
-                            <div class="found-search-row text-14 remove-bottom-border row-height-35">
-                            <div class="found-text text-gray-25">Profile</div>
-                            </div>
-                            <div class="found-search-row text-14 row-height-35">
-                            <div class="found-text text-gray-25">Products</div>
-                            </div>
-                            <div class="found-search-row text-14 remove-bottom-border row-height-35">
-                            <div class="found-text text-gray-25">Invite a Friend</div>
-                            </div>
-                            <div class="found-search-row text-14 remove-bottom-border row-height-35">
-                            <div class="found-text text-gray-25">Pricing Plan</div>
-                            </div>
                           .found-search-row.text-14(onclick="actionSettings(this, '/ru/merchant/settings/info/')")
                             .found-text.text-gray-25 Настройки
                           .found-search-row.text-14(onclick='actionLogout(this)')
@@ -177,96 +160,154 @@ html
                       | Вывод средств
             hr.hr-client-top
             input(type='hidden', name='csrfmiddlewaretoken', value='dHRm837hYXN5VTjcRcEMuHAmu0A5Jx7T')
-            section.section-large.section-reset.wrapper
+            
+            // Mayack's Code Begins
+            section.margin-large.wrapper
               .box.padding-reset
-                .padding-large.section-reset
-                  | Testing the test test test #5
-                  .settings-row
-                    .settings-left-block.text-medium
-                      span.margin-reset Ответственная персона
-                      span.margin-top-10.text-regular.text-12.text-gray-25
-                        | Вы должны подтвердить, что Swipe использует персона с правом подписи от лица компании "SIA "Mayack"".
-                    .settings-right-block.text-gray-33.upload-button
-                      .column-1
-                        input#responsible_person_first_name.text-14.text-gray-33(type='text', name='responsible_person_first_name', placeholder='Имя', value='')
-                        button#upload-button.button.text-14.text-medium.margin-reset.margin-top-20.width-315
-                          span.icon-upload
-                          |  Загрузить скан паспорта
-                        input#input-document(style='display:none', name='logo', type='file', accept='image/*, application/pdf')
-                        #upload-document-view.input-dummy-bg.input-dummy-document-upload.margin-top-20.margin-reset.text-gray-33(style='display: none;')
-                          span.icon-user.text-aqua
-                          span#file-name None
-                        #upload-info-text.settings-under-input-text.text-gray-60.margin-top-15
-                          | Загрузите копию паспорта представителя компании, ответственного за использование Swipe, и отправьте нам на проверку.
-                      .column-2
-                        input#responsible_person_last_name.text-14.text-gray-33.move-right(type='text', name='responsible_person_last_name', placeholder='Фамилия', value='')
-                        .input-dummy-bg.input-dummy-document-upload.move-right.margin-top-20.margin-reset.padding-left-reset.border-reset
-                          span#delete-document.icon-cross.text-gray-60(style='display: none;')
-                          span#pending-document(style='display: none;')
-                            span.text-gray-60.text-regular Ожидание
-                            span.icon-help.text-gray-60
-                  .settings-row
-                    .settings-left-block.text-medium.margin-top-5.margin-reset
-                      span.margin-reset Метод вывода средств
-                      span.margin-top-10.text-regular.text-12.text-gray-25
-                        | Банковский счёт "SIA "Mayack"", на который Swipe будет перечислять полученные средства.
-                    #bank-account-view.settings-right-block
-                      span#bank-account-header.text-18.text-gray-25.move-left Банковские счета
-                      a#add-bank-account-button.text-14.move-right.margin-bottom-5.margin-top-5(asdasd='', href='javascript:void(0)', onclick="$('#modal-add-bank').bPopup()") + Добавить банковский счёт
-                      #bank-account-placeholder.move-left.expand
-                        .block.text-60.text-aqua.icon-bank_account.move-left.margin-top-15.margin-xxsmall  
-                        span.block.text-gray-25.margin-top-20
-                          | Swipe перечислит 0,10 € на указанный банковский счёт. Чтобы подтвердить, что счёт принадлежит компании "SIA "Mayack"", перечислите эту сумму обратно на счёт Swipe. Если у вас есть вопросы, свяжитесь с нами по телефону 
-                          span.text-medium +371 22045239
-                          |  или пишите на 
-                          a(href='mailto:support@swipe.lv')
-                            span.text-medium support@swipe.lv
-                          | .
-                  .settings-row(style='display: none;')
-                    .settings-left-block.text-medium
-                      span.margin-top-5 Частота вывода средств
-                    input#automatic_transfers(type='hidden', name='automatic_transfers', value='7')
-                    .settings-right-block
-                      .column-1
-                        input#radio-transfer-fixed.radio-custom.margin-top-5.move-left.radio-width(onclick="$('input[name=radio-transfer-group]').val(1); checkChanges(); $('#automatic_transfers').val($('#transfer-days').val());", value='1', name='radio-transfer-group', type='radio', checked='')
-                        label.radio-custom-label.margin-top-5(for='radio-transfer-fixed')
-                        span.move-left.margin-top-5.margin-bottom-10    Переводить каждые
-                        input#transfer-days.text-14.text-gray-33.move-left.withdrawal-days-input.margin-bottom-5(type='text', value='7', onchange="checkChanges(); $('#automatic_transfers').val($('#transfer-days').val());", onkeyup='checkChanges()', placeholder='')
-                        span.move-left.margin-top-5.margin-bottom-10 дней
-                        .settings-under-input-text.text-gray-60.margin-top-15.margin-bottom-10
-                          | Swipe будет автоматически перечислять средства на выбранный метод вывода средств.
-                      .column-2
-                        input#radio-transfer-stop.radio-custom.margin-top-5.radio-width(onclick="$('input[name=radio-transfer-group]').val(2);checkChanges();$('#automatic_transfers').val(0);", value='1', name='radio-transfer-group', type='radio')
-                        label.radio-custom-label.margin-top-5(for='radio-transfer-stop')
-                        span.move-left.margin-top-5.margin-bottom-10    Приостановить переводы
-                        .settings-under-input-text.text-gray-60.margin-top-15
-                          | Swipe будет перечислять средства только по вашему запросу.
-                  .settings-row.section-small
-                    .settings-left-block.text-medium
-                      span  
-                    .settings-right-block
-                      .column-1
-                        span
-                          button#submit-button.button.fill-mint.text-medium.text-18(onclick='postMainFormData()', disabled='disabled') Отправить данные
-                      .column-2
-            .padding-small
+                section.padding-large.fill-gray-15
+                  p Настоящим заявлением прошу акционерное общество «Rietumu Banka», единый регистрационный № 40003074497, юридический адрес: ул. Весетас 7, Рига, LV-1013, Латвийская Республика, (далее – Банк) предоставить услугу перевода денежных средств (swipe.lv) (далее – Услуга) в соответствии с «Правилами предоставления услуги перевода денежных средств (swipe.lv)» (далее – Правила).
+                  p Прошу открыть Транзитный счет для получения денежных средств в рамках Услуги.
+                  p Прошу перечислять денежные средства с Транзитного счета на следующий Счет торговца:
+                  strong bic
+                  input(type='text')
+                  strong iban
+                  input(type='text')
+                section.padding-large
+                  .cells.cells-gutter-small.valign-top
+                    aside.cell.form-side-label
+                      h6.margin-xsmall Торговец в лице
+                      p.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
+                    .cell
+                      .cells
+                        .cell
+                          strong imja
+                          input(type='text')
+                        .cell
+                          strong familija
+                          input(type='text')
+                      .cells
+                        .cell
+                          strong personaljnij kod
+                          input(type='text')
+                        .cell
+                          strong id doc
+                          input(type='text')
+                hr.hr-nomargin
+                section.padding-large
+                  .cells.cells-gutter-small.valign-top
+                    aside.cell.form-side-label
+                      h6.margin-xsmall Торговец в лице
+                      p.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
+                    .cell
+                      .cells
+                        .cell
+                          strong Address
+                          input(type='text')
+                        .cell
+                          strong ???
+                          input(type='text')
+                      .cells
+                        .cell
+                          strong Phone
+                          input(type='text')
+                        .cell
+                          strong Email
+                          input(type='text')
+                      .cells
+                        .cell
+                          strong Kommerchiskaja Dejatelknostj
+                          input(type='text')
+                        .cell
+                          strong ???
+                          input(type='text')
+
+                hr.hr-nomargin
+                section.padding-large
+                  .cells.cells-gutter-small.valign-top
+                    aside.cell.form-side-label
+                      h6.margin-xsmall Торговец в лице
+                      p.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
+                    .cell
+                      p Также настоящим заявлением подтверждаю, что:
+                      p ознакомился и согласен с Правилами и Тарифами Услуги;
+                      p согласен, что предоставленная информация может быть использована Банком в маркетинговых и деловых целях, а также быть передана лицам в рамках группы предприятий Банка;
+                      p права и обязанности Банка и Торговца в рамках Услуги регулируются материальным правом Латвийской Республики.
+                      p бые споры относительно Услуги разрешаются в соответствии с Правилами.
+
+                  //- .settings-row
+                  //-   .settings-left-block.text-medium
+                  //-     span.margin-reset Ответственная персона
+                  //-     span.margin-top-10.text-regular.text-12.text-gray-25
+                  //-       | Вы должны подтвердить, что Swipe использует персона с правом подписи от лица компании "SIA "Mayack"".
+                  //-   .settings-right-block.text-gray-33.upload-button
+                  //-     .column-1
+                  //-       input#responsible_person_first_name.text-14.text-gray-33(type='text', name='responsible_person_first_name', placeholder='Имя', value='')
+                  //-       button#upload-button.button.text-14.text-medium.margin-reset.margin-top-20.width-315
+                  //-         span.icon-upload
+                  //-         |  Загрузить скан паспорта
+                  //-       input#input-document(style='display:none', name='logo', type='file', accept='image/*, application/pdf')
+                  //-       #upload-document-view.input-dummy-bg.input-dummy-document-upload.margin-top-20.margin-reset.text-gray-33(style='display: none;')
+                  //-         span.icon-user.text-aqua
+                  //-         span#file-name None
+                  //-       #upload-info-text.settings-under-input-text.text-gray-60.margin-top-15
+                  //-         | Загрузите копию паспорта представителя компании, ответственного за использование Swipe, и отправьте нам на проверку.
+                  //-     .column-2
+                  //-       input#responsible_person_last_name.text-14.text-gray-33.move-right(type='text', name='responsible_person_last_name', placeholder='Фамилия', value='')
+                  //-       .input-dummy-bg.input-dummy-document-upload.move-right.margin-top-20.margin-reset.padding-left-reset.border-reset
+                  //-         span#delete-document.icon-cross.text-gray-60(style='display: none;')
+                  //-         span#pending-document(style='display: none;')
+                  //-           span.text-gray-60.text-regular Ожидание
+                  //-           span.icon-help.text-gray-60
+                  //- .settings-row
+                  //-   .settings-left-block.text-medium.margin-top-5.margin-reset
+                  //-     span.margin-reset Метод вывода средств
+                  //-     span.margin-top-10.text-regular.text-12.text-gray-25
+                  //-       | Банковский счёт "SIA "Mayack"", на который Swipe будет перечислять полученные средства.
+                  //-   #bank-account-view.settings-right-block
+                  //-     span#bank-account-header.text-18.text-gray-25.move-left Банковские счета
+                  //-     a#add-bank-account-button.text-14.move-right.margin-bottom-5.margin-top-5(asdasd='', href='javascript:void(0)', onclick="$('#modal-add-bank').bPopup()") + Добавить банковский счёт
+                  //-     #bank-account-placeholder.move-left.expand
+                  //-       .block.text-60.text-aqua.icon-bank_account.move-left.margin-top-15.margin-xxsmall  
+                  //-       span.block.text-gray-25.margin-top-20
+                  //-         | Swipe перечислит 0,10 € на указанный банковский счёт. Чтобы подтвердить, что счёт принадлежит компании "SIA "Mayack"", перечислите эту сумму обратно на счёт Swipe. Если у вас есть вопросы, свяжитесь с нами по телефону 
+                  //-         span.text-medium +371 22045239
+                  //-         |  или пишите на 
+                  //-         a(href='mailto:support@swipe.lv')
+                  //-           span.text-medium support@swipe.lv
+                  //-         | .
+                  //- .settings-row(style='display: none;')
+                  //-   .settings-left-block.text-medium
+                  //-     span.margin-top-5 Частота вывода средств
+                  //-   input#automatic_transfers(type='hidden', name='automatic_transfers', value='7')
+                  //-   .settings-right-block
+                  //-     .column-1
+                  //-       input#radio-transfer-fixed.radio-custom.margin-top-5.move-left.radio-width(onclick="$('input[name=radio-transfer-group]').val(1); checkChanges(); $('#automatic_transfers').val($('#transfer-days').val());", value='1', name='radio-transfer-group', type='radio', checked='')
+                  //-       label.radio-custom-label.margin-top-5(for='radio-transfer-fixed')
+                  //-       span.move-left.margin-top-5.margin-bottom-10    Переводить каждые
+                  //-       input#transfer-days.text-14.text-gray-33.move-left.withdrawal-days-input.margin-bottom-5(type='text', value='7', onchange="checkChanges(); $('#automatic_transfers').val($('#transfer-days').val());", onkeyup='checkChanges()', placeholder='')
+                  //-       span.move-left.margin-top-5.margin-bottom-10 дней
+                  //-       .settings-under-input-text.text-gray-60.margin-top-15.margin-bottom-10
+                  //-         | Swipe будет автоматически перечислять средства на выбранный метод вывода средств.
+                  //-     .column-2
+                  //-       input#radio-transfer-stop.radio-custom.margin-top-5.radio-width(onclick="$('input[name=radio-transfer-group]').val(2);checkChanges();$('#automatic_transfers').val(0);", value='1', name='radio-transfer-group', type='radio')
+                  //-       label.radio-custom-label.margin-top-5(for='radio-transfer-stop')
+                  //-       span.move-left.margin-top-5.margin-bottom-10    Приостановить переводы
+                  //-       .settings-under-input-text.text-gray-60.margin-top-15
+                  //-         | Swipe будет перечислять средства только по вашему запросу.
+                  //- .settings-row.section-small
+                  //-   .settings-left-block.text-medium
+                  //-     span  
+                  //-   .settings-right-block
+                  //-     .column-1
+                  //-       span
+                  //-         button#submit-button.button.fill-mint.text-medium.text-18(onclick='postMainFormData()', disabled='disabled') Отправить данные
+                  //-     .column-2
+            // Mayack's Code Ends
+
       #footer.layout-row
         .layout-cell
           hr.hr-nomargin
           footer.wrapper.section-large.text-gray-60.text-caps
-            //
-              <div class="cells margin expand">
-              <div class="cell">
-              <nav class="languages divider-small text-kilo"><a href="javascript:void(0)" onclick="changeLanguage('lv')" >Lv</a><a href="javascript:void(0)" onclick="changeLanguage('en')" >En</a><a href="javascript:void(0)" onclick="changeLanguage('ru')" class="active">Ru</a></nav>
-              </div>
-              <div class="cell align-right">
-              <div class="cells cells-gutter move-right">
-              <div class="cell"><a href="http://www.rietumu.com/" target="_blank" class="logo-rietumu"><img src="images/logo-rietumu.svg" width="125" height="22"></a></div>
-              <div class="cell"><a href="https://decta.com/" target="_blank" class="logo-decta"><img src="images/logo-decta.svg" width="85" height="16"></a></div>
-              <div class="cell"><a href="http://www.latvijaslabums.lv/" target="_blank" class="logo-labums"><img src="images/logo-latvijas-labums.svg" width="48" height="48"></a></div>
-              </div>
-              </div>
-              </div>
             .cells.expand.text-12.text-medium
               .cell.divider.text-regular
                 a(href='/ru/pricing/', target='_blank') Тарифы
