@@ -166,7 +166,7 @@ html
               .box.padding-reset
                 section.padding-large
                   .cells.cells-gutter-small.valign-top.expand
-                    aside.cell.form-side-label
+                    aside.cell.form-side-label.text-gray-25
                       .text-medium.margin-xsmall Реквизиты
                       p.margin-reset.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
                     .cell
@@ -181,7 +181,7 @@ html
                 hr.hr-nomargin
                 section.padding-large
                   .cells.cells-gutter-small.valign-top.expand
-                    aside.cell.form-side-label
+                    aside.cell.form-side-label.text-gray-25
                       .text-medium.margin-xsmall Торговец в лице
                       p.margin-reset.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
                     .cell
@@ -199,10 +199,11 @@ html
                       //-       | &nbsp;&nbsp;Закачать идентификационный док.
                       .cells.expand.cells-justified.cells-gutter-xsmall
                         .cell
-                          span.input-icon.expand.inline.margin-xsmall
-                            span.icon-draft.text-aqua
-                            input(type='text', value="My File.jpg").expand
-                          //- .text-gray-60 Upload a passport scan of a person who has the right of signature.
+                          span.input-icon.expand.margin-xsmall.input-icon-primary.input-icon-secondary.input-icon-read-only
+                            span.icon-draft.text-aqua.move-left
+                            a.icon-cross.text-gray-60.text-12.move-right(href='javascript:void(0)')
+                            input(type='text', value="My File My File My File My File My File.jpg").expand
+                          .text-gray-60 Upload a passport scan of a person who has the right of signature.
                           //- #upload-document-view.input-dummy-bg.input-dummy-document-upload.margin-top-20.margin-reset.text-gray-33
                           //-   span.icon-user.text-aqua
                           //-   span.icon-draft.text-aqua
@@ -211,7 +212,7 @@ html
                 hr.hr-nomargin
                 section.padding-large
                   .cells.cells-gutter-small.valign-top.expand
-                    aside.cell.form-side-label
+                    aside.cell.form-side-label.text-gray-25
                       .text-medium.margin-xsmall Детали торговца
                       p.margin-reset.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
                     .cell
@@ -234,7 +235,7 @@ html
                 hr.hr-nomargin
                 section.padding-large
                   .cells.cells-gutter-small.valign-top
-                    aside.cell.form-side-label
+                    aside.cell.form-side-label.text-gray-25
                       .text-medium.margin-xsmall Соглашение с правами
                       p.margin-reset.text-12 Также настоящим заявлением подтверждаю, что:
                     .cell

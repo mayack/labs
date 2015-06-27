@@ -737,14 +737,33 @@ input, textarea {
   }
 }
 .input-icon {
+  display: inline-block;
   position: relative;
   >*[class*=icon] {
-    .position(@t:50%,@l:1em);
+    .position(@t:50%);
+    float: none;
     line-height: 1;
     margin-top: -0.5em;
+    &.move-left {
+      left: 1em;
+    }
+    &.move-right {
+      right: 1em;
+    }
   }
-  input {
+  &.input-icon-primary input {
     padding-left: 2.5em;
+  }
+  &.input-icon-secondary input {
+    padding-right: 2.5em;
+  }
+  &.input-icon-read-only {
+    input {
+      overflow: hidden;
+      pointer-events: none;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 }
 
