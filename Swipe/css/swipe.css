@@ -1431,6 +1431,7 @@ textarea:focus {
   display: none;
 }
 .input-aligner {
+  margin-top: 1px;
   padding: 0.65em 1em 0.55em 1em;
   padding-bottom: 0;
   padding-left: 0;
@@ -1465,6 +1466,9 @@ textarea:focus {
   pointer-events: none;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.checkbox {
+  position: relative;
 }
 .wrapper {
   width: 940px !important;

@@ -167,7 +167,7 @@ html
                 section.padding-large
                   .cells.cells-gutter-small.valign-top.expand
                     aside.cell.form-side-label.text-gray-25
-                      .text-medium.margin-xsmall Реквизиты
+                      .text-bold.margin-xsmall.input-aligner Реквизиты
                       p.margin-reset.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
                     .cell
                       //- p Настоящим заявлением прошу акционерное общество «Rietumu Banka», единый регистрационный № 40003074497, юридический адрес: ул. Весетас 7, Рига, LV-1013, Латвийская Республика, (далее – Банк) предоставить услугу перевода денежных средств (swipe.lv) (далее – Услуга) в соответствии с «Правилами предоставления услуги перевода денежных средств (swipe.lv)» (далее – Правила).
@@ -182,7 +182,7 @@ html
                 section.padding-large
                   .cells.cells-gutter-small.valign-top.expand
                     aside.cell.form-side-label.text-gray-25
-                      .text-medium.margin-xsmall Торговец в лице
+                      .text-bold.margin-xsmall.input-aligner Торговец в лице
                       p.margin-reset.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
                     .cell
                       .cells.cells-gutter-small.margin-small.expand
@@ -208,7 +208,7 @@ html
                 section.padding-large
                   .cells.cells-gutter-small.valign-top.expand
                     aside.cell.form-side-label.text-gray-25
-                      .text-medium.margin-xsmall Детали торговца
+                      .text-bold.margin-xsmall.input-aligner Детали торговца
                       p.margin-reset.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
                     .cell
                       .cells.cells-gutter-small.margin-small.expand
@@ -231,13 +231,19 @@ html
                 section.padding-large
                   .cells.cells-gutter-small.valign-top
                     aside.cell.form-side-label.text-gray-25
-                      .text-medium.margin-xsmall Соглашение с правами
+                      .text-bold.margin-xsmall.input-aligner Соглашение с правами
                       p.margin-reset.text-12 Также настоящим заявлением подтверждаю, что:
                     .cell
                       //- p Также настоящим заявлением подтверждаю, что:
-                      .cells.cells-gutter-xsmall
+                      .cells.cells-gutter-xsmall.input-aligner
                         .cell
-                          input(type='checkbox')
+                          .cells
+                            .cell
+                              .checkbox
+                                input(type='checkbox', id='test')
+                                label(for='test')
+                            .cell
+                              label(for='test') One More Label
                         .cell
                           | Ознакомился и согласен с Правилами и Тарифами Услуги;
                       ul
