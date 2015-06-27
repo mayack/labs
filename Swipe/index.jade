@@ -173,7 +173,7 @@ html
                       //- p Настоящим заявлением прошу акционерное общество «Rietumu Banka», единый регистрационный № 40003074497, юридический адрес: ул. Весетас 7, Рига, LV-1013, Латвийская Республика, (далее – Банк) предоставить услугу перевода денежных средств (swipe.lv) (далее – Услуга) в соответствии с «Правилами предоставления услуги перевода денежных средств (swipe.lv)» (далее – Правила).
                       //- p Прошу открыть Транзитный счет для получения денежных средств в рамках Услуги.
                       //- p Прошу перечислять денежные средства с Транзитного счета на следующий Счет торговца:
-                      .cells.cells-gutter-xsmall.margin-xsmall.expand
+                      .cells.cells-gutter-small.margin-small.expand
                         .cell
                           input.expand(type='text', placeholder='BIC')
                         .cell
@@ -185,7 +185,7 @@ html
                       .text-medium.margin-xsmall Торговец в лице
                       p.margin-reset.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
                     .cell
-                      .cells.cells-gutter-xsmall.margin-xsmall.expand
+                      .cells.cells-gutter-small.margin-small.expand
                         .cell
                           input.expand(type='text', placeholder='Имя и Фамилия')
                         .cell
@@ -197,18 +197,20 @@ html
                       //-     button.button.expand
                       //-       span.icon-upload
                       //-       | &nbsp;&nbsp;Закачать идентификационный док.
-                      .cells.expand.cells-justified.cells-gutter-xsmall
+                      .cells.expand.cells-justified.cells-gutter-small.valign-top
                         .cell
-                          span.input-icon.expand.margin-xsmall.input-icon-primary.input-icon-secondary.input-icon-read-only
-                            span.icon-draft.text-aqua.move-left
-                            a.icon-cross.text-gray-60.text-12.move-right(href='javascript:void(0)')
-                            input(type='text', value="My File My File My File My File My File.jpg").expand
+                          button.button.expand.margin-xsmall
+                            span.icon-upload
+                            | &nbsp;&nbsp;Закачать идентификационный док.
+                          //- span.input-icon.expand.margin-xsmall.input-icon-primary.input-icon-secondary.input-icon-read-only
+                          //-   span.icon-draft.text-aqua.move-left
+                          //-   a.icon-cross.text-gray-60.text-12.move-right(href='javascript:void(0)')
+                          //-   input(type='text', value="My File My File My File My File My File.jpg").expand
                           .text-gray-60 Upload a passport scan of a person who has the right of signature.
-                          //- #upload-document-view.input-dummy-bg.input-dummy-document-upload.margin-top-20.margin-reset.text-gray-33
-                          //-   span.icon-user.text-aqua
-                          //-   span.icon-draft.text-aqua
-                          //-   span#file-name tumblr_nb8lkvU…5PB.jpg
                         .cell
+                          .text-gray-60.input-aligner
+                            | Pending&nbsp;&nbsp;
+                            span.icon-help
                 hr.hr-nomargin
                 section.padding-large
                   .cells.cells-gutter-small.valign-top.expand
@@ -216,17 +218,17 @@ html
                       .text-medium.margin-xsmall Детали торговца
                       p.margin-reset.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
                     .cell
-                      .cells.cells-gutter-xsmall.margin-xsmall.expand
+                      .cells.cells-gutter-small.margin-small.expand
                         .cell
                           input.expand(type='text', placeholder='Наименование торговца')
                         .cell
                           input.expand(type='text', placeholder='Регистрационный номер')
-                      .cells.cells-gutter-xsmall.margin-xsmall.expand
+                      .cells.cells-gutter-small.margin-small.expand
                         .cell
                           input.expand(type='text', placeholder='Вид коммерчиской деятельности')
                         .cell
                           input.expand(type='text', placeholder='Адрес для корреспонденции')
-                      .cells.cells-gutter-xsmall.expand
+                      .cells.cells-gutter-small.expand
                         .cell
                           input.expand(type='text', placeholder='Телефон')
                         .cell

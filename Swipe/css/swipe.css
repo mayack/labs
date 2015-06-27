@@ -1358,6 +1358,12 @@ textarea:focus {
 .ms-parent.select-single .ms-drop ul li input {
   display: none;
 }
+.input-aligner {
+  padding: 0.65em 1em 0.55em 1em;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
 .input-icon {
   display: inline-block;
   position: relative;
