@@ -164,7 +164,7 @@ html
             // Mayack's Code Begins
             section.margin-large.wrapper
               .box.padding-reset
-                section.padding-large.fill-gray-15
+                section.padding-large
                   p Настоящим заявлением прошу акционерное общество «Rietumu Banka», единый регистрационный № 40003074497, юридический адрес: ул. Весетас 7, Рига, LV-1013, Латвийская Республика, (далее – Банк) предоставить услугу перевода денежных средств (swipe.lv) (далее – Услуга) в соответствии с «Правилами предоставления услуги перевода денежных средств (swipe.lv)» (далее – Правила).
                   p Прошу открыть Транзитный счет для получения денежных средств в рамках Услуги.
                   p Прошу перечислять денежные средства с Транзитного счета на следующий Счет торговца:
@@ -173,60 +173,50 @@ html
                   strong iban
                   input(type='text')
                 section.padding-large
-                  .cells.cells-gutter-small.valign-top
+                  .cells.cells-gutter-small.valign-top.expand
                     aside.cell.form-side-label
                       .text-medium.margin-xsmall Торговец в лице
-                      p.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
+                      p.margin-reset.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
                     .cell
-                      .cells.margin-small
+                      .cells.cells-gutter-xsmall.margin-xsmall.expand
                         .cell
-                          strong imja
-                          input(type='text')
+                          input.expand(type='text', placeholder='Имя')
                         .cell
-                          strong familija
-                          input(type='text')
-                      .cells
+                          input.expand(type='text', placeholder='Фамилия')
+                      .cells.cells-gutter-xsmall.expand
                         .cell
-                          strong personaljnij kod
-                          input(type='text')
+                          input.expand(type='text', placeholder='Персональный код')
                         .cell
-                          strong id doc
-                          input(type='text')
+                          input.expand(type='text', placeholder='Номер паспорта или ID документа')
                 hr.hr-nomargin
                 section.padding-large
-                  .cells.cells-gutter-small.valign-top
+                  .cells.cells-gutter-small.valign-top.expand
                     aside.cell.form-side-label
-                      .text-medium.margin-xsmall Торговец в лице
-                      p.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
+                      .text-medium.margin-xsmall Детали торговца
+                      p.margin-reset.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
                     .cell
-                      .cells
+                      .cells.cells-gutter-xsmall.margin-xsmall.expand
                         .cell
-                          strong Address
-                          input(type='text')
+                          input.expand(type='text', placeholder='Наименование торговца')
                         .cell
-                          strong ???
-                          input(type='text')
-                      .cells
+                          input.expand(type='text', placeholder='Регистрационный номер')
+                      .cells.cells-gutter-xsmall.margin-xsmall.expand
                         .cell
-                          strong Phone
-                          input(type='text')
+                          input.expand(type='text', placeholder='Вид коммерчиской деятельности')
                         .cell
-                          strong Email
-                          input(type='text')
-                      .cells
+                          input.expand(type='text', placeholder='Адрес для корреспонденции')
+                      .cells.cells-gutter-xsmall.expand
                         .cell
-                          strong Kommerchiskaja Dejatelknostj
-                          input(type='text')
+                          input.expand(type='text', placeholder='Телефон')
                         .cell
-                          strong ???
-                          input(type='text')
+                          input.expand(type='text', placeholder='Электронная почта')
 
                 hr.hr-nomargin
                 section.padding-large
                   .cells.cells-gutter-small.valign-top
                     aside.cell.form-side-label
-                      .text-medium.margin-xsmall Торговец в лице
-                      p.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
+                      .text-medium.margin-xsmall Соглашение с правами
+                      p.margin-reset.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
                     .cell
                       p Также настоящим заявлением подтверждаю, что:
                       p ознакомился и согласен с Правилами и Тарифами Услуги;
