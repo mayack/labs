@@ -1358,6 +1358,19 @@ textarea:focus {
 .ms-parent.select-single .ms-drop ul li input {
   display: none;
 }
+.input-icon {
+  position: relative;
+}
+.input-icon > *[class*=icon] {
+  position: absolute;
+  top: 50%;
+  left: 1em;
+  line-height: 1;
+  margin-top: -0.5em;
+}
+.input-icon input {
+  padding-left: 2.5em;
+}
 .wrapper {
   width: 940px !important;
 }

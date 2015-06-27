@@ -736,6 +736,17 @@ input, textarea {
     display: none;
   }
 }
+.input-icon {
+  position: relative;
+  >*[class*=icon] {
+    .position(@t:50%,@l:1em);
+    line-height: 1;
+    margin-top: -0.5em;
+  }
+  input {
+    padding-left: 2.5em;
+  }
+}
 
 
 

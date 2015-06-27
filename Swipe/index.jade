@@ -187,17 +187,27 @@ html
                     .cell
                       .cells.cells-gutter-xsmall.margin-xsmall.expand
                         .cell
-                          input.expand(type='text', placeholder='Имя')
-                        .cell
-                          input.expand(type='text', placeholder='Фамилия')
-                      .cells.cells-gutter-xsmall.expand.cells-justified
+                          input.expand(type='text', placeholder='Имя и Фамилия')
                         .cell
                           input.expand(type='text', placeholder='Персональный код')
+                      //- .cells.cells-gutter-xsmall.expand.cells-justified
+                      //-   .cell
+                      //-     input.expand(type='text', placeholder='Персональный код')
+                      //-   .cell
+                      //-     button.button.expand
+                      //-       span.icon-upload
+                      //-       | &nbsp;&nbsp;Закачать идентификационный док.
+                      .cells.expand.cells-justified.cells-gutter-xsmall
                         .cell
-                          //- input.expand(type='text', placeholder='Номер паспорта или ID документа')
-                          button.button.expand
-                            span.icon-upload
-                            | &nbsp;&nbsp;Закачать идентификационный док.
+                          span.input-icon.expand.inline.margin-xsmall
+                            span.icon-draft.text-aqua
+                            input(type='text', value="My File.jpg").expand
+                          //- .text-gray-60 Upload a passport scan of a person who has the right of signature.
+                          //- #upload-document-view.input-dummy-bg.input-dummy-document-upload.margin-top-20.margin-reset.text-gray-33
+                          //-   span.icon-user.text-aqua
+                          //-   span.icon-draft.text-aqua
+                          //-   span#file-name tumblr_nb8lkvU…5PB.jpg
+                        .cell
                 hr.hr-nomargin
                 section.padding-large
                   .cells.cells-gutter-small.valign-top.expand
