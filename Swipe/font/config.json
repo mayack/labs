@@ -595,10 +595,30 @@
       ]
     },
     {
+      "uid": "c176bc770e9d137dc6a3f2c03817a50f",
+      "css": "icon-tick",
+      "code": 59436,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M419.1 998.8C419.1 998.8-0.4 578.8-0.4 578.8-0.4 578.8 107.3 471 107.3 471 107.3 471 392.5 756.6 392.5 756.6 392.5 756.6 871.6 1.5 871.6 1.5 871.6 1.5 1000.1 83.3 1000.1 83.3 1000.1 83.3 419.1 998.8 419.1 998.8Z",
+        "width": 1000
+      },
+      "search": [
+        "icon-tick"
+      ]
+    },
+    {
       "uid": "5d2d07f112b8de19f2c0dbfec3e42c05",
       "css": "spin5",
       "code": 59420,
       "src": "fontelico"
+    },
+    {
+      "uid": "cda0cdcfd38f5f1d9255e722dad42012",
+      "css": "spinner",
+      "code": 59435,
+      "src": "fontawesome"
     }
   ]
 }

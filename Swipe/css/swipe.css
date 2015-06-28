@@ -314,6 +314,41 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+@font-face {
+  font-family: 'ProximaNovaRegular';
+  src: url('../font/proxima_nova/ProximaNova.Reg.eot');
+  src: local('ProximaNovaRegular'), url('../font/proxima_nova/ProximaNova.Reg.woff') format('woff'), url('../font/proxima_nova/ProximaNova.Reg.ttf') format('truetype'), url('../font/proxima_nova/ProximaNova.Reg.svg') format('svg'), url('../font/proxima_nova/ProximaNova.Reg.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ProximaNovaRegularIt';
+  src: url('../font/proxima_nova/ProximaNova.RegIt.eot');
+  src: local('ProximaNovaRegularIt'), url('../font/proxima_nova/ProximaNova.RegIt.woff') format('woff'), url('../font/proxima_nova/ProximaNova.RegIt.ttf') format('truetype'), url('../font/proxima_nova/ProximaNova.RegIt.svg') format('svg'), url('../font/proxima_nova/ProximaNova.RegIt.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ProximaNovaLight';
+  src: url('../font/proxima_nova/ProximaNova.Light.eot');
+  src: local('ProximaNovaLight'), url('../font/proxima_nova/ProximaNova.Light.woff') format('woff'), url('../font/proxima_nova/ProximaNova.Light.ttf') format('truetype'), url('../font/proxima_nova/ProximaNova.Light.svg') format('svg'), url('../font/proxima_nova/ProximaNova.Light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ProximaNovaSemibold';
+  src: url('../font/proxima_nova/ProximaNova.Semibold.eot');
+  src: local('ProximaNovaSemibold'), url('../font/proxima_nova/ProximaNova.Semibold.woff') format('woff'), url('../font/proxima_nova/ProximaNova.Semibold.ttf') format('truetype'), url('../font/proxima_nova/ProximaNova.Semibold.svg') format('svg'), url('../font/proxima_nova/ProximaNova.Semibold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ProximaNovaBold';
+  src: url('../font/proxima_nova/ProximaNova.Bold.eot');
+  src: local('ProximaNovaBold'), url('../font/proxima_nova/ProximaNova.Bold.woff') format('woff'), url('../font/proxima_nova/ProximaNova.Bold.ttf') format('truetype'), url('../font/proxima_nova/ProximaNova.Bold.svg') format('svg'), url('../font/proxima_nova/ProximaNova.Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 .text-light {
   font-family: 'ProximaNovaLight', sans-serif;
   font-weight: normal;
@@ -990,41 +1025,6 @@ section {
   font-family: 'ProximaNovaRegular', sans-serif;
   font-weight: normal;
 }
-@font-face {
-  font-family: 'ProximaNovaRegular';
-  src: url('../font/proxima_nova/ProximaNova.Reg.eot');
-  src: local('ProximaNovaRegular'), url('../font/proxima_nova/ProximaNova.Reg.woff') format('woff'), url('../font/proxima_nova/ProximaNova.Reg.ttf') format('truetype'), url('../font/proxima_nova/ProximaNova.Reg.svg') format('svg'), url('../font/proxima_nova/ProximaNova.Reg.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ProximaNovaRegularIt';
-  src: url('../font/proxima_nova/ProximaNova.RegIt.eot');
-  src: local('ProximaNovaRegularIt'), url('../font/proxima_nova/ProximaNova.RegIt.woff') format('woff'), url('../font/proxima_nova/ProximaNova.RegIt.ttf') format('truetype'), url('../font/proxima_nova/ProximaNova.RegIt.svg') format('svg'), url('../font/proxima_nova/ProximaNova.RegIt.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ProximaNovaLight';
-  src: url('../font/proxima_nova/ProximaNova.Light.eot');
-  src: local('ProximaNovaLight'), url('../font/proxima_nova/ProximaNova.Light.woff') format('woff'), url('../font/proxima_nova/ProximaNova.Light.ttf') format('truetype'), url('../font/proxima_nova/ProximaNova.Light.svg') format('svg'), url('../font/proxima_nova/ProximaNova.Light.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ProximaNovaSemibold';
-  src: url('../font/proxima_nova/ProximaNova.Semibold.eot');
-  src: local('ProximaNovaSemibold'), url('../font/proxima_nova/ProximaNova.Semibold.woff') format('woff'), url('../font/proxima_nova/ProximaNova.Semibold.ttf') format('truetype'), url('../font/proxima_nova/ProximaNova.Semibold.svg') format('svg'), url('../font/proxima_nova/ProximaNova.Semibold.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ProximaNovaBold';
-  src: url('../font/proxima_nova/ProximaNova.Bold.eot');
-  src: local('ProximaNovaBold'), url('../font/proxima_nova/ProximaNova.Bold.woff') format('woff'), url('../font/proxima_nova/ProximaNova.Bold.ttf') format('truetype'), url('../font/proxima_nova/ProximaNova.Bold.svg') format('svg'), url('../font/proxima_nova/ProximaNova.Bold.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
 .align-center {
   text-align: center;
 }
@@ -1035,11 +1035,18 @@ section {
   text-align: right;
 }
 .valign-bottom,
-.valign-bottom.cells > .cell {
+.valign-bottom.cells > .cell,
+.cells .valign-bottom.cell {
   vertical-align: bottom;
 }
+.valign-middle,
+.valign-middle.cells > .cell,
+.cells .valign-middle.cell {
+  vertical-align: middle;
+}
 .valign-top,
-.valign-top.cells > .cell {
+.valign-top.cells > .cell,
+.cells .valign-top.cell {
   vertical-align: top;
 }
 .move-center {
@@ -1430,10 +1437,16 @@ textarea:focus {
 .ms-parent.select-single .ms-drop ul li input {
   display: none;
 }
-.input-aligner {
+*[class*='input-aligner']:not(.input-aligner-both) {
   margin-top: 1px;
   padding: 0.65em 1em 0.55em 1em;
   padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+*[class*='input-aligner'].input-aligner-both {
+  margin-top: 1px;
+  padding: 0.65em 1em 0.55em 1em;
   padding-left: 0;
   padding-right: 0;
 }
@@ -1468,7 +1481,70 @@ textarea:focus {
   white-space: nowrap;
 }
 .checkbox {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+  font-size: 1.2em;
+  height: 1em;
   position: relative;
+  text-align: center;
+  width: 1em;
+}
+.checkbox input {
+  position: absolute;
+  pointer-events: none;
+  visibility: hidden;
+}
+.checkbox input:checked + label:before {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.checkbox input:checked + label:after {
+  border-color: #b2c1c1;
+}
+.checkbox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+.checkbox label:before {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  color: #00c1c7;
+  content: '\e82c';
+  font-family: fontello;
+  font-size: 0.53em;
+  height: 1em;
+  line-height: 1;
+  margin: -0.5em 0 0 -0.5em;
+  text-indent: 0.05em;
+  width: 1em;
+}
+.checkbox label:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border: 1px solid #c0cccc;
+  background: #ffffff;
+  border-radius: 2px;
+  content: '';
+  height: 100%;
+  width: 100%;
 }
 .wrapper {
   width: 940px !important;

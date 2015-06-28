@@ -235,17 +235,13 @@ html
                       p.margin-reset.text-12 Также настоящим заявлением подтверждаю, что:
                     .cell
                       //- p Также настоящим заявлением подтверждаю, что:
-                      .cells.cells-gutter-xsmall.input-aligner
-                        .cell
-                          .cells
-                            .cell
-                              .checkbox
-                                input(type='checkbox', id='test')
-                                label(for='test')
-                            .cell
-                              label(for='test') One More Label
-                        .cell
-                          | Ознакомился и согласен с Правилами и Тарифами Услуги;
+                      .cells.cells-gutter-xsmall
+                        .cell.text-baseline-reset
+                          .checkbox.valign-middle
+                            input(type='checkbox', id='accept-terms', checked)
+                            label(for='accept-terms')
+                        .cell.input-aligner-both
+                          label(for='accept-terms') Ознакомился и согласен с Правилами и Тарифами Услуги;
                       ul
                         li согласен, что предоставленная информация может быть использована Банком в маркетинговых и деловых целях, а также быть передана лицам в рамках группы предприятий Банка;
                         li права и обязанности Банка и Торговца в рамках Услуги регулируются материальным правом Латвийской Республики.
