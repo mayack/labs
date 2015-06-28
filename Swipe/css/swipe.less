@@ -12,6 +12,7 @@
 @import 'footer.less';
 
 
+
 // ==========================================================
 // Typography
 // ==========================================================
@@ -109,6 +110,8 @@ p, ul {
 .pointer{
   cursor: pointer !important;
 }
+
+
 
 // ==========================================================
 // Styles
@@ -226,8 +229,15 @@ p, ul {
   }
 }
 
+// Shapes
+
+.rounded-top {
+  .border-top-radius(@cornerRadius);
+}
+
 
 // Text Colors
+
 a:focus{
   outline: 0;
 }
@@ -393,6 +403,7 @@ section{
 .move-right {
   float: right;
 }
+
 
 
 // ==========================================================
@@ -689,7 +700,6 @@ button:disabled {
 // ==========================================================
 // Forms
 // ==========================================================
-
 
 input, textarea {
   @color: lighten(@swatchGray-60, 10%);
@@ -1085,7 +1095,6 @@ button.warning-input{
     background-image: none !important;
   color: @swatchGray-80 !important;
 }
-
 
 
 

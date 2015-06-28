@@ -919,6 +919,14 @@ ul:last-child {
   background: #1c2121;
   border-color: #1c2121;
 }
+.rounded-top {
+  -webkit-border-top-left-radius: 2px;
+  -moz-border-top-left-radius: 2px;
+  border-top-left-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+  -moz-border-top-right-radius: 2px;
+  border-top-right-radius: 2px;
+}
 a:focus {
   outline: 0;
 }
