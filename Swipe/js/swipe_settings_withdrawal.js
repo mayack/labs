@@ -89,6 +89,19 @@ $(function(){
             }
 	    });
 	});
+    
+    $('#print-withdrawal-form').click(function(){
+
+        $('body>.layout').addClass('print-hide');
+        window.print();
+
+    });
+
+    $('body').click(function(){
+        if( $('.print-hide').length ) {
+            $('.print-hide').removeClass('print-hide');
+        }
+    });
 
 	updateWithdrawalMethodRows();
 	updateFileChange();

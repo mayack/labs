@@ -126,6 +126,9 @@ p, ul {
     border-color: @swatchGray-90;
     color: @swatchGray-33;
   }
+  &.box {
+    border-color: @swatchGray-96;
+  }
 }
 .fill-gray-95 {
   &, &[class*='button'] {
@@ -229,10 +232,29 @@ p, ul {
   }
 }
 
+
+// Shapes
+
+.border-90 {
+  &, &.box:not([class*=fill]) {
+    border-color: @swatchGray-90;
+  }
+}
+
+
 // Shapes
 
 .rounded-top {
-  .border-top-radius(@cornerRadius);
+  &, &.box {
+    .border-radius(0);
+    .border-top-radius(@cornerRadius);
+  }
+}
+.rounded-bottom {
+  &, &.box {
+    .border-radius(0);
+    .border-bottom-radius(@cornerRadius);
+  }
 }
 
 
@@ -1119,6 +1141,24 @@ button.warning-input{
 
 
 // ==========================================================
+// Print
+// ==========================================================
+
+.print {
+  display: none;
+}
+@media print {
+  .print {
+    display: block;
+  }
+  .print-hide {
+    display: none;
+  }
+}
+
+
+
+// ==========================================================
 // Custom
 // ==========================================================
 
@@ -1224,4 +1264,7 @@ ul.checkbox-w-list {
     margin-left: 2px;
     padding-left: 0.55em;
   }
+}
+header.fill-gray-15+.box {
+  border-top: 0;
 }

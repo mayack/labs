@@ -170,7 +170,7 @@
               <header class="fill-gray-15 padding-large rounded-top">
                 <h1 class="margin-xsmall">Some Long Heading</h1> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda praesentium placeat ullam odio aliquam voluptatum officia consequuntur veniam debitis, repellat quam nostrum vero quia sint tenetur qui doloremque facere officiis!
               </header>
-              <div class="box padding-reset">
+              <div class="box padding-reset rounded-bottom">
                 <section class="padding-large">
                   <div class="cells cells-gutter-small valign-top expand">
                     <aside class="cell form-side-label text-gray-25">
@@ -241,7 +241,7 @@
                           <input type="text" placeholder="Адрес для корреспонденции" class="expand">
                         </div>
                       </div>
-                      <div class="cells cells-gutter-small expand">
+                      <div class="cells cells-gutter-small margin-large expand">
                         <div class="cell">
                           <input type="text" placeholder="Телефон" class="expand">
                         </div>
@@ -249,18 +249,7 @@
                           <input type="text" placeholder="Электронная почта" class="expand">
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </section>
-                <hr class="hr-nomargin">
-                <section class="padding-large">
-                  <div class="cells cells-gutter-small valign-top">
-                    <aside class="cell form-side-label text-gray-25">
-                      <div class="text-bold margin-xsmall input-aligner">Соглашение с правами</div>
-                      <p class="margin-reset text-12">Также настоящим заявлением подтверждаю, что:</p>
-                    </aside>
-                    <div class="cell">
-                      <div class="box fill-gray-96">
+                      <div class="box border-90">
                         <div class="cells cells-gutter-xsmall margin-small text-16">
                           <div class="cell text-baseline-reset">
                             <div class="checkbox valign-middle">
@@ -283,9 +272,10 @@
                 </section>
                 <hr class="hr-nomargin">
                 <section class="padding-large section-small">
-                  <div class="cells cells-gutter-small">
+                  <div class="cells cells-gutter-small expand">
                     <aside class="cell form-side-label"></aside>
                     <div class="cell">
+                      <button id="print-withdrawal-form" class="button text-18 move-right"><span class="icon-upload"></span>&nbsp;&nbsp;Print</button>
                       <button data-loading-label="Saving Changes..." onClick="$(this).addClass('button-loading')" class="fill-mint button text-18"><span>Save Changes</span></button>
                     </div>
                   </div>
@@ -308,6 +298,43 @@
             </div>
           </footer>
         </div>
+      </div>
+    </div>
+    <div class="print withdrawal-form">
+      <div class="cells">
+        <div class="cell">logo<br>dates</div>
+        <div class="cell">title</div>
+      </div>
+      <div class="cells">
+        <div class="cell">Торговец</div>
+        <div class="cell">_____________________________</div>
+      </div>
+      <div class="cells">
+        <div class="cell">Регистрационный Номер</div>
+        <div class="cell">_____________________________</div>
+      </div>
+      <div class="cells">
+        <div class="cell">Адрес для корреспонденции</div>
+        <div class="cell">_____________________________</div>
+      </div>
+      <div class="cells">
+        <div class="cell">Контактные данные</div>
+        <div class="cell">_____________________________</div>
+      </div>
+      <div class="cells">
+        <div class="cell">Вид коммерческой деятельности</div>
+        <div class="cell">_____________________________</div>
+      </div>
+      <hr>
+      <h3>Заполняет сотрудник банка</h3>
+      <p>Личность и подпись представителя Торговца подтверждаю</p>
+      <div class="cells">
+        <div class="cell">Торговец идентифицирован, CREF: </div>
+        <div class="cell">______________________________</div>
+      </div>
+      <div class="cells">
+        <div class="cell">Торговец идентифицирован, CREF: </div>
+        <div class="cell">______________________________</div>
       </div>
     </div>
     <script src="js/jquery-1.11.2.min.js"></script>

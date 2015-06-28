@@ -837,6 +837,9 @@ ul:last-child {
   border-color: #dfe5e5;
   color: #3f5555;
 }
+.fill-gray-96.box {
+  border-color: #f2f5f5;
+}
 .fill-gray-95,
 .fill-gray-95[class*='button'] {
   background: #edf2f2;
@@ -919,13 +922,33 @@ ul:last-child {
   background: #1c2121;
   border-color: #1c2121;
 }
-.rounded-top {
+.border-90,
+.border-90.box:not([class*=fill]) {
+  border-color: #dfe5e5;
+}
+.rounded-top,
+.rounded-top.box {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   -webkit-border-top-left-radius: 2px;
   -moz-border-top-left-radius: 2px;
   border-top-left-radius: 2px;
   -webkit-border-top-right-radius: 2px;
   -moz-border-top-right-radius: 2px;
   border-top-right-radius: 2px;
+}
+.rounded-bottom,
+.rounded-bottom.box {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-bottom-left-radius: 2px;
+  -moz-border-bottom-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  -moz-border-bottom-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 a:focus {
   outline: 0;
@@ -1817,6 +1840,17 @@ button.warning-input {
     transform: rotate(360deg);
   }
 }
+.print {
+  display: none;
+}
+@media print {
+  .print {
+    display: block;
+  }
+  .print-hide {
+    display: none;
+  }
+}
 * {
   box-sizing: border-box;
   outline: none;
@@ -1925,4 +1959,7 @@ ul.checkbox-w-list {
 ul.checkbox-w-list > li {
   margin-left: 2px;
   padding-left: 0.55em;
+}
+header.fill-gray-15 + .box {
+  border-top: 0;
 }

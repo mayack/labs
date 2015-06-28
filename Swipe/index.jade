@@ -166,7 +166,7 @@ html
               header.fill-gray-15.padding-large.rounded-top
                 h1.margin-xsmall Some Long Heading
                 |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda praesentium placeat ullam odio aliquam voluptatum officia consequuntur veniam debitis, repellat quam nostrum vero quia sint tenetur qui doloremque facere officiis!
-              .box.padding-reset
+              .box.padding-reset.rounded-bottom
                 section.padding-large
                   .cells.cells-gutter-small.valign-top.expand
                     aside.cell.form-side-label.text-gray-25
@@ -224,21 +224,12 @@ html
                           input.expand(type='text', placeholder='Вид коммерчиской деятельности')
                         .cell
                           input.expand(type='text', placeholder='Адрес для корреспонденции')
-                      .cells.cells-gutter-small.expand
+                      .cells.cells-gutter-small.margin-large.expand
                         .cell
                           input.expand(type='text', placeholder='Телефон')
                         .cell
                           input.expand(type='text', placeholder='Электронная почта')
-
-                hr.hr-nomargin
-                section.padding-large
-                  .cells.cells-gutter-small.valign-top
-                    aside.cell.form-side-label.text-gray-25
-                      .text-bold.margin-xsmall.input-aligner Соглашение с правами
-                      p.margin-reset.text-12 Также настоящим заявлением подтверждаю, что:
-                    .cell
-                      //- p Также настоящим заявлением подтверждаю, что:
-                      .box.fill-gray-96
+                      .box.border-90
                         .cells.cells-gutter-xsmall.margin-small.text-16
                           .cell.text-baseline-reset
                             .checkbox.valign-middle
@@ -252,81 +243,17 @@ html
                           li Согласен, что предоставленная информация может быть использована Банком в маркетинговых и деловых целях, а также быть передана лицам в рамках группы предприятий Банка;
                           li Права и обязанности Банка и Торговца в рамках Услуги регулируются материальным правом Латвийской Республики.
                           li Любые споры относительно Услуги разрешаются в соответствии с Правилами.
-                  //- .settings-row
-                  //-   .settings-left-block.text-medium
-                  //-     span.margin-reset Ответственная персона
-                  //-     span.margin-top-10.text-regular.text-12.text-gray-25
-                  //-       | Вы должны подтвердить, что Swipe использует персона с правом подписи от лица компании "SIA "Mayack"".
-                  //-   .settings-right-block.text-gray-33.upload-button
-                  //-     .column-1
-                  //-       input#responsible_person_first_name.text-14.text-gray-33(type='text', name='responsible_person_first_name', placeholder='Имя', value='')
-                  //-       button#upload-button.button.text-14.text-medium.margin-reset.margin-top-20.width-315
-                  //-         span.icon-upload
-                  //-         |  Загрузить скан паспорта
-                  //-       input#input-document(style='display:none', name='logo', type='file', accept='image/*, application/pdf')
-                  //-       #upload-document-view.input-dummy-bg.input-dummy-document-upload.margin-top-20.margin-reset.text-gray-33(style='display: none;')
-                  //-         span.icon-user.text-aqua
-                  //-         span#file-name None
-                  //-       #upload-info-text.settings-under-input-text.text-gray-60.margin-top-15
-                  //-         | Загрузите копию паспорта представителя компании, ответственного за использование Swipe, и отправьте нам на проверку.
-                  //-     .column-2
-                  //-       input#responsible_person_last_name.text-14.text-gray-33.move-right(type='text', name='responsible_person_last_name', placeholder='Фамилия', value='')
-                  //-       .input-dummy-bg.input-dummy-document-upload.move-right.margin-top-20.margin-reset.padding-left-reset.border-reset
-                  //-         span#delete-document.icon-cross.text-gray-60(style='display: none;')
-                  //-         span#pending-document(style='display: none;')
-                  //-           span.text-gray-60.text-regular Ожидание
-                  //-           span.icon-help.text-gray-60
-                  //- .settings-row
-                  //-   .settings-left-block.text-medium.margin-top-5.margin-reset
-                  //-     span.margin-reset Метод вывода средств
-                  //-     span.margin-top-10.text-regular.text-12.text-gray-25
-                  //-       | Банковский счёт "SIA "Mayack"", на который Swipe будет перечислять полученные средства.
-                  //-   #bank-account-view.settings-right-block
-                  //-     span#bank-account-header.text-18.text-gray-25.move-left Банковские счета
-                  //-     a#add-bank-account-button.text-14.move-right.margin-bottom-5.margin-top-5(asdasd='', href='javascript:void(0)', onclick="$('#modal-add-bank').bPopup()") + Добавить банковский счёт
-                  //-     #bank-account-placeholder.move-left.expand
-                  //-       .block.text-60.text-aqua.icon-bank_account.move-left.margin-top-15.margin-xxsmall  
-                  //-       span.block.text-gray-25.margin-top-20
-                  //-         | Swipe перечислит 0,10 € на указанный банковский счёт. Чтобы подтвердить, что счёт принадлежит компании "SIA "Mayack"", перечислите эту сумму обратно на счёт Swipe. Если у вас есть вопросы, свяжитесь с нами по телефону 
-                  //-         span.text-medium +371 22045239
-                  //-         |  или пишите на 
-                  //-         a(href='mailto:support@swipe.lv')
-                  //-           span.text-medium support@swipe.lv
-                  //-         | .
-                  //- .settings-row(style='display: none;')
-                  //-   .settings-left-block.text-medium
-                  //-     span.margin-top-5 Частота вывода средств
-                  //-   input#automatic_transfers(type='hidden', name='automatic_transfers', value='7')
-                  //-   .settings-right-block
-                  //-     .column-1
-                  //-       input#radio-transfer-fixed.radio-custom.margin-top-5.move-left.radio-width(onclick="$('input[name=radio-transfer-group]').val(1); checkChanges(); $('#automatic_transfers').val($('#transfer-days').val());", value='1', name='radio-transfer-group', type='radio', checked='')
-                  //-       label.radio-custom-label.margin-top-5(for='radio-transfer-fixed')
-                  //-       span.move-left.margin-top-5.margin-bottom-10    Переводить каждые
-                  //-       input#transfer-days.text-14.text-gray-33.move-left.withdrawal-days-input.margin-bottom-5(type='text', value='7', onchange="checkChanges(); $('#automatic_transfers').val($('#transfer-days').val());", onkeyup='checkChanges()', placeholder='')
-                  //-       span.move-left.margin-top-5.margin-bottom-10 дней
-                  //-       .settings-under-input-text.text-gray-60.margin-top-15.margin-bottom-10
-                  //-         | Swipe будет автоматически перечислять средства на выбранный метод вывода средств.
-                  //-     .column-2
-                  //-       input#radio-transfer-stop.radio-custom.margin-top-5.radio-width(onclick="$('input[name=radio-transfer-group]').val(2);checkChanges();$('#automatic_transfers').val(0);", value='1', name='radio-transfer-group', type='radio')
-                  //-       label.radio-custom-label.margin-top-5(for='radio-transfer-stop')
-                  //-       span.move-left.margin-top-5.margin-bottom-10    Приостановить переводы
-                  //-       .settings-under-input-text.text-gray-60.margin-top-15
-                  //-         | Swipe будет перечислять средства только по вашему запросу.
-                  //- .settings-row.section-small
-                  //-   .settings-left-block.text-medium
-                  //-     span  
-                  //-   .settings-right-block
-                  //-     .column-1
-                  //-       span
-                  //-         button#submit-button.button.fill-mint.text-medium.text-18(onclick='postMainFormData()', disabled='disabled') Отправить данные
-                  //-     .column-2
                 hr.hr-nomargin
                 section.padding-large.section-small
-                  .cells.cells-gutter-small
+                  .cells.cells-gutter-small.expand
                     aside.cell.form-side-label
                     .cell
+                      button.button.text-18.move-right#print-withdrawal-form
+                        span.icon-upload
+                        | &nbsp;&nbsp;Print
                       button.fill-mint.button.text-18(data-loading-label="Saving Changes...", onClick="$(this).addClass('button-loading')")
                         span Save Changes
+
             // Mayack's Code Ends
 
       #footer.layout-row
@@ -350,6 +277,53 @@ html
                 a(href='javascript:void(0)', onclick="$('html, body').animate({scrollTop:0}, '500', 'swing');")
                   span.icon-arrow-north-1
                   |   Наверх
+    .print.withdrawal-form
+      .cells
+        .cell
+          | logo
+          br
+          | dates
+        .cell
+          | title
+      .cells
+        .cell
+          | Торговец
+        .cell
+          | _____________________________
+      .cells
+        .cell
+          | Регистрационный Номер
+        .cell
+          | _____________________________
+      .cells
+        .cell
+          | Адрес для корреспонденции
+        .cell
+          | _____________________________
+      .cells
+        .cell
+          | Контактные данные
+        .cell
+          | _____________________________
+      .cells
+        .cell
+          | Вид коммерческой деятельности
+        .cell
+          | _____________________________
+      hr
+      h3 Заполняет сотрудник банка
+      p Личность и подпись представителя Торговца подтверждаю
+      .cells
+        .cell
+          | Торговец идентифицирован, CREF: 
+        .cell
+          | ______________________________
+      .cells
+        .cell
+          | Торговец идентифицирован, CREF: 
+        .cell
+          | ______________________________
+
     script(src='js/jquery-1.11.2.min.js')
     script(src='js/jquery.multiple.select.js')
     script(src='js/jquery.bpopup.js')
