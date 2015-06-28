@@ -77,6 +77,20 @@ h6 {
 p {
   margin: 0 0 @padding 0;
 }
+ul {
+  margin: 0 0 @padding 0;
+  li + li {
+    margin-top: @paddingSmall/2;
+  }
+  &.list-nomargin {
+    padding-left: 1.2em;
+  }
+}
+p, ul {
+  &:last-child {
+    margin-bottom: 0;
+  } 
+}
 
 .text-reset {
   font-size: 0;
@@ -92,7 +106,6 @@ p {
 .swatchAquaDarken-border{
     border-color: @swatchAquaDarken !important;
 }
-
 .pointer{
   cursor: pointer !important;
 }
@@ -104,6 +117,13 @@ p {
 
 // Fills
 
+.fill-gray-96 {
+  &, &[class*='button'] {
+    background: @swatchGray-96;
+    border-color: @swatchGray-90;
+    color: @swatchGray-33;
+  }
+}
 .fill-gray-95 {
   &, &[class*='button'] {
     background: @swatchGray-95;
@@ -118,6 +138,9 @@ p {
       background: darken(@swatchGray-95,2%);
       border-color: darken(@swatchGray-80,2%);
     }
+  }
+  &.box {
+    border-color: @swatchGray-95;
   }
 }
 
@@ -601,7 +624,7 @@ button:disabled {
     padding-bottom: 0 !important;
   }
 }
-*[class*='margin']:not([class*=margin-top]):not([class*=hr-nomargin]) {
+*[class*='margin-']:not([class*=margin-top]):not([class*=hr-nomargin]) {
   margin-bottom: @padding;
   &.margin-xxsmall {
     margin-bottom: @paddingSmall/3;
@@ -623,9 +646,13 @@ button:disabled {
   }
 }
 .box {
-  background: @swatchWhite;
-  border: 1px solid @swatchGray-85;
+  &:not([class*=fill]) {
+    background: @swatchWhite;
+    border-color: @swatchGray-85;
+  }
   border-radius: @cornerRadius;
+  border-style: solid;
+  border-width: 1px;
   padding: @padding;
 }
 .pills {
@@ -665,6 +692,8 @@ button:disabled {
 
 
 input, textarea {
+  @color: lighten(@swatchGray-60, 10%);
+  .placeholder(@color);
   background: @swatchWhite;
   border: 1px solid @swatchGray-80;
   border-radius: @cornerRadius;
@@ -1179,4 +1208,11 @@ body {
 .form-side-label {
   .box-sizing(content-box);
   width: 180px;
+}
+ul.checkbox-w-list {
+  padding-left: 1.45em;
+  >li {
+    margin-left: 2px;
+    padding-left: 0.55em;
+  }
 }

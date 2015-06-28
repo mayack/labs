@@ -211,7 +211,7 @@ html
                       .text-bold.margin-xsmall.input-aligner Детали торговца
                       p.margin-reset.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
                     .cell
-                      .cells.cells-gutter-small.margin-small.expand
+                      .margin-small.cells.cells-gutter-small.expand
                         .cell
                           input.expand(type='text', placeholder='Наименование торговца')
                         .cell
@@ -235,17 +235,20 @@ html
                       p.margin-reset.text-12 Также настоящим заявлением подтверждаю, что:
                     .cell
                       //- p Также настоящим заявлением подтверждаю, что:
-                      .cells.cells-gutter-xsmall
-                        .cell.text-baseline-reset
-                          .checkbox.valign-middle
-                            input(type='checkbox', id='accept-terms', checked)
-                            label(for='accept-terms')
-                        .cell.input-aligner-both
-                          label(for='accept-terms') Ознакомился и согласен с Правилами и Тарифами Услуги;
-                      ul
-                        li согласен, что предоставленная информация может быть использована Банком в маркетинговых и деловых целях, а также быть передана лицам в рамках группы предприятий Банка;
-                        li права и обязанности Банка и Торговца в рамках Услуги регулируются материальным правом Латвийской Республики.
-                        li.margin-reset бые споры относительно Услуги разрешаются в соответствии с Правилами.
+                      .box.fill-gray-96
+                        .cells.cells-gutter-xsmall.margin-small.text-16
+                          .cell.text-baseline-reset
+                            .checkbox.valign-middle
+                              input(type='checkbox', id='accept-terms', checked)
+                              label(for='accept-terms')
+                          .cell
+                            label(for='accept-terms') Ознакомился и согласен с 
+                              a(href='javascript:void(0)')Правилами и Тарифами Услуги
+                              | .
+                        ul.text-gray-43.checkbox-w-list
+                          li Согласен, что предоставленная информация может быть использована Банком в маркетинговых и деловых целях, а также быть передана лицам в рамках группы предприятий Банка;
+                          li Права и обязанности Банка и Торговца в рамках Услуги регулируются материальным правом Латвийской Республики.
+                          li Любые споры относительно Услуги разрешаются в соответствии с Правилами.
                   //- .settings-row
                   //-   .settings-left-block.text-medium
                   //-     span.margin-reset Ответственная персона
@@ -350,6 +353,7 @@ html
     script(src='js/2swipe.js')
     script(src='js/iban.js')
     script(src='js/swipe_settings_withdrawal.js')
+    script(src='js/jquery.mask.min.js')
     script(type='text/javascript').
       var fileData =  false ,
       strVerify = "Подтвердить",

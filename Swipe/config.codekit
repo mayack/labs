@@ -975,6 +975,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/js\/min\/jquery.mask.min-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/min\/jquery.mask.min-min.js",
+		"outputAbbreviatedPath": "\/js\/min\/min\/jquery.mask.min-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/min\/jquery.sumoselect-min.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -1003,6 +1014,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/min\/swipe-min.js",
 		"outputAbbreviatedPath": "\/js\/min\/min\/swipe-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/min\/swipe_settings_withdrawal-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/min\/swipe_settings_withdrawal-min.js",
+		"outputAbbreviatedPath": "\/js\/min\/min\/swipe_settings_withdrawal-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
