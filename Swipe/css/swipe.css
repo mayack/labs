@@ -1281,6 +1281,12 @@ button:disabled {
   margin-left: 1em;
   margin-right: 1em;
 }
+.cells-group {
+  display: table;
+}
+.cells-group > .cells {
+  display: table-row;
+}
 .cells {
   display: table;
 }
