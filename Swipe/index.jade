@@ -164,29 +164,29 @@ html
             // Mayack's code begins
             section.margin-large.wrapper
               header.fill-gray-15.padding-large.rounded-top
-                h1.margin-xsmall Some Long Heading
-                |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda praesentium placeat ullam odio aliquam voluptatum officia consequuntur veniam debitis, repellat quam nostrum vero quia sint tenetur qui doloremque facere officiis!
+                h1.margin-xsmall.text-leading Заявления на открытие счёта в Swipe
+                |  Настоящим заявлением прошу открыть Транзитный счет для получения денежных средств в рамках Услуги Swipe и подтверждаю, что ознакомился и согласен с Правилами и Тарифами Услуги Swipe.
               .box.padding-reset.rounded-bottom
                 section.padding-large
                   .cells.cells-gutter-small.valign-top.expand
                     aside.cell.form-side-label.text-gray-25
-                      .text-bold.margin-xsmall.input-aligner Реквизиты
-                      p.margin-reset.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
+                      .text-bold.margin-xsmall.input-aligner Метод вывода средств
+                      p.margin-reset.text-12 Прошу перечислять денежные средства с Транзитного счета на следующий Счет торговца.
                     .cell
                       //- p Настоящим заявлением прошу акционерное общество «Rietumu Banka», единый регистрационный № 40003074497, юридический адрес: ул. Весетас 7, Рига, LV-1013, Латвийская Республика, (далее – Банк) предоставить услугу перевода денежных средств (swipe.lv) (далее – Услуга) в соответствии с «Правилами предоставления услуги перевода денежных средств (swipe.lv)» (далее – Правила).
                       //- p Прошу открыть Транзитный счет для получения денежных средств в рамках Услуги.
                       //- p Прошу перечислять денежные средства с Транзитного счета на следующий Счет торговца:
                       .cells.cells-gutter-small.margin-small.expand
                         .cell
-                          input.expand(type='text', placeholder='BIC')
-                        .cell
                           input.expand(type='text', placeholder='IBAN')
+                        .cell
+                          input.expand(type='text', placeholder='BIC')
                 hr.hr-nomargin
                 section.padding-large
                   .cells.cells-gutter-small.valign-top.expand
                     aside.cell.form-side-label.text-gray-25
                       .text-bold.margin-xsmall.input-aligner Торговец в лице
-                      p.margin-reset.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
+                      p.margin-reset.text-12 Вы должны подтвердить, что Swipe использует персона с правом подписи от лица компании "SIA "Mayack".
                     .cell
                       .cells.cells-gutter-small.margin-small.expand
                         .cell
@@ -197,50 +197,51 @@ html
                         .cell
                           button.button.margin-xsmall.expand(data-loading-label="Loading...", onClick="$(this).addClass('button-loading')")
                             span.icon-upload
-                            span &nbsp;&nbsp;Закачать идентификационный док.
+                            span &nbsp;&nbsp;Загрузить скан паспорта
                           //- span.input-icon.expand.margin-xsmall.input-icon-primary.input-icon-secondary.input-icon-read-only
                           //-   span.icon-draft.text-aqua.move-left
                           //-   a.icon-cross.text-gray-60.text-12.move-right(href='javascript:void(0)')
                           //-   input(type='text', value="My File My File My File My File My File.jpg").expand
-                          .text-gray-60 Upload a passport scan of a person who has the right of signature.
+                          .text-gray-60 Загрузите копию паспорта представителя компании, ответственного за использование Swipe, и отправьте нам на проверку.
                         .cell
                           .text-gray-60.input-aligner
-                            | Pending&nbsp;&nbsp;
+                            | Ожидание&nbsp;
                             span.icon-help
                 hr.hr-nomargin
                 section.padding-large
                   .cells.cells-gutter-small.valign-top.expand
                     aside.cell.form-side-label.text-gray-25
-                      .text-bold.margin-xsmall.input-aligner Детали торговца
-                      p.margin-reset.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
+                      .text-bold.margin-xsmall.input-aligner Общая информация
+                      p.margin-reset.text-12 Проверьте достоверность указанных данных. После подачи заявления их можно будет изменить только связавшись с командой поддержки Swipe.
                     .cell
                       .cells.cells-gutter-small.margin-small.expand.cells-justified
                         .cell
                           input.expand(type='text', placeholder='Наименование торговца')
                         .cell
-                          select.select-single.expand
-                            option(selected='selected') Вид коммерческой недели
-                            option Латвия
-                            option Россия
+                          input.expand(type='text', placeholder='Регистрационный номер')
+                      input.expand.margin-small(type='text', placeholder='Вид коммерческой деятельности')
                       .cells.cells-gutter-small.margin-small.expand.valign-top.cells-justified
                         .cell
-                          select.select-single.expand
-                            option(selected='selected') Латвия
-                            option Россия
-                        .cell
-                          input.expand(type='text', placeholder='Регистрационный номер')
-                      .cells.cells-gutter-small.margin-small.expand.cells-justified
-                        .cell
-                          input.expand(type='text', placeholder='Адрес')
-                        .cell
-                          .cells.cells-gutter-xsmall
+                          .cells.expand.cells-justified.cells-gutter-xsmall
+                            .cell
+                              select.select-single.expand
+                                option(selected='selected') Латвия
+                                option Россия
                             .cell
                               input.expand(type='text', placeholder='Город')
-                            .cell
-                              input.expand(type='text', placeholder='Почтовый индекс')
-                      .cells.cells-gutter-small.margin-large.expand
                         .cell
-                          input.expand(type='text', placeholder='Телефон')
+                          .cells.expand.cells-gutter-xsmall
+                            .cell.expand
+                              input.expand(type='text', placeholder='Адрес')
+                            .cell
+                              input(type='text', placeholder='Индекс', size="7")
+                      .cells.cells-gutter-small.margin-large.expand.cells-justified
+                        .cell
+                          .cells.expand.cells-gutter-xsmall
+                            .cell
+                              input(type='text', value="+371", size="4")
+                            .cell.expand
+                              input.expand(type='text', placeholder='Телефон')
                         .cell
                           input.expand(type='text', placeholder='Электронная почта')
                       .box.border-90

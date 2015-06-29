@@ -815,6 +815,9 @@ p:last-child,
 ul:last-child {
   margin-bottom: 0;
 }
+.text-leading {
+  line-height: 1.1;
+}
 .text-reset {
   font-size: 0;
   line-height: 0;
