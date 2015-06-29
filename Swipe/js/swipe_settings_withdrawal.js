@@ -90,6 +90,8 @@ $(function(){
 	    });
 	});
     
+
+    // Mayack's code begins
     $('#print-withdrawal-form').click(function(){
 
         $('body>.layout').addClass('print-hide');
@@ -102,6 +104,11 @@ $(function(){
             $('.print-hide').removeClass('print-hide');
         }
     });
+
+    $('select.select-single').multipleSelect({
+        single: true
+    });
+    // Mayack's code ends
 
 	updateWithdrawalMethodRows();
 	updateFileChange();

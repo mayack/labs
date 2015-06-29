@@ -663,7 +663,7 @@ button:disabled {
     padding-bottom: 0 !important;
   }
 }
-*[class*='margin-']:not([class*=margin-top]):not([class*=hr-nomargin]) {
+*[class*='margin']:not([class*=margin-top]):not([class*=hr-nomargin]) {
   margin-bottom: @padding;
   &.margin-xxsmall {
     margin-bottom: @paddingSmall/3;
@@ -735,6 +735,7 @@ input, textarea {
   background: @swatchWhite;
   border: 1px solid @swatchGray-80;
   border-radius: @cornerRadius;
+  color: @swatchGray-33;
   line-height: @bodyBaseline;
   padding: @inputPadding;
   outline: none;
@@ -802,6 +803,7 @@ input, textarea {
         }
         + li {
           border-top: 1px solid @swatchGray-96;
+          margin-top: 0;
         }
       }
     }

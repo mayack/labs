@@ -161,7 +161,7 @@ html
             hr.hr-client-top
             input(type='hidden', name='csrfmiddlewaretoken', value='dHRm837hYXN5VTjcRcEMuHAmu0A5Jx7T')
             
-            // Mayack's Code Begins
+            // Mayack's code begins
             section.margin-large.wrapper
               header.fill-gray-15.padding-large.rounded-top
                 h1.margin-xsmall Some Long Heading
@@ -214,16 +214,30 @@ html
                       .text-bold.margin-xsmall.input-aligner Детали торговца
                       p.margin-reset.text-12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores accusantium.
                     .cell
-                      .margin-small.cells.cells-gutter-small.expand
+                      .cells.cells-gutter-small.margin-small.expand.cells-justified
                         .cell
                           input.expand(type='text', placeholder='Наименование торговца')
                         .cell
+                          select.select-single.expand
+                            option(selected='selected') Вид коммерческой недели
+                            option Латвия
+                            option Россия
+                      .cells.cells-gutter-small.margin-small.expand.valign-top.cells-justified
+                        .cell
+                          select.select-single.expand
+                            option(selected='selected') Латвия
+                            option Россия
+                        .cell
                           input.expand(type='text', placeholder='Регистрационный номер')
-                      .cells.cells-gutter-small.margin-small.expand
+                      .cells.cells-gutter-small.margin-small.expand.cells-justified
                         .cell
-                          input.expand(type='text', placeholder='Вид коммерчиской деятельности')
+                          input.expand(type='text', placeholder='Адрес')
                         .cell
-                          input.expand(type='text', placeholder='Адрес для корреспонденции')
+                          .cells.cells-gutter-xsmall
+                            .cell
+                              input.expand(type='text', placeholder='Город')
+                            .cell
+                              input.expand(type='text', placeholder='Почтовый индекс')
                       .cells.cells-gutter-small.margin-large.expand
                         .cell
                           input.expand(type='text', placeholder='Телефон')
@@ -233,11 +247,11 @@ html
                         .cells.cells-gutter-xsmall.margin-small.text-16
                           .cell.text-baseline-reset
                             .checkbox.valign-middle
-                              input(type='checkbox', id='accept-terms', checked)
+                              input(type='checkbox', id='accept-terms', checked='checked')
                               label(for='accept-terms')
                           .cell
                             label(for='accept-terms') Ознакомился и согласен с 
-                              a(href='javascript:void(0)')Правилами и Тарифами Услуги
+                              a(href='javascript:void(0)') Правилами и Тарифами Услуги
                               | .
                         ul.text-gray-43.checkbox-w-list
                           li Согласен, что предоставленная информация может быть использована Банком в маркетинговых и деловых целях, а также быть передана лицам в рамках группы предприятий Банка;
@@ -254,7 +268,7 @@ html
                       button.fill-mint.button.text-18(data-loading-label="Saving Changes...", onClick="$(this).addClass('button-loading')")
                         span Save Changes
 
-            // Mayack's Code Ends
+            // Mayack's code ends
 
       #footer.layout-row
         .layout-cell
@@ -314,23 +328,22 @@ html
             .cell
               | _____________________________
         p Настоящим заявлением прошу акционерное общество «Rietumu Banka», единый регистрационный No 40003074497, юридический адрес: ул. Весетас 7, Рига, LV-1013, Латвийская Республика, (далее – Банк) предоставить услугу перевода денежных средств (swipe.lv) (далее – Услуга) в соответствии с «Правилами предоставления услуги перевода денежных средств (swipe.lv)» (далее – Правила).
-        p Прошу открыть Транзитный счет для получения денежных средств в рамках Услуги.
-        p Прошу перечислять денежные средства с Транзитного счета на следующий Счет торговца:
-        .cells
-          .cell
-            | IBAN
-          .cell
-            | _____________________________
-        .cells
-          .cell
-            | BIC
-          .cell
-            | _____________________________
-        p Также настоящим заявлением подтверждаю, что:
         ul
-          li - ознакомился и согласен с Правилами и Тарифами Услуги;
-          li - согласен, что предоставленная информация может быть использована Банком в маркетинговых и деловых целях, а также быть передана лицам в рамках группы предприятий Банка;
-          li - права и обязанности Банка и Торговца в рамках Услуги регулируются материальным правом Латвийской Республики. - любые споры относительно Услуги разрешаются в соответствии с Правилами.
+          li Прошу открыть Транзитный счет для получения денежных средств в рамках Услуги.
+          li Прошу перечислять денежные средства с Транзитного счета на следующий Счет торговца:
+        .cells.expand.cells-justified.margin-large
+          .cell
+            .cells
+              .cell
+                | IBAN
+              .cell
+                | _____________________________
+          .cell
+            .cells
+              .cell
+                | BIC
+              .cell
+                | _____________________________
         h4 Торговец в лице
         | Имя Фамилия______________________________
         .cells.expand
@@ -343,18 +356,24 @@ html
             | Персональный код (только для резидентов Латвийской Республики)
           .cell
             | Номер паспорта или ID документа
+      section.section-large
+        p Также настоящим заявлением подтверждаю, что:
+        ul
+          li ознакомился и согласен с Правилами и Тарифами Услуги;
+          li согласен, что предоставленная информация может быть использована Банком в маркетинговых и деловых целях, а также быть передана лицам в рамках группы предприятий Банка;
+          li права и обязанности Банка и Торговца в рамках Услуги регулируются материальным правом Латвийской Республики. - любые споры относительно Услуги разрешаются в соответствии с Правилами.
       hr
       section.section-large
         h3 Заполняет сотрудник банка
         p Личность и подпись представителя Торговца подтверждаю
-        .cells.expand
+        .cells.expand.margin
           .cell
             | Имя, Фамилия
           .cell
             | Подпись
           .cell
             | 12/07/2012
-        .cells
+        .cells.expand
           .cell
             | Торговец идентифицирован, CREF: 
           .cell
