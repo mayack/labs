@@ -164,7 +164,7 @@ html
             // Mayack's code begins
             section.margin-large.wrapper
               header.fill-gray-15.padding-large.rounded-top
-                h1.margin-xsmall.text-leading Заявления на открытие счёта в Swipe
+                h1.margin-xsmall Заявления на открытие счёта в Swipe
                 |  Настоящим заявлением прошу открыть Транзитный счет для получения денежных средств в рамках Услуги Swipe и подтверждаю, что ознакомился и согласен с Правилами и Тарифами Услуги Swipe.
               .box.padding-reset.rounded-bottom
                 section.padding-large
@@ -222,19 +222,22 @@ html
                       input.expand.margin-small(type='text', placeholder='Вид коммерческой деятельности')
                       .cells.cells-gutter-small.margin-small.expand.valign-top.cells-justified
                         .cell
-                          .cells.expand.cells-justified.cells-gutter-xsmall
-                            .cell
-                              select.select-single.expand
-                                option(selected='selected') Латвия
-                                option Россия
-                            .cell
-                              input.expand(type='text', placeholder='Город')
+                          select.select-single.expand
+                            option(selected='selected') Латвия
+                            option Россия
+                          
                         .cell
-                          .cells.expand.cells-gutter-xsmall
-                            .cell.expand
-                              input.expand(type='text', placeholder='Адрес')
-                            .cell
-                              input(type='text', placeholder='Индекс', size="7")
+                          input.expand(type='text', placeholder='Город')
+                          //- .cells.expand.cells-gutter-xsmall
+                          //-   .cell.expand
+                          //-     input.expand(type='text', placeholder='Адрес')
+                          //-   .cell
+                          //-     input(type='text', placeholder='Индекс', size="7")
+                      .cells.cells-gutter-small.margin-small.expand.cells-justified
+                        .cell
+                          input.expand(type='text', placeholder='Адрес')
+                        .cell
+                          input.expand(type='text', placeholder='Почтовый индекс')
                       .cells.cells-gutter-small.margin-large.expand.cells-justified
                         .cell
                           .cells.expand.cells-gutter-xsmall
