@@ -253,6 +253,18 @@ p, ul {
     .border-top-radius(@cornerRadius);
   }
 }
+.rounded-left {
+  &, &.box {
+    .border-radius(0);
+    .border-left-radius(@cornerRadius);
+  }
+}
+.rounded-right {
+  &, &.box {
+    .border-radius(0);
+    .border-right-radius(@cornerRadius);
+  }
+}
 .rounded-bottom {
   &, &.box {
     .border-radius(0);
@@ -440,7 +452,7 @@ input,
 button {
   &.button {
     .transition(0.3s);
-    background: @swatchGray-96;
+    background: @swatchGray-94;
     border: 1px solid @swatchGray-80;
     border-radius: @cornerRadius;
     color: @swatchGray-43;
@@ -910,6 +922,23 @@ input, textarea {
       content: '';
       height: 100%;
       width: 100%;
+    }
+  }
+}
+.input-combo {
+  .input-label {
+    background: @swatchGray-97;
+    border: 1px solid @swatchGray-80;
+    padding: @inputPadding;
+  }
+  >*:first-child>* {
+    &.input-label, .button {
+      border-right: none;
+    }
+  }
+  >*:last-child>* {
+    &.input-label, .button {
+      border-left: none;
     }
   }
 }

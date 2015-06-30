@@ -941,6 +941,30 @@ ul:last-child {
   -moz-border-top-right-radius: 2px;
   border-top-right-radius: 2px;
 }
+.rounded-left,
+.rounded-left.box {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 2px;
+  -moz-border-top-left-radius: 2px;
+  border-top-left-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  -moz-border-bottom-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.rounded-right,
+.rounded-right.box {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 2px;
+  -moz-border-top-right-radius: 2px;
+  border-top-right-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  -moz-border-bottom-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
 .rounded-bottom,
 .rounded-bottom.box {
   -webkit-border-radius: 0;
@@ -1123,7 +1147,7 @@ button.button {
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  background: #f2f5f5;
+  background: #ebf0f0;
   border: 1px solid #c0cccc;
   border-radius: 2px;
   color: #5a6d6d;
@@ -1633,6 +1657,19 @@ textarea:focus {
   content: '';
   height: 100%;
   width: 100%;
+}
+.input-combo .input-label {
+  background: #f7f7f7;
+  border: 1px solid #c0cccc;
+  padding: 0.65em 1em 0.55em 1em;
+}
+.input-combo > *:first-child > *.input-label,
+.input-combo > *:first-child > * .button {
+  border-right: none;
+}
+.input-combo > *:last-child > *.input-label,
+.input-combo > *:last-child > * .button {
+  border-left: none;
 }
 .wrapper {
   width: 940px !important;

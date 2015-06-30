@@ -240,11 +240,17 @@ html
                           input.expand(type='text', placeholder='Почтовый индекс')
                       .cells.cells-gutter-small.margin-large.expand.cells-justified
                         .cell
-                          .cells.expand.cells-gutter-xsmall
+                          .input-combo.cells
                             .cell
-                              input(type='text', value="+371", size="4")
+                              label.input-label.text-gray-60.block.rounded-left(for='phone')
+                                | +371
                             .cell.expand
-                              input.expand(type='text', placeholder='Телефон')
+                              input.expand.rounded-right(type='text', placeholder='Телефон', id='phone')
+                          //- .cells.expand.cells-gutter-xsmall
+                          //-   .cell
+                          //-     input(type='text', value="+371", size="4")
+                          //-   .cell.expand
+                          //-     input.expand(type='text', placeholder='Телефон')
                         .cell
                           input.expand(type='text', placeholder='Электронная почта')
                       .box.border-90
