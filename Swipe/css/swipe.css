@@ -1689,7 +1689,11 @@ textarea:focus {
 .select2 .selection .select2-selection--multiple ul.select2-selection__rendered li.select2-selection__choice {
   font-size: 0.875em;
   padding: 0.2em 0.4em;
-  margin: 0.6em 0 0 0;
+  margin: 0.6em 0 0 0.6em;
+}
+.select2 .selection .select2-selection--multiple ul.select2-selection__rendered li.select2-selection__choice + .select2-search--inline input.select2-search__field {
+  margin-left: 0.6em;
+  margin-right: 0;
 }
 .select2 .selection .select2-selection--multiple ul.select2-selection__rendered li + li {
   margin-top: 0;
