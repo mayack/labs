@@ -164,14 +164,16 @@ html
             // Mayack's code begins
             section.margin-large.wrapper
               header.fill-gray-15.padding-large.rounded-top
-                h1.margin-xsmall Заявления на открытие счёта в Swipe
-                |  Настоящим заявлением прошу открыть Транзитный счет для получения денежных средств в рамках Услуги Swipe и подтверждаю, что ознакомился и согласен с Правилами и Тарифами Услуги Swipe.
+                h1.margin-xsmall Заявление на подключение к Swipe
+                |  Прошу открыть Транзитный счет для получения денежных средств в рамках Услуги Swipe и подтверждаю, что ознакомился и согласен с
+                a(href='javascript:void(0)') Правилами и Тарифами Услуги Swipe
+                | .
               .box.padding-reset.rounded-bottom
                 section.padding-large
                   .cells.cells-gutter-small.valign-top.expand
                     aside.cell.form-side-label.text-gray-25
-                      .text-bold.margin-xsmall.input-aligner Метод вывода средств
-                      p.margin-reset.text-12 Прошу перечислять денежные средства с Транзитного счета на следующий Счет торговца.
+                      .text-bold.margin-xsmall.input-aligner Реквизиты дла вывода средств
+                      //- p.margin-reset.text-12 Прошу перечислять денежные средства с Транзитного счета на следующий Счет торговца.
                     .cell
                       //- p Настоящим заявлением прошу акционерное общество «Rietumu Banka», единый регистрационный № 40003074497, юридический адрес: ул. Весетас 7, Рига, LV-1013, Латвийская Республика, (далее – Банк) предоставить услугу перевода денежных средств (swipe.lv) (далее – Услуга) в соответствии с «Правилами предоставления услуги перевода денежных средств (swipe.lv)» (далее – Правила).
                       //- p Прошу открыть Транзитный счет для получения денежных средств в рамках Услуги.
@@ -180,13 +182,16 @@ html
                         .cell
                           input.expand(type='text', placeholder='IBAN')
                         .cell
-                          input.expand(type='text', placeholder='BIC')
+                          input.expand(type='text', placeholder='BIC или SWIFT код банка')
                 hr.hr-nomargin
                 section.padding-large
                   .cells.cells-gutter-small.valign-top.expand
                     aside.cell.form-side-label.text-gray-25
-                      .text-bold.margin-xsmall.input-aligner Торговец в лице
-                      p.margin-reset.text-12 Вы должны подтвердить, что Swipe использует персона с правом подписи от лица компании "SIA "Mayack".
+                      .text-bold.margin-xsmall.input-aligner Представитель торговца
+                      p.margin-reset.text-12
+                        | Представителю торговца необходимо обладать правом подписи от лица компании
+                        br
+                        | "SIA Mayack".
                     .cell
                       .cells.cells-gutter-small.margin-small.expand
                         .cell
@@ -197,12 +202,12 @@ html
                         .cell
                           button.button.margin-xsmall.expand(data-loading-label="Loading...", onClick="$(this).addClass('button-loading')")
                             span.icon-upload
-                            span &nbsp;&nbsp;Загрузить скан паспорта
+                            span &nbsp;&nbsp;Загрузить скан
                           //- span.input-icon.expand.margin-xsmall.input-icon-primary.input-icon-secondary.input-icon-read-only
                           //-   span.icon-draft.text-aqua.move-left
                           //-   a.icon-cross.text-gray-60.text-12.move-right(href='javascript:void(0)')
                           //-   input(type='text', value="My File My File My File My File My File.jpg").expand
-                          .text-gray-60 Загрузите копию паспорта представителя компании, ответственного за использование Swipe, и отправьте нам на проверку.
+                          .text-gray-60 Загрузите копию паспорта или ID карты представителя компании.
                         .cell
                           .text-gray-60.input-aligner
                             | Ожидание&nbsp;
@@ -211,7 +216,7 @@ html
                 section.padding-large
                   .cells.cells-gutter-small.valign-top.expand
                     aside.cell.form-side-label.text-gray-25
-                      .text-bold.margin-xsmall.input-aligner Общая информация
+                      .text-bold.margin-xsmall.input-aligner Торговец
                       p.margin-reset.text-12 Проверьте достоверность указанных данных. После подачи заявления их можно будет изменить только связавшись с командой поддержки Swipe.
                     .cell
                       .cells.cells-gutter-small.margin-small.expand.cells-justified
@@ -221,19 +226,14 @@ html
                           input.expand(type='text', placeholder='Регистрационный номер')
                       //- input.expand.margin-small(type='text', placeholder='Вид коммерческой деятельности')
                       .margin-small
-                        .cells.expand.cells-gutter-small
-                          .cell.expand
-                            select.form-control.input-tags.expand(name='colors', multiple='', data-placeholder='Choose 2-4 colors')
-                              option(value='black') Very long label indeed
-                              option(value='blue') Testing the wrapping
-                              option(value='green') Brown fox jumps over the fence
-                              option(value='orange') Orange
-                              option(value='red') Red
-                              option(value='yellow') Yellow
-                              option(value='white') White
-                          .cell
-                            input(type='text')
-
+                        select.form-control.input-tags.expand(name='colors', multiple='', data-placeholder='Choose 2-4 colors')
+                          option(value='black') Very long label indeed
+                          option(value='blue') Testing the wrapping
+                          option(value='green') Brown fox jumps over the fence
+                          option(value='orange') Orange
+                          option(value='red') Red
+                          option(value='yellow') Yellow
+                          option(value='white') White
                       .cells.cells-gutter-small.margin-small.expand.valign-top.cells-justified
                         .cell
                           select.select-single.expand
@@ -288,9 +288,9 @@ html
                     .cell
                       button.button.text-18.move-right#print-withdrawal-form
                         span.icon-upload
-                        | &nbsp;&nbsp;Print
+                        | &nbsp;&nbsp;Распечатать
                       button.fill-mint.button.text-18(data-loading-label="Saving Changes...", onClick="$(this).addClass('button-loading')")
-                        span Save Changes
+                        span Подать Заявку
 
             // Mayack's code ends
 

@@ -168,14 +168,13 @@
             <!-- Mayack's code begins-->
             <section class="margin-large wrapper">
               <header class="fill-gray-15 padding-large rounded-top">
-                <h1 class="margin-xsmall">Заявления на открытие счёта в Swipe</h1> Настоящим заявлением прошу открыть Транзитный счет для получения денежных средств в рамках Услуги Swipe и подтверждаю, что ознакомился и согласен с Правилами и Тарифами Услуги Swipe.
+                <h1 class="margin-xsmall">Заявление на подключение к Swipe</h1> Прошу открыть Транзитный счет для получения денежных средств в рамках Услуги Swipe и подтверждаю, что ознакомился и согласен с<a href="javascript:void(0)">Правилами и Тарифами Услуги Swipe</a>.
               </header>
               <div class="box padding-reset rounded-bottom">
                 <section class="padding-large">
                   <div class="cells cells-gutter-small valign-top expand">
                     <aside class="cell form-side-label text-gray-25">
-                      <div class="text-bold margin-xsmall input-aligner">Метод вывода средств</div>
-                      <p class="margin-reset text-12">Прошу перечислять денежные средства с Транзитного счета на следующий Счет торговца.</p>
+                      <div class="text-bold margin-xsmall input-aligner">Реквизиты дла вывода средств</div>
                     </aside>
                     <div class="cell">
                       <div class="cells cells-gutter-small margin-small expand">
@@ -183,7 +182,7 @@
                           <input type="text" placeholder="IBAN" class="expand">
                         </div>
                         <div class="cell">
-                          <input type="text" placeholder="BIC" class="expand">
+                          <input type="text" placeholder="BIC или SWIFT код банка" class="expand">
                         </div>
                       </div>
                     </div>
@@ -193,8 +192,8 @@
                 <section class="padding-large">
                   <div class="cells cells-gutter-small valign-top expand">
                     <aside class="cell form-side-label text-gray-25">
-                      <div class="text-bold margin-xsmall input-aligner">Торговец в лице</div>
-                      <p class="margin-reset text-12">Вы должны подтвердить, что Swipe использует персона с правом подписи от лица компании "SIA "Mayack".</p>
+                      <div class="text-bold margin-xsmall input-aligner">Представитель торговца</div>
+                      <p class="margin-reset text-12">Представителю торговца необходимо обладать правом подписи от лица компании<br>"SIA Mayack".</p>
                     </aside>
                     <div class="cell">
                       <div class="cells cells-gutter-small margin-small expand">
@@ -207,8 +206,8 @@
                       </div>
                       <div class="cells expand cells-justified cells-gutter-small valign-top">
                         <div class="cell">
-                          <button data-loading-label="Loading..." onClick="$(this).addClass('button-loading')" class="button margin-xsmall expand"><span class="icon-upload"></span><span>&nbsp;&nbsp;Загрузить скан паспорта</span></button>
-                          <div class="text-gray-60">Загрузите копию паспорта представителя компании, ответственного за использование Swipe, и отправьте нам на проверку.</div>
+                          <button data-loading-label="Loading..." onClick="$(this).addClass('button-loading')" class="button margin-xsmall expand"><span class="icon-upload"></span><span>&nbsp;&nbsp;Загрузить скан</span></button>
+                          <div class="text-gray-60">Загрузите копию паспорта или ID карты представителя компании.</div>
                         </div>
                         <div class="cell">
                           <div class="text-gray-60 input-aligner">Ожидание&nbsp;<span class="icon-help"></span></div>
@@ -221,7 +220,7 @@
                 <section class="padding-large">
                   <div class="cells cells-gutter-small valign-top expand">
                     <aside class="cell form-side-label text-gray-25">
-                      <div class="text-bold margin-xsmall input-aligner">Общая информация</div>
+                      <div class="text-bold margin-xsmall input-aligner">Торговец</div>
                       <p class="margin-reset text-12">Проверьте достоверность указанных данных. После подачи заявления их можно будет изменить только связавшись с командой поддержки Swipe.</p>
                     </aside>
                     <div class="cell">
@@ -234,22 +233,15 @@
                         </div>
                       </div>
                       <div class="margin-small">
-                        <div class="cells expand cells-gutter-small">
-                          <div class="cell expand">
-                            <select name="colors" multiple="" data-placeholder="Choose 2-4 colors" class="form-control input-tags expand">
-                              <option value="black">Very long label indeed</option>
-                              <option value="blue">Testing the wrapping</option>
-                              <option value="green">Brown fox jumps over the fence</option>
-                              <option value="orange">Orange</option>
-                              <option value="red">Red</option>
-                              <option value="yellow">Yellow</option>
-                              <option value="white">White</option>
-                            </select>
-                          </div>
-                          <div class="cell">
-                            <input type="text">
-                          </div>
-                        </div>
+                        <select name="colors" multiple="" data-placeholder="Choose 2-4 colors" class="form-control input-tags expand">
+                          <option value="black">Very long label indeed</option>
+                          <option value="blue">Testing the wrapping</option>
+                          <option value="green">Brown fox jumps over the fence</option>
+                          <option value="orange">Orange</option>
+                          <option value="red">Red</option>
+                          <option value="yellow">Yellow</option>
+                          <option value="white">White</option>
+                        </select>
                       </div>
                       <div class="cells cells-gutter-small margin-small expand valign-top cells-justified">
                         <div class="cell">
@@ -311,8 +303,8 @@
                   <div class="cells cells-gutter-small expand">
                     <aside class="cell form-side-label"></aside>
                     <div class="cell">
-                      <button id="print-withdrawal-form" class="button text-18 move-right"><span class="icon-upload"></span>&nbsp;&nbsp;Print</button>
-                      <button data-loading-label="Saving Changes..." onClick="$(this).addClass('button-loading')" class="fill-mint button text-18"><span>Save Changes</span></button>
+                      <button id="print-withdrawal-form" class="button text-18 move-right"><span class="icon-upload"></span>&nbsp;&nbsp;Распечатать</button>
+                      <button data-loading-label="Saving Changes..." onClick="$(this).addClass('button-loading')" class="fill-mint button text-18"><span>Подать Заявку</span></button>
                     </div>
                   </div>
                 </section>
