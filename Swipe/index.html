@@ -233,7 +233,24 @@
                           <input type="text" placeholder="Регистрационный номер" class="expand">
                         </div>
                       </div>
-                      <input type="text" placeholder="Вид коммерческой деятельности" class="expand margin-small">
+                      <div class="margin-small">
+                        <div class="cells">
+                          <div class="cell expand">
+                            <select name="colors" multiple="" data-placeholder="Choose 2-4 colors" class="form-control input-tags expand">
+                              <option value="black">Black</option>
+                              <option value="blue">Blue</option>
+                              <option value="green">Green</option>
+                              <option value="orange">Orange</option>
+                              <option value="red">Red</option>
+                              <option value="yellow">Yellow</option>
+                              <option value="white">White</option>
+                            </select>
+                          </div>
+                          <div class="cell">
+                            <input type="text">
+                          </div>
+                        </div>
+                      </div>
                       <div class="cells cells-gutter-small margin-small expand valign-top cells-justified">
                         <div class="cell">
                           <select class="select-single expand">
@@ -412,7 +429,7 @@
     <script src="js/2swipe.js"></script>
     <script src="js/iban.js"></script>
     <script src="js/swipe_settings_withdrawal.js"></script>
-    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/select2.min.js"></script>
     <script type="text/javascript">
       var fileData =  false ,
       strVerify = "Подтвердить",

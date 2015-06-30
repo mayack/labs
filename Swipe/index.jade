@@ -219,7 +219,21 @@ html
                           input.expand(type='text', placeholder='Наименование торговца')
                         .cell
                           input.expand(type='text', placeholder='Регистрационный номер')
-                      input.expand.margin-small(type='text', placeholder='Вид коммерческой деятельности')
+                      //- input.expand.margin-small(type='text', placeholder='Вид коммерческой деятельности')
+                      .margin-small
+                        .cells
+                          .cell.expand
+                            select.form-control.input-tags.expand(name='colors', multiple='', data-placeholder='Choose 2-4 colors')
+                              option(value='black') Black
+                              option(value='blue') Blue
+                              option(value='green') Green
+                              option(value='orange') Orange
+                              option(value='red') Red
+                              option(value='yellow') Yellow
+                              option(value='white') White
+                          .cell
+                            input(type='text')
+
                       .cells.cells-gutter-small.margin-small.expand.valign-top.cells-justified
                         .cell
                           select.select-single.expand
@@ -400,7 +414,7 @@ html
     script(src='js/2swipe.js')
     script(src='js/iban.js')
     script(src='js/swipe_settings_withdrawal.js')
-    script(src='js/jquery.mask.min.js')
+    script(src='js/select2.min.js')
     script(type='text/javascript').
       var fileData =  false ,
       strVerify = "Подтвердить",

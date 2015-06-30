@@ -7,6 +7,7 @@
  */
 @import 'fontello.css';
 @import 'multiple-select.css';
+@import 'select2.css';
 article,
 aside,
 details,
@@ -1670,6 +1671,27 @@ textarea:focus {
 .input-combo > *:last-child > *.input-label,
 .input-combo > *:last-child > * .button {
   border-left: none;
+}
+.select2 .selection .select2-selection--multiple {
+  overflow: hidden;
+  min-height: 0;
+}
+.select2 .selection .select2-selection--multiple ul.select2-selection__rendered {
+  float: left;
+  padding: 0 0.6em;
+}
+.select2 .selection .select2-selection--multiple ul.select2-selection__rendered li.select2-search--inline input.select2-search__field {
+  line-height: 1.4;
+  margin: 0.65em 1em 0.55em 1em;
+  padding: 0 0 1px 0;
+}
+.select2 .selection .select2-selection--multiple ul.select2-selection__rendered li.select2-selection__choice {
+  font-size: 0.875em;
+  padding: 0.2em 0.4em;
+  margin: 0.6em 0 0 0;
+}
+.select2 .selection .select2-selection--multiple ul.select2-selection__rendered li + li {
+  margin-top: 0;
 }
 .wrapper {
   width: 940px !important;

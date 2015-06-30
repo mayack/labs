@@ -105,8 +105,8 @@ $(function(){
         }
     });
 
-    $('select.select-single').multipleSelect({
-        single: true
+    $('select.input-tags').select2({
+        tags: true
     });
     // Mayack's code ends
 

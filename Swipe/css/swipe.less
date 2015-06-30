@@ -9,6 +9,7 @@
 @import 'grid-system.less';
 @import 'fontello.css';
 @import 'multiple-select.css';
+@import 'select2.css';
 @import 'footer.less';
 
 
@@ -939,6 +940,35 @@ input, textarea {
   >*:last-child>* {
     &.input-label, .button {
       border-left: none;
+    }
+  }
+}
+.select2 {
+  .selection {
+    .select2-selection--multiple {
+      overflow: hidden;
+      min-height: 0;
+      ul.select2-selection__rendered {
+        float: left;
+        padding: 0 0.6em;
+        li {
+          &.select2-search--inline {
+            input.select2-search__field {
+              line-height: 1.4;
+              margin: @inputPadding;
+              padding: 0 0 1px 0;
+            }
+          }
+          &.select2-selection__choice {
+            font-size: 0.875em;
+            padding: 0.2em 0.4em;
+            margin: 0.6em 0 0 0;
+          }
+          + li {
+            margin-top: 0;
+          }
+        }
+      }
     }
   }
 }
