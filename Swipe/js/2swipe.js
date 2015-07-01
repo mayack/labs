@@ -11,7 +11,8 @@ $( window ).load(function() {
 $(function(){
 
 	$('.select-single').multipleSelect({
-		single: true
+		single: true,
+		placeholder : $(this).data("placeholder")
 	});
 
 	updateClientTooltip();

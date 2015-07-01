@@ -165,7 +165,7 @@ html
             .margin-large.wrapper
               .box.padding-reset
                 section.padding-large
-                  h1.margin-xsmall Заявление на подключение к Swipe
+                  h1.margin-xsmall Открытие транзитного счёта в Swipe
                   |  Прошу открыть Транзитный счет для получения денежных средств в рамках Услуги Swipe и подтверждаю, что ознакомился и согласен с 
                   a(href='javascript:void(0)') Правилами
                   |  и 
@@ -223,11 +223,11 @@ html
                         .cell
                           input.expand(type='text', placeholder='Юридическое название торговца')
                         .cell
-                          select.select-single.expand
-                            option(selected='selected') Индивидуальный коммерсант
+                          select.select-single.expand(data-placeholder="Форма коммерческой деятельности")
+                            option Индивидуальный коммерсант
                             option Россия  
                       .margin-small
-                        select.form-control.input-tags.expand(name='colors', multiple='', data-placeholder='Форма коммерческой деятельности')
+                        select.form-control.input-tags.expand(name='colors', multiple='', data-placeholder='Вид коммерческой деятельности')
                           option(value='black') Quisque in magna tempus
                           option(value='blue') Vivamus a mauris
                           option(value='green') Lorem ipsum
@@ -239,8 +239,8 @@ html
                         .cell
                           input.expand(type='text', placeholder='Регистрационный номер')
                         .cell
-                          select.select-single.expand
-                            option(selected='selected') Латвия
+                          select.expand.select-single
+                            option(selected="selected") Латвия
                             option Россия
                       .cells.cells-gutter-small.expand.cells-justified
                         .cell
@@ -355,99 +355,6 @@ html
                 a(href='javascript:void(0)', onclick="$('html, body').animate({scrollTop:0}, '500', 'swing');")
                   span.icon-arrow-north-1
                   |   Наверх
-    .print.withdrawal-form
-      header.cells.expand.section-large
-        .cell(style='width:30%')
-          img#logo(src='images/logo.svg', alt='Swipe', width='112', height='42')
-          br
-          | dates
-        .cell.align-right
-          h2 ЗАЯВЛЕНИЕ НА ПОЛУЧЕНИЕ УСЛУГИ ПЕРЕВОДА ДЕНЕЖНЫХ СРЕДСТВ (swipe.lv)
-      hr.hr-nomargin
-      section.section-large
-        .cells-group.margin-large
-          .cells
-            .cell
-              | Торговец
-            .cell
-              | _____________________________
-          .cells
-            .cell
-              | Регистрационный Номер
-            .cell
-              | _____________________________
-          .cells
-            .cell
-              | Адрес для корреспонденции
-            .cell
-              | _____________________________
-          .cells
-            .cell
-              | Контактные данные
-            .cell
-              | _____________________________
-          .cells
-            .cell
-              | Вид коммерческой деятельности
-            .cell
-              | _____________________________
-        p Настоящим заявлением прошу акционерное общество «Rietumu Banka», единый регистрационный No 40003074497, юридический адрес: ул. Весетас 7, Рига, LV-1013, Латвийская Республика, (далее – Банк) предоставить услугу перевода денежных средств (swipe.lv) (далее – Услуга) в соответствии с «Правилами предоставления услуги перевода денежных средств (swipe.lv)» (далее – Правила).
-        ul
-          li Прошу открыть Транзитный счет для получения денежных средств в рамках Услуги.
-          li Прошу перечислять денежные средства с Транзитного счета на следующий Счет торговца:
-        .cells.expand.cells-justified.margin-large
-          .cell
-            .cells
-              .cell
-                | IBAN
-              .cell
-                | _____________________________
-          .cell
-            .cells
-              .cell
-                | BIC
-              .cell
-                | _____________________________
-        h4 Торговец в лице
-        | Имя Фамилия______________________________
-        .cells.expand
-          .cell
-            | Подпись
-          .cell
-            | Печать Торговца
-        .cells.expand
-          .cell
-            | Персональный код (только для резидентов Латвийской Республики)
-          .cell
-            | Номер паспорта или ID документа
-      section.section-large
-        p Также настоящим заявлением подтверждаю, что:
-        ul
-          li ознакомился и согласен с Правилами и Тарифами Услуги;
-          li согласен, что предоставленная информация может быть использована Банком в маркетинговых и деловых целях, а также быть передана лицам в рамках группы предприятий Банка;
-          li права и обязанности Банка и Торговца в рамках Услуги регулируются материальным правом Латвийской Республики. - любые споры относительно Услуги разрешаются в соответствии с Правилами.
-      hr
-      section.section-large
-        h3 Заполняет сотрудник банка
-        p Личность и подпись представителя Торговца подтверждаю
-        .cells.expand.margin
-          .cell
-            | Имя, Фамилия
-          .cell
-            | Подпись
-          .cell
-            | 12/07/2012
-        .cells.expand
-          .cell
-            | Торговец идентифицирован, CREF: 
-          .cell
-            | ______________________________
-        .cells
-          .cell
-            | Представитель Торговца идентифицирован, PREF:
-          .cell
-            | ______________________________
-
     script(src='js/jquery-1.11.2.min.js')
     script(src='js/jquery.multiple.select.js')
     script(src='js/jquery.bpopup.js')

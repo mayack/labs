@@ -94,7 +94,7 @@ $(function(){
     // Mayack's code begins
     $('#print-withdrawal-form').click(function(){
 
-        $('body>.layout').addClass('print-hide');
+        // $('body>.layout').addClass('print-hide');
         window.print();
 
     });

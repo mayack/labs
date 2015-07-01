@@ -805,6 +805,9 @@ input, textarea {
           margin-top: -0.6em;
         }
       }
+      &.placeholder {
+        color: lighten(@swatchGray-60, 10%);
+      }
     }
   }
   .ms-drop {
@@ -1519,4 +1522,7 @@ header.fill-gray-15+.box {
 }
 #input-phone {
   width: 5.4em;
+  + .select2 {
+    text-align: center;
+  }
 }

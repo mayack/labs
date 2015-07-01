@@ -1531,6 +1531,9 @@ textarea:focus {
   font-size: 1em;
   margin-top: -0.6em;
 }
+.ms-parent .ms-choice span.placeholder {
+  color: #a2afaf;
+}
 .ms-parent .ms-drop {
   box-shadow: 0 7px 15px rgba(19, 38, 38, 0.2);
   border-color: #c0cccc;
@@ -2254,4 +2257,7 @@ header.fill-gray-15 + .box {
 }
 #input-phone {
   width: 5.4em;
+}
+#input-phone + .select2 {
+  text-align: center;
 }
