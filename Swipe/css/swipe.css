@@ -1873,18 +1873,23 @@ textarea:focus {
   margin-top: 0;
 }
 .input-dropdown {
+  position: relative;
+  z-index: 10;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
+}
+.input-dropdown .input-combo {
   position: relative;
+  z-index: 2;
 }
 .input-dropdown .select2-container {
   left: 0 !important;
   top: 100% !important;
   width: 100%;
+  z-index: 1;
 }
 .input-dropdown .select2-container .select2-dropdown {
-  margin-top: 1px;
   width: 100% !important;
   z-index: 999;
 }
