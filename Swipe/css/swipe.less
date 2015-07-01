@@ -1412,11 +1412,19 @@ button.warning-input{
     padding: 0 !important;
     width: 100% !important;
   }
-  input[type=text], .ms-parent .ms-choice, .select2.select2-container--default .selection .select2-selection--single,
-  .select2.select2-container--default .selection .select2-selection--multiple {
-    .border-radius(0);
-    border: none;
-    border-bottom: 2px solid black;
+  .box#form-settings {
+    border: 0;
+    padding: 0;
+    input[type=text], .ms-parent .ms-choice, .select2.select2-container--default .selection .select2-selection--single,
+    .select2.select2-container--default .selection .select2-selection--multiple {
+      .border-radius(0);
+      border: none;
+      border-bottom: 2px solid black;
+    }
+    header.padding-large, section.padding-large {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
 }
