@@ -2139,6 +2139,25 @@ button.warning-input {
   .print-hide {
     display: none;
   }
+  #header,
+  #footer,
+  .form-side-label {
+    display: none !important;
+  }
+  .wrapper {
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  input[type=text],
+  .ms-parent .ms-choice,
+  .select2.select2-container--default .selection .select2-selection--single,
+  .select2.select2-container--default .selection .select2-selection--multiple {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px solid black;
+  }
 }
 * {
   box-sizing: border-box;
