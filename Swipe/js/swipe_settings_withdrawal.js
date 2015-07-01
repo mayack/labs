@@ -99,11 +99,11 @@ $(function(){
 
     });
 
-    $('body').click(function(){
-        if( $('.print-hide').length ) {
-            $('.print-hide').removeClass('print-hide');
-        }
-    });
+    // $('body').click(function(){
+    //     if( $('.print-hide').length ) {
+    //         $('.print-hide').removeClass('print-hide');
+    //     }
+    // });
 
     $('select.input-tags').select2({
         tags: true

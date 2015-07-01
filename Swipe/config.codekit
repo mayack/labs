@@ -810,6 +810,15 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/index.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
@@ -829,7 +838,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/2swipe-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/bootstrap-datepicker.js": {
@@ -840,7 +849,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/bootstrap-datepicker-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/clients.js": {
@@ -851,7 +860,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/clients-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/date.js": {
@@ -862,7 +871,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/date-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/google.map.api.autocomplete.js": {
@@ -873,7 +882,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/google.map.api.autocomplete-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/iban.js": {
@@ -884,7 +893,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/iban-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/jquery-1.11.2.min.js": {
@@ -895,7 +904,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/jquery-1.11.2.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/jquery-1.11.4.ui.js": {
@@ -906,7 +915,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/jquery-1.11.4.ui-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/jquery.bpopup.js": {
@@ -917,7 +926,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/jquery.bpopup-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/jquery.bpopup.min.js": {
@@ -928,7 +937,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/jquery.bpopup.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/jquery.cookie.js": {
@@ -939,7 +948,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/jquery.cookie-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/jquery.elastic.source.js": {
@@ -950,7 +959,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/jquery.elastic.source-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/jquery.multiple.select.js": {
@@ -961,7 +970,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/jquery.multiple.select-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/jquery.tipsy.js": {
@@ -972,73 +981,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/jquery.tipsy-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/min\/2swipe-min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/min\/2swipe-min.js",
-		"outputAbbreviatedPath": "\/js\/min\/min\/2swipe-min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/min\/jquery.mask.min-min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/min\/jquery.mask.min-min.js",
-		"outputAbbreviatedPath": "\/js\/min\/min\/jquery.mask.min-min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/min\/jquery.sumoselect-min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/min\/jquery.sumoselect-min.js",
-		"outputAbbreviatedPath": "\/js\/min\/min\/jquery.sumoselect-min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/min\/jquery.sumoselect.min-min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/min\/jquery.sumoselect.min-min.js",
-		"outputAbbreviatedPath": "\/js\/min\/min\/jquery.sumoselect.min-min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/min\/swipe-min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/min\/swipe-min.js",
-		"outputAbbreviatedPath": "\/js\/min\/min\/swipe-min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/min\/swipe_settings_withdrawal-min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/min\/swipe_settings_withdrawal-min.js",
-		"outputAbbreviatedPath": "\/js\/min\/min\/swipe_settings_withdrawal-min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/notifications.js": {
@@ -1049,7 +992,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/notifications-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/products.js": {
@@ -1060,7 +1003,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/products-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/select2.full.min.js": {
@@ -1071,7 +1014,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/select2.full.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/select2.min.js": {
@@ -1082,7 +1025,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/select2.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/swipe_login.js": {
@@ -1093,7 +1036,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/swipe_login-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/swipe_pay.js": {
@@ -1104,7 +1047,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/swipe_pay-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/swipe_payer.js": {
@@ -1115,7 +1058,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/swipe_payer-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/swipe_payer_popup.js": {
@@ -1126,7 +1069,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/swipe_payer_popup-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/swipe_payer_radio.js": {
@@ -1137,7 +1080,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/swipe_payer_radio-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/swipe_payments.js": {
@@ -1148,7 +1091,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/swipe_payments-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/swipe_settings_info.js": {
@@ -1159,7 +1102,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/swipe_settings_info-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/swipe_settings_payments.js": {
@@ -1170,7 +1113,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/swipe_settings_payments-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/swipe_settings_withdrawal.js": {
@@ -1181,7 +1124,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/swipe_settings_withdrawal-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		}
 	},
@@ -1370,7 +1313,7 @@
 	"javascriptAutoOutputPathReplace2": "",
 	"javascriptAutoOutputPathStyle": 2,
 	"javascriptCreateSourceMap": 1,
-	"javascriptOutputStyle": 1,
+	"javascriptOutputStyle": 0,
 	"javascriptSyntaxCheckerStyle": 1,
 	"jsCheckerReservedNamesString": "",
 	"jsHintFlags2": {
