@@ -163,32 +163,29 @@ html
             
             // Mayack's code begins
             section.margin-large.wrapper
-              header.fill-gray-15.padding-large.rounded-top
+              header.box.padding-large.rounded-top
                 h1.margin-xsmall Заявление на подключение к Swipe
-                |  Прошу открыть Транзитный счет для получения денежных средств в рамках Услуги Swipe и подтверждаю, что ознакомился и согласен с
+                |  Прошу открыть Транзитный счет для получения денежных средств в рамках Услуги Swipe и подтверждаю, что ознакомился и согласен с 
                 a(href='javascript:void(0)') Правилами и Тарифами Услуги Swipe
                 | .
               .box.padding-reset.rounded-bottom
                 section.padding-large
                   .cells.cells-gutter-small.valign-top.expand
-                    aside.cell.form-side-label.text-gray-25
-                      .text-bold.margin-xsmall.input-aligner Реквизиты дла вывода средств
-                      //- p.margin-reset.text-12 Прошу перечислять денежные средства с Транзитного счета на следующий Счет торговца.
+                    aside.cell.form-side-label
+                      .text-bold.margin-xsmall.input-aligner.text-gray-20 Банковские реквизиты
                     .cell
-                      //- p Настоящим заявлением прошу акционерное общество «Rietumu Banka», единый регистрационный № 40003074497, юридический адрес: ул. Весетас 7, Рига, LV-1013, Латвийская Республика, (далее – Банк) предоставить услугу перевода денежных средств (swipe.lv) (далее – Услуга) в соответствии с «Правилами предоставления услуги перевода денежных средств (swipe.lv)» (далее – Правила).
-                      //- p Прошу открыть Транзитный счет для получения денежных средств в рамках Услуги.
-                      //- p Прошу перечислять денежные средства с Транзитного счета на следующий Счет торговца:
-                      .cells.cells-gutter-small.margin-small.expand
+                      .cells.cells-gutter-small.margin-xsmall.expand
                         .cell
                           input.expand(type='text', placeholder='IBAN')
                         .cell
                           input.expand(type='text', placeholder='BIC или SWIFT код банка')
+                      .text-gray-60 Согласен, что предоставленная информация может быть использована Банком в маркетинговых и деловых целях, а также быть передана лицам в рамках группы предприятий Банка;
                 hr.hr-nomargin
                 section.padding-large
                   .cells.cells-gutter-small.valign-top.expand
-                    aside.cell.form-side-label.text-gray-25
-                      .text-bold.margin-xsmall.input-aligner Представитель торговца
-                      p.margin-reset.text-12
+                    aside.cell.form-side-label
+                      .text-bold.margin-xsmall.input-aligner.text-gray-20 Представитель торговца
+                      p.margin-reset.text-12.text-gray-25
                         | Представителю торговца необходимо обладать правом подписи от лица компании
                         br
                         | "SIA Mayack".
@@ -215,9 +212,9 @@ html
                 hr.hr-nomargin
                 section.padding-large
                   .cells.cells-gutter-small.valign-top.expand
-                    aside.cell.form-side-label.text-gray-25
-                      .text-bold.margin-xsmall.input-aligner Торговец
-                      p.margin-reset.text-12 Проверьте достоверность указанных данных. После подачи заявления их можно будет изменить только связавшись с командой поддержки Swipe.
+                    aside.cell.form-side-label
+                      .text-bold.margin-xsmall.input-aligner.text-gray-20 Торговец
+                      p.margin-reset.text-12.text-gray-25 Проверьте достоверность указанных данных. После подачи заявления их можно будет изменить только связавшись с командой поддержки Swipe.
                     .cell
                       .cells.cells-gutter-small.margin-small.expand.cells-justified
                         .cell
@@ -241,12 +238,19 @@ html
                           
                         .cell
                           input.expand(type='text', placeholder='Город')
-                      .cells.cells-gutter-small.margin-small.expand.cells-justified
+                      .cells.cells-gutter-small.expand.cells-justified
                         .cell
                           input.expand(type='text', placeholder='Адрес')
                         .cell
                           input.expand(type='text', placeholder='Почтовый индекс')
-                      .cells.cells-gutter-small.margin-large.expand.cells-justified
+                hr.hr-nomargin
+                section.padding-large
+                  .cells.cells-gutter-small.valign-top.expand
+                    aside.cell.form-side-label
+                      .text-bold.input-aligner.text-gray-20 Контактная информация
+                      //- p.margin-reset.text-12.text-gray-25 Проверьте достоверность указанных данных. После подачи заявления их можно будет изменить только связавшись с командой поддержки Swipe.
+                    .cell
+                      .cells.cells-gutter-small.margin-small.expand.cells-justified
                         .cell
                           .input-combo.cells
                             .cell
@@ -256,20 +260,49 @@ html
                               input.expand.rounded-right(type='text', placeholder='Телефон', id='phone')
                         .cell
                           input.expand(type='text', placeholder='Электронная почта')
-                      .box.border-90
-                        .cells.cells-gutter-xsmall.margin-small.text-16
-                          .cell.text-baseline-reset
-                            .checkbox.valign-middle
-                              input(type='checkbox', id='accept-terms', checked='checked')
-                              label(for='accept-terms')
+                      .cells.cells-gutter-xsmall
+                        .cell.text-baseline-reset
+                          .onoffswitch.move-left
+                            input#contact-adress-input(type='hidden', name='contact-address-input', value='1')
+                            input#contact-address-switch.onoffswitch-checkbox(type='checkbox', checked="checked")
+                            label.onoffswitch-label(for='contact-address-switch')
+                              span.onoffswitch-inner
+                              span.onoffswitch-switch
+                        .cell
+                          label(for='contact-address-switch') Фактический адрес не отличается от юридического.
+                      #contact-address.hidden
+                        .cells.cells-gutter-small.margin-small.expand.valign-top.cells-justified
                           .cell
-                            label(for='accept-terms') Ознакомился и согласен с 
-                              a(href='javascript:void(0)') Правилами и Тарифами Услуги
-                              | .
-                        ul.text-gray-43.checkbox-w-list
-                          li Согласен, что предоставленная информация может быть использована Банком в маркетинговых и деловых целях, а также быть передана лицам в рамках группы предприятий Банка;
-                          li Права и обязанности Банка и Торговца в рамках Услуги регулируются материальным правом Латвийской Республики.
-                          li Любые споры относительно Услуги разрешаются в соответствии с Правилами.
+                            select.select-single.expand
+                              option(selected='selected') Латвия
+                              option Россия
+                            
+                          .cell
+                            input.expand(type='text', placeholder='Город')
+                        .cells.cells-gutter-small.expand.cells-justified
+                          .cell
+                            input.expand(type='text', placeholder='Адрес')
+                          .cell
+                            input.expand(type='text', placeholder='Почтовый индекс')
+                hr.hr-nomargin
+                section.padding-large
+                  .cells.expand.cells-gutter-small
+                    aside.cell.form-side-label
+                      | &nbsp;
+                    .cell
+                      .cells.cells-gutter-xsmall.margin-small.text-16
+                        .cell.text-baseline-reset
+                          .checkbox.valign-middle
+                            input(type='checkbox', id='accept-terms')
+                            label(for='accept-terms')
+                        .cell
+                          label(for='accept-terms') Ознакомился и согласен с 
+                            a(href='javascript:void(0)') Правилами и Тарифами Услуги
+                            | .
+                      ul.text-gray-43.checkbox-w-list
+                        //- li Согласен, что предоставленная информация может быть использована Банком в маркетинговых и деловых целях, а также быть передана лицам в рамках группы предприятий Банка;
+                        li Права и обязанности Банка и Торговца в рамках Услуги регулируются материальным правом Латвийской Республики.
+                        li Любые споры относительно Услуги разрешаются в соответствии с Правилами.
                 hr.hr-nomargin
                 section.padding-large.section-small
                   .cells.cells-gutter-small.expand

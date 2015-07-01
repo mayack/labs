@@ -108,6 +108,16 @@ $(function(){
     $('select.input-tags').select2({
         tags: true
     });
+
+    $('label[for="contact-address-switch"]').click(function(){
+        if ($('#contact-address-switch').is(':checked') == true) {
+            $('#contact-address').slideDown(300);
+        } else {
+            $('#contact-address').slideUp(300);
+        }
+
+    });
+
     // Mayack's code ends
 
 	updateWithdrawalMethodRows();
