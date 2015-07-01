@@ -948,16 +948,38 @@ input, textarea {
   .input-label {
     background: @swatchGray-97;
     border: 1px solid @swatchGray-80;
+    display: block;
+    line-height: 1.4;
     padding: @inputPadding;
   }
-  >*:first-child>* {
-    &.input-label, .button {
-      border-right: none;
+  >.cell {
+    input, .button, .input-label,
+    .select2.select2-container--default .selection .select2-selection--single,
+    .select2.select2-container--default .selection .select2-selection--multiple {
+      .border-radius(0);
     }
-  }
-  >*:last-child>* {
-    &.input-label, .button {
-      border-left: none;
+    &:first-child {
+      input, .button, .input-label,
+      .select2.select2-container--default .selection .select2-selection--single,
+      .select2.select2-container--default .selection .select2-selection--multiple {
+        .rounded-left;
+      }
+    }
+    &:last-child {
+      input, .button, .input-label,
+      .select2.select2-container--default .selection .select2-selection--single,
+      .select2.select2-container--default .selection .select2-selection--multiple {
+        .rounded-right;
+      }
+    }
+    + .cell {
+      .position(relative, @z:2);
+      input {
+        border-left: 0;
+        &:focus {
+          box-shadow: -1px 0 0 @inputFocus;
+        }
+      }
     }
   }
 }
@@ -965,9 +987,38 @@ input, textarea {
 
 // Select2 
 
-.select2 {
-  font-size: 14px;
+.select2.select2-container--default {
+  font-size: 1em;
   .selection {
+    .select2-selection--single {
+      background: @swatchWhite;
+      border-color: @swatchGray-80;
+      border-radius: @cornerRadius;
+      color: @swatchGray-33;
+      height: auto;
+      .select2-selection__rendered {
+        line-height: 1.4;
+        padding: @inputPadding;
+        padding-right: 2em;
+      }
+      .select2-selection__arrow {
+        .position(@t:0, @r:0);
+        height: 100%;
+        width: 2em;
+        b {
+          display: none;
+        }
+        &:before {
+          position: absolute;
+          top: 50%;
+          right: 0.5em;
+          content: '\e80a';
+          font-family: 'fontello';
+          font-size: 1em;
+          margin-top: -0.6em;
+        }
+      }
+    }
     .select2-selection--multiple {
       border-color: @swatchGray-80;
       min-height: 0;
@@ -1022,11 +1073,13 @@ input, textarea {
       }
     }
   }
-  &.select2-container--open .selection .select2-selection--multiple {
-    // border-left-color: @swatchAqua;
-    // border-top-color: @swatchAqua;
-    // border-right-color: @swatchAqua;
-    border-color: @inputFocus;
+  &.select2-container--open .selection {
+   .select2-selection--multiple, .select2-selection--single {
+      // border-left-color: @swatchAqua;
+      // border-top-color: @swatchAqua;
+      // border-right-color: @swatchAqua;
+      border-color: @inputFocus;
+    }
   }
 }
 .select2-container {
@@ -1035,6 +1088,9 @@ input, textarea {
     // border-color: @swatchGray-80;
     border-color: darken(@swatchGray-80, 10%);
     border-radius: 0 0 @cornerRadius @cornerRadius;
+    .select2-search__field {
+      border-color: @swatchGray-80;
+    }
     ul.select2-results__options {
       li.select2-results__option {
         color: @swatchGray-43;
@@ -1063,6 +1119,33 @@ input, textarea {
     }
   }
 }
+.input-dropdown {
+  .box-sizing(content-box);
+  position: relative;
+  .select2-container {
+    left:0 !important;
+    top:100% !important;
+    width: 100%;
+    .select2-dropdown {
+      margin-top: 1px;
+      width: 100% !important;
+      z-index: 999;
+    }
+  }
+  &.active .input-combo .cell {
+    &:first-child .select2.select2-container--default .selection .select2-selection--single {
+      .border-radius(0);
+      .border-top-left-radius(@cornerRadius);
+    }
+    &:last-child {
+      input {
+      .border-radius(0);
+      .border-top-right-radius(@cornerRadius);
+      }
+    }
+  }
+}
+
 
 
 // ==========================================================
@@ -1430,4 +1513,7 @@ header.fill-gray-15+.box {
 }
 #contact-address {
   margin-top: @paddingSmall;
+}
+#input-phone {
+  width: 5.4em;
 }

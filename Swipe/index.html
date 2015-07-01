@@ -238,7 +238,7 @@
                         </div>
                       </div>
                       <div class="margin-small">
-                        <select name="colors" multiple="" data-placeholder="Вид коммерческой деятельности" class="form-control input-tags expand">
+                        <select name="colors" multiple="" data-placeholder="Форма коммерческой деятельности" class="form-control input-tags expand">
                           <option value="black">Quisque in magna tempus</option>
                           <option value="blue">Vivamus a mauris</option>
                           <option value="green">Lorem ipsum</option>
@@ -286,29 +286,45 @@
                     <div class="cell">
                       <div class="cells cells-gutter-small margin-small expand cells-justified">
                         <div class="cell">
-                          <div class="input-combo cells">
-                            <div class="cell">
-                              <label for="phone" class="input-label text-gray-60 block rounded-left">+371</label>
-                            </div>
-                            <div class="cell expand">
-                              <input type="text" placeholder="Телефон" id="phone" class="expand rounded-right">
+                          <div class="input-dropdown">
+                            <div class="input-combo cells">
+                              <div class="cell">
+                                <select id="input-phone">
+                                  <option data-code="372">Estonia (+372)</option>
+                                  <option data-code="371" selected="selected">Latvia (+371)</option>
+                                  <option data-code="7">Russia (+7)</option>
+                                  <option data-code="44">United Kingdom (+44)</option>
+                                </select>
+                              </div>
+                              <div class="cell expand">
+                                <input type="text" placeholder="Телефон" id="phone" class="expand rounded-right">
+                              </div>
                             </div>
                           </div>
                         </div>
                         <div class="cell">
-                          <input type="text" placeholder="Электронная почта" class="expand">
+                          <div class="input-combo cells expand">
+                            <div class="cell">
+                              <label class="input-label">Test</label>
+                            </div>
+                            <div class="cell">
+                              <input type="text" size="6" placeholder="Inp #1">
+                            </div>
+                            <div class="cell expand">
+                              <input type="text" placeholder="Inp #2" class="expand">
+                            </div>
+                          </div>
                         </div>
                       </div>
                       <div class="cells cells-gutter-xsmall">
                         <div class="cell text-baseline-reset">
-                          <div class="onoffswitch move-left">
-                            <input id="contact-adress-input" type="hidden" name="contact-address-input" value="1">
-                            <input id="contact-address-switch" type="checkbox" checked="checked" class="onoffswitch-checkbox">
-                            <label for="contact-address-switch" class="onoffswitch-label"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label>
+                          <div class="checkbox valign-middle">
+                            <input type="checkbox" id="contact-address-trigger" checked="checked">
+                            <label for="contact-address-trigger"></label>
                           </div>
                         </div>
                         <div class="cell">
-                          <label for="contact-address-switch">Ваш фактической адрес совпадает с юридическим?</label>
+                          <label for="contact-address-trigger">Фактический адрес совпадает с юридическим.</label>
                         </div>
                       </div>
                       <div id="contact-address" class="hidden">
@@ -481,7 +497,7 @@
     <script src="js/2swipe.js"></script>
     <script src="js/iban.js"></script>
     <script src="js/swipe_settings_withdrawal.js"></script>
-    <script src="js/select2.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
     <script type="text/javascript">
       var fileData =  false ,
       strVerify = "Подтвердить",

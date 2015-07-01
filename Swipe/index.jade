@@ -227,7 +227,7 @@ html
                             option(selected='selected') Индивидуальный коммерсант
                             option Россия  
                       .margin-small
-                        select.form-control.input-tags.expand(name='colors', multiple='', data-placeholder='Вид коммерческой деятельности')
+                        select.form-control.input-tags.expand(name='colors', multiple='', data-placeholder='Форма коммерческой деятельности')
                           option(value='black') Quisque in magna tempus
                           option(value='blue') Vivamus a mauris
                           option(value='green') Lorem ipsum
@@ -260,24 +260,38 @@ html
                     .cell
                       .cells.cells-gutter-small.margin-small.expand.cells-justified
                         .cell
-                          .input-combo.cells
-                            .cell
-                              label.input-label.text-gray-60.block.rounded-left(for='phone')
-                                | +371
-                            .cell.expand
-                              input.expand.rounded-right(type='text', placeholder='Телефон', id='phone')
+                          .input-dropdown
+                            .input-combo.cells
+                              .cell
+                                select#input-phone
+                                  option(data-code="372") Estonia (+372)
+                                  option(data-code="371", selected="selected") Latvia (+371)
+                                  option(data-code="7") Russia (+7)
+                                  option(data-code="44") United Kingdom (+44)
+                              .cell.expand
+                                input.expand.rounded-right(type='text', placeholder='Телефон', id='phone')
                         .cell
-                          input.expand(type='text', placeholder='Электронная почта')
+                          .input-combo.cells.expand
+                            .cell
+                              label.input-label Test
+                            .cell
+                              input(type='text', size='6', placeholder='Inp #1')
+                            .cell.expand
+                              input.expand(type='text', placeholder='Inp #2')
+                          //- input.expand(type='text', placeholder='Электронная почта')
                       .cells.cells-gutter-xsmall
                         .cell.text-baseline-reset
-                          .onoffswitch.move-left
-                            input#contact-adress-input(type='hidden', name='contact-address-input', value='1')
-                            input#contact-address-switch.onoffswitch-checkbox(type='checkbox', checked="checked")
-                            label.onoffswitch-label(for='contact-address-switch')
-                              span.onoffswitch-inner
-                              span.onoffswitch-switch
+                          .checkbox.valign-middle
+                            input(type='checkbox', id='contact-address-trigger', checked='checked')
+                            label(for='contact-address-trigger')
+                          //- .onoffswitch.move-left
+                          //-   input#contact-adress-input(type='hidden', name='contact-address-input', value='1')
+                          //-   input#contact-address-switch.onoffswitch-checkbox(type='checkbox', checked="checked")
+                          //-   label.onoffswitch-label(for='contact-address-switch')
+                          //-     span.onoffswitch-inner
+                          //-     span.onoffswitch-switch
                         .cell
-                          label(for='contact-address-switch') Ваш фактической адрес совпадает с юридическим?
+                          label(for='contact-address-trigger') Фактический адрес совпадает с юридическим.
                       #contact-address.hidden
                         .cells.cells-gutter-small.margin-small.expand.valign-top.cells-justified
                           .cell
@@ -446,7 +460,7 @@ html
     script(src='js/2swipe.js')
     script(src='js/iban.js')
     script(src='js/swipe_settings_withdrawal.js')
-    script(src='js/select2.min.js')
+    script(src='js/select2.full.min.js')
     script(type='text/javascript').
       var fileData =  false ,
       strVerify = "Подтвердить",

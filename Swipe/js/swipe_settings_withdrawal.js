@@ -109,12 +109,31 @@ $(function(){
         tags: true
     });
 
-    $('label[for="contact-address-switch"]').click(function(){
-        if ($('#contact-address-switch').is(':checked') == true) {
+    $('label[for="contact-address-trigger"]').click(function(){
+        if ($('#contact-address-trigger').is(':checked') == true) {
             $('#contact-address').slideDown(300);
         } else {
             $('#contact-address').slideUp(300);
         }
+
+    });
+
+    function format(icon) {
+        var originalOption = icon.element;
+        return '+' + $(originalOption).data('code');
+    }
+
+    $('.input-dropdown select').each(function(){
+        $(this).select2({
+            dropdownCssClass: "mytest",
+            dropdownParent: $(this).parents('.input-dropdown'),
+            templateSelection: format
+        }).on('select2:open', function (e) {
+            $(this).parents('.input-dropdown').addClass("active");
+        }).on('select2:close', function (e) {
+            $(this).parents('.input-dropdown').removeClass("active");
+        })
+
 
     });
 
