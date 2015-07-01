@@ -166,26 +166,27 @@
             <hr class="hr-client-top">
             <input type="hidden" name="csrfmiddlewaretoken" value="dHRm837hYXN5VTjcRcEMuHAmu0A5Jx7T">
             <!-- Mayack's code begins-->
-            <section class="margin-large wrapper">
-              <header class="box padding-large rounded-top">
-                <h1 class="margin-xsmall">Заявление на подключение к Swipe</h1> Прошу открыть Транзитный счет для получения денежных средств в рамках Услуги Swipe и подтверждаю, что ознакомился и согласен с <a href="javascript:void(0)">Правилами и Тарифами Услуги Swipe</a>.
-              </header>
-              <div class="box padding-reset rounded-bottom">
+            <div class="margin-large wrapper">
+              <div class="box padding-reset">
+                <section class="padding-large">
+                  <h1 class="margin-xsmall">Заявление на подключение к Swipe</h1> Прошу открыть Транзитный счет для получения денежных средств в рамках Услуги Swipe и подтверждаю, что ознакомился и согласен с <a href="javascript:void(0)">Правилами</a> и <a href="javascript:void(0)">Тарифами</a> Услуги Swipe.
+                </section>
+                <hr class="hr-nomargin">
                 <section class="padding-large">
                   <div class="cells cells-gutter-small valign-top expand">
                     <aside class="cell form-side-label">
-                      <div class="text-bold margin-xsmall input-aligner text-gray-20">Банковские реквизиты</div>
+                      <div class="text-semibold margin-xsmall input-aligner text-gray-20">Банковские реквизиты</div>
                     </aside>
                     <div class="cell">
-                      <div class="cells cells-gutter-small margin-xsmall expand">
+                      <div class="cells cells-gutter-small expand cells-justified valign-top">
                         <div class="cell">
-                          <input type="text" placeholder="IBAN" class="expand">
+                          <input type="text" placeholder="IBAN" class="margin-xsmall expand">
+                          <div class="text-gray-60">Swipe будет перечислять средства на указанные реквизиты банковского счёта.</div>
                         </div>
                         <div class="cell">
                           <input type="text" placeholder="BIC или SWIFT код банка" class="expand">
                         </div>
                       </div>
-                      <div class="text-gray-60">Согласен, что предоставленная информация может быть использована Банком в маркетинговых и деловых целях, а также быть передана лицам в рамках группы предприятий Банка;</div>
                     </div>
                   </div>
                 </section>
@@ -193,7 +194,7 @@
                 <section class="padding-large">
                   <div class="cells cells-gutter-small valign-top expand">
                     <aside class="cell form-side-label">
-                      <div class="text-bold margin-xsmall input-aligner text-gray-20">Представитель торговца</div>
+                      <div class="text-semibold margin-xsmall input-aligner text-gray-20">Представитель торговца</div>
                       <p class="margin-reset text-12 text-gray-25">Представителю торговца необходимо обладать правом подписи от лица компании<br>"SIA Mayack".</p>
                     </aside>
                     <div class="cell">
@@ -221,10 +222,19 @@
                 <section class="padding-large">
                   <div class="cells cells-gutter-small valign-top expand">
                     <aside class="cell form-side-label">
-                      <div class="text-bold margin-xsmall input-aligner text-gray-20">Торговец</div>
+                      <div class="text-semibold margin-xsmall input-aligner text-gray-20">Торговец</div>
                       <p class="margin-reset text-12 text-gray-25">Проверьте достоверность указанных данных. После подачи заявления их можно будет изменить только связавшись с командой поддержки Swipe.</p>
                     </aside>
                     <div class="cell">
+                      <div class="cells cells-gutter-small margin-small expand cells-justified">
+                        <div class="cell">
+                          <select class="select-single expand">
+                            <option selected="selected">Индивидуальный комерсант</option>
+                            <option>Россия</option>
+                          </select>
+                        </div>
+                        <div class="cell"></div>
+                      </div>
                       <div class="cells cells-gutter-small margin-small expand cells-justified">
                         <div class="cell">
                           <input type="text" placeholder="Наименование торговца" class="expand">
@@ -270,7 +280,7 @@
                 <section class="padding-large">
                   <div class="cells cells-gutter-small valign-top expand">
                     <aside class="cell form-side-label">
-                      <div class="text-bold input-aligner text-gray-20">Контактная информация</div>
+                      <div class="text-semibold input-aligner text-gray-20">Контактная информация</div>
                     </aside>
                     <div class="cell">
                       <div class="cells cells-gutter-small margin-small expand cells-justified">
@@ -337,7 +347,7 @@
                           </div>
                         </div>
                         <div class="cell">
-                          <label for="accept-terms">Ознакомился и согласен с <a href="javascript:void(0)">Правилами и Тарифами Услуги</a>.</label>
+                          <label for="accept-terms">Ознакомился и согласен с <a href="javascript:void(0)">правилами</a> и <a href="javascript:void(0)">тарифами</a> услуги.</label>
                         </div>
                       </div>
                       <ul class="text-gray-43 checkbox-w-list">
@@ -358,7 +368,7 @@
                   </div>
                 </section>
               </div>
-            </section>
+            </div>
             <!-- Mayack's code ends-->
           </div>
         </div>
