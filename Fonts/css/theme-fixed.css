@@ -2211,23 +2211,23 @@ h6 {
 }
 .atk-text-dimmed,
 *[class*=atk-swatch] .atk-text-dimmed {
-  color: #666666;
+  color: #b3b3b3;
 }
 .atk-text-dimmed a,
 *[class*=atk-swatch]:not(.atk-text-inherit) .atk-text-dimmed a:link {
-  color: #404040;
+  color: #8c8c8c;
 }
 .atk-text-dimmed a:hover,
 *[class*=atk-swatch]:not(.atk-text-inherit) .atk-text-dimmed a:link:hover {
-  color: #303030;
+  color: #7d7d7d;
 }
 a.atk-text-dimmed,
 *[class*=atk-swatch] a.atk-text-dimmed {
-  color: #666666;
+  color: #b3b3b3;
 }
 a.atk-text-dimmed:hover,
 *[class*=atk-swatch] a.atk-text-dimmed:hover {
-  color: #575757;
+  color: #a3a3a3;
 }
 .atk-text-nowrap {
   white-space: nowrap;
@@ -4549,16 +4549,16 @@ a.atk-swatch-blue:not(.atk-text-inherit):hover,
   .atk-wrapper {
     min-width: 0px;
     max-width: 100%;
-    padding-left: 3.2rem;
-    padding-right: 3.2rem;
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
   }
   .atk-row {
-    margin-left: -1.6rem;
+    margin-left: -3.2rem;
   }
   .atk-row > *[class*=atk-col] {
     border-left: 0px solid rgba(0, 0, 0, 0);
     border-right: 0px solid rgba(0, 0, 0, 0);
-    border-left-width: 1.6rem;
+    border-left-width: 3.2rem;
   }
   *[class*=atk-col] {
     width: 100%;

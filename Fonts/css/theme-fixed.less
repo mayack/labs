@@ -36,7 +36,7 @@
 @cornerRadius:         5px;
 
 @textSelect:           @atk-swatch-ink; // Text selection's color
-@textDimmed:           lighten(@bodyColor, 40%);
+@textDimmed:           lighten(@bodyColor, 70%);
 
 @blur:                 5px; // Effect .atk-blur can be applied on any element.
 
@@ -117,8 +117,8 @@
 
 // Important: list .createViewport functions in the right order based on @min and @max values otherwise styles get overridden
 .createViewport(
-	@wrapperMargin:    @margin*2,
-	@colsGutter:       @margin,
+	@wrapperMargin:    @margin*3,
+	@colsGutter:       @margin*2,
 	@cols:             12,
 	@viewportMinWidth: 0px,
 	@wrapperMinWidth:  0px,
