@@ -4521,6 +4521,15 @@ a.atk-swatch-blue:not(.atk-text-inherit):hover,
   background-color: #0095ff;
   border-color: #0095ff;
 }
+.test-w10 {
+  font-family: 'Proxima Nova W10';
+}
+.test-w07 {
+  font-family: 'Proxima Nova A W07';
+}
+.test-w08 {
+  font-family: 'Proxima Nova W08';
+}
 @media screen and (min-width: 0px) {
   .atk-layout > .atk-layout-row > .atk-layout-cell {
     min-width: 100%;
