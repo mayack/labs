@@ -4530,15 +4530,27 @@ a.atk-swatch-blue:not(.atk-text-inherit):hover,
 .test-w08 {
   font-family: 'Proxima Nova W08';
 }
+.size-10 {
+  font-size: 10px;
+}
+.size-12 {
+  font-size: 12px;
+}
+.size-14 {
+  font-size: 14px;
+}
+.size-16 {
+  font-size: 16px;
+}
 @media screen and (min-width: 0px) {
   .atk-layout > .atk-layout-row > .atk-layout-cell {
     min-width: 100%;
   }
   .atk-wrapper {
-    min-width: 960px;
-    max-width: 960px;
-    padding-left: 1.6rem;
-    padding-right: 1.6rem;
+    min-width: 0px;
+    max-width: 100%;
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
   }
   .atk-row {
     margin-left: -1.6rem;
