@@ -1227,7 +1227,8 @@ button.button.button-loading:after {
 a.button.button-loading > *:first-child,
 input.button.button-loading > *:first-child,
 button.button.button-loading > *:first-child {
-  font-size: 1em;
+  background: none;
+  display: inline-block;
   position: relative;
   text-indent: -9999em;
   border-top: 0.2em solid rgba(255, 255, 255, 0.2);
@@ -1252,6 +1253,30 @@ button.button.button-loading > *:first-child:after {
   border-radius: 50%;
   width: 1em;
   height: 1em;
+}
+a.button.button-loading > *:first-child.text-aqua,
+input.button.button-loading > *:first-child.text-aqua,
+button.button.button-loading > *:first-child.text-aqua {
+  border-color: rgba(0, 193, 199, 0.15);
+  border-left-color: #00c1c7;
+}
+a.button.button-loading > *:first-child.text-gray-60,
+input.button.button-loading > *:first-child.text-gray-60,
+button.button.button-loading > *:first-child.text-gray-60 {
+  border-color: rgba(134, 152, 152, 0.15);
+  border-left-color: #869898;
+}
+a.button.button-loading > *:first-child.text-gray-80,
+input.button.button-loading > *:first-child.text-gray-80,
+button.button.button-loading > *:first-child.text-gray-80 {
+  border-color: rgba(192, 204, 204, 0.15);
+  border-left-color: #c0cccc;
+}
+a.button.button-loading > *:first-child.text-white,
+input.button.button-loading > *:first-child.text-white,
+button.button.button-loading > *:first-child.text-white {
+  border-color: rgba(255, 255, 255, 0.2);
+  border-left-color: #ffffff;
 }
 a.button.button-loading:after,
 input.button.button-loading:after,
@@ -1463,6 +1488,46 @@ button:disabled {
   border-color: #c0cccc;
   color: #869898;
   cursor: default;
+}
+.loading {
+  background: none;
+  display: inline-block;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 0.2em solid rgba(255, 255, 255, 0.2);
+  border-right: 0.2em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0.2em solid rgba(255, 255, 255, 0.2);
+  border-left: 0.2em solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: rotateEndlessly 1s infinite linear;
+  animation: rotateEndlessly 1s infinite linear;
+  line-height: 1;
+  top: 0.2em;
+  margin-right: 0.5em;
+}
+.loading,
+.loading:after {
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+}
+.loading.text-aqua {
+  border-color: rgba(0, 193, 199, 0.15);
+  border-left-color: #00c1c7;
+}
+.loading.text-gray-60 {
+  border-color: rgba(134, 152, 152, 0.15);
+  border-left-color: #869898;
+}
+.loading.text-gray-80 {
+  border-color: rgba(192, 204, 204, 0.15);
+  border-left-color: #c0cccc;
+}
+.loading.text-white {
+  border-color: rgba(255, 255, 255, 0.2);
+  border-left-color: #ffffff;
 }
 input,
 textarea {

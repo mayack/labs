@@ -506,27 +506,7 @@ button {
         display: inline-block;
       }
       >*:first-child {
-        font-size: 1em;
-        position: relative;
-        text-indent: -9999em;
-        border-top: 0.2em solid rgba(255, 255, 255, 0.2);
-        border-right: 0.2em solid rgba(255, 255, 255, 0.2);
-        border-bottom: 0.2em solid rgba(255, 255, 255, 0.2);
-        border-left: 0.2em solid #ffffff;
-        -webkit-transform: translateZ(0);
-        -ms-transform: translateZ(0);
-        transform: translateZ(0);
-        -webkit-animation: rotateEndlessly 1s infinite linear;
-        animation: rotateEndlessly 1s infinite linear;
-        line-height: 1;
-        top:0.2em;
-        margin-right: 0.5em;
-        &,
-        &:after {
-          border-radius: 50%;
-          width: 1em;
-          height: 1em;
-        }        
+        .loading;      
       }
       &:after {
         color: @swatchWhite;
@@ -754,6 +734,47 @@ button:disabled {
       color: @swatchGray-60;
       cursor: default;
     }
+  }
+}
+.loading {
+  background: none;
+  display: inline-block;
+  // font-size: inherit;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 0.2em solid rgba(255, 255, 255, 0.2);
+  border-right: 0.2em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0.2em solid rgba(255, 255, 255, 0.2);
+  border-left: 0.2em solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: rotateEndlessly 1s infinite linear;
+  animation: rotateEndlessly 1s infinite linear;
+  line-height: 1;
+  top:0.2em;
+  margin-right: 0.5em;
+  &,
+  &:after {
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+  }
+  &.text-aqua {
+    border-color: fade(@swatchAqua, 15%);
+    border-left-color: @swatchAqua;
+  }
+  &.text-gray-60 {
+    border-color: fade(@swatchGray-60, 15%);
+    border-left-color: @swatchGray-60;
+  }
+  &.text-gray-80 {
+    border-color: fade(@swatchGray-80, 15%);
+    border-left-color: @swatchGray-80;
+  }
+  &.text-white {
+    border-color: fade(@swatchWhite, 20%);
+    border-left-color: @swatchWhite;
   }
 }
 
