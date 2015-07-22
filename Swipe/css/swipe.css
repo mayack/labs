@@ -1310,7 +1310,8 @@ a.button.button-loading-nolabel:before,
 input.button.button-loading-nolabel:before,
 button.button.button-loading-nolabel:before {
   position: absolute;
-  top: 50%;
+  top: auto;
+  bottom: auto;
   left: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1328,8 +1329,7 @@ button.button.button-loading-nolabel:before {
   animation: rotateEndlessly 1s infinite linear;
   content: '';
   height: 1em;
-  line-height: 1.4;
-  margin: -0.7em 0 0 -0.7em;
+  margin: 0 0 0 -0.7em;
   width: 1em;
 }
 input:disabled {

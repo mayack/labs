@@ -523,12 +523,11 @@ button {
         color: transparent;
       }
       &:before {
-        .position(@t:50%, @l:50%);
+        .position(@t:auto, @b:auto, @l:50%);
         .loader;
         content: '';
         height: 1em;
-        line-height: 1.4;
-        margin: -0.7em 0 0 -0.7em;
+        margin: 0 0 0 -0.7em;
         width: 1em;
       }
     }
