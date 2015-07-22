@@ -491,7 +491,7 @@ button {
         color: @swatchWhite;
       }
     }
-    &.button-loading {
+    &[class*=button-loading] {
       cursor: static;
       pointer-events: none;
       &, &:hover, &:active {
@@ -506,11 +506,17 @@ button {
         display: inline-block;
       }
       >*:first-child {
-        .loading;      
+        .loading;  
       }
       &:after {
         color: @swatchWhite;
         content: attr(data-loading-label);
+        margin-left: 0.5em;
+      }
+      &.button-loading-nolabel {
+        &:after {
+          display: none;
+        }
       }
     }
   }
@@ -753,7 +759,6 @@ button:disabled {
   animation: rotateEndlessly 1s infinite linear;
   line-height: 1;
   top:0.2em;
-  margin-right: 0.5em;
   &,
   &:after {
     border-radius: 50%;
