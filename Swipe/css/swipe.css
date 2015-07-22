@@ -1192,102 +1192,145 @@ input.button.outline:hover,
 button.button.outline:hover {
   color: #ffffff;
 }
-a.button[class*=button-loading],
-input.button[class*=button-loading],
-button.button[class*=button-loading] {
-  cursor: static;
-  pointer-events: none;
-}
-a.button[class*=button-loading],
-input.button[class*=button-loading],
-button.button[class*=button-loading],
-a.button[class*=button-loading]:hover,
-input.button[class*=button-loading]:hover,
-button.button[class*=button-loading]:hover,
-a.button[class*=button-loading]:active,
-input.button[class*=button-loading]:active,
-button.button[class*=button-loading]:active {
+a.button.button-loading,
+input.button.button-loading,
+button.button.button-loading,
+a.button.button-loading-nolabel,
+input.button.button-loading-nolabel,
+button.button.button-loading-nolabel,
+a.button.button-loading:hover,
+input.button.button-loading:hover,
+button.button.button-loading:hover,
+a.button.button-loading-nolabel:hover,
+input.button.button-loading-nolabel:hover,
+button.button.button-loading-nolabel:hover,
+a.button.button-loading:active,
+input.button.button-loading:active,
+button.button.button-loading:active,
+a.button.button-loading-nolabel:active,
+input.button.button-loading-nolabel:active,
+button.button.button-loading-nolabel:active {
   background: #c0cccc;
   border-color: #c0cccc;
   color: #f2f5f5;
 }
-a.button[class*=button-loading] > *,
-input.button[class*=button-loading] > *,
-button.button[class*=button-loading] > * {
+a.button.button-loading,
+input.button.button-loading,
+button.button.button-loading {
+  cursor: static;
+  pointer-events: none;
+}
+a.button.button-loading > *,
+input.button.button-loading > *,
+button.button.button-loading > * {
   display: none;
 }
-a.button[class*=button-loading] > *:first-child,
-input.button[class*=button-loading] > *:first-child,
-button.button[class*=button-loading] > *:first-child,
-a.button[class*=button-loading]:after,
-input.button[class*=button-loading]:after,
-button.button[class*=button-loading]:after {
+a.button.button-loading > *:first-child,
+input.button.button-loading > *:first-child,
+button.button.button-loading > *:first-child,
+a.button.button-loading:after,
+input.button.button-loading:after,
+button.button.button-loading:after {
   display: inline-block;
 }
-a.button[class*=button-loading] > *:first-child,
-input.button[class*=button-loading] > *:first-child,
-button.button[class*=button-loading] > *:first-child {
-  background: none;
-  display: inline-block;
+a.button.button-loading > *:first-child,
+input.button.button-loading > *:first-child,
+button.button.button-loading > *:first-child {
   position: relative;
-  text-indent: -9999em;
+  top: 0.2em;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
   border-top: 0.2em solid rgba(255, 255, 255, 0.2);
   border-right: 0.2em solid rgba(255, 255, 255, 0.2);
   border-bottom: 0.2em solid rgba(255, 255, 255, 0.2);
   border-left: 0.2em solid #ffffff;
+  display: inline-block;
+  line-height: 1;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-animation: rotateEndlessly 1s infinite linear;
   animation: rotateEndlessly 1s infinite linear;
-  line-height: 1;
-  top: 0.2em;
+  background: none;
+  text-indent: -9999em;
 }
-a.button[class*=button-loading] > *:first-child,
-input.button[class*=button-loading] > *:first-child,
-button.button[class*=button-loading] > *:first-child,
-a.button[class*=button-loading] > *:first-child:after,
-input.button[class*=button-loading] > *:first-child:after,
-button.button[class*=button-loading] > *:first-child:after {
+a.button.button-loading > *:first-child,
+input.button.button-loading > *:first-child,
+button.button.button-loading > *:first-child,
+a.button.button-loading > *:first-child:after,
+input.button.button-loading > *:first-child:after,
+button.button.button-loading > *:first-child:after {
   border-radius: 50%;
   width: 1em;
   height: 1em;
 }
-a.button[class*=button-loading] > *:first-child.text-aqua,
-input.button[class*=button-loading] > *:first-child.text-aqua,
-button.button[class*=button-loading] > *:first-child.text-aqua {
+a.button.button-loading > *:first-child.text-aqua,
+input.button.button-loading > *:first-child.text-aqua,
+button.button.button-loading > *:first-child.text-aqua {
   border-color: rgba(0, 193, 199, 0.15);
   border-left-color: #00c1c7;
 }
-a.button[class*=button-loading] > *:first-child.text-gray-60,
-input.button[class*=button-loading] > *:first-child.text-gray-60,
-button.button[class*=button-loading] > *:first-child.text-gray-60 {
+a.button.button-loading > *:first-child.text-gray-60,
+input.button.button-loading > *:first-child.text-gray-60,
+button.button.button-loading > *:first-child.text-gray-60 {
   border-color: rgba(134, 152, 152, 0.15);
   border-left-color: #869898;
 }
-a.button[class*=button-loading] > *:first-child.text-gray-80,
-input.button[class*=button-loading] > *:first-child.text-gray-80,
-button.button[class*=button-loading] > *:first-child.text-gray-80 {
+a.button.button-loading > *:first-child.text-gray-80,
+input.button.button-loading > *:first-child.text-gray-80,
+button.button.button-loading > *:first-child.text-gray-80 {
   border-color: rgba(192, 204, 204, 0.15);
   border-left-color: #c0cccc;
 }
-a.button[class*=button-loading] > *:first-child.text-white,
-input.button[class*=button-loading] > *:first-child.text-white,
-button.button[class*=button-loading] > *:first-child.text-white {
+a.button.button-loading > *:first-child.text-white,
+input.button.button-loading > *:first-child.text-white,
+button.button.button-loading > *:first-child.text-white {
   border-color: rgba(255, 255, 255, 0.2);
   border-left-color: #ffffff;
 }
-a.button[class*=button-loading]:after,
-input.button[class*=button-loading]:after,
-button.button[class*=button-loading]:after {
+a.button.button-loading:after,
+input.button.button-loading:after,
+button.button.button-loading:after {
   color: #ffffff;
   content: attr(data-loading-label);
   margin-left: 0.5em;
 }
-a.button[class*=button-loading].button-loading-nolabel:after,
-input.button[class*=button-loading].button-loading-nolabel:after,
-button.button[class*=button-loading].button-loading-nolabel:after {
-  display: none;
+a.button.button-loading-nolabel,
+input.button.button-loading-nolabel,
+button.button.button-loading-nolabel {
+  position: relative;
+}
+a.button.button-loading-nolabel span,
+input.button.button-loading-nolabel span,
+button.button.button-loading-nolabel span {
+  color: transparent;
+}
+a.button.button-loading-nolabel:before,
+input.button.button-loading-nolabel:before,
+button.button.button-loading-nolabel:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border-top: 0.2em solid rgba(255, 255, 255, 0.2);
+  border-right: 0.2em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0.2em solid rgba(255, 255, 255, 0.2);
+  border-left: 0.2em solid #ffffff;
+  display: inline-block;
+  line-height: 1;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: rotateEndlessly 1s infinite linear;
+  animation: rotateEndlessly 1s infinite linear;
+  content: '';
+  height: 1em;
+  line-height: 1.4;
+  margin: -0.7em 0 0 -0.7em;
+  width: 1em;
 }
 input:disabled {
   background: #f2f5f5;
@@ -1494,22 +1537,39 @@ button:disabled {
   color: #869898;
   cursor: default;
 }
-.loading {
-  background: none;
-  display: inline-block;
-  position: relative;
-  text-indent: -9999em;
+.loader {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
   border-top: 0.2em solid rgba(255, 255, 255, 0.2);
   border-right: 0.2em solid rgba(255, 255, 255, 0.2);
   border-bottom: 0.2em solid rgba(255, 255, 255, 0.2);
   border-left: 0.2em solid #ffffff;
+  display: inline-block;
+  line-height: 1;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-animation: rotateEndlessly 1s infinite linear;
   animation: rotateEndlessly 1s infinite linear;
+}
+.loading {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border-top: 0.2em solid rgba(255, 255, 255, 0.2);
+  border-right: 0.2em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0.2em solid rgba(255, 255, 255, 0.2);
+  border-left: 0.2em solid #ffffff;
+  display: inline-block;
   line-height: 1;
-  top: 0.2em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: rotateEndlessly 1s infinite linear;
+  animation: rotateEndlessly 1s infinite linear;
+  background: none;
+  text-indent: -9999em;
 }
 .loading,
 .loading:after {
