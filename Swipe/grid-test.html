@@ -157,224 +157,34 @@
             </section>
             <section class="section-large wrapper print-hide">
               <div class="cells expand">
-                <div class="cell divider-small text-regular text-32 text-gray-60">Настройки</div>
+                <div class="cell divider-small text-regular text-32 text-gray-60">Grid Test</div>
                 <div class="cell align-right text-14 text-gray-43">
-                  <nav class="pills"><a href="/ru/merchant/settings/info/" class="pointer">Профиль</a><a href="/ru/merchant/settings/payments/" class="pointer">Счета</a><a href="/ru/merchant/settings/withdrawal/" class="pointer active">Вывод средств</a></nav>
                 </div>
               </div>
             </section>
             <hr class="hr-client-top">
             <input type="hidden" name="csrfmiddlewaretoken" value="dHRm837hYXN5VTjcRcEMuHAmu0A5Jx7T">
             <!-- Mayack's code begins-->
-            <div class="margin-large wrapper">
-              <div id="form-settings" class="box padding-reset">
-                <header class="padding-large">
-                  <h1 class="margin-xsmall">Открытие транзитного счёта в Swipe</h1> Прошу открыть Транзитный счет для получения денежных средств в рамках Услуги Swipe и подтверждаю, что ознакомился и согласен с <a href="javascript:void(0)">Правилами</a> и <a href="javascript:void(0)">Тарифами</a> Услуги Swipe.
-                </header>
-                <hr class="hr-nomargin">
-                <section class="padding-large">
-                  <div class="cells cells-gutter-small valign-top expand">
-                    <aside class="cell form-side-label">
-                      <div class="text-semibold margin-xsmall input-aligner text-gray-20">Банковские реквизиты</div>
-                    </aside>
-                    <div class="cell">
-                      <div class="cells cells-gutter-small expand cells-justified valign-top">
-                        <div class="cell">
-                          <input type="text" placeholder="IBAN" class="margin-xsmall expand">
-                          <div class="text-gray-60">Swipe будет перечислять средства на указанные реквизиты банковского счёта.</div>
-                        </div>
-                        <div class="cell">
-                          <input type="text" placeholder="BIC или SWIFT код банка" class="expand">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-                <hr class="hr-nomargin">
-                <section class="padding-large">
-                  <div class="cells cells-gutter-small valign-top expand">
-                    <aside class="cell form-side-label">
-                      <div class="text-semibold margin-xsmall input-aligner text-gray-20">Представитель торговца</div>
-                      <p class="margin-reset text-12 text-gray-25">Представителю торговца необходимо обладать правом подписи от лица компании<br>"SIA Mayack".</p>
-                    </aside>
-                    <div class="cell">
-                      <div class="cells cells-gutter-small margin-small expand">
-                        <div class="cell">
-                          <input type="text" placeholder="Имя и Фамилия" class="expand">
-                        </div>
-                        <div class="cell">
-                          <input type="text" placeholder="Персональный код" class="expand">
-                        </div>
-                      </div>
-                      <div class="cells expand cells-justified cells-gutter-small valign-top">
-                        <div class="cell">
-                          <button onClick="$(this).addClass('button-loading-nolabel')" class="button margin-xsmall expand"><span class="icon-upload"></span><span>&nbsp;&nbsp;Загрузить Копию</span></button>
-                          <div class="text-gray-60">Загрузите копию паспорта или ID карты представителя компании.</div>
-                        </div>
-                        <div class="cell">
-                          <div class="text-gray-60 input-aligner">Ожидание&nbsp;<span class="icon-help"></span></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-                <hr class="hr-nomargin">
-                <section class="padding-large">
-                  <div class="cells cells-gutter-small valign-top expand">
-                    <aside class="cell form-side-label">
-                      <div class="text-semibold margin-xsmall input-aligner text-gray-20">Торговец</div>
-                      <p class="margin-reset text-12 text-gray-25">Проверьте достоверность указанных данных. После подачи заявления их можно будет изменить только связавшись с командой поддержки Swipe.</p>
-                    </aside>
-                    <div class="cell">
-                      <div class="cells cells-gutter-small margin-small expand cells-justified">
-                        <div class="cell">
-                          <input type="text" placeholder="Юридическое название торговца" class="expand">
-                        </div>
-                        <div class="cell">
-                          <select data-placeholder="Форма коммерческой деятельности" class="select-single expand">
-                            <option>Индивидуальный коммерсант</option>
-                            <option>Россия  </option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="margin-small">
-                        <select name="colors" multiple="" data-placeholder="Вид коммерческой деятельности" class="form-control input-tags expand">
-                          <option value="black">Quisque in magna tempus</option>
-                          <option value="blue">Vivamus a mauris</option>
-                          <option value="green">Lorem ipsum</option>
-                          <option value="orange">Duis porttitor sem sit</option>
-                          <option value="red">Proin fermentum</option>
-                          <option value="yellow">Fusce ut eros</option>
-                          <option value="white">Vivamus</option>
-                        </select>
-                      </div>
-                      <div class="cells cells-gutter-small margin-small expand cells-justified">
-                        <div class="cell">
-                          <input type="text" placeholder="Регистрационный номер" class="expand">
-                        </div>
-                        <div class="cell">
-                          <select class="expand select-single">
-                            <option selected="selected">Латвия</option>
-                            <option>Россия</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="cells cells-gutter-small expand cells-justified">
-                        <div class="cell">
-                          <input type="text" placeholder="Адрес" class="expand">
-                        </div>
-                        <div class="cell">
-                          <div class="cells cells-gutter-small expand cells-justified">
-                            <div class="cell">
-                              <input type="text" placeholder="Город" class="expand">
-                            </div>
-                            <div class="cell">
-                              <input type="text" placeholder="Почтовый индекс" class="expand">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-                <hr class="hr-nomargin">
-                <section class="padding-large">
-                  <div class="cells cells-gutter-small valign-top expand">
-                    <aside class="cell form-side-label">
-                      <div class="text-semibold input-aligner text-gray-20">Контактная информация</div>
-                    </aside>
-                    <div class="cell">
-                      <div class="cells cells-gutter-small margin-small expand cells-justified">
-                        <div class="cell">
-                          <div class="input-dropdown">
-                            <div class="input-combo cells">
-                              <div class="cell">
-                                <select id="input-phone">
-                                  <option data-code="372">Estonia (+372)</option>
-                                  <option data-code="371" selected="selected">Latvia (+371)</option>
-                                  <option data-code="7">Russia (+7)</option>
-                                  <option data-code="44">United Kingdom (+44)</option>
-                                </select>
-                              </div>
-                              <div class="cell expand">
-                                <input type="text" placeholder="Телефон" id="phone" class="expand rounded-right">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="cell">
-                          <input type="text" placeholder="Электронная почта" class="expand">
-                        </div>
-                      </div>
-                      <div class="cells cells-gutter-xsmall">
-                        <div class="cell text-baseline-reset">
-                          <div class="checkbox valign-middle">
-                            <input type="checkbox" id="contact-address-trigger" checked="checked">
-                            <label for="contact-address-trigger"></label>
-                          </div>
-                        </div>
-                        <div class="cell">
-                          <label for="contact-address-trigger">Фактический адрес совпадает с юридическим.</label>
-                        </div>
-                      </div>
-                      <div id="contact-address" class="hidden">
-                        <div class="cells cells-gutter-small margin-small expand valign-top cells-justified">
-                          <div class="cell">
-                            <select class="select-single expand">
-                              <option selected="selected">Латвия</option>
-                              <option>Россия</option>
-                            </select>
-                          </div>
-                          <div class="cell">
-                            <input type="text" placeholder="Город" class="expand">
-                          </div>
-                        </div>
-                        <div class="cells cells-gutter-small expand cells-justified">
-                          <div class="cell">
-                            <input type="text" placeholder="Адрес" class="expand">
-                          </div>
-                          <div class="cell">
-                            <input type="text" placeholder="Почтовый индекс" class="expand">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-                <hr class="hr-nomargin">
-                <section class="padding-large">
-                  <div class="cells expand cells-gutter-small">
-                    <aside class="cell form-side-label">&nbsp;</aside>
-                    <div class="cell">
-                      <div class="cells cells-gutter-xsmall margin-small text-16">
-                        <div class="cell text-baseline-reset">
-                          <div class="checkbox valign-middle">
-                            <input type="checkbox" id="accept-terms">
-                            <label for="accept-terms"></label>
-                          </div>
-                        </div>
-                        <div class="cell">
-                          <label for="accept-terms">Ознакомился и согласен с <a href="javascript:void(0)">Правилами</a> и <a href="javascript:void(0)">Тарифами</a> Услуги.</label>
-                        </div>
-                      </div>
-                      <ul class="text-gray-43 checkbox-w-list">
-                        <li>Прошу акционерное общество «Rietumu Banka», единый регистрационный No 40003074497, юридический адрес: ул. Весетас 7, Рига, LV-1013, Латвийская Республика, предоставить услугу перевода денежных средств.</li>
-                        <li>Права и обязанности Банка и Торговца в рамках Услуги регулируются материальным правом Латвийской Республики.</li>
-                        <li>Любые споры относительно Услуги разрешаются в соответствии с Правилами.</li>
-                      </ul>
-                    </div>
-                  </div>
-                </section>
-                <hr class="hr-nomargin print-hide">
-                <section class="padding-large section-small print-hide">
-                  <div class="cells cells-gutter-small expand">
-                    <aside class="cell form-side-label"></aside>
-                    <div class="cell">
-                      <button id="print-withdrawal-form" class="button text-18 move-right"><span class="icon-upload"></span>&nbsp;&nbsp;Распечатать</button>
-                      <button onClick="$(this).addClass('button-loading-nolabel')" class="fill-mint button text-18"><span>Подать Заявку</span></button>
-                    </div>
-                  </div>
-                </section>
+            <div class="wrapper margin-large">
+              <div class="row grid">
+                <div class="col-4">
+                  <div class="box">Test</div>
+                </div>
+                <div class="col-4">
+                  <div class="box">Test</div>
+                </div>
+                <div class="col-4">
+                  <div class="box">Test</div>
+                </div>
+                <div class="col-4">
+                  <div class="box">Test</div>
+                </div>
+                <div class="col-4">
+                  <div class="box">Test</div>
+                </div>
+                <div class="col-4">
+                  <div class="box">Test</div>
+                </div>
               </div>
             </div>
             <!-- Mayack's code ends-->

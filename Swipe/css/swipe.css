@@ -1593,6 +1593,12 @@ button:disabled {
   border-color: rgba(255, 255, 255, 0.2);
   border-left-color: #ffffff;
 }
+.grid.row {
+  margin-top: -20px;
+}
+.grid.row > *[class*=col-] {
+  margin-top: 20px;
+}
 input,
 textarea {
   background: #ffffff;
