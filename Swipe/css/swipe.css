@@ -851,7 +851,7 @@ ul:last-child {
   border-color: #c0cccc;
   color: #3f5555;
 }
-.fill-gray-95[class*='button'].outline {
+.fill-gray-95[class*='button'][class*='outline'] {
   color: #3f5555;
 }
 .fill-gray-95[class*='button']:hover {
@@ -867,7 +867,7 @@ ul:last-child {
   border-color: #859797;
   color: #ffffff;
 }
-.fill-gray-17[class*='button'].outline {
+.fill-gray-17[class*='button'][class*='outline'] {
   color: #859797;
 }
 .fill-gray-17[class*='button']:hover {
@@ -880,7 +880,7 @@ ul:last-child {
   border-color: #00c1c7;
   color: #ffffff;
 }
-.fill-aqua[class*='button'].outline {
+.fill-aqua[class*='button'][class*='outline'] {
   color: #00c1c7;
 }
 .fill-aqua[class*='button']:hover {
@@ -893,7 +893,7 @@ ul:last-child {
   border-color: #0ac697;
   color: #ffffff;
 }
-.fill-mint[class*='button'].outline {
+.fill-mint[class*='button'][class*='outline'] {
   color: #0ac697;
 }
 .fill-mint[class*='button']:hover {
@@ -907,7 +907,7 @@ ul:last-child {
   border-color: #f06e6e;
   color: #ffffff;
 }
-.fill-peach[class*='button'].outline {
+.fill-peach[class*='button'][class*='outline'] {
   color: #f06e6e;
 }
 .fill-peach[class*='button']:hover {
@@ -920,7 +920,7 @@ ul:last-child {
   border-color: #212626;
   color: #ffffff;
 }
-.fill-gray-15[class*='button'].outline {
+.fill-gray-15[class*='button'][class*='outline'] {
   color: #212626;
 }
 .fill-gray-15[class*='button']:hover {
@@ -928,8 +928,26 @@ ul:last-child {
   border-color: #1c2121;
 }
 .border-90,
-.border-90.box:not([class*=fill]) {
+.border-90.box:not([class*=fill]),
+.border-90[class*=border-] {
   border-color: #dfe5e5;
+}
+.border-95,
+.border-95.box:not([class*=fill]),
+.border-95[class*=border-] {
+  border-color: #edf2f2;
+}
+.border-bottom {
+  border-bottom: 1px solid #dfe5e5;
+}
+.border-left {
+  border-left: 1px solid #dfe5e5;
+}
+.border-top {
+  border-top: 1px solid #dfe5e5;
+}
+.border-right {
+  border-right: 1px solid #dfe5e5;
 }
 .rounded-top,
 .rounded-top.box {
@@ -978,6 +996,12 @@ ul:last-child {
   -webkit-border-bottom-right-radius: 2px;
   -moz-border-bottom-right-radius: 2px;
   border-bottom-right-radius: 2px;
+}
+.shape-pill,
+.shape-pill[class*=button] {
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
 }
 a:focus {
   outline: 0;
@@ -1078,6 +1102,10 @@ a.text-peach,
 .text-peach a:hover,
 a.text-peach:hover {
   color: #cb1414;
+}
+.text-caps {
+  text-transform: caps;
+  letter-spacing: 0.1em;
 }
 .text-12 {
   font-size: 12px;
@@ -1181,16 +1209,21 @@ input.button:hover,
 button.button:hover {
   background: #e9eeee;
 }
-a.button.outline,
-input.button.outline,
-button.button.outline {
+a.button[class*=outline],
+input.button[class*=outline],
+button.button[class*=outline] {
   border-width: 2px;
   background: none;
 }
-a.button.outline:hover,
-input.button.outline:hover,
-button.button.outline:hover {
+a.button[class*=outline]:hover,
+input.button[class*=outline]:hover,
+button.button[class*=outline]:hover {
   color: #ffffff;
+}
+a.button[class*=outline].outline-thin,
+input.button[class*=outline].outline-thin,
+button.button[class*=outline].outline-thin {
+  border-width: 1px;
 }
 a.button.button-loading,
 input.button.button-loading,
@@ -1443,11 +1476,17 @@ button:disabled {
 *[class*='padding'] {
   padding: 30px;
 }
+*[class*='padding'].padding-xsmall {
+  padding: 10px;
+}
 *[class*='padding'].padding-small {
   padding: 20px;
 }
 *[class*='padding'].padding-large {
   padding: 40px;
+}
+*[class*='padding'].padding-xlarge {
+  padding: 80px;
 }
 *[class*='padding'].padding-reset {
   padding: 0 !important;
@@ -1455,6 +1494,10 @@ button:disabled {
 *[class*='section'] {
   padding-bottom: 30px;
   padding-top: 30px;
+}
+*[class*='section'].section-xsmall {
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 *[class*='section'].section-small {
   padding-bottom: 20px;
@@ -1466,6 +1509,10 @@ button:disabled {
 *[class*='section'].section-large {
   padding-bottom: 40px;
   padding-top: 40px;
+}
+*[class*='section'].section-xlarge {
+  padding-bottom: 80px;
+  padding-top: 80px;
 }
 *[class*='section'].section-bottom-large {
   padding-bottom: 40px !important;

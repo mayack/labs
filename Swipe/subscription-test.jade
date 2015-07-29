@@ -1,0 +1,253 @@
+doctype html
+<!--[if lt IE 7]<html lang="en" class="oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en" class="oldie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="oldie lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+html
+  <!--<![endif]-->
+  head
+    meta(charset='utf-8')
+    <!--[if IE]><!-->
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    <!--<![endif]-->
+    title Swipe // Настройки - вывод
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='css/animation.css')
+    link(rel='stylesheet', href='css/swipe.css')
+    link(rel='stylesheet', href='css/arturs.css')
+    script(type='text/javascript').
+      var strServerError = "Нет связи с сервером.";
+      var loginPageLink = "/ru/merchant/login/";
+      var currentLanguage = "ru";
+  body#main-section
+    .layout
+      .layout-row.layout-expand
+        .layout.layout-cell
+          .layout-column.layout-expand
+            #modal-change-person-data.modal-window-overlay(style='display:none')
+              form#modal-change-person-data-form
+                input(type='hidden', name='custom_action', value='resubmit_personal_details')
+                input(type='hidden', name='csrfmiddlewaretoken', value='dHRm837hYXN5VTjcRcEMuHAmu0A5Jx7T')
+                .modal-window-bg.modal-change-password
+                  .modal-title.text-24.text-gray-33.align-center Изменить ответственное лицо
+                  .modal-input.bottom-margin-10
+                    input#change-person-first-name.text-14.text-gray-33(type='text', name='responsible_person_first_name', value='', placeholder='Имя')
+                    span#modal-change-person-data-error-first-name.warning-text
+                  .modal-input.bottom-margin-10
+                    input#change-person-last-name.text-14.text-gray-33(type='text', name='responsible_person_last_name', value='', placeholder='Фамилия')
+                    span#modal-change-person-data-error-last-name.warning-text
+                  .modal-input.upload-button
+                    input#input-new-document(name='new-logo', type='file', accept='image/*, application/pdf', style='display:none')
+                    button#new-upload-button.button.text-14.text-medium.margin-reset.margin-top-20
+                      span.icon-upload
+                      |  Загрузить Скан Паспорта
+                    #new-upload-document-view.input-dummy-bg.input-dummy-document-upload.margin-top-20.margin-reset.text-gray-33(style='display: none;')
+                      span.icon-user.text-aqua
+                      span#new-file-name
+                    span#modal-change-person-data-error-document.warning-text
+                  a.text-12.text-gray-43.forgot-password(href='javascript:void(0)')
+                    // Забыли пароль?
+                  button.button.text-14.text-medium.text-gray-33.move-left.b-close Отмена
+                  button.button.text-14.text-medium.fill-mint.move-right(onclick='return postPersonChange();') Подтвердить
+            #modal-verify-card.modal-window-overlay(style='display:none')
+              .modal-window-bg.modal-verify-card
+                .modal-title.text-24.text-gray-33.align-center Verify Credit Card
+                .modal-input
+                  input.text-16.text-gray-33.code-input.align-center(type='text', value='1', placeholder='')
+                .modal-input
+                  input.text-16.text-gray-33.code-input.align-center(type='text', value='2', placeholder='')
+                .modal-input
+                  input.text-16.text-gray-33.code-input.align-center(type='text', value='3', placeholder='')
+                .modal-input
+                  input.text-16.text-gray-33.code-input.align-center(type='text', value='4', placeholder='')
+                .modal-full-width-text.top-margin-20.bottom-margin-25.align-center
+                  span.text-gray-43.align-center
+                    | We held 
+                    span.text-medium € 1.50
+                    |   on your card to make sure it’s yours. We’ll release the money after you enter correct 4-digit code that appears next to the charge.
+                button.button.text-14.text-medium.text-gray-33.move-left.b-close Later
+                button.button.text-14.text-medium.fill-mint.move-right Verify
+            #modal-add-card.modal-window-overlay(style='display:none')
+              .modal-window-bg.modal-verify-card
+                .modal-title.text-24.text-gray-33.align-center Add Credit Card
+                .modal-input
+                  input.text-14.text-gray-33(type='text', value='5573  6700  0203  4452', placeholder='')
+                  span.icon-mastercard-image.show-card-type
+                .modal-input.bottom-margin-30
+                  input.text-14.text-gray-33.align-center.date-input(type='text', value='', placeholder='/')
+                  input.text-14.text-gray-33.align-right.date-nr-input-1(type='text', value='02', placeholder='')
+                  input.text-14.text-gray-33.align-left.date-nr-input-2(type='text', value='17', placeholder='')
+                .bottom-margin-30.move-right
+                  span.text-14.icon-lock
+                  input.text-14.text-gray-33.align-center.cvc-input(type='text', value='357', placeholder='')
+                button.button.text-14.text-medium.text-gray-33.move-left.b-close Cancel
+                button.button.text-14.text-medium.fill-mint.move-right Add
+            #modal-verify-bank.modal-window-overlay(style='display:none')
+              .modal-window-bg.modal-verify-bank
+                .modal-title.text-24.text-gray-33.align-center.margin-reset Подтвердите счёт
+                .modal-full-width-text.top-margin-20.bottom-margin-25.align-center
+                  // <span class="text-gray-43 align-center">Swipe перевёл €0,10 на ваш счёт. <span class="text-medium">Вам необходимо перечислить их назад</span> чтобы закончить подтверждение.</span>
+                  span.text-gray-43.align-center
+                    | Мы перечислили 0,10 € на ваш счёт. 
+                    span.text-medium Перечислите эту сумму обратно
+                    |  на счёт Swipe, чтобы подтвердить, что счёт принадлежит компании "SIA "Mayack"".
+                button.button.text-14.text-medium.fill-mint.expand.b-close Понял!
+            #modal-file-size-error.modal-window-overlay(style='display:none')
+              .modal-window-bg.modal-verify-bank
+                .modal-full-width-text.top-margin-20.bottom-margin-25.align-center
+                  span.text-gray-43.align-center Файл слишком большого размера. Максимальный размер файла 10 Мб.
+                button.button.text-14.text-medium.fill-mint.expand.b-close Понял!
+            #modal-add-bank.modal-window-overlay(style='display:none')
+              form#modal-add-bank-form
+                input(type='hidden', name='csrfmiddlewaretoken', value='dHRm837hYXN5VTjcRcEMuHAmu0A5Jx7T')
+                input(type='hidden', name='custom_action', value='add_bank_account')
+                .modal-window-bg.modal-verify-card
+                  .modal-title.text-24.text-gray-33.align-center Добавить банковский счёт
+                  .modal-input.bottom-margin-5
+                    input.text-14.text-gray-33(type='text', name='iban', value='LV22HABA0551026337837', placeholder='')
+                  span#modal-add-bank-error-text.text-normal.align-left.expand.warning-text
+                  .modal-full-width-text.top-margin-10.bottom-margin-25.align-center.expand
+                    .text-medium.align-center.expand.inline SIA "Mayack"
+                    span.text-gray-43.align-center Рег. номер 40103614521
+                  button.button.text-14.text-medium.text-gray-33.move-left.b-close Отмена
+                  button#modal-add-bank-button.button.text-14.text-medium.fill-mint.move-right(onclick='return postBankAccount();') Добавить
+            #modal-delete-bank-account.modal-window-overlay(style='display:none')
+              .modal-window-bg.modal-verify-card
+                .modal-full-width-text.top-margin-10.bottom-margin-25.align-center
+                  .text-normal.align-center.expand.inline Вы уверены, что хотите удалить этот банковский счёт?
+                .b-close
+                  button.button.text-14.text-medium.text-gray-33.move-left Нет
+                button#modal-delete-bank-account-submit.button.text-14.text-medium.fill-peach.move-right Да
+            section#header
+              .wrapper
+                .row.text-gray-33
+                  .col-3
+                    a(href='/ru/merchant/payments/')
+                      img#logo(src='images/logo.svg', alt='Swipe', width='112', height='42')
+                  .col-5
+                    nav.navigation
+                      .navigation-item.cells
+                        a.cell.pointer(href='/ru/merchant/payments/') Платежи
+                      .navigation-item.cells
+                        a.cell.pointer(href='/ru/merchant/clients/') Клиенты
+                      .navigation-item.cells
+                        a.cell.pointer(href='/ru/merchant/products/') Продукты
+                  .col-4.align-right
+                    .cells.expand
+                      .cell.username(style='padding-right:7px;')
+                        a(href='javascript:void(0)', onclick='showLoggedUserActions(this)')
+                          span.icon-user.text-aqua
+                          | Mayack
+                          span.icon-arrow-small-south
+                        .client-tooltip.logged-user-tooltip.logged-user-tooltip-opened(tabindex='-2', style='display:none')
+                          .found-search-row.text-14(onclick="actionSettings(this, '/ru/merchant/settings/info/')")
+                            .found-text.text-gray-25 Настройки
+                          .found-search-row.text-14(onclick='actionLogout(this)')
+                            .found-text.text-gray-25 Выход
+                            span.icon-logout.text-aqua.icon-user-logout
+            section.section-large.wrapper.print-hide
+              .cells.expand
+                .cell.divider-small.text-regular.text-32.text-gray-60
+                  | Subscriptions
+                .cell.align-right.text-14.text-gray-43
+                  //- nav.pills
+                  //-   a.pointer(href='/ru/merchant/settings/info/')
+                  //-     | Профиль
+                  //-   a.pointer(href='/ru/merchant/settings/payments/')
+                  //-     | Счета
+                  //-   a.pointer.active(href='/ru/merchant/settings/withdrawal/')
+                  //-     | Вывод средств
+            hr.hr-client-top
+            input(type='hidden', name='csrfmiddlewaretoken', value='dHRm837hYXN5VTjcRcEMuHAmu0A5Jx7T')
+            
+            // Mayack's code begins
+            .wrapper.margin-large
+              .row.grid
+                .col-4
+                  .box.padding-reset
+                    .padding-small.align-center.text-20.text-leading.text-gray-25
+                      a(href='javascript:void(0)') Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    hr.hr-nomargin.border-95
+                    .cells.cells-justified.align-center.expand.text-gray-43
+                      .cell.padding-small.border-right.border-95
+                        .text-32.text-light €9.99
+                        .text-12 PER MONTH
+                      .cell.padding-small
+                        .text-32.text-light 417
+                        .text-12 PER MONTH
+                    hr.hr-nomargin.border-95
+                    .section-xsmall.padding-small.cells.expand.text-gray-43
+                      .cell
+                        | Activation Expires
+                      .cell.align-right.text-medium
+                        | 30.07.15
+                    hr.hr-nomargin.border-95
+                    .section-xsmall.padding-small.cells.expand.text-gray-43
+                      .cell
+                        | Billing frequency
+                      .cell.align-right.text-medium
+                        | every 2 weeks
+                    hr.hr-nomargin.border-95
+                    .padding-small.align-center
+                      a.button.outline-thin.fill-aqua.shape-pill.text-caps(href='javascript:void(0)', style="width:160px") Activated
+
+                .col-4
+                  .box
+                    | Test
+                .col-4
+                  .box
+                    | Test
+                .col-4
+                  .box
+                    | Test
+                .col-4
+                  .box
+                    | Test
+                .col-4
+                  .box
+                    | Test
+
+            // Mayack's code ends
+
+      #footer.layout-row
+        .layout-cell
+          hr.hr-nomargin
+          footer.wrapper.section-large.text-gray-60.text-caps
+            .cells.expand.text-12.text-medium
+              .cell.divider.text-regular
+                a(href='/ru/pricing/', target='_blank') Тарифы
+                // <a href="javascript:void(0)" target="_blank">Support Center</a>
+                a(href='/ru/terms_and_conditions/', target='_blank') Правила использования
+              .cell.align-right.text-regular
+                span.divider
+                  a(href='https://www.facebook.com/swipe.lv', target='_blank')
+                    span.icon-facebook
+                    |   Facebook
+                  a(href='https://twitter.com/swipelv', target='_blank')
+                    span.icon-twitter
+                    |   Twitter
+                span.separator-large.text-aqua.text-bold /
+                a(href='javascript:void(0)', onclick="$('html, body').animate({scrollTop:0}, '500', 'swing');")
+                  span.icon-arrow-north-1
+                  |   Наверх
+    script(src='js/jquery-1.11.2.min.js')
+    script(src='js/jquery.multiple.select.js')
+    script(src='js/jquery.bpopup.js')
+    script(src='js/2swipe.js')
+    script(src='js/iban.js')
+    script(src='js/swipe_settings_withdrawal.js')
+    script(src='js/select2.full.min.js')
+    script(type='text/javascript').
+      var fileData =  false ,
+      strVerify = "Подтвердить",
+      maxFileSize = 10 * 1024 * 1024; //10MB
+    script(type='text/javascript').
+      function actionLogout(e){
+      $( ".logged-user-tooltip" ).toggle();
+      window.location.href = '/ru/merchant/logout/';
+      }
+      function actionSettings(evt, link){
+      $(".logged-user-tooltip").toggle();
+      window.location.href = link;
+      }
