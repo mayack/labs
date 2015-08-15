@@ -5686,7 +5686,7 @@ input#how-it-works .dots-holder .dots:after.ui-button {
 #input-combo-phone #input-phone {
   width: 5.4em;
 }
-#input-combo-phone #input-phone + .select2 {
+#input-combo-phone #input-phone + .select2.select2-container--default .selection .select2-selection--single .select2-selection__rendered {
   text-align: center;
 }
 #input-combo-phone input[type=text] {
