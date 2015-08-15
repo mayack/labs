@@ -1,0 +1,402 @@
+doctype html
+<!--[if lt IE 7]<html lang="en" class="no-js oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js oldie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js oldie lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+html
+  <!--<![endif]-->
+  include includes/head
+  body.page-index
+    include includes/browsehappy
+    include includes/analytics
+    include includes/facebook-sdk
+    .atk-layout
+      include includes/header
+      .atk-layout-row.atk-layout-expand
+        .atk-layout.atk-layout-cell
+          .atk-layout-column.atk-layout-expand
+            section.atk-swatch-ink#hero
+              #hero-text.atk-section-xlarge
+                .atk-wrapper
+                  .atk-row
+                    .atk-col-4
+                      .atk-size-peta.atk-text-lead.atk-push
+                        strong Medical bidding.
+                        br
+                        | Save your health
+                        br
+                        | and wealth.
+                      .atk-size-milli
+                        a.atk-button-small.atk-button-outline.atk-expand.atk-push-small(href='//vimeo.com/1084537', data-lity)
+                          span.icon-play-1
+                          | Play Video
+                        a.atk-button-small.atk-button-outline.atk-expand(href="#how-it-works", data-lity) How It Works?
+                        #how-it-works.atk-box-large.lity-hide.atk-align-center
+                          .atk-col-11.atk-move-center
+                            h4.h-caps.atk-swatch-tomato-text.atk-text-bold.atk-push How it works?
+                            p Simply explore our website and search for a hospital by the country of your choice or the procedure you are looking for, submit your details, then sit back and wait for the hospitals to bid for your procedure. 
+                            .workflow.atk-push-large
+                              .atk-row
+                                .atk-col-3
+                                  .atk-text-reset.atk-push-small.dots-holder
+                                    .dots
+                                    img(src='images/workflow-step-1.png')
+                                  .atk-text-italic.atk-text-dimmed Search by country or required procedure.
+                                .atk-col-3
+                                  .atk-text-reset.atk-push-small.dots-holder
+                                    .dots
+                                    img(src='images/workflow-step-2.png')
+                                  .atk-text-italic.atk-text-dimmed Login and submit your personal details.
+                                .atk-col-3
+                                  .atk-text-reset.atk-push-small.dots-holder
+                                    .dots
+                                    img(src='images/workflow-step-3.png')
+                                  .atk-text-italic.atk-text-dimmed Wait 48 hours for hospitals to bid.
+                                .atk-col-3
+                                  .atk-text-reset.atk-push-small.dots-holder
+                                    img(src='images/workflow-step-4.png')
+                                  .atk-text-italic.atk-text-dimmed Select the hospital that suit your needs.
+                            a.atk-button-large.atk-swatch-asphalt.atk-col-5.atk-size-milli(href="#", data-lity-close) Okay, Got It!
+                    .atk-col-5
+                    .atk-col-3
+                      #hero-stats
+                        h5.h-caps Stats to date
+                        hr.atk-hr-reset.atk-push-small
+                        .atk-cells-group
+                          .atk-cells.atk-cells-gutter-small.atk-push-small
+                            .atk-cell.atk-size-peta.atk-text-italic.atk-text-light.atk-text-baseline-reset
+                              | 443
+                            .atk-cell
+                              strong Total enquiries
+                              | &nbsp;to MEDeTOURISM
+                          .atk-cells.atk-cells-gutter-small
+                            .atk-cell.atk-size-peta.atk-text-italic.atk-text-light.atk-text-baseline-reset
+                              | 217
+                            .atk-cell
+                              strong Total bids
+                              | &nbsp;accepted
+                              br
+                              | on MEDeTOURISM
+              #hero-form.atk-section
+                .atk-wrapper
+                  .atk-row
+                    .atk-col-10.atk-move-center
+                      .atk-form.atk-push-xsmall
+                        form.atk-cells.atk-valign-bottom.atk-input-combo
+                          .atk-cell.atk-col-5.atk-text-baseline-reset
+                            label.atk-push-xsmall.atk-block I'm looking for
+                            input(type='text', placeholder='Search by procedure, e.g. teeth whitening, laser eye surgery.').input-large.atk-size-milli
+                          .atk-cell.atk-col-3.atk-size-milli.input-large.atk-text-baseline-reset
+                            label.atk-push-xsmall.atk-block.atk-size-default Destination
+                            select
+                              option Select Country
+                              option Australia
+                          .atk-cell.atk-col-2.atk-text-baseline-reset
+                            label.atk-push-xsmall.atk-block.invisible &nbsp;
+                            input(type='submit', value='Search').atk-button-large.atk-size-milli.atk-expand.atk-swatch-asphalt
+            .atk-wrapper.atk-section-xlarge
+              section.atk-push-xlarge
+                .h-lines.atk-align-center.atk-push
+                  .h-lines-wrap.atk-inline
+                    h4.h-caps
+                      | Commence bidding by&nbsp;
+                      strong ELITE hospitals
+                      | &nbsp;for your procedure?
+                .atk-push.atk-section-small
+                  .atk-row
+                    .atk-col-6
+                      .atk-cells.atk-cells-gutter-xlarge
+                        .atk-cell.atk-text-reset
+                          span.icon-badge-star-2.atk-size-exa.atk-swatch-sand-text
+                        .atk-cell.atk-expand
+                          p
+                            | Only a select number of elite hospitals are invited to bid
+                            br
+                            | for your procedure, ensuring only the best quality.
+                    .atk-col-6
+                      .atk-cells.atk-cells-gutter-xlarge
+                        .atk-cell.atk-text-reset
+                          span.icon-badge-bolt.atk-size-exa.atk-swatch-sand-text
+                        .atk-cell.atk-expand
+                          p These low prices and offers are unique to MEDeTOURISM as a result of our real time dynamic bidding process.
+                .atk-align-center.h-lines
+                  span.h-lines-wrap
+                    a.atk-swatch-tomato.atk-button-large.atk-col-4.w-shadow.action-large(href='javascript:void(0)')
+                      span.icon-circle-plus
+                      | Request a Bid
+              section.featured-boxes
+                .atk-row
+                  aside.atk-col-3
+                    .atk-size-exa.icon-briefcase-m.atk-swatch-tomato.atk-text-baseline-reset
+                    h1.atk-text-baseline-reset.atk-push Featured Procedures
+                    p.atk-push-reset
+                      a(href='javascript:void(0)') Request a bid
+                      | &nbsp;now on Cancer, Cosmetics, Dentistry, Orthopedics, Cardiovascular, Weight Loss andand many other specialty procedures.
+                  .atk-col-3
+                    a.overlay-box.atk-swatch-ink.atk-block(href='javascript:void(0)')
+                      span.atk-align-center.atk-cells.overlay-box-content
+                        span.atk-cell.atk-valign-bottom.atk-padding
+                          strong.atk-size-giga.atk-push-small.atk-text-baseline-reset.atk-block Comsetics
+                          strong.atk-size-micro.h-caps.atk-push.atk-block Latest Bids
+                          .atk-text-bold.atk-size-micro.atk-text-nowrap
+                            .atk-cells.atk-expand
+                              .atk-cell.atk-align-left.atk-expand Breast augmentation
+                              .atk-cell.atk-align-right.atk-text-italic USD $2,450
+                            hr.atk-hr-xsmall
+                            .atk-cells.atk-expand
+                              .atk-cell.atk-align-left.atk-expand Nasal septoplasty
+                              .atk-cell.atk-align-right.atk-text-italic USD $2,450
+                      img(src='images/procedure-cosmetics.png', alt='Cosmetics', width='235', height='300')
+                  .atk-col-3
+                    a.overlay-box.atk-swatch-ink.atk-block(href='javascript:void(0)')
+                      span.atk-align-center.atk-cells.overlay-box-content
+                        span.atk-cell.atk-valign-bottom.atk-padding
+                          strong.atk-size-giga.atk-push-small.atk-text-baseline-reset.atk-block Dentistry
+                          strong.atk-size-micro.h-caps.atk-push.atk-block Latest Bids
+                          .atk-text-bold.atk-size-micro.atk-text-nowrap
+                            .atk-cells.atk-expand
+                              .atk-cell.atk-align-left.atk-expand Braces
+                              .atk-cell.atk-align-right.atk-text-italic USD $1,775
+                            hr.atk-hr-xsmall
+                            .atk-cells.atk-expand
+                              .atk-cell.atk-align-left.atk-expand Bridges
+                              .atk-cell.atk-align-right.atk-text-italic USD $480
+                      img(src='images/procedure-dentistry.png', alt='Dentistry', width='235', height='300')
+                  .atk-col-3
+                    a.overlay-box.atk-swatch-ink.atk-block(href='javascript:void(0)')
+                      span.atk-align-center.atk-cells.overlay-box-content
+                        span.atk-cell.atk-valign-bottom.atk-padding
+                          strong.atk-size-giga.atk-push-small.atk-text-baseline-reset.atk-block Orthopedics
+                          strong.atk-size-micro.h-caps.atk-push.atk-block Latest Bids
+                          .atk-text-bold.atk-size-micro.atk-text-nowrap
+                            .atk-cells.atk-expand
+                              .atk-cell.atk-align-left.atk-expand Hip Replacement
+                              .atk-cell.atk-align-right.atk-text-italic USD $3,710
+                            hr.atk-hr-xsmall
+                            .atk-cells.atk-expand
+                              .atk-cell.atk-align-left.atk-expand Arthroscopy
+                              .atk-cell.atk-align-right.atk-text-italic USD $1,220
+                      img(src='images/procedure-orthopedics.png', alt='Orthopedics', width='235', height='300')
+              hr.atk-hr-large.border-light
+              section.featured-boxes
+                .atk-row
+                  aside.atk-col-3
+                    .atk-size-exa.icon-planet-m.atk-swatch-tomato.atk-text-baseline-reset
+                    h1.atk-text-baseline-reset.atk-push Popular Locations
+                    p.atk-push-small
+                      a(href='javascript:void(0)') Request a bid
+                      | &nbsp;now on popular locations to have your procedure carried out.
+                    .atk-text-dimmed.atk-size-micro *Compared with U.S. prices.
+                  .atk-col-3
+                    a.overlay-box.atk-swatch-ink.atk-block(href='javascript:void(0)')
+                      span.atk-align-center.atk-cells.overlay-box-content
+                        span.atk-cell.atk-valign-bottom.atk-padding-large
+                          strong.atk-size-giga.atk-push.atk-text-baseline-reset.atk-block Malaysia
+                          button.atk-button.atk-button-outline.atk-size-micro
+                           span Save 80%*
+                      img(src='images/location-malaysia.png', alt='Malaysia', width='235', height='300')
+                  .atk-col-3
+                    a.overlay-box.atk-swatch-ink.atk-block(href='javascript:void(0)')
+                      span.atk-align-center.atk-cells.overlay-box-content
+                        span.atk-cell.atk-valign-bottom.atk-padding-large
+                          strong.atk-size-giga.atk-push.atk-text-baseline-reset.atk-block Thailand
+                          button.atk-button.atk-button-outline.atk-size-micro
+                           span Save 75%*
+                      img(src='images/location-thailand.png', alt='Thailand', width='235', height='300')
+                  .atk-col-3
+                    a.overlay-box.atk-swatch-ink.atk-block(href='javascript:void(0)')
+                      span.atk-align-center.atk-cells.overlay-box-content
+                        span.atk-cell.atk-valign-bottom.atk-padding-large
+                          strong.atk-size-giga.atk-push.atk-text-baseline-reset.atk-block Singapore
+                          button.atk-button.atk-button-outline.atk-size-micro
+                           span Save 40%*
+                      img(src='images/location-singapore.png', alt='Singapore', width='235', height='Singapore')
+              hr.atk-hr-large.border-light
+              section.featured-boxes.atk-push-xlarge
+                .atk-row
+                  aside.atk-col-3
+                    .atk-size-exa.icon-hospital-m.atk-swatch-tomato.atk-text-baseline-reset
+                    h1.atk-text-baseline-reset.atk-push Featured Hospitals
+                    p.atk-push-small
+                      a(href='javascript:void(0)') Request a bid
+                      | &nbsp;now from featured hospitals, as selected by the MEDeTOURISM staff.
+                  .atk-col-9
+                    .atk-row.atk-grid.atk-grid-gutter
+                      .atk-col-6
+                        .atk-cells.featured-hospital
+                          a.atk-cell.atk-shape-rounded-left(href='javascript:void(0)',style='background-image:url(temp/hospital-1.png)')
+                          .atk-cell
+                            .atk-box.atk-shape-rounded-right
+                              h5.atk-push-reset.atk-text-baseline-default.atk-inline
+                                a(href='javascript:void(0)') Dr. Sunil Clinic
+                              .atk-text-dimmed.atk-size-micro.atk-push
+                                span.icon-location-outline
+                                | &nbsp;&nbsp;Bangkok, Thailand
+                              ul.atk-list-nobullets.atk-size-micro
+                                li Diagnostics
+                                hr.atk-hr-xsmall
+                                li Therapy
+                      .atk-col-6
+                        .atk-cells.featured-hospital
+                          a.atk-cell.atk-shape-rounded-left(href='javascript:void(0)',style='background-image:url(temp/hospital-2.png)')
+                          .atk-cell
+                            .atk-box.atk-shape-rounded-right
+                              h5.atk-push-reset.atk-text-baseline-default.atk-inline
+                                a(href='javascript:void(0)') Nair Dental Surgery
+                              .atk-text-dimmed.atk-size-micro.atk-push
+                                span.icon-location-outline
+                                | &nbsp;&nbsp;Kuala Lumpur, Malaysia
+                              ul.atk-list-nobullets.atk-size-micro
+                                li Dental Braces
+                                hr.atk-hr-xsmall
+                                li Dental Crowns
+                      .atk-col-6
+                        .atk-cells.featured-hospital
+                          a.atk-cell.atk-shape-rounded-left(href='javascript:void(0)',style='background-image:url(temp/hospital-3.png)')
+                          .atk-cell
+                            .atk-box.atk-shape-rounded-right
+                              h5.atk-push-reset.atk-text-baseline-default.atk-inline
+                                a(href='javascript:void(0)') Bangpakok 9 International Clinic
+                              .atk-text-dimmed.atk-size-micro.atk-push
+                                span.icon-location-outline
+                                | &nbsp;&nbsp;Bangkok, Thailand
+                              ul.atk-list-nobullets.atk-size-micro
+                                li Root Canal Treatment
+                                hr.atk-hr-xsmall
+                                li Dental Implants
+                      .atk-col-6
+                        .atk-cells.featured-hospital
+                          a.atk-cell.atk-shape-rounded-left(href='javascript:void(0)',style='background-image:url(temp/hospital-4.png)')
+                          .atk-cell
+                            .atk-box.atk-shape-rounded-right
+                              h5.atk-push-reset.atk-text-baseline-default.atk-inline
+                                a(href='javascript:void(0)') Tanfer Klinik
+                              .atk-text-dimmed.atk-size-micro.atk-push
+                                span.icon-location-outline
+                                | &nbsp;&nbsp;Chiang Mai, Thailand
+                              ul.atk-list-nobullets.atk-size-micro
+                                li Diagnostics
+                                hr.atk-hr-xsmall
+                                li Therapy
+              section
+                .h-lines.atk-align-center.atk-push-large
+                  .h-lines-wrap.atk-inline
+                    h4.h-caps Recent Stories
+                .atk-row
+                  .atk-col-4
+                    .atk-box.story.atk-shape-rounded-bottom.box-line
+                      .atk-cells.atk-push-small.atk-cells-gutter
+                        .atk-cell
+                          .atk-shape-circle.atk-swatch-ink.avatar
+                            img(src='images/avatar-1.png')
+                        .atk-cell.atk-expand
+                          h5.atk-text-baseline-default.atk-push-reset Jack Dickson
+                          .atk-text-dimmed.atk-size-milli
+                            span.icon-location-outline
+                            | &nbsp;Sydney, Australia
+                      p.atk-text-italic “A quote for dental implants was too expensive to have done in Australia. I received two bids in 48 hours following submitting my requirements for dental implants and dental bridge work in Malaysia. I accepted the bid with one of Kuala Lumpar's hospitals and they even included one week's holiday.”
+                      .atk-cells.atk-size-micro.h-caps
+                        .atk-cell.atk-text-dimmed 5 days ago
+                        .atk-cell.atk-text-bold.atk-swatch-tomato-text.atk-align-right Dentistry
+                  .atk-col-4
+                    .atk-box.story.atk-shape-rounded-bottom.box-line
+                      .atk-cells.atk-push-small.atk-cells-gutter
+                        .atk-cell
+                          .atk-shape-circle.atk-swatch-ink.avatar
+                            img(src='images/avatar-2.png')
+                        .atk-cell.atk-expand
+                          h5.atk-text-baseline-default.atk-push-reset Laura Steers
+                          .atk-text-dimmed.atk-size-milli
+                            span.icon-location-outline
+                            | &nbsp;Melbourne, Australia
+                      p.atk-text-italic “I just arrived back from Bangkok, Thailand having had Breast Augmentation following receipt of three bids from Thai internationally accredited hospitals so I knew the bids were related to elite hospitals only. I was more than happy with the huge savings I made and quality of care during the procedure.”
+                      .atk-cells.atk-size-micro.h-caps
+                        .atk-cell.atk-text-dimmed 2 weeks ago
+                        .atk-cell.atk-text-bold.atk-swatch-tomato-text.atk-align-right Surgery
+                  .atk-col-4
+                    .atk-box.story.atk-shape-rounded-bottom.box-line
+                      .atk-cells.atk-push-small.atk-cells-gutter
+                        .atk-cell
+                          .atk-shape-circle.atk-swatch-ink.avatar
+                            img(src='images/avatar-3.png')
+                        .atk-cell.atk-expand
+                          h5.atk-text-baseline-default.atk-push-reset Pippa Jones
+                          .atk-text-dimmed.atk-size-milli
+                            span.icon-location-outline
+                            | &nbsp;Sydney, Australia
+                      p.atk-text-italic “After years of playing rugby I finally decided to have a Rhino (nose straightened) procedure. I logged onto MEDeTOURISM.com and submitted my details for the procedure. I received three bids from Singapore hospitals as I wanted to visit my family at the same time and I was amazed at the savings on offer.”
+                      .atk-cells.atk-size-micro.h-caps
+                        .atk-cell.atk-text-dimmed 1 month ago
+                        .atk-cell.atk-text-bold.atk-swatch-tomato-text.atk-align-right Surgery
+            section
+              .atk-wrapper
+                .h-lines.atk-align-center.atk-push-large
+                  .h-lines-wrap.atk-inline
+                    h4.h-caps
+                      | Over&nbsp;
+                      strong 2000 Top Hospitals
+                      | &nbsp;Across All Asia
+              script(src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js')
+              script.
+                google.maps.event.addDomListener(window, 'load', init);
+                var map;
+                function init() {
+                var mapOptions = {
+                center: new google.maps.LatLng(13.902076,94.940184),
+                zoom: 4,
+                zoomControl: true,
+                zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.SMALL,
+                },
+                disableDoubleClickZoom: false,
+                mapTypeControl: false,
+                scaleControl: false,
+                scrollwheel: false,
+                panControl: false,
+                streetViewControl: false,
+                draggable : true,
+                overviewMapControl: false,
+                overviewMapControlOptions: {
+                opened: false,
+                },
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                }
+                var mapElement = document.getElementById('map');
+                var map = new google.maps.Map(mapElement, mapOptions);
+                var locations = [
+                ];
+                for (i = 0; i < locations.length; i++) {
+                if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+                if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+                if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+                if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+                if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+                marker = new google.maps.Marker({
+                icon: markericon,
+                position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+                map: map,
+                title: locations[i][0],
+                desc: description,
+                tel: telephone,
+                email: email,
+                web: web
+                });
+                link = '';     }
+                }
+              #map
+            section.atk-section-large#benefits
+              .atk-wrapper
+                .atk-row.atk-align-center
+                  .atk-col-3
+                    .icon-badge-percent.atk-size-zetta.atk-push-small.atk-swatch-tomato.atk-text-lead
+                    | Quality healthcare, saving up to 70% few more words.
+                  .atk-col-3
+                    .icon-badge-star.atk-size-zetta.atk-push-small.atk-swatch-tomato.atk-text-lead
+                    | World’s Top Hospitals bid for your procedure.
+                  .atk-col-3
+                    .icon-badge-free.atk-size-zetta.atk-push-small.atk-swatch-tomato.atk-text-lead
+                    | MEDeTOURISM is free to use and book at anytime.
+                  .atk-col-3
+                    .icon-badge-tick.atk-size-zetta.atk-push-small.atk-swatch-tomato.atk-text-lead
+                    | Listings of international accreditation hospitals.
+      include includes/footer

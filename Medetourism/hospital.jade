@@ -1,0 +1,338 @@
+doctype html
+<!--[if lt IE 7]<html lang="en" class="no-js oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js oldie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js oldie lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+html(class='no-js')
+  <!--<![endif]-->
+  include includes/head
+  body
+    include includes/browsehappy
+    include includes/analytics
+    include includes/facebook-sdk
+    .atk-layout.page-hospital
+      include includes/header
+      .atk-layout-row.atk-layout-expand
+        .atk-layout.atk-layout-cell
+          .atk-layout-column.atk-layout-expand
+            section.breadcrumb.atk-wrapper.atk-section-small.atk-size-micro
+              a(href='#').h-caps Home
+              span.icon-angle-right.atk-sep-large.atk-text-dimmed
+              a(href='#').h-caps Thailand
+              span.icon-angle-right.atk-sep-large.atk-text-dimmed
+              a(href='#').h-caps Bangkok
+              span.icon-angle-right.atk-sep-large.atk-text-dimmed
+              strong.h-caps Smile Signature Dental Clinics
+            hr.atk-hr-reset.border-light
+            .atk-wrapper.atk-section-xlarge
+              .atk-push-xlarge
+                .atk-row
+                  aside.atk-col-4
+                    a.atk-button.atk-button-outline.atk-size-micro.atk-button-large.atk-expand.outline-gray.atk-push(href="#")
+                      span.icon-angle-left
+                      | Back To Search Results
+
+                    .atk-box-large.atk-swatch-ink.atk-push-reset.atk-shape-rounded-top
+                      h5.h-caps Contact Hospital
+                      .atk-form
+                        form
+                          .atk-push-small
+                            select
+                              option General Enquiry
+                              option Option #2
+                          .atk-push-small
+                            button.atk-button-large.atk-size-micro.atk-swatch-tomato.atk-expand Send Enquiry
+                          .atk-size-micro.atk-align-center.atk-text-dimmed Enquiries are free of charge.
+                    .atk-box.atk-push.atk-padding-reset.atk-shape-rounded-bottom
+                      .atk-padding-large
+                        h5.h-caps Location
+                        p.atk-text-dimmed 257/26 Ratchadapisek Rd The Wiz Ratchada, Din Deang District Bangkok, 10400 Thailand Bangkok
+                      script(src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js')
+                      script.
+                        google.maps.event.addDomListener(window, 'load', init);
+                        var map;
+                        function init() {
+                        var mapOptions = {
+                        center: new google.maps.LatLng(13.749161,100.51168),
+                        zoom: 16,
+                        zoomControl: false,
+                        disableDoubleClickZoom: true,
+                        mapTypeControl: false,
+                        scaleControl: false,
+                        scrollwheel: false,
+                        panControl: false,
+                        streetViewControl: false,
+                        draggable : true,
+                        overviewMapControl: false,
+                        overviewMapControlOptions: {
+                        opened: false,
+                        },
+                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                        }
+                        var mapElement = document.getElementById('hospital-map');
+                        var map = new google.maps.Map(mapElement, mapOptions);
+                        var locations = [
+                        ];
+                        for (i = 0; i < locations.length; i++) {
+                        if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+                        if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+                        if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+                        if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+                        if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+                        marker = new google.maps.Marker({
+                        icon: markericon,
+                        position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+                        map: map,
+                        title: locations[i][0],
+                        desc: description,
+                        tel: telephone,
+                        email: email,
+                        web: web
+                        });
+                        link = '';     }
+                        }
+                      #hospital-map
+                      .atk-padding-large
+                        h5.h-caps.atk-push-small.atk-text-baseline-default Working Hours
+                        .atk-cells.atk-cells-gutter-xlarge.atk-size-micro.atk-text-dimmed
+                          .atk-cell
+                            ul.atk-list-nobullets
+                              li Monday
+                              li Tuesday
+                              li.atk-text-bold Wednesday
+                              li Thursday
+                              li Friday
+                              li Saturday
+                              li Sunday
+                          .atk-cell.atk-expand
+                            ul.atk-list-nobullets
+                              li 10:00 am – 9:00 pm
+                              li 10:00 am – 9:00 pm
+                              li.atk-text-bold 10:00 am – 9:00 pm
+                              li 10:00 am – 9:00 pm
+                              li 10:00 am – 9:00 pm
+                              li 10:00 am – 9:00 pm
+                              li 12:00 am – 6:00 pm
+                        h5.h-caps.atk-push-small.atk-text-baseline-default Accreditations
+                        .atk-cells-group.atk-size-micro.atk-cells-gutter-large.atk-text-dimmed.hospital-accreditations
+                          .atk-cells.atk-push-small
+                            .atk-cell
+                              img(src='images/accreditation-tjc.png', height='42')
+                            .atk-cell
+                              | Joint Commission International
+                          .atk-cells.atk-push-small
+                            .atk-cell
+                              img(src='images/accreditation-iso.png', height='42')
+                            .atk-cell
+                              | International Organization for Standardization
+                          .atk-cells.atk-push-small
+                            .atk-cell
+                              img(src='images/accreditation-isqua.png', height='36')
+                            .atk-cell
+                              | The International Society for Quality in Health Care
+                          .atk-cells.atk-push-small
+                            .atk-cell
+                              img(src='images/accreditation-hospital.png', height='42')
+                            .atk-cell
+                              | Hospital Accreditation of Thailand
+                          .atk-cells.atk-push-small
+                            .atk-cell
+                              img(src='images/accreditation-msqh.png', height='42')
+                            .atk-cell
+                              | Malaysian Society for Quality in Health
+                    .atk-box.atk-padding-reset.widget-mask
+                      ins.bookingaff(data-aid='832878', data-target_aid='817268', data-prod='nsb', data-width='320', data-height='260')
+                        // Anything inside will go away once widget is loaded.
+                        a(href='//www.booking.com?aid=817268') Booking.com
+                      script(type='text/javascript').
+                        (function(d, sc, u) {
+                        var s = d.createElement(sc), p = d.getElementsByTagName(sc)[0];
+                        s.type = 'text/javascript';
+                        s.async = true;
+                        s.src = u + '?v=' + (+new Date());
+                        p.parentNode.insertBefore(s,p);
+                        })(document, 'script', '//aff.bstatic.com/static/affiliate_base/js/flexiproduct.js');
+                  .atk-col-1
+                  .atk-col-7
+                    section.hospital-description.atk-push-large
+                      h2.atk-push-reset.atk-text-baseline-default
+                        | Smile Signature Dental Clinics
+                        span.icon-badge-tick.atk-swatch-tomato-text
+                      .atk-text-dimmed.atk-push
+                        span.icon-location-outline
+                        | &nbsp;&nbsp;Bangkok, Thailand
+                      p
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. At deserunt quo provident voluptate, temporibus placeat inventore soluta? Provident optio, commodi itaque enim quis. Vero officia magni a, sequi numquam? Sint! Lorem ipsum dolor sit amet, consectetur adipisicing elit. At deserunt quo provident voluptate, temporibus placeat inventore soluta? Provident optio, commodi itaque enim quis. Vero officia magni a, sequi numquam? Sint! Lorem ipsum dolor sit amet, consectetur adipisicing elit. At deserunt quo provident voluptate, temporibus placeat inventore soluta? Provident optio, commodi itaque enim quis. Vero officia magni a, sequi numquam? Sint! Lorem ipsum dolor sit amet, consectetur adipisicing elit. At deserunt quo provident voluptate, temporibus placeat inventore soluta? Provident optio, commodi itaque enim quis. Vero officia magni a, sequi numquam? Sint!
+                      #photos
+                        a.item(href='//vimeo.com/1084537', data-lity)
+                          span.icon-play-circled2.atk-size-exa.atk-text-baseline-reset
+                          img(src='temp/hospital-1.png', alt='Owl Image')
+                        a.item(href='temp/hospital-full-1.jpg', data-lity)
+                          img(src='temp/hospital-2.png', alt='Owl Image')
+                        a.item(href='temp/hospital-full-2.jpg', data-lity)
+                          img(src='temp/hospital-3.png', alt='Owl Image')
+                        a.item(href='temp/hospital-full-3.jpg', data-lity)
+                          img(src='temp/hospital-4.png', alt='Owl Image')
+                        a.item(href='temp/hospital-full-1.jpg', data-lity)
+                          img(src='temp/hospital-1.png', alt='Owl Image')
+                        a.item(href='temp/hospital-full-2.jpg', data-lity)
+                          img(src='temp/hospital-2.png', alt='Owl Image')
+                      script.
+                        $(function(){
+                          $("#photos").owlCarousel({
+                              autoPlay: false,
+                              items : 3,
+                              pagination: false,
+                              nav: true,
+                              navText: "",
+                              navRewind: false,
+                              margin: 20
+                         
+                          });
+                        });
+
+                    section.atk-push-large
+                      h5.h-lines-left.atk-push
+                        span.h-lines-wrap.h-caps Procedures
+                      .atk-cells.atk-cells-gutter-large
+                        .atk-cell
+                          ul.atk-list-nobullets.list-circles
+                            li Procedure Name
+                            li Procedure Name
+                            li Procedure Name
+                            li Procedure Name
+                            li Procedure Name
+                        .atk-cell
+                          ul.atk-list-nobullets.list-circles
+                            li Procedure Name
+                            li Procedure Name
+                            li Procedure Name
+                            li Procedure Name
+                            li Procedure Name
+                    section.atk-push-large
+                      h5.h-lines-left.atk-push
+                        span.h-lines-wrap.h-caps Facilities
+                      .atk-cells.atk-cells-gutter-large.atk-cells-justified
+                        .atk-cell
+                          ul.atk-list-nobullets.list-icons
+                            li 
+                              span.icon-toilet
+                              | Toilet
+                            li 
+                              span.icon-wifi
+                              | Free wi-fi
+                            li 
+                              span.icon-baby
+                              | Baby changing room
+                            li 
+                              span.icon-doctor
+                              | Online consultation
+                            li 
+                              span.icon-park
+                              | Parking
+                            li 
+                              span.icon-restaurant
+                              | Restaurant
+                        .atk-cell
+                          ul.atk-list-nobullets.list-icons
+                            li 
+                              span.icon-pharmacy
+                              | Pharmacy
+                            li 
+                              span.icon-laundry
+                              | Laundry
+                            li 
+                              span.icon-spray
+                              | Dry cleaning
+                            li 
+                              span.icon-safe
+                              | Safe in the room
+                            li 
+                              span.icon-cup-1
+                              | Café
+                            li 
+                              span.icon-shower
+                              | Spa and wellness
+                    section.atk-push-large
+                      h5.h-lines-left.atk-push
+                        span.h-lines-wrap.h-caps Travel Services
+                      .atk-cells.atk-cells-gutter-large.atk-cells-justified
+                        .atk-cell
+                          ul.atk-list-nobullets.list-icons
+                            li 
+                              span.icon-translation
+                              | Translation
+                            li 
+                              span.icon-currency
+                              | Currency exchange
+                            li 
+                              span.icon-airport
+                              | Airport pickup
+                        .atk-cell
+                          ul.atk-list-nobullets.list-icons
+                            li 
+                              span.icon-planet
+                              | Visa help
+                            li 
+                              span.icon-car
+                              | Private driver
+                    section
+                      h5.h-lines-left.atk-push
+                        span.h-lines-wrap.h-caps Socials
+                      script.
+                        $(function(){
+                          $(".vertical-tabs-menu a").click(verticalTabs);
+                        });
+                      .vertical-tabs#tabs-socials.atk-cells.atk-valign-top.atk-cells-gutter-large
+                        .vertical-tab.atk-cell.atk-expand
+                          #tab-socials-1.vertical-tab-content
+                            .fb-page(data-href='https://www.facebook.com/BangkokSmileDental', data-width='490', data-height='350', data-hide-cover='true', data-show-facepile='false', data-show-posts='true')
+                              .fb-xfbml-parse-ignore
+                                blockquote(cite='https://www.facebook.com/BangkokSmileDental')
+                                  a(href='https://www.facebook.com/BangkokSmileDental') Bangkok Smile Dental Clinic
+                          #tab-socials-2.vertical-tab-content
+                            p
+                              | Donec semper dictum sem, quis pretium sem malesuada non. Proin venenatis orci vel nisl porta sollicitudin. Pellentesque sit amet massa et orci malesuada facilisis vel vel lectus. Etiam tristique volutpat auctor. Morbi nec massa eget sem ultricies fermentum id ut ligula. Praesent aliquet adipiscing dictum. Suspendisse dignissim dui tortor. Integer faucibus interdum justo, mattis commodo elit tempor id. Quisque ut orci orci, sit amet mattis nulla. Suspendisse quam diam, feugiat at ullamcorper eget, sagittis sed eros. Proin tortor tellus, pulvinar at imperdiet in, egestas sed nisl. Aenean tempor neque ut felis dignissim ac congue felis viverra.
+                          #tab-socials-3.vertical-tab-content
+                            p
+                              | Duis egestas fermentum ipsum et commodo. Proin bibendum consectetur elit, hendrerit porta mi dictum eu. Vestibulum adipiscing euismod laoreet. Vivamus lobortis tortor a odio consectetur pulvinar. Proin blandit ornare eros dictum fermentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur laoreet, ante aliquet molestie laoreet, lectus odio fringilla purus, id porttitor erat velit vitae mi. Nullam posuere nunc ut justo sollicitudin interdum. Donec suscipit eros nec leo condimentum fermentum. Nunc quis libero massa. Integer tempus laoreet lectus id interdum. Integer facilisis egestas dui at convallis. Praesent elementum nisl et erat iaculis a blandit ligula mollis. Vestibulum vitae risus dui, nec sagittis arcu. Nullam tortor enim, placerat quis eleifend in, viverra ac lacus. Ut aliquam sapien ut metus hendrerit auctor dapibus justo porta.
+                        ul.vertical-tabs-menu.atk-list-nobullets.atk-cell
+                          li.atk-box-small.atk-push-small.active
+                            a.atk-shape-circle.atk-padding-xsmall.icon-facebook.atk-text-baseline-reset.atk-block(href='#tab-socials-1')
+                          li.atk-box-small.atk-push-small
+                            a.atk-shape-circle.atk-padding-xsmall.icon-twitter.atk-text-baseline-reset.atk-block(href='#tab-socials-2')
+                          li.atk-box-small.atk-push-small
+                            a.atk-shape-circle.atk-padding-xsmall.icon-youtube.atk-text-baseline-reset.atk-block(href='#tab-socials-3')
+
+              .h-lines.atk-align-center.atk-push-large
+                .h-lines-wrap.atk-inline
+                  h4.h-caps Clinics Nearby
+              .atk-row
+                .atk-col-4.featured-hospital-vertical
+                  a.atk-shape-rounded-top.atk-text-reset.atk-block(href='javascript:void(0)')
+                    img(src='temp/hospital-large-1.jpg', width='320', height='160')
+                  .atk-box.atk-shape-rounded-bottom
+                    h5.atk-text-ellipsis.atk-expand.atk-text-baseline-default.atk-push-reset
+                      a(href='javascript:void(0)') Bangkok International Dental Center dsadsa 
+                    .atk-text-dimmed.atk-size-micro
+                      span.icon-location-outline
+                      | &nbsp;&nbsp;Bangkok, Thailand
+                .atk-col-4.featured-hospital-vertical
+                  a.atk-shape-rounded-top.atk-text-reset.atk-block(href='javascript:void(0)')
+                    img(src='temp/hospital-large-2.jpg', width='320', height='160')
+                  .atk-box.atk-shape-rounded-bottom
+                    h5.atk-text-ellipsis.atk-expand.atk-text-baseline-default.atk-push-reset
+                      a(href='javascript:void(0)') Bangkok International Dental Center dsadsa 
+                    .atk-text-dimmed.atk-size-micro
+                      span.icon-location-outline
+                      | &nbsp;&nbsp;Bangkok, Thailand
+                .atk-col-4.featured-hospital-vertical
+                  a.atk-shape-rounded-top.atk-text-reset.atk-block(href='javascript:void(0)')
+                    img(src='temp/hospital-large-3.jpg', width='320', height='160')
+                  .atk-box.atk-shape-rounded-bottom
+                    h5.atk-text-ellipsis.atk-expand.atk-text-baseline-default.atk-push-reset
+                      a(href='javascript:void(0)') Bangkok International Dental Center dsadsa 
+                    .atk-text-dimmed.atk-size-micro
+                      span.icon-location-outline
+                      | &nbsp;&nbsp;Bangkok, Thailand
+      include includes/footer

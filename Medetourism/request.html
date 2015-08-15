@@ -1,0 +1,316 @@
+<!DOCTYPE html><!--[if lt IE 7]<html lang="en" class="no-js oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js oldie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js oldie lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8"><!--[if IE]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]-->
+    <title>MEDeTOURISM</title>
+    <meta name="description" content="">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/medetourism.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/core.js"></script>
+    <script src="js/widget.js"></script>
+    <script src="js/position.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/selectmenu.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/dialog.js"></script>
+    <script src="js/button.js"></script>
+    <script src="js/tooltip.js"></script>
+    <script src="js/atk-helpers-min.js"></script>
+    <script src="js/readmore.min.js"></script>
+    <script src="js/lity.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stickem.js"></script>
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/medetourism.js"></script>
+  </head>
+  <body><!--[if lt IE 8]>
+    <p class="browsehappy">
+      You are using an <strong>outdated</strong> browser.
+      Please <a href="http://browsehappy.com/">upgrade your browser</a>
+      to improve your experience.
+    </p><![endif]-->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-17702108-4');
+      ga('send', 'pageview');
+    </script>
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div class="atk-layout page-hospital">
+      <div id="header" class="atk-layout-row">
+        <div class="atk-layout-cell">
+          <div class="atk-wrapper atk-section">
+            <div class="atk-cells">
+              <div class="atk-cell"><a id="logo" href="javascript:void(0)" class="atk-text-reset atk-block"><img src="images/logo.png" alt="MEDeTOURISM"></a></div>
+              <div class="atk-cell atk-align-right atk-actions-xxlarge"><a href="javascript:void(0)">Sign In</a><a href="javascript:void(0)" class="atk-button-large atk-size-micro atk-swatch-tomato">Reuqest a Bid</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="atk-layout-row atk-layout-expand">
+        <div class="atk-layout atk-layout-cell">
+          <div class="atk-layout-column atk-layout-expand">
+            <div class="atk-wrapper atk-section-xlarge">
+              <h2 class="atk-push">Request a Treatment Bid</h2>
+              <div class="atk-row stickem-container">
+                <section class="atk-col-8">
+                  <div class="atk-box-large">
+                    <form class="atk-form">
+                      <div class="atk-push">
+                        <div class="atk-push-xsmall">
+                          <label class="atk-text-bold">Preferred region</label>
+                        </div>
+                        <select data-placeholder="Select preferred region">
+                          <option> </option>
+                          <option>China</option>
+                          <option>Hong Kong</option>
+                          <option>Macau</option>
+                        </select>
+                      </div>
+                      <div class="atk-push">
+                        <div class="atk-push-xsmall">
+                          <label class="atk-text-bold">Contact name</label>
+                        </div>
+                        <input type="text">
+                      </div>
+                      <div class="atk-cells atk-cells-justified atk-cells-gutter atk-push">
+                        <div class="atk-cell">
+                          <div class="atk-push-xsmall">
+                            <label class="atk-text-bold">Email</label>
+                          </div>
+                          <input type="text">
+                        </div>
+                        <div class="atk-cell">
+                          <div class="atk-push-xsmall">
+                            <label class="atk-text-bold">Phone</label>
+                          </div>
+                          <div id="input-combo-phone" class="input-dropdown">
+                            <div class="atk-input-combo atk-cells">
+                              <div class="atk-cell">
+                                <select id="input-phone">
+                                  <option data-code="61" selected="selected">Australia (+61)</option>
+                                  <option data-code="43">Austria (+43)</option>
+                                  <option data-code="372">Estonia (+372)</option>
+                                  <option data-code="371">Latvia (+371)</option>
+                                  <option data-code="7">Russia (+7)</option>
+                                  <option data-code="44">United Kingdom (+44)</option>
+                                  <option data-code="1">United States (+1)</option>
+                                </select>
+                              </div>
+                              <div class="atk-cell atk-expand">
+                                <input type="text" id="phone" class="atk-expand">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="atk-cells atk-cells-justified atk-cells-gutter atk-push">
+                        <div class="atk-cell">
+                          <div class="atk-push-xsmall">
+                            <label class="atk-text-bold">Available from</label>
+                          </div>
+                          <div class="atk-cells atk-input-combo">
+                            <div class="atk-cell atk-expand">
+                              <input type="text">
+                            </div>
+                            <div class="atk-cell"><a href="#" class="atk-button"><span class="icon-calendar atk-text-dimmed"></span></a></div>
+                          </div>
+                        </div>
+                        <div class="atk-cell">
+                          <div class="atk-push-xsmall">
+                            <label class="atk-text-bold">Available until</label>
+                          </div>
+                          <div class="atk-cells atk-input-combo">
+                            <div class="atk-cell atk-expand">
+                              <input type="text">
+                            </div>
+                            <div class="atk-cell"><a href="#" class="atk-button"><span class="icon-calendar atk-text-dimmed"></span></a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="atk-cells atk-cells-justified atk-cells-gutter atk-push">
+                        <div class="atk-cell">
+                          <div class="atk-push-xsmall">
+                            <label class="atk-text-bold">Age</label>
+                          </div>
+                          <input type="text">
+                        </div>
+                        <div class="atk-cell">
+                          <div class="atk-push-xsmall">
+                            <label class="atk-text-bold">Gender</label>
+                          </div>
+                          <select>
+                            <option>Male</option>
+                            <option>Female</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="atk-cells atk-cells-justified atk-cells-gutter atk-push">
+                        <div class="atk-cell">
+                          <div class="atk-push-xsmall">
+                            <label class="atk-text-bold">Nationality</label>
+                          </div>
+                          <input type="text">
+                        </div>
+                        <div class="atk-cell">
+                          <div class="atk-push-xsmall">
+                            <label class="atk-text-bold">Religion</label>
+                          </div>
+                          <select data-placeholder="Select your religion">
+                            <option></option>
+                            <option>African traditional religions</option>
+                            <option>Buddhism</option>
+                            <option>Chinese traditional religion</option>
+                            <option>Christianity</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="atk-push">
+                        <div class="atk-push-xsmall">
+                          <label class="atk-text-bold">Language(s) spoken fluently</label>
+                        </div>
+                        <select name="colors" multiple="" data-placeholder="Please select options" class="input-tags">
+                          <option>Mandarin</option>
+                          <option>Spanish</option>
+                          <option>English</option>
+                        </select>
+                      </div>
+                      <div class="atk-push">
+                        <div class="atk-input-radio"><span>
+                            <input type="checkbox" id="med-ref">
+                            <label for="med-ref">I have a Medical Referral.</label></span></div>
+                      </div>
+                      <div class="atk-push">
+                        <div class="atk-push-xsmall">
+                          <label class="atk-text-bold">General comments</label>
+                        </div>
+                        <textarea></textarea>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="atk-align-center h-lines atk-push-large"><span class="h-lines-wrap"><a href="javascript:void(0)" class="atk-swatch-tomato atk-button-large atk-col-4 w-shadow action-large">Request a Bid</a></span></div>
+                  <ol class="atk-text-dimmed atk-size-micro atk-list-nomargin">
+                    <li>
+                       
+                      Bids do not cover any complications, subject to <a href="http://www.medetourism.com/?page=bid&amp;procedure_id=19&amp;region_id=6#1">terms &amp; conditions</a>, based on individual circumstances.
+                    </li>
+                    <li>If and when you accept a bid then you will be asked to make a 5% booking deposit VIA our SSL secure website. - (CURRENTLY THIS IS FREE) A confirmation email will be sent to you and all your contact details will then be disclosed to the winning hospital ONLY - who will contact you within 7 days to make full arrangements.</li>
+                    <li>All Bids will be quoted in US Dollars.</li>
+                  </ol>
+                </section>
+                <aside class="atk-col-4 stickem">
+                  <div class="atk-box atk-size-milli atk-align-center atk-swatch-ink">
+                    <h4 class="atk-push-xsmall">Treatment and Location</h4>
+                    <div class="atk-form">
+                      <div class="atk-push-small">
+                        <input type="text" placeholder="Select Treatment" value="Dental Bridges">
+                      </div>
+                      <div class="atk-push-small">
+                        <select>
+                          <option>Central Asia</option>
+                          <option>Eastern Asia</option>
+                          <option>Europe</option>
+                        </select>
+                      </div>
+                      <div class="atk-text-dimmed">Treatment available in <strong>China, Malaysia</strong>.</div>
+                    </div>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="atk-layout-row">
+        <div class="atk-layout-cell">
+          <hr class="atk-hr-reset border-light">
+          <div id="accreditations" class="atk-section">
+            <div class="atk-wrapper">
+              <div class="atk-cells">
+                <div class="atk-cell atk-col-3">
+                  <h4>International Health Accreditations</h4>
+                </div>
+                <div class="atk-cell atk-align-center"><img src="images/accreditation-tjc.png"><img src="images/accreditation-iso.png"><img src="images/accreditation-isqua.png"><img src="images/accreditation-hospital.png"><img src="images/accreditation-msqh.png"></div>
+              </div>
+            </div>
+          </div>
+          <footer id="footer" class="atk-swatch-ink">
+            <div class="atk-wrapper atk-section-large">
+              <div class="atk-row">
+                <div class="atk-col-3">
+                  <div class="atk-text-reset atk-push"><img src="images/logo-footer.png"></div>
+                  <p class="atk-size-micro">MEDeTOURISM.com.au offers an innovative FREE easy-to-use platform where you can search &amp; book medical &amp; surgical procedures with elite Internationally Accredited Asian Hospitals, for the best prices, saving up to 70% compared to Australian medical costs.</p>
+                </div>
+                <div class="atk-col-1"></div>
+                <div class="atk-col-4">
+                  <h5 class="h-caps">Hospital Locations</h5>
+                  <hr class="atk-hr-reset atk-push">
+                  <div class="atk-cells atk-cells-justified">
+                    <div class="atk-cell">
+                      <ul class="atk-list-nobullets">
+                        <li><a href="javascript:void(0)">Malaysia</a></li>
+                        <li><a href="javascript:void(0)">Indonesia</a></li>
+                        <li><a href="javascript:void(0)">Thailand</a></li>
+                        <li><a href="javascript:void(0)">Vietnam</a></li>
+                        <li><a href="javascript:void(0)">Turkey</a></li>
+                      </ul>
+                    </div>
+                    <div class="atk-cell">
+                      <ul class="atk-list-nobullets">
+                        <li><a href="javascript:void(0)">Singapore</a></li>
+                        <li><a href="javascript:void(0)">South Korea</a></li>
+                        <li><a href="javascript:void(0)">India</a></li>
+                        <li><a href="javascript:void(0)">UAE</a></li>
+                        <li><a href="javascript:void(0)">Cambodia</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="atk-col-2">
+                  <h5 class="h-caps">Company</h5>
+                  <hr class="atk-hr-reset atk-push">
+                  <ul class="atk-list-nobullets">
+                    <li><a href="javascript:void(0)">About Us</a></li>
+                    <li><a href="javascript:void(0)">Contact Us</a></li>
+                    <li><a href="javascript:void(0)">FAQ</a></li>
+                    <li><a href="javascript:void(0)">Terms</a></li>
+                    <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                  </ul>
+                </div>
+                <div class="atk-col-2">
+                  <h5 class="h-caps">SOCIAL</h5>
+                  <hr class="atk-hr-reset atk-push">
+                  <ul class="atk-list-nobullets">
+                    <li><a href="javascript:void(0)"><span class="icon-facebook"></span>&nbsp;&nbsp;Facebook</a></li>
+                    <li><a href="javascript:void(0)"><span class="icon-twitter"></span>&nbsp;&nbsp;Twitter</a></li>
+                    <li>
+                      <div data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" class="fb-like"></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

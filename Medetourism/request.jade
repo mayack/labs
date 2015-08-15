@@ -1,0 +1,153 @@
+doctype html
+<!--[if lt IE 7]<html lang="en" class="no-js oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js oldie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js oldie lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+html(class='no-js')
+  <!--<![endif]-->
+  include includes/head
+  body
+    include includes/browsehappy
+    include includes/analytics
+    include includes/facebook-sdk
+    .atk-layout.page-hospital
+      include includes/header
+      .atk-layout-row.atk-layout-expand
+        .atk-layout.atk-layout-cell
+          .atk-layout-column.atk-layout-expand
+            //- section.breadcrumb.atk-wrapper.atk-section-small.atk-size-micro
+            //-   a(href='#').h-caps Home
+            //-   span.icon-angle-right.atk-sep-large.atk-text-dimmed
+            //-   a(href='#').h-caps Thailand
+            //-   span.icon-angle-right.atk-sep-large.atk-text-dimmed
+            //-   a(href='#').h-caps Bangkok
+            //-   span.icon-angle-right.atk-sep-large.atk-text-dimmed
+            //-   strong.h-caps Smile Signature Dental Clinics
+            //- hr.atk-hr-reset.border-light
+            .atk-wrapper.atk-section-xlarge
+              h2.atk-push Request a Treatment Bid
+              .atk-row.stickem-container
+                section.atk-col-8
+                  .atk-box-large
+                    form.atk-form
+                      .atk-push
+                        .atk-push-xsmall
+                          label.atk-text-bold Preferred region
+                        select(data-placeholder="Select preferred region")
+                          option 
+                          option China
+                          option Hong Kong
+                          option Macau
+                      .atk-push
+                        .atk-push-xsmall
+                          label.atk-text-bold Contact name
+                        input(type="text")
+                      .atk-cells.atk-cells-justified.atk-cells-gutter.atk-push
+                        .atk-cell
+                          .atk-push-xsmall
+                            label.atk-text-bold Email
+                          input(type="text")
+                        .atk-cell
+                          .atk-push-xsmall
+                            label.atk-text-bold Phone
+                          .input-dropdown#input-combo-phone
+                            .atk-input-combo.atk-cells
+                              .atk-cell
+                                select#input-phone
+                                  option(data-code="61", selected="selected") Australia (+61)
+                                  option(data-code="43") Austria (+43)
+                                  option(data-code="372") Estonia (+372)
+                                  option(data-code="371") Latvia (+371)
+                                  option(data-code="7") Russia (+7)
+                                  option(data-code="44") United Kingdom (+44)
+                                  option(data-code="1") United States (+1)
+                              .atk-cell.atk-expand
+                                input.atk-expand(type='text', id='phone')
+                      .atk-cells.atk-cells-justified.atk-cells-gutter.atk-push
+                        .atk-cell
+                          .atk-push-xsmall
+                            label.atk-text-bold Available from
+                          .atk-cells.atk-input-combo
+                            .atk-cell.atk-expand
+                              input(type='text')
+                            .atk-cell
+                              a(href='#').atk-button
+                                span.icon-calendar.atk-text-dimmed
+                        .atk-cell
+                          .atk-push-xsmall
+                            label.atk-text-bold Available until
+                          .atk-cells.atk-input-combo
+                            .atk-cell.atk-expand
+                              input(type='text')
+                            .atk-cell
+                              a(href='#').atk-button
+                                span.icon-calendar.atk-text-dimmed
+                      .atk-cells.atk-cells-justified.atk-cells-gutter.atk-push
+                        .atk-cell
+                          .atk-push-xsmall
+                            label.atk-text-bold Age
+                          input(type="text")
+                        .atk-cell
+                          .atk-push-xsmall
+                            label.atk-text-bold Gender
+                          select
+                            option Male
+                            option Female
+                      .atk-cells.atk-cells-justified.atk-cells-gutter.atk-push
+                        .atk-cell
+                          .atk-push-xsmall
+                            label.atk-text-bold Nationality
+                          input(type="text")
+                        .atk-cell
+                          .atk-push-xsmall
+                            label.atk-text-bold Religion
+                          select(data-placeholder="Select your religion")
+                            option
+                            option African traditional religions
+                            option Buddhism
+                            option Chinese traditional religion
+                            option Christianity
+                      .atk-push
+                        .atk-push-xsmall
+                          label.atk-text-bold Language(s) spoken fluently
+                        select.input-tags(name='colors', multiple='', data-placeholder="Please select options")
+                          option Mandarin
+                          option Spanish
+                          option English
+                      .atk-push
+                        .atk-input-radio
+                          span
+                            input(type='checkbox', id='med-ref')
+                            label(for='med-ref')
+                              | I have a Medical Referral.
+                      .atk-push
+                        .atk-push-xsmall
+                          label.atk-text-bold General comments
+                        textarea
+                  .atk-align-center.h-lines.atk-push-large
+                    span.h-lines-wrap
+                      a.atk-swatch-tomato.atk-button-large.atk-col-4.w-shadow.action-large(href='javascript:void(0)')
+                        | Request a Bid
+                  ol.atk-text-dimmed.atk-size-micro.atk-list-nomargin
+                    li 
+                      | Bids do not cover any complications, subject to 
+                      a(href='http://www.medetourism.com/?page=bid&procedure_id=19&region_id=6#1') terms &amp; conditions
+                      | , based on individual circumstances.
+                    li If and when you accept a bid then you will be asked to make a 5% booking deposit VIA our SSL secure website. - (CURRENTLY THIS IS FREE) A confirmation email will be sent to you and all your contact details will then be disclosed to the winning hospital ONLY - who will contact you within 7 days to make full arrangements.
+                    li All Bids will be quoted in US Dollars.
+                aside.atk-col-4.stickem
+                  .atk-box.atk-size-milli.atk-align-center.atk-swatch-ink
+                    h4.atk-push-xsmall Treatment and Location
+                    .atk-form
+                      .atk-push-small
+                        input(type="text", placeholder="Select Treatment", value="Dental Bridges")
+                      .atk-push-small
+                        select
+                          option Central Asia
+                          option Eastern Asia
+                          option Europe
+                      .atk-text-dimmed
+                        | Treatment available in 
+                        strong China, Malaysia
+                        | .
+      include includes/footer
