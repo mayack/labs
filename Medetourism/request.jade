@@ -15,20 +15,26 @@ html(class='no-js')
       .atk-layout-row.atk-layout-expand
         .atk-layout.atk-layout-cell
           .atk-layout-column.atk-layout-expand
-            //- section.breadcrumb.atk-wrapper.atk-section-small.atk-size-micro
-            //-   a(href='#').h-caps Home
-            //-   span.icon-angle-right.atk-sep-large.atk-text-dimmed
-            //-   a(href='#').h-caps Thailand
-            //-   span.icon-angle-right.atk-sep-large.atk-text-dimmed
-            //-   a(href='#').h-caps Bangkok
-            //-   span.icon-angle-right.atk-sep-large.atk-text-dimmed
-            //-   strong.h-caps Smile Signature Dental Clinics
-            //- hr.atk-hr-reset.border-light
             .atk-wrapper.atk-section-xlarge
-              h2.atk-push Request a Treatment Bid
-              .atk-row.stickem-container
+              .atk-row.stickem-container.form-request
                 section.atk-col-8
-                  .atk-box-large
+                  h2.atk-push Request a Treatment Bid
+                  .atk-box-large.atk-swatch-ink.atk-push-reset.atk-shape-rounded-top
+                    h4.atk-push-xsmall.atk-margin-reset Treatment and Location
+                    .atk-form
+                      .atk-cells.atk-expand.atk-cells-justified.atk-cells-gutter.atk-push-small
+                        .atk-cell
+                          input(type="text", placeholder="Select Treatment", value="Dental Bridges")
+                        .atk-cell
+                          select
+                            option Central Asia
+                            option(selected="selected") Eastern Asia
+                            option Europe
+                      .atk-text-dimmed
+                        | Treatment available in 
+                        strong China, Hong Kong, Macau
+                        | .
+                  .atk-box-large.atk-shape-rounded-bottom
                     form.atk-form
                       .atk-push
                         .atk-push-xsmall
@@ -144,20 +150,9 @@ html(class='no-js')
                     li If and when you accept a bid then you will be asked to make a 5% booking deposit VIA our SSL secure website. - (CURRENTLY THIS IS FREE) A confirmation email will be sent to you and all your contact details will then be disclosed to the winning hospital ONLY - who will contact you within 7 days to make full arrangements.
                     li All Bids will be quoted in US Dollars.
                 aside.atk-col-4.stickem
-                  .atk-box.atk-size-milli.atk-align-center.atk-swatch-ink
-                    img(src="images/icon-treatment.svg", width="64", height="64")
-                    h4.atk-push-xsmall.atk-margin-reset Treatment and Location
-                    .atk-form
-                      .atk-push-small
-                        input(type="text", placeholder="Select Treatment", value="Dental Bridges")
-                      .atk-push-small
-                        select
-                          option Central Asia
-                          option(selected="selected") Eastern Asia
-                          option Europe
-                      .atk-text-dimmed
-                        | Treatment available in
-                        br 
-                        strong China, Hong Kong, Macau
-                        | .
+                  .atk-box.atk-align-center.box-hint(style="position:relative")
+                    img(src="images/icon-bulb.svg", width="64", height="64", style="position: absolute;top:-32px;left:50%;margin-left:-32px")
+                    h4 Some hint heading
+                    p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis quod nemo dolores incidunt, at modi enim odio nostrum vel doloremque voluptates.
+
       include includes/footer

@@ -5660,23 +5660,27 @@ input#how-it-works .dots-holder .dots:after.ui-button {
 .stickem-container {
   position: relative;
 }
-.stickit {
-  position: fixed;
-  margin-left: 660px;
-  top: 0;
-}
-.stickit-end {
-  bottom: 0;
-  position: absolute;
-  right: 0;
-}
 .stickem {
   box-sizing: border-box;
   width: 340px !important;
 }
+.stickem .atk-box {
+  margin-top: 62px;
+}
+.stickem.stickit {
+  position: fixed;
+  margin-left: 660px;
+  top: 0;
+  padding-bottom: 0;
+}
 .stickem.stickit .atk-box {
   position: relative;
   left: 20px;
+}
+.stickem.stickit-end {
+  bottom: 0;
+  position: absolute;
+  right: 0;
 }
 #input-combo-phone .select2.select2-container--default .selection .select2-selection--single {
   -webkit-border-radius: 3px 0 0 3px;
@@ -5701,6 +5705,9 @@ input#how-it-works .dots-holder .dots:after.ui-button {
   -webkit-box-shadow: -1px 0 0 #9a9890;
   -moz-box-shadow: -1px 0 0 #9a9890;
   box-shadow: -1px 0 0 #9a9890;
+}
+.form-request .atk-shape-rounded-bottom.atk-box-large {
+  border-top: none;
 }
 .select2.select2-container--default {
   font-size: 1em;

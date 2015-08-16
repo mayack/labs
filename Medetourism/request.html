@@ -69,10 +69,28 @@
         <div class="atk-layout atk-layout-cell">
           <div class="atk-layout-column atk-layout-expand">
             <div class="atk-wrapper atk-section-xlarge">
-              <h2 class="atk-push">Request a Treatment Bid</h2>
-              <div class="atk-row stickem-container">
+              <div class="atk-row stickem-container form-request">
                 <section class="atk-col-8">
-                  <div class="atk-box-large">
+                  <h2 class="atk-push">Request a Treatment Bid</h2>
+                  <div class="atk-box-large atk-swatch-ink atk-push-reset atk-shape-rounded-top">
+                    <h4 class="atk-push-xsmall atk-margin-reset">Treatment and Location</h4>
+                    <div class="atk-form">
+                      <div class="atk-cells atk-expand atk-cells-justified atk-cells-gutter atk-push-small">
+                        <div class="atk-cell">
+                          <input type="text" placeholder="Select Treatment" value="Dental Bridges">
+                        </div>
+                        <div class="atk-cell">
+                          <select>
+                            <option>Central Asia</option>
+                            <option selected="selected">Eastern Asia</option>
+                            <option>Europe</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="atk-text-dimmed">Treatment available in <strong>China, Hong Kong, Macau</strong>.</div>
+                    </div>
+                  </div>
+                  <div class="atk-box-large atk-shape-rounded-bottom">
                     <form class="atk-form">
                       <div class="atk-push">
                         <div class="atk-push-xsmall">
@@ -226,21 +244,9 @@
                   </ol>
                 </section>
                 <aside class="atk-col-4 stickem">
-                  <div class="atk-box atk-size-milli atk-align-center atk-swatch-ink"><img src="images/icon-treatment.svg" width="64" height="64">
-                    <h4 class="atk-push-xsmall atk-margin-reset">Treatment and Location</h4>
-                    <div class="atk-form">
-                      <div class="atk-push-small">
-                        <input type="text" placeholder="Select Treatment" value="Dental Bridges">
-                      </div>
-                      <div class="atk-push-small">
-                        <select>
-                          <option>Central Asia</option>
-                          <option selected="selected">Eastern Asia</option>
-                          <option>Europe</option>
-                        </select>
-                      </div>
-                      <div class="atk-text-dimmed">Treatment available in<br><strong>China, Hong Kong, Macau</strong>.</div>
-                    </div>
+                  <div style="position:relative" class="atk-box atk-align-center box-hint"><img src="images/icon-bulb.svg" width="64" height="64" style="position: absolute;top:-32px;left:50%;margin-left:-32px">
+                    <h4>Some hint heading</h4>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis quod nemo dolores incidunt, at modi enim odio nostrum vel doloremque voluptates.</p>
                   </div>
                 </aside>
               </div>

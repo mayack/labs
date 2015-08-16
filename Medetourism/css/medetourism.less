@@ -659,28 +659,26 @@ ul.list-circles {
 .stickem-container {
   position: relative;
 }
-.stickit {
-  position: fixed;
-  margin-left: 660px;
-  top: 0;
-}
-.stickit-end {
-  bottom: 0;
-  position: absolute;
-  right: 0;
-}
 .stickem {
   box-sizing: border-box;
   width: 340px !important;
   .atk-box {
-    // position: relative;
-    // left: 20px;
+    margin-top: 62px;
   }
   &.stickit {
+    position: fixed;
+    margin-left: 660px;
+    top: 0;
+    padding-bottom: 0;
     .atk-box {
       position: relative;
       left: 20px;
     }
+  }
+  &.stickit-end {
+    bottom: 0;
+    position: absolute;
+    right: 0;
   }
 }
 #input-combo-phone {
@@ -703,6 +701,12 @@ ul.list-circles {
     }
   }
 }
+.form-request {
+  .atk-shape-rounded-bottom.atk-box-large {
+    border-top: none;
+  }
+}
+
 
 // Select2 
 
