@@ -5887,9 +5887,6 @@ input#how-it-works .dots-holder .dots:after.ui-button {
   -moz-box-shadow: -1px 0 0 #9a9890;
   box-shadow: -1px 0 0 #9a9890;
 }
-.form-request .atk-shape-rounded-bottom.atk-box-large {
-  border-top: none;
-}
 .box-hint {
   position: relative;
 }
