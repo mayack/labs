@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{margin:0;padding:0px;} 
+    .appleLinks a{ text-decoration: none !important; color: #00c1c7;}
+    .appleLinksBlack a {color:#000000; text-decoration: none;}
+  </style>
+</head>
+<body style="margin:0px;padding:0px;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" style="margin:0;background-color:#f2f5f5;font-family:Helvetica,Arial,sans-serif;">
+  <tbody>
+    <tr>
+      <td align="center" width="100%" style="margin: 0px auto;">
+        <table align="center" height="40" width="100%" border="0" cellpadding="0" cellspacing="0" style="height:40px;">
+          <tbody><tr><td></td></tr></tbody>
+        </table>
+        <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width:800px;">
+          <tbody>
+            <tr>
+              <td style="text-align:center;font-size:22px;color:#3f5555;">Rēķins no</td>
+            </tr>
+            <tr style="text-align:center;font-size:22px;color:#3f5555;">
+              <td style="font-weight:bold">SIA Qfer <span style="font-weight:normal;font-size:22px;color:#3f5555;"> par </span> €5,45</td> 
+            </tr>
+            <tr style="width:100%;text-align:center;font-size:12px;color:#3f5555;">
+              <td>
+                <table style="text-align:center;padding-top:40px;" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="center" width="50%" style="text-align:right;">
+                        <table align="right" width="158" border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td align="center" style="text-align:center;font-size:12px;color:#869898;">Mēs pieņemam</td>
+                            </tr>
+                            <tr>
+                              <td align="center" style="text-align:center;padding-top:5px;">
+                              <div align="center" style="margin: 0 auto;width:89px;">
+                              <img style="border:0;margin:0px;" height="20" src="https://swipe.lv/static/images/email/visa-master-header-logo.png">
+                              </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                      <td align="center" width="1" height="40">
+                        <table align="center" width="1" height="40" border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td align="center" width="1" height="40" style="width:1px;height:40px;background-color:#ced9d9;"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                      <td align="center" width="50%" style="text-align:left;">
+                        <table align="left" width="158" border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td align="center" style="text-align:center;font-size:12px;color:#869898;">Izsniegts</td>
+                            </tr>
+                            <tr>
+                              <td align="center" style="text-align:center;font-size:12px;color:#5a6d6d;font-weight:bold;padding-top:5px;">2015. gada 2. septembris</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+<!--         <table align="center" height="55" width="100%" border="0" cellpadding="0" cellspacing="0" style="height:55px;">
+          <tbody><tr><td></td></tr></tbody>
+        </table> -->
+        <!-- {% include 'swipe_app/email/invoice_table.html' %} -->
+        <table align="center" height="30" width="100%" border="0" cellpadding="0" cellspacing="0" style="height:30px;">
+          <tbody><tr><td></td></tr></tbody>
+        </table>
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="300" style="">
+          <tbody>
+            <tr>
+              <td align="center" width="300" style="width:300px;">
+                <a href="{{ url }}{% url 'client:payment' lang=LANGUAGE_CODE hash=invoice.hash %}">
+                <table align="center" width="300" border="0" cellpadding="0" cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <td style="background-color:#00c1c7;width:300px;height:50px;border-radius: 2px;font-size:18px;color:#ffffff;border:0;font-weight:600;display:block;line-height:50px;text-decoration:none !important;text-align:center;">
+                        <a style="text-decoration:none !important;color:#ffffff;" href="{{ url }}{% url 'client:payment' lang=LANGUAGE_CODE hash=invoice.hash %}">Maksāt</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td height="15" style="height:15px;">
+              </td>
+            </tr>
+            <tr>
+              <td align="center" width="300" style="width:300px;">
+                <a href="{{ url }}{% url 'client:reject_invoice' lang=LANGUAGE_CODE hash=invoice.hash %}">
+                <table align="center" width="300" border="0" cellpadding="0" cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <td style="border:1px solid #c0cccc;background-color:#edf2f2;width:300px;height:50px;border-radius:2px;font-size:18px;color:#3f5555;font-weight:600;display:block;line-height:50px;text-decoration:none !important;text-align:center;">
+                        <a style="text-decoration:none !important;color:#3f5555;" href="{{ url }}{% url 'client:reject_invoice' lang=LANGUAGE_CODE hash=invoice.hash %}">Skatīt rēķinu</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td height="30" style="height:30px;">
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <img style="border:0;" height="42" src="https://swipe.lv/static/images/email/visa-master-footer-logo.png">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table align="center" height="30" width="100%" style="border-bottom:1px solid #ced9d9;" cellpadding="0" cellspacing="0" style="height:30px;">
+          <tbody><tr><td></td></tr></tbody>
+        </table>
+        <table align="center" height="30" width="100%" border="0" cellpadding="0" cellspacing="0" style="height:30px;">
+          <tbody><tr><td></td></tr></tbody>
+        </table>
+        <table align="center" width="300" style="margin: 0 auto;">
+          <tbody>
+            <tr>
+              <td align="center">
+                <img style="border:0;" width="100" src="https://swipe.lv/static/images/email/swipe-footer-logo.png">
+              </td>
+            </tr>
+            <tr>
+              <td align="center" width="300" style="color:#869898;font-size:14px;width:300px;padding-top:20px;line-height:20px;margin: 0 auto;">
+                Swipe.lv palīdz SIA SIA Qfer pieņemt maksājumus internetā uz viņu esošo bankas kontu. <a href="{{ url }}{{ landing_url }}" style="text-decoration:none !important;color:#869898;font-weight:bold;">Lasīt vairāk <img style="border:0;" height="9" src="https://swipe.lv/static/images/email/icon-arrow-east.png"></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table align="center" height="30" width="100%" border="0" cellpadding="0" cellspacing="0" style="height:30px;">
+          <tbody><tr><td></td></tr></tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
