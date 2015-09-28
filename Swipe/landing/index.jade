@@ -1,0 +1,222 @@
+doctype html
+<!--[if lt IE 7]<html lang="en" class="oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en" class="oldie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="oldie lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+html
+  <!--<![endif]-->
+  include includes/head
+  body#page-landing
+    include includes/browsehappy
+    include includes/analytics
+    .atk-layout
+      .atk-layout-row#header
+        .atk-layout-cell
+          .atk-wrapper
+            .atk-section-small
+              include includes/navigation
+      .atk-layout-row.atk-layout-expand
+        .atk-layout.atk-layout-cell
+          .atk-layout-column.atk-layout-expand
+            section#hero
+              .atk-wrapper.atk-section-xlarge
+                .atk-row
+                  .atk-col-6
+                    h1.atk-size-yotta2.atk-text-light.atk-text-baseline-reset.atk-push Rēķini, kuri tiek maksāti uzreiz.
+                    p.atk-size-mega.atk-push Invoices sent using Swipe can be paid in just two clicks. That's why 70% of them are paid within 24 hours. But Swipe is even more. We need 4 lines of text here, otherwise paddings are mess.
+                    .atk-push-xlarge
+                      .atk-row.atk-push-small
+                        .atk-col-6
+                          a(href='#').atk-button-large.atk-swatch-aqua.atk-expand Sign Up
+                        .atk-col-6
+                          a(href='#').atk-button-large.atk-swatch-gray.atk-expand
+                            span.icon-play
+                            | &nbsp;&nbsp;Play Video
+                    .atk-cells.atk-cells-gutter
+                      .atk-cell.atk-text-baseline-reset
+                        span.icon-api.atk-size-yotta.atk-text-dimmed
+                      .atk-cell
+                        a(href='#').atk-text-bold Swipe API for your website
+                        p.atk-text-dimmed You can request access to Swipe web and mobile checkouts and API. Our team will contact you and take personal care.
+                  .atk-col-6.atk-hide-mobile.atk-hide-tablet.img-holder
+                    figure.img-hand
+            #nav-floating-anchor.atk-hide-tablet.atk-hide-mobile
+            #nav-floating-wrap.atk-hide-tablet.atk-hide-mobile
+              #nav-floating.animated.short.fadeOutUp
+                include includes/navigation
+            section#why-swipe
+              .atk-wrapper.atk-section-xlarge
+                .atk-row.atk-push
+                  .atk-col-8
+                    h1.atk-push-large.atk-text-baseline-reset We need a bigger heading here.
+                    .atk-row
+                      .atk-col-6
+                        .atk-cells.atk-cells-gutter-large.atk-push
+                          .atk-cell.atk-text-baseline-reset.atk-valign-top.atk-valign-middle
+                            span.icon-cards.atk-size-zetta.atk-swatch-aqua
+                          .atk-cell.atk-expand
+                            .atk-text-bold Online Payments
+                            p Easiest way to get paid for your products and services online.
+                        .atk-cells.atk-cells-gutter-large
+                          .atk-cell.atk-text-baseline-reset.atk-valign-top.atk-valign-middle
+                            span.icon-cog.atk-size-zetta.atk-swatch-aqua
+                          .atk-cell.atk-expand
+                            .atk-text-bold Free Setup
+                            p
+                              | Quick setup free of charge.&nbsp;
+                              br.atk-hide-tablet.atk-hide-mobile
+                              | Website is not required.
+                      .atk-col-6
+                        .atk-cells.atk-cells-gutter-large.atk-push
+                          .atk-cell.atk-text-baseline-reset.atk-valign-top.atk-valign-middle
+                            span.icon-paper-plane.atk-size-zetta.atk-swatch-aqua
+                          .atk-cell.atk-expand
+                            .atk-text-bold Invoicing
+                            p Invoice your clients having only their email or phone number.
+                        .atk-cells.atk-cells-gutter-large
+                          .atk-cell.atk-text-baseline-reset.atk-valign-top.atk-valign-middle
+                            span.icon-building.atk-size-zetta.atk-swatch-aqua
+                          .atk-cell.atk-expand
+                            .atk-text-bold Corporate Friendly
+                            p Individual integration with big company invoicing infrastructure.
+                  .atk-col-4.img-holder
+                    figure.img-macbook.atk-hide-tablet.atk-hide-mobile
+              //- .connection.connection-bottom
+              //-   a(href='#how-it-works').scroll.icon-arrow-south
+            section#how-it-works.atk-background-cover(style='background-image:url(images/bg-desk.jpg)')
+              //- .connection.connection-top
+              //-   span 2
+              //-   h5 How it works?
+              .atk-wrapper.atk-section-xlarge
+                h5.section-header.atk-push-xlarge How it works?
+                .workflow.atk-push-large
+                  .atk-row
+                    .workflow-path.atk-col-8.atk-move-center
+                      figure.img-workflow-path.wow.fadeIn.long.atk-hide-tablet.atk-hide-mobile(data-wow-delay=".8s")
+                      .workflow-step-1
+                        .atk-shape-circle.atk-swatch-aqua.wow.zoomIn.short(data-wow-delay=".3s")
+                          span.icon-shop
+                        p.wow.fadeIn(data-wow-delay=".3s")
+                          strong Uzņēmums
+                          |  reģistrējās Swipe.lv mājas lapā dažās minutēs.
+                      .workflow-step-2
+                        .atk-shape-circle.atk-swatch-aqua.wow.zoomIn.short(data-wow-delay=".4s")
+                          span.icon-shop
+                        p.wow.fadeIn(data-wow-delay=".4s")
+                          strong Uzņēmums
+                          |  ērti izveido rēķinu un aizsūta to klientam. 
+                      .workflow-step-3
+                        .atk-shape-circle.atk-swatch-aqua.wow.zoomIn.short(data-wow-delay=".5s")
+                          span.icon-user
+                        p.wow.fadeIn(data-wow-delay=".5s")
+                          strong Klients
+                          |  saņem rēķinu uz e-pastu un mobīlo tālruni.
+                      .workflow-step-4
+                        .atk-shape-circle.atk-swatch-aqua.wow.zoomIn.short(data-wow-delay=".6s")
+                           span.icon-user
+                        p.wow.fadeIn(data-wow-delay=".6s")
+                         strong Klients
+                         |  norāda savus datus un veic maksājumu ar karti.
+                      .workflow-step-5
+                        .atk-shape-circle.atk-swatch-aqua.wow.zoomIn.short(data-wow-delay=".7s")
+                           span.icon-shop
+                        p.wow.fadeIn(data-wow-delay=".7s")
+                          strong Uzņēmums
+                          |  uzreiz saņem līdzekļus savā Swipe kontā.
+                      .workflow-step-6
+                        .atk-shape-circle.atk-swatch-aqua.wow.zoomIn.short(data-wow-delay=".8s")
+                           span.icon-tick
+                        p.wow.fadeIn(data-wow-delay=".8s")
+                          strong Swipe
+                          |  automātiski pārskaita naudas līdzekļus uzņēmuma bankas kontā.
+                .powered-by.atk-cells.atk-width-auto.atk-move-center.atk-cells-gutter-large.wow.fadeInUp.short.atk-stack-mobile(data-wow-delay=".8s")
+                  .atk-cell.caps.atk-text-bold.atk-size-micro.atk-swatch-aqua-text
+                    | Powered by
+                  .atk-cell
+                    .atk-cells.atk-cells-gutter-large.atk-size-micro
+                      .atk-cell
+                        a(href='javascript:void(0);')
+                          img(src="images/logo-rietumu-aqua.svg", width="125", height="22")
+                      .atk-cell
+                        a(href='javascript:void(0);')
+                          img(src="images/logo-decta-aqua.svg", width="85", height="16")
+            section#features.atk-swatch-ink
+              .atk-wrapper.atk-section-xlarge
+                h5.section-header.atk-push-large Features
+                .atk-row.atk-stack-tablet.atk-stack-mobile
+                  .atk-col-6
+                    h1 Beautiful invoices.
+                    p Do not believe us? Check it out yourself! Just enter an email address and/or a phone number in the form below and get a demonstration invoice sent right away to any of your devices.
+                    .atk-form.form-minimal
+                      .atk-push
+                        .atk-row.atk-stack-tablet.atk-stack-mobile.atk-push-xsmall
+                          .atk-col-6
+                            input(type='text', placeholder='Phone number').atk-expand
+                          .atk-col-6
+                            input(type='text' placeholder='Email address').atk-expand
+                      .atk-row.atk-stack-tablet.atk-stack-mobile
+                        .atk-col-6#button-wrap
+                          button.atk-button-large.atk-swatch-aqua.atk-expand.animated.super-short#send-invoice Send Invoice
+                          button.atk-button-large.button-success.atk-expand.animated#invoice-sent
+                            span.icon-circle-tick
+                            | Invoice Sent
+                          //- br
+                          //- br
+                          //- button.atk-swatch-aqua.atk-button-large.atk-expand.animated(data-loading-label="Loading...", onClick="$(this).addClass('button-loading')")
+                          //-   span Start Loading
+                  .atk-col-1
+                  .atk-col-5.img-holder
+                    figure.img-ipad-invoice.atk-hide-tablet.atk-hide-mobile
+            section#contact-us
+              .atk-wrapper
+                .atk-section-xlarge
+                  h5.section-header.atk-push-large Contact Us
+                  .atk-row.atk-push.atk-stack-tablet.atk-stack-mobile
+                    .atk-col-6
+                      #faq.accordion-minimal
+                        h3 Donec in ipsum ut erat tincidunt luctus sit amet vel enim?
+                        div 
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero aut similique, repudiandae ducimus deserunt veniam suscipit incidunt ut, consectetur, ipsa illum repellendus.
+                        h3 Aenean at purus id dui convallis condimentum amet?
+                        div 
+                          p Nullam laoreet justo et elementum blandit. Morbi ac dui rutrum, tempor elit at, laoreet lacus. Nam mattis sem sed malesuada viverra. Etiam bibendum nulla tincidunt purus aliquet laoreet.
+                        h3 Suspendisse mollis metus ultricies vitae neque?
+                        div 
+                          p Curabitur ornare nulla nec lacus auctor, vel ullamcorper nisl consectetur. Donec sed purus ut ante tempus dignissim vulputate et arcu. Nullam ac est convallis, tincidunt odio sit amet, luctus neque.
+                        h3 Fusce quis mi eget tellus porta interdum id a nunc?
+                        div 
+                          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero aut similique, repudiandae ducimus deserunt veniam suscipit incidunt ut, consectetur, ipsa illum repellendus.
+
+                    .atk-col-1
+                    .atk-col-5
+                      .atk-box-large.glow-aqua.callout
+                        h3.atk-text-medium Sazinies ar mums!
+                        p Mēs esam vienmēr gatavi palīdzēt sākt saņemt maksājumus internetā.
+                      .callout-author
+                        .atk-cells.atk-cells-gutter-large.atk-stack-mobile
+                          .atk-cell.atk-text-nowrap
+                            .atk-cells.atk-cells-gutter-large
+                              .atk-cell.atk-text-reset
+                                .atk-shape-circle.atk-swatch-aqua.avatar
+                                  img(src='images/avatar.png').atk-expand
+                              .atk-cell.atk-expand
+                                .atk-text-bold Jevgenijs Novickis
+                                .atk-text-dimmed Izpilddirektors
+                          .atk-cell.atk-expand
+                            span.icon-phone.atk-swatch-aqua-text.atk-show-mobile.atk-show-tablet
+                            | +371 2999999
+                            br
+                            span.icon-mail.atk-swatch-aqua-text.atk-show-mobile.atk-show-tablet
+                            a(href='mailto:j.novickis@inbox.lv') j.novickis@inbox.lv
+                .hr-faded.atk-col-10.atk-move-center
+                .atk-section-xlarge.atk-align-center#last-action
+                  h1.atk-text-light.atk-push
+                    | Enough reading.
+                    span.atk-show-mobile &nbsp;
+                    br.atk-hide-mobile
+                    | Let’s take an action!
+                  a(href='javascript:void(0)').atk-button-large.atk-swatch-aqua.atk-col-4.atk-expand-mobile.atk-expand-tablet Get Started
+                figure.img-objects-left.atk-hide-tablet.atk-hide-mobile
+                figure.img-objects-right.atk-hide-tablet.atk-hide-mobile
+      include includes/footer
+    include includes/scripts

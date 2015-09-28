@@ -1,0 +1,102 @@
+// ==========================================================
+// Hidden Variables
+// ==========================================================
+@margin:               round(@baselineDestroyer * @bodyBaseline, 1);
+@baselineDestroyer:    1rem;
+
+
+// ==========================================================
+// General
+// ==========================================================
+
+* { 
+   .box-sizing();
+   outline: none !important;
+   &:last-child {
+        margin-bottom: 0;
+   }
+}
+body {
+    background: @bodyBackground;
+}
+
+
+// ==========================================================
+// Effects
+// ==========================================================
+
+.atk-background-cover {
+  .background-cover(inherit);
+}
+
+*[class*=atk-box], .ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content, *[class*=atk-swatch] hr, hr {
+  &.atk-border-static {
+    border-color: @borderStatic;
+  }
+  &.atk-border-active {
+    border-color: @borderClickable;
+  }
+  &.atk-border-overlay {
+    border-color: @borderOverlay;
+  }
+}
+
+
+// ==========================================================
+// Selection Colors
+// ==========================================================
+
+::selection {
+    background: @textSelect;
+    .colorCheck(@textSelect);
+}
+::-moz-selection {
+    background: @textSelect;
+    .colorCheck(@textSelect);
+}
+img::selection {
+    background: transparent;
+}
+img::-moz-selection {
+    background: transparent;
+}
+
+
+// ==========================================================
+// Hyperlinks
+// ==========================================================
+
+a {
+    color: @linkColor;
+    text-decoration: none;
+    &:hover, &:focus{
+        color: @linkColorHover;
+    }
+}
+
+
+// ==========================================================
+// Fixes
+// ==========================================================
+
+.row {
+    .clear-fix;
+}
+.labelSupport() {
+  .atk-label {
+      display: inline-block;
+      height: 1em * @bodyBaseline;
+      margin: 0 .2em;
+      min-width: 1em * @bodyBaseline;
+      padding-bottom: 0;
+      padding-top: 0;
+      text-align: center;
+      &[class*='icon']:before {
+          margin: 0;
+      }
+  }
+}
+*[class*=icon]:before {
+  margin-left: 0;
+  margin-right: 0; 
+}

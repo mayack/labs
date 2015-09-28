@@ -1,0 +1,85 @@
+doctype html
+<!--[if lt IE 7]<html lang="en" class="oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en" class="oldie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="oldie lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+html
+  <!--<![endif]-->
+  include includes/head
+  body
+    include includes/browsehappy
+    include includes/analytics
+    .atk-layout
+      include includes/header
+      .atk-layout-row.atk-layout-expand
+        .atk-layout.atk-layout-cell
+          .atk-layout-column.atk-layout-expand
+            nav.atk-actions-xxlarge.atk-align-center.atk-stack-tablet.atk-stack-mobile.atk-section.atk-swatch-ink.atk-text-medium.caps.nav-pages
+              a(href='pricing.html').active Pricing
+              a(href='terms.html') Terms &amp; Conditions
+            section.atk-wrapper.atk-section-xlarge
+              h2.atk-push-large Тарифы Свайп
+              .atk-row.atk-push
+                .atk-col-7.atk-expand-tablet
+                  h4 Отправка счёта – бесплатно.
+                  p.text-comment Клиент всегда может расплатиться с вами по указанным в счёте реквизитам. Комиссионная плата берётся только если ваш клиент решает оплатить счёт через Swipe. Комиссионная плата зависит от оборота предприятия и может разделяться между компанией и клиентом.
+                .atk-col-5.atk-expand-tablet
+                  .atk-table.atk-table-outline.table-line
+                    table
+                      tbody
+                        tr
+                          td.atk-text-medium Отправление счетов через e-mail
+                          td.atk-align-right.atk-text-nowrap Бесплатно
+                        tr
+                          td.atk-text-medium Отправление счетов через SMS
+                          td.atk-align-right.atk-text-nowrap Бесплатно
+                        tr
+                          td.atk-text-medium Подключение в счёт метода оплаты BankLink
+                          td.atk-align-right.atk-text-nowrap Бесплатно
+              hr.atk-hr-large
+              .atk-row.atk-push
+                .atk-col-7.atk-expand-tablet
+                  h4 Some heading here.
+                  p.text-comment.atk-push-xsmall
+                    | Коммисия за платёж картой 
+                    strong начинается от 3% + 0,20€
+                    |  за транзакцию в зависимости от оборота.
+                  p.text-comment
+                    | Коммисия за платёж через BankLink 
+                    strong составляет 0,15%
+                    | . Предприятие предоставляет BankLink банков с которыми договорилось о сотрудничестве.
+                .atk-col-5.atk-expand-tablet
+                  .atk-table.atk-table-outline.atk-expand-tablet.atk-push-small.table-line
+                    table
+                      tbody
+                        tr
+                          td.atk-text-medium 0€ – 2 500€
+                          td.atk-align-right.atk-text-nowrap 3,0% + 0,20€
+                        tr
+                          td.atk-text-medium 2 500€ - 10 000€
+                          td.atk-align-right.atk-text-nowrap 2,7% + 0,20€
+                        tr
+                          td.atk-text-medium 10 000€ - 100 000€
+                          td.atk-align-right.atk-text-nowrap 2,4% + 0,20€
+                        tr
+                          td.atk-text-medium &gt; 100 000€
+                          td.atk-align-right.atk-text-nowrap 2,0% + 0,20€
+              hr.atk-hr-large
+              h4.atk-push Другие Условия
+              .atk-table.atk-table-outline.table-line
+                table.atk-stack-mobile
+                  tbody
+                    tr
+                      td.atk-text-medium.atk-col-10 Размер Страхового депозита (только для Латвия)
+                      td.atk-text-nowrap.atk-align-right 0.00€
+                    tr
+                      td.atk-text-medium.atk-col-10 Размер Страхового депозита (для других стран)
+                      td.atk-text-nowrap.atk-align-right 10% на 120 дней
+                    tr
+                      td.atk-text-medium.atk-col-10 Комиссионная плата за хранение денежных средств Торговца на Транзитном счете, если по независящим от Банка причинам денежные средства невозможно перечислить на Счет торговца
+                      td.atk-text-nowrap.atk-align-right 20.00€
+                    tr
+                      td.atk-text-medium.atk-col-10 Комиссионная плата за обработку Рекламаций
+                      td.atk-text-nowrap.atk-align-right 10.00€
+      include includes/footer
+    include includes/scripts

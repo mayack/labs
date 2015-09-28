@@ -1,0 +1,34 @@
+// ==========================================================
+// Layouts (credit: Pixel vs. Bytes)
+// ==========================================================
+html, body, .atk-layout  {
+	height: 100%;
+}
+.atk-layout {
+	.box-sizing;
+	display: table;
+	width: 100%;
+	>.atk-layout-row, >.atk-layout-column, .atk-layout-row>.atk-layout-column {
+		height: 0.1%;
+		position: relative;
+	}
+	>.atk-layout-row {
+		display: table-row;
+		height: 1px;
+		&.atk-layout-fluid, &.atk-layout-expand {
+			height: auto;
+		}
+	}
+	>.atk-layout-column, >.atk-layout-row>.atk-layout-column {
+		display: table-cell;
+		height: auto;
+		width: 1px;
+		&.atk-layout-fluid, &.atk-layout-expand {
+			width: auto;
+		}
+	}
+}
+.atk-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+}

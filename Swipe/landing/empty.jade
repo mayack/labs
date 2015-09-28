@@ -1,0 +1,34 @@
+doctype html
+<!--[if lt IE 7]<html lang="en" class="oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en" class="oldie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="oldie lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+html
+  <!--<![endif]-->
+  include includes/head
+  body
+    include includes/browsehappy
+    include includes/analytics
+    .atk-layout
+      include includes/header
+      .atk-layout-row.atk-layout-expand
+        .atk-layout.atk-layout-cell
+          .atk-layout-column.atk-layout-expand
+
+            //- Comment out if subnavigation is needed.
+            //- nav.atk-actions-xxlarge.atk-align-center.atk-stack-tablet.atk-stack-mobile.atk-section.atk-swatch-ink.caps.nav-pages
+            //-   a(href='pricing.html').atk-text-medium.active Page #1
+            //-   a(href='terms.html').atk-text-medium Page #2
+
+            //- Use Horizontal Ruler if there is no subnavigation.
+            hr.atk-hr-reset
+
+            //- Your Content Goes Here
+            section.atk-wrapper.atk-section-xlarge
+              h2.atk-push-large Heading
+              p  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis condimentum lorem quis scelerisque. Aenean bibendum lacus eget lectus suscipit tempus. Sed sed efficitur magna, ac auctor erat. Mauris porta dolor nec placerat finibus. Donec elementum et erat eu euismod. Donec aliquam eget nisl at fermentum. Nulla commodo dolor eu leo congue, id aliquet mauris aliquam. Nullam ut tellus egestas elit consectetur semper. Quisque tempor quam quis sem mattis, sit amet dictum mi fringilla. Ut in scelerisque diam. Phasellus ac dictum ligula. Duis massa eros, aliquam auctor condimentum ut, tincidunt ut ante.
+              p  Quisque vel viverra felis. Suspendisse potenti. Aenean iaculis pellentesque erat, sit amet lobortis ligula tincidunt in. Pellentesque auctor neque vitae velit dapibus sollicitudin. Cras sodales risus eget erat mollis semper. In malesuada, urna et dignissim consectetur, ligula arcu tristique velit, tincidunt porttitor metus purus id leo. Pellentesque volutpat condimentum faucibus. Vestibulum vestibulum lacus sit amet quam vulputate volutpat. Integer molestie vitae mauris et tempor. Vivamus sollicitudin facilisis neque at commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris sed erat vitae odio varius ullamcorper. Etiam quis ex vitae purus pulvinar dapibus eget eget nunc. Mauris turpis dolor, finibus a malesuada in, lobortis nec velit.
+            //- Your Content Ends Here
+
+      include includes/footer
+    include includes/scripts

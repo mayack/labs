@@ -1,0 +1,266 @@
+
+/**
+ * Agile Toolkit CSS Framework (c) 2013-2014 v0.912
+ *  http://www4.agiletoolkit.org/css
+ */
+
+// Agile Toolkit
+@import '/less/normalize.less'; /* Renders elements more consistently and in line with modern standards. */
+@import '/less/misc.less';
+@import '/less/mixins.less';
+@import '/less/layouts.less';
+@import '/less/typography.less';
+@import '/less/components.less'; /* Helpers, Colors, Boxes, Buttons etc. */
+@import '/less/responsive.less';
+@import '/less/variables.less';
+
+
+// ==========================================================
+// Typography
+// ==========================================================
+
+@bodyFamily:           "glober_regularregular", "Glober", "Helvetica Neue", "Helvetica", sans-serif;
+@bodyColor:            #3f5555;
+@bodySize:             1rem; // 14px
+@bodyBaseline:         1.618; // Golden Section
+
+@headingCase:          none; // Options: none, capitalize, uppercase, lowercase
+@headingColor:         #3f5555;
+@headingFamily:        "glober_regularregular", "Glober", "Helvetica Neue", "Helvetica", sans-serif;
+@headingWeight:		   400;
+@headingBaseline:	   1.15; // Minor Third
+
+@fontScatter:          0.65; // Multiplier that affects difference between heading sizes
+@baselineDestroyer:    1rem; // Value that globally affects margins and paddings in all elements. 1rem is default.
+
+
+// ==========================================================
+// Styles & Colors
+// ==========================================================
+
+@bodyBackground:       @gray-96;
+
+@cornerRadius:         5px;
+
+@textSelect:           @atk-swatch-ink; // Text selection's color
+@textDimmed:           @gray-43;
+
+@blur:                 5px; // Effect .atk-blur can be applied on any element.
+
+@borderStatic:         #dfe6e6;
+@borderClickable:      darken(@borderStatic, 10%);
+@borderOverlay:        darken(@borderStatic, 25%);
+
+@atk-swatch-aqua:	   #1fc9d0;		.createSwatch(atk-swatch-aqua, @buttonShadow: none);
+@atk-swatch-gray:	   @gray-60; 	.createSwatch(atk-swatch-gray, @buttonShadow: none);
+@atk-swatch-ink:	   #212626;		.createSwatch(atk-swatch-ink);
+@swatchText:           50%; // Text color sensitivity based on swatch
+
+@effectSuccess:        #25c425;
+@effectWarning:        #f7a600;
+@effectDanger:         #ff2d1a;
+@effectInfo:           #2bacd7;
+
+
+// ==========================================================
+// Components & Widgets
+// ==========================================================
+
+@linkColor:            darken(@atk-swatch-aqua,2%);
+@linkColorHover:       darken(@linkColor,10%);
+
+@dialogOverlay:        fade(#000, 25%); // Color of modal dialog's overlay
+
+@tooltipColor:         fade(@atk-swatch-ink, 90%);
+
+@menuActive:           @atk-swatch-aqua;
+
+@buttonDefault:        #fff;
+@buttonHover:          #f7f7f7;
+@buttonActive:         #eee;
+
+@boxColor:             #fff;
+
+@formMandatory:        #ff0000;
+
+@inputFocus:           @atk-swatch-aqua;
+
+@popoverArrow:        12px;
+
+
+// ==========================================================
+// Custom
+// ==========================================================
+
+.caps {
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+}
+
+
+// Fonts
+@font-face {
+    font-family: 'globerbold';
+    src: url('../fonts/fontfabric_glober.bold-webfont.eot');
+    src: url('../fonts/fontfabric_glober.bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fontfabric_glober.bold-webfont.woff2') format('woff2'),
+         url('../fonts/fontfabric_glober.bold-webfont.woff') format('woff'),
+         url('../fonts/fontfabric_glober.bold-webfont.ttf') format('truetype'),
+         url('../fonts/fontfabric_glober.bold-webfont.svg#globerbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'globerlight';
+    src: url('../fonts/fontfabric_glober.light-webfont.eot');
+    src: url('../fonts/fontfabric_glober.light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fontfabric_glober.light-webfont.woff2') format('woff2'),
+         url('../fonts/fontfabric_glober.light-webfont.woff') format('woff'),
+         url('../fonts/fontfabric_glober.light-webfont.ttf') format('truetype'),
+         url('../fonts/fontfabric_glober.light-webfont.svg#globerlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'glober_regularregular';
+    src: url('../fonts/fontfabric_glober.regular-webfont.eot');
+    src: url('../fonts/fontfabric_glober.regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fontfabric_glober.regular-webfont.woff2') format('woff2'),
+         url('../fonts/fontfabric_glober.regular-webfont.woff') format('woff'),
+         url('../fonts/fontfabric_glober.regular-webfont.ttf') format('truetype'),
+         url('../fonts/fontfabric_glober.regular-webfont.svg#glober_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'globersemibold';
+    src: url('../fonts/fontfabric_glober.semi.bold-webfont.eot');
+    src: url('../fonts/fontfabric_glober.semi.bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fontfabric_glober.semi.bold-webfont.woff2') format('woff2'),
+         url('../fonts/fontfabric_glober.semi.bold-webfont.woff') format('woff'),
+         url('../fonts/fontfabric_glober.semi.bold-webfont.ttf') format('truetype'),
+         url('../fonts/fontfabric_glober.semi.bold-webfont.svg#globersemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+// Swatches
+@gray-33: #3f5555;
+@gray-43: #5a6d6d;
+@gray-60: #869898;
+@gray-80: #c0cccc;
+@gray-95: #edf2f2;
+@gray-96: #f2f5f5;
+
+// Mixins
+.text-light, .atk-text-light {
+	font-family: 'globerlight', sans-serif;
+	font-weight: normal;
+}
+.text-regular {
+	font-family: 'glober_regularregular', sans-serif;
+	font-weight: normal;
+}
+.text-semibold, .atk-text-semibold, h4 {
+	font-family: 'globersemibold', sans-serif;
+	font-weight: normal;
+}
+.text-bold, .atk-text-bold, strong, h5 {
+	font-family: 'globerbold', sans-serif;
+	font-weight: normal;
+}
+
+input, a, button {
+	&[class*=atk-button] {
+		.caps;
+		.transition(.2s);
+		border-radius: 2em;
+		border-width: 2px !important;
+		&.atk-button-large {
+			padding-left: 4em;
+			padding-right: 4em;
+		}
+		&.atk-swatch-aqua {
+			border-color: @atk-swatch-aqua !important;
+		}
+		&.atk-button-outline {
+			color: @gray-60 !important;
+			&:hover {
+				background: lighten(@borderStatic, 5%) !important;
+			}
+		}
+	}
+}
+
+.rombus {
+	@border: 2px;
+	@size: 64px;
+	@diagonal: round(sqrt(@size * @size * 2),2);
+	height: @diagonal;
+	position: relative;
+	width: @diagonal;
+	span {
+		.position(relative, @z:2);
+		color: @atk-swatch-aqua;
+		display: table-cell;
+		font-size: 1.2rem;
+		height: @diagonal;
+		letter-spacing: 0.1em;
+		vertical-align: middle;
+		width: @diagonal;
+	}
+	&:after {
+		.position(@b:100%, @l:50%);
+		background: @atk-swatch-aqua;
+		content: '';
+		height: 10000px;
+		margin-left: -@border/2;
+		width: @border;
+	}
+	&:before {
+		.position(@t:50%, @l:50%, @z:1);
+		.rotate(45deg);
+		background: fade(@atk-swatch-aqua, 5%);
+		border: @border solid @atk-swatch-aqua;
+		content: '';
+		height: @size;
+		margin: -(@size + @border*2)/2 0 0 -(@size + @border*2)/2;
+		width: @size;
+	}
+}
+a.logo {
+	color: #b1c3c3;
+}
+
+
+// ==========================================================
+// Layout
+// ==========================================================
+
+// Important: list .createViewport functions in the right order based on @min and @max values otherwise styles get overridden
+.createViewport(
+	@wrapperMargin:    40px,
+	@colsGutter:       @margin,
+	@cols:             12,
+	@viewportMinWidth: 681px,
+	@wrapperMinWidth:  600px,
+	@wrapperMaxWidth:  600px
+);
+.createViewport(
+	@wrapperMargin:    40px,
+	@colsGutter:       @margin,
+	@cols:             1,
+	@viewportMinWidth: 0px,
+	@viewportMaxWidth: 680px,
+	@wrapperMinWidth:  0px,
+	@wrapperMaxWidth:  400px,
+	@class: mobile
+);
