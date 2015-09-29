@@ -839,6 +839,17 @@ body>.atk-layout {
     }
     .select2 {
         width: 5em !important;
+        .selection .select2-selection--single {
+            border-color: @swatchGray-90;
+            .select2-selection__rendered {
+                color: @swatchGray-60;
+                padding-bottom: .55em;
+                padding-top: .55em;
+            }
+            .select2-selection__arrow:before  {
+                color: @swatchGray-80;
+            }
+        }
     }
     nav {
         &.nav-main {
