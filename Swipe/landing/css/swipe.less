@@ -574,12 +574,11 @@ nav.nav-languages {
 #page-landing {
     #header {
         .atk-wrapper {
-            position: relative;
             >.atk-section-small {
-                .position(@t:0, @l:0, @z:2);
-                width: 100%;
-                &, .atk-cells .atk-section {
-                    padding-bottom: 0;
+                position: relative;
+                header {
+                    .position(@l:0, @z:2);
+                    width: 100%;
                 }
             }
         }
@@ -745,7 +744,7 @@ section {
     &#features {
         overflow: hidden;
         >.atk-wrapper>.atk-row>.atk-col-6 {
-            padding-top: 80px;
+            padding-top: 70px;
         }
         .connection {
             h5, a {
@@ -839,7 +838,15 @@ body>.atk-layout {
     background: #fff;
     max-width: 1280px;
 }
-.header {
+#header {
+    .atk-wrapper {
+        >.atk-section-small, .atk-cells .atk-section {
+            padding-bottom: 0 !important;
+        }
+    }
+    .select2 {
+        width: 5em !important;
+    }
     nav {
         &.nav-main {
             a {
@@ -887,6 +894,12 @@ body>.atk-layout {
 // ==========================================================
 
 .mobile() {
+    section#features>.atk-wrapper>.atk-row>.atk-col-6, section#why-swipe .atk-col-8 {
+        padding-top: 0 !important;
+    }
+    .atk-push-xlarge, .atk-push-large {
+        margin-bottom: @margin*1.5 !important;
+    }
     *[class*=atk-section].atk-section-xlarge {
         padding-bottom: @margin*3;
         padding-top: @margin*3;
@@ -903,59 +916,11 @@ body>.atk-layout {
             }
         }
     }
-    .connection.connection-top {
-        span {
-            margin-top: @margin*3;
-        }
-        &:before {
-            display: none;
-        }
-    }
-    .connection-bottom {
-        display: none;
+    #page-landing #header .atk-wrapper>.atk-section-small>header {
+        position: relative;
     }
     section#hero {
-        height: auto !important;
-        .rombus-grid {
-            height: auto;
-            position: relative;
-            figure#rombus-2 {
-                .rotate(0deg);
-                height: 100%;
-                margin: 0;
-                position: static;
-                width: auto;
-                .mask {
-                    .rotate(0deg);
-                    background-image: url(../images/hero-mobile.jpg);
-                    background-size: cover;
-                    height: auto;
-                    margin: 0;
-                    position: static;
-                    width: auto;
-                    .content {
-                        .rotate(0deg);
-                        background-color: fade(@atk-swatch-ink, 70%);
-                        height: auto;
-                        margin: 0;
-                        padding: 0;
-                        position: static;
-                        width: auto;
-                        .wrap {
-                            padding-bottom: @margin*3;
-                            padding-top: @margin*3;
-                            h1 {
-                                white-space: normal !important;
-                            }
-                            .atk-button-large {
-                                background: @atk-swatch-aqua;
-                                color: #fff;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        padding-top: 0;
     }
     section#why-swipe {
         margin: 0 !important;
@@ -1120,6 +1085,10 @@ body>.atk-layout {
     @class:            tablet,
     @customStyle: {
         .mobile;
+        #hero h1.atk-size-yotta2 {
+            .atk-size-zetta;
+            font-weight: 400 !important;
+        }
         section#hero .rombus-grid figure#rombus-2 .mask .content .wrap {
             max-width: @wrapperMaxWidth;
             min-width: @wrapperMinWidth;
@@ -1141,6 +1110,15 @@ body>.atk-layout {
     @customStyle: {
         // Layout
         .mobile;
+        .atk-text-light {
+            font-weight: 400 !important;
+        }
+        h1 {
+            .atk-size-tera;
+        }
+        #hero .atk-size-yotta2 {
+            .atk-size-peta;
+        }
         #header {
             .atk-cell:first-child + .atk-cell {
                 padding-right: 0;
@@ -1387,15 +1365,18 @@ body>.atk-layout {
           }
         }
         + li {
-          .border-bottom-radius(@cornerRadius);
           border-top: 1px solid @swatchGray-96;
           margin-top: 0;
+        }
+        &:last-child {
+          .border-bottom-radius(@cornerRadius);
         }
       }
     }
     &.atk-size-nano {
         ul.select2-results__options li.select2-results__option[aria-selected=true]:before {
             font-size: 0.1em;
+            margin-top: -0.6em;
         }
     }
   }

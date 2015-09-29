@@ -1,19 +1,24 @@
-header.header.atk-cells.atk-text-nowrap.atk-cells-gutter-large.atk-wrapper.atk-text-medium.atk-size-micro
-  .atk-cell
-    a.logo.atk-block(href='#hero', data-id="#hero").atk-text-reset
-      img(src='images/logo-swipe.svg', width='90', height='36', alt="Swipe")
-  .atk-cell.atk-expand.atk-size-nano
-    select.languages
-      option LV
-      option(selected="selected") EN
-      option RU
-  .atk-cell.atk-size-micro
-    nav.nav-main.atk-actions-xlarge.atk-inline
-      a.atk-section-small.atk-inline.caps.atk-text-dimmed(href='#why-swipe', data-id="#why-swipe") Why Swipe
-      a.atk-section-small.atk-inline.caps.atk-text-dimmed(href='#how-it-works', data-id="#how-it-works") How It Works
-      a.atk-section-small.atk-inline.caps.atk-text-dimmed(href='#features', data-id="#features") Features
-      a.atk-section-small.atk-inline.caps.atk-text-dimmed(href='#contact-us', data-id="#contact-us") Contact Us
-    span.atk-sep-xlarge.atk-swatch-aqua-text /
-    nav.nav-actions.atk-actions-xlarge.atk-inline
-      a(href="#").atk-section-small.caps.atk-text-dimmed Sign In
-      a(href='javascript:void(0);').atk-button.atk-swatch-aqua Sign Up
+header.atk-text-nowrap.atk-text-medium.atk-size-micro
+  .atk-cells.atk-cells-gutter-large.atk-expand
+    .atk-cell
+      a.logo.atk-block(href='#hero', data-id="#hero").atk-text-reset
+        img(src='images/logo-swipe.svg', width='90', height='36', alt="Swipe")
+    .atk-cell.atk-expand.atk-size-nano.atk-hide-mobile.atk-hide-tablet
+      select.languages
+        option LV
+        option(selected="selected") EN
+        option RU
+    .atk-cell.atk-size-micro.atk-align-right
+      nav.nav-main.atk-actions-xlarge.atk-inline.atk-hide-mobile.atk-hide-tablet
+        a.atk-section-small.atk-inline.caps.atk-text-dimmed(href='#why-swipe', data-id="#why-swipe") Why Swipe
+        a.atk-section-small.atk-inline.caps.atk-text-dimmed(href='#how-it-works', data-id="#how-it-works") How It Works
+        a.atk-section-small.atk-inline.caps.atk-text-dimmed(href='#features', data-id="#features") Features
+        a.atk-section-small.atk-inline.caps.atk-text-dimmed(href='#contact-us', data-id="#contact-us") Contact Us
+      span.atk-sep-xlarge.atk-swatch-aqua-text.atk-hide-mobile.atk-hide-tablet /
+      nav.nav-actions.atk-actions-xlarge.atk-inline.atk-hide-mobile.atk-hide-tablet
+        a(href="#").atk-section-small.caps.atk-text-dimmed Sign In
+        a(href='javascript:void(0);').atk-button.atk-swatch-aqua Sign Up
+      nav.atk-actions-large.caps.nav-languages.atk-size-milli.atk-hide-desktop
+        a(href='javascript:void(0)') LV
+        a(href='javascript:void(0)').active EN
+        a(href='javascript:void(0)') RU
