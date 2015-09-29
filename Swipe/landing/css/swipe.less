@@ -573,15 +573,10 @@ nav.nav-languages {
 
 #page-landing {
     #header {
-        .atk-wrapper {
-            >.atk-section-small {
-                position: relative;
-                header {
-                    .position(@l:0, @z:2);
-                    width: 100%;
-                }
-            }
-        }
+        .position(@t:0,@l:0,@z:2);
+        display: block;
+        height: auto;
+        width: 100%;
     }
 }
 section {
@@ -604,7 +599,7 @@ section {
         background: linear-gradient(135deg,  #ffffff 0%,#f2f5f5 100%); /* W3C */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f5f5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
         overflow: hidden;
-        padding-top: 63px;
+        padding-top: 61px;
         .atk-wrapper {
             position: relative;
             h1 {
@@ -839,10 +834,8 @@ body>.atk-layout {
     max-width: 1280px;
 }
 #header {
-    .atk-wrapper {
-        >.atk-section-small, .atk-cells .atk-section {
-            padding-bottom: 0 !important;
-        }
+    .atk-layout-cell>.atk-section-small, .atk-cells .atk-section {
+        padding-bottom: 0 !important;
     }
     .select2 {
         width: 5em !important;
@@ -867,7 +860,7 @@ body>.atk-layout {
                 padding-left: 1.5em;
             }
         }
-        a:hover {
+        a:hover:not(.atk-button) {
             color: @atk-swatch-aqua;
         }
     }
@@ -916,9 +909,12 @@ body>.atk-layout {
             }
         }
     }
-    #page-landing #header .atk-wrapper>.atk-section-small>header {
-        position: relative;
-        top: 4px;
+    #page-landing #header {
+        position: static;
+        .atk-wrapper>.atk-section-small>header {
+            position: relative;
+            top: 4px;
+        }
     }
     section#hero {
         background: none;
