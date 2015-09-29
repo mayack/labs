@@ -294,12 +294,15 @@ ul[class*=atk-menu] {
         padding: @margin;
         margin-bottom: @margin;
         &.atk-box-xsmall {
-            padding: @margin/3;
-        }
-        &.atk-box-small {
             padding: @margin/2;
         }
+        &.atk-box-small {
+            padding: @margin/1.5;
+        }
         &.atk-box-large {
+            padding: @margin*1.5;
+        }
+        &.atk-box-xlarge {
             padding: @margin*2;
         }
         &:last-child {
@@ -313,7 +316,7 @@ ul[class*=atk-menu] {
     .border-radius(@cornerRadius);
     // display: inline-block;
     display: inline;
-    font-weight: bold;
+    // font-weight: bold;
     // line-height: @bodyBaseline;
     padding: (0.2em * @baselineDestroyer) (0.4em * @baselineDestroyer);
     white-space: nowrap;
@@ -640,57 +643,59 @@ ul[class*=atk-menu] {
 
 // Shapes
 .atk-shape-rectangle {
-    border-radius: 0;
+    &, input& {
+        border-radius: 0;
+    }
 }
 .atk-shape-rounded {
-    &, img& {
+    &, img&, input&  {
         .border-radius(@cornerRadius);
     }
 }
 .atk-shape-rounded-top {
-     &, img& {
+     &, img&, input&  {
         .border-radius(0);
         .border-top-radius(@cornerRadius);
     }
 }
 .atk-shape-rounded-bottom {
-     &, img& {
+     &, img&, input&  {
         .border-radius(0);
         .border-bottom-radius(@cornerRadius);
     }
 }
 .atk-shape-rounded-left {
-     &, img& {
+     &, img&, input&  {
         .border-radius(0);
         .border-left-radius(@cornerRadius);
     }
 }
 .atk-shape-rounded-right {
-     &, img& {
+     &, img&, input&  {
         .border-radius(0);
         .border-right-radius(@cornerRadius);
     }
 }
 .atk-shape-rounded-top-left {
-     &, img& {
+     &, img&, input&  {
         .border-radius(0);
         .border-top-left-radius(@cornerRadius);
     }
 }
 .atk-shape-rounded-top-right {
-     &, img& {
+     &, img&, input&  {
         .border-radius(0);
         .border-top-right-radius(@cornerRadius);
     }
 }
 .atk-shape-rounded-bottom-left {
-     &, img& {
+     &, img&, input&  {
         .border-radius(0);
         .border-bottom-left-radius(@cornerRadius);
     }
 }
 .atk-shape-rounded-bottom-right {
-     &, img& {
+     &, img&, input&  {
         .border-radius(0);
         .border-bottom-right-radius(@cornerRadius);
     }
@@ -772,7 +777,7 @@ ul[class*=atk-menu] {
         }
         .atk-text-dimmed {
             .colorCheck(@@color);
-            .opacity(50);
+            .opacity(0.5);
         }
         &[class*=icon-] {
             &, a& {
@@ -809,6 +814,14 @@ ul[class*=atk-menu] {
             &:hover {
                 border-color: darken(@@color, 10%);
             }
+            &.atk-button-outline {
+                background: fade(@@color, 0%);
+                border-color: @@color;
+                color: @@color;
+                &:hover {
+                    background: fade(@@color, 20%);
+                }
+            }
         }
         *[class*=atk-menu]>li.atk-menu-separated:not(:first-child)>a& {
             border-style: solid;
@@ -838,6 +851,9 @@ ul[class*=atk-menu] {
         background-color: @@color;
         border-color: @@color;
     }
+    .@{color}-fill {
+        background-color: @@color;
+    }
     .@{color}-text {
         color: @@color;
     }
@@ -862,28 +878,41 @@ ul[class*=atk-menu] {
     &.atk-label, &[class*=atk-box] {
         // color: @bodyColor;
         &.atk-effect-danger {
-            .colorCheck(@color);
-            @color: tint(@effectDanger, 80%);
+            // .colorCheck(@color);
+            @color: tint(@effectDanger, 90%);
+            // color: contrast(@color, black, white, 50%);
             background-color: @color;
             border-color: @color;
+            &, h1, h2, h3, h4, h5, h6 {
+                color: multiply(@effectDanger, #999);
+            }
         }
         &.atk-effect-warning {
-            .colorCheck(@color);
-            @color: tint(@effectWarning, 80%);
+            // .colorCheck(@color);
+            @color: tint(@effectWarning, 90%);
             background-color: @color;
             border-color: @color;
+            &, h1, h2, h3, h4, h5, h6 {
+                color: multiply(@effectWarning, #999);
+            }
         }
         &.atk-effect-success {
-            .colorCheck(@color);
-            @color: tint(@effectSuccess, 80%);
+            // .colorCheck(@color);
+            @color: tint(@effectSuccess, 90%);
             background: @color;
             border-color: @color;
+            &, h1, h2, h3, h4, h5, h6 {
+                color: multiply(@effectSuccess, #999);
+            }
         }
         &.atk-effect-info {
-            .colorCheck(@color);
-            @color: tint(@effectInfo, 80%);
+            // .colorCheck(@color);
+            @color: tint(@effectInfo, 90%);
             background-color: @color;
             border-color: @color;
+            &, h1, h2, h3, h4, h5, h6 {
+                color: multiply(@effectInfo, #999);
+            }
         }
     }
     &.atk-effect-danger {
