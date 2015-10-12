@@ -1,0 +1,94 @@
+block link
+  -var selected = 'Clients'; // by default
+
+-var menu = { 'Clients': 'clients', 'Invoices': 'invoices' };
+
+
+aside.atk-layout-column#sidebar
+  #sidebar-fill.atk-swatch-midnight
+    .atk-align-center
+      a(href='/').atk-text-bold.atk-text-lead.atk-padding.atk-inline.logo
+        img(src='images/logo.svg' title="Surfaccounts" width="100")
+    hr.atk-hr-reset
+    //- hr.atk-hr-reset.atk-push-xsmall
+    //- ul.atk-list-nobullets.atk-menu-vertical.atk-push-xsmall
+    //-   each val, key in menu
+    //-     li
+    //-       if selected === key
+    //-         a(href=val, title=key).atk-swatch-ocean.atk-padding.atk-section-xsmall= key
+    //-       else
+    //-         a(href=val, title=key).atk-swatch-midnight.atk-padding.atk-section-xsmall= key
+    //- nav#nav-user
+    //-   .atk-align-center.atk-size-mega.atk-padding-small.atk-text-lead.atk-text-bold
+    //-     | Demonstration Business Inc.
+    //-   .atk-align-center
+    //-     | Dmitrijs Malinovskis
+    //-   .atk-cells.atkcells-justified.atk-size-tera.atk-align-center.atk-expand
+    //-     .atk-cell.atk-padding-small #[a.icon-cog(href="#")]
+    //-     .atk-cell.atk-padding-small #[a.icon-help(href="#")]
+    //-     .atk-cell.atk-padding-small #[a.icon-logout(href="#")]
+    ul.atk-menu-vertical.atk-push-small
+      li.atk-swatch-aqua
+        a(href="#").atk-cells.atk-cells-gutter.atk-section-small.atk-padding.atk-block.atk-text-baseline-reset
+          span.atk-cell #[span.icon-plus.atk-text-bold.atk-size-giga]
+          span.atk-cell.atk-expand.atk-text-bold.atk-size-kilo Create New
+        ul.atk-menu-vertical.atk-text-bold
+          li
+            a(href='javascript:void(0)').atk-swatch-aqua.atk-padding.atk-section-small.atk-shape-rounded-top-right #[span.icon-plus]&nbsp;&nbsp;Invoice
+          li
+            a(href='javascript:void(0)').atk-swatch-aqua.atk-padding.atk-section-small #[span.icon-plus]&nbsp;&nbsp;Credit Note
+          li
+            a(href='javascript:void(0)').atk-swatch-aqua.atk-padding.atk-section-small #[span.icon-plus]&nbsp;&nbsp;Client
+          li
+            a(href='javascript:void(0)').atk-swatch-aqua.atk-padding.atk-section-small.atk-shape-rounded-bottom-right #[span.icon-plus]&nbsp;&nbsp;Purchase Order
+    nav#nav-main
+      ul.atk-list-nobullets.atk-menu-vertical.atk-text-baseline-reset
+        //- li.active
+        li
+          a(href="#").atk-cells.atk-cells-gutter.atk-section-small.atk-padding
+            span.atk-cell #[span.icon-gauge.atk-text-bold.atk-size-giga]
+            span.atk-cell.atk-expand.atk-text-bold.atk-size-kilo Dashboard
+        li
+          a(href="#").atk-cells.atk-cells-gutter.atk-section-small.atk-padding
+            span.atk-cell #[span.icon-user.atk-text-bold.atk-size-giga]
+            span.atk-cell.atk-expand.atk-text-bold.atk-size-kilo Contacts
+        li
+          a(href="#").atk-cells.atk-cells-gutter.atk-padding.atk-section-small
+            span.atk-cell #[span.icon-doc-inv.atk-text-bold.atk-size-giga]
+            span.atk-cell.atk-expand.atk-text-bold.atk-size-kilo Invoices
+            span.atk-cell #[span.icon-angle-right]
+          ul.atk-section-small.atk-text-medium
+            li #[a(href="#").atk-padding.atk-section-xsmall Sample Subpage]
+            li #[a(href="#").atk-padding.atk-section-xsmall Sample Subpage]
+            li #[a(href="#").atk-padding.atk-section-xsmall Sample Subpage]
+        li
+          a(href="#").atk-cells.atk-cells-gutter.atk-padding.atk-section-small
+            span.atk-cell #[span.icon-chart-pie.atk-text-bold.atk-size-giga]
+            span.atk-cell.atk-expand.atk-text-bold.atk-size-kilo CRM
+            span.atk-cell #[span.icon-angle-right]
+          ul.atk-section-xsmall.atk-text-medium
+            li #[a(href="#").atk-padding.atk-section-xsmall Sample Subpage]
+            li.active #[a(href="#").atk-padding.atk-section-xsmall Sample Subpage]
+            li #[a(href="#").atk-padding.atk-section-xsmall Sample Subpage]
+        li
+          a(href="#").atk-cells.atk-cells-gutter.atk-padding.atk-section-small
+            span.atk-cell #[span.icon-bank.atk-text-bold.atk-size-giga]
+            span.atk-cell.atk-expand.atk-text-bold.atk-size-kilo Banking
+            span.atk-cell #[span.icon-angle-right]
+          ul.atk-section-xsmall.atk-text-medium
+            li #[a(href="#").atk-padding.atk-section-xsmall Sample Subpage]
+            li #[a(href="#").atk-padding.atk-section-xsmall Sample Subpage]
+            li #[a(href="#").atk-padding.atk-section-xsmall Sample Subpage]
+        li
+          a(href="#").atk-cells.atk-cells-gutter.atk-padding.atk-section-small
+            span.atk-cell #[span.icon-table.atk-text-bold.atk-size-giga]
+            span.atk-cell.atk-expand.atk-text-bold.atk-size-kilo Accounts
+            span.atk-cell #[span.icon-angle-right]
+          ul.atk-section-xsmall.atk-text-medium
+            li #[a(href="#").atk-padding.atk-section-xsmall Sample Subpage]
+            li #[a(href="#").atk-padding.atk-section-xsmall Sample Subpage]
+            li #[a(href="#").atk-padding.atk-section-xsmall Sample Subpage]
+        li
+          a(href="#").atk-cells.atk-cells-gutter.atk-padding.atk-section-small
+            span.atk-cell #[span.icon-clock.atk-text-bold.atk-size-giga]
+            span.atk-cell.atk-expand.atk-text-bold.atk-size-kilo Reports
