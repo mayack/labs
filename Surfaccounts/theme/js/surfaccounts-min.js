@@ -88,3 +88,4 @@ function showSidebar() {
 function removeExpanded() {
   $('.sidebar ul li.expanded').removeClass('expanded').find('ul').slideUp('fast');
 }
+

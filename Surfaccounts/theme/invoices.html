@@ -19,68 +19,94 @@
     <div class="atk-layout">
       <div class="atk-layout-row atk-layout-expand">
         <div class="atk-layout atk-layout-cell">
-          <aside id="sidebar" class="atk-layout-column">
-            <div id="sidebar-fill" class="atk-swatch-midnight">
-              <div class="atk-align-center"><a href="/" class="atk-text-bold atk-text-lead atk-padding atk-inline logo"><img src="images/logo.svg" title="Surfaccounts" width="100"></a></div>
+          <aside class="sidebar atk-layout-column atk-swatch-midnight">
+            <div class="sidebar-indicator"></div>
+            <div class="sidebar-inner">
+              <div class="atk-align-center atk-padding logo"><a href="/" class="atk-inline"><span class="logo-mask atk-swatch-midnight"></span><img src="images/logo.svg" title="Surfaccounts" width="100"></a></div>
               <hr class="atk-hr-reset">
-              <ul class="atk-menu-vertical atk-push-small">
-                <li class="atk-swatch-aqua"><a href="#" class="atk-cells atk-cells-gutter atk-section-small atk-padding atk-block atk-text-baseline-reset"><span class="atk-cell"><span class="icon-plus atk-text-bold atk-size-giga"></span></span><span class="atk-cell atk-expand atk-text-bold atk-size-kilo">Create New</span></a>
-                  <ul class="atk-menu-vertical atk-text-bold">
-                    <li><a href="javascript:void(0)" class="atk-swatch-aqua atk-padding atk-section-small atk-shape-rounded-top-right"><span class="icon-plus"></span>&nbsp;&nbsp;Invoice</a></li>
-                    <li><a href="javascript:void(0)" class="atk-swatch-aqua atk-padding atk-section-small"><span class="icon-plus"></span>&nbsp;&nbsp;Credit Note</a></li>
-                    <li><a href="javascript:void(0)" class="atk-swatch-aqua atk-padding atk-section-small"><span class="icon-plus"></span>&nbsp;&nbsp;Client</a></li>
-                    <li><a href="javascript:void(0)" class="atk-swatch-aqua atk-padding atk-section-small atk-shape-rounded-bottom-right"><span class="icon-plus"></span>&nbsp;&nbsp;Purchase Order</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <nav id="nav-main">
+              <nav class="nav-sidebar scrollable atk-padding-top-small">
                 <ul class="atk-list-nobullets atk-menu-vertical atk-text-baseline-reset">
-                  <li><a href="#" class="atk-cells atk-cells-gutter atk-section-small atk-padding"><span class="atk-cell"><span class="icon-gauge atk-text-bold atk-size-giga"></span></span><span class="atk-cell atk-expand atk-text-bold atk-size-kilo">Dashboard</span></a></li>
-                  <li><a href="#" class="atk-cells atk-cells-gutter atk-section-small atk-padding"><span class="atk-cell"><span class="icon-user atk-text-bold atk-size-giga"></span></span><span class="atk-cell atk-expand atk-text-bold atk-size-kilo">Contacts</span></a></li>
-                  <li><a href="#" class="atk-cells atk-cells-gutter atk-padding atk-section-small"><span class="atk-cell"><span class="icon-doc-inv atk-text-bold atk-size-giga"></span></span><span class="atk-cell atk-expand atk-text-bold atk-size-kilo">Invoices</span><span class="atk-cell"><span class="icon-angle-right"></span></span></a>
+                  <li><a href="#" class="atk-cells atk-cells-gutter atk-section-small atk-padding">
+                      <figure class="atk-cell"><span class="icon-gauge atk-text-bold atk-size-giga"></span></figure><span class="atk-cell atk-expand atk-text-bold atk-size-kilo">Dashboard</span></a></li>
+                  <li><a href="#" class="atk-cells atk-cells-gutter atk-section-small atk-padding">
+                      <figure class="atk-cell"><span class="icon-user atk-text-bold atk-size-giga"></span></figure><span class="atk-cell atk-expand atk-text-bold atk-size-kilo">Contacts</span></a></li>
+                  <li><a href="#" class="atk-cells atk-cells-gutter atk-padding atk-padding-right-small atk-section-small">
+                      <figure class="atk-cell"><span class="icon-doc-inv atk-text-bold atk-size-giga"></span></figure><span class="atk-cell atk-expand atk-text-bold atk-size-kilo">Invoices</span><span class="atk-cell"><span class="icon-angle-right"></span></span></a>
                     <ul class="atk-section-small atk-text-medium">
                       <li><a href="#" class="atk-padding atk-section-xsmall">Sample Subpage</a></li>
                       <li><a href="#" class="atk-padding atk-section-xsmall">Sample Subpage</a></li>
                       <li><a href="#" class="atk-padding atk-section-xsmall">Sample Subpage</a></li>
                     </ul>
                   </li>
-                  <li><a href="#" class="atk-cells atk-cells-gutter atk-padding atk-section-small"><span class="atk-cell"><span class="icon-chart-pie atk-text-bold atk-size-giga"></span></span><span class="atk-cell atk-expand atk-text-bold atk-size-kilo">CRM</span><span class="atk-cell"><span class="icon-angle-right"></span></span></a>
+                  <li><a href="#" class="atk-cells atk-cells-gutter atk-padding atk-padding-right-small atk-section-small">
+                      <figure class="atk-cell"><span class="icon-chart-pie atk-text-bold atk-size-giga"></span></figure><span class="atk-cell atk-expand atk-text-bold atk-size-kilo">CRM</span><span class="atk-cell"><span class="icon-angle-right"></span></span></a>
                     <ul class="atk-section-xsmall atk-text-medium">
                       <li><a href="#" class="atk-padding atk-section-xsmall">Sample Subpage</a></li>
                       <li class="active"><a href="#" class="atk-padding atk-section-xsmall">Sample Subpage</a></li>
                       <li><a href="#" class="atk-padding atk-section-xsmall">Sample Subpage</a></li>
                     </ul>
                   </li>
-                  <li><a href="#" class="atk-cells atk-cells-gutter atk-padding atk-section-small"><span class="atk-cell"><span class="icon-bank atk-text-bold atk-size-giga"></span></span><span class="atk-cell atk-expand atk-text-bold atk-size-kilo">Banking</span><span class="atk-cell"><span class="icon-angle-right"></span></span></a>
+                  <li><a href="#" class="atk-cells atk-cells-gutter atk-padding atk-padding-right-small atk-section-small">
+                      <figure class="atk-cell"><span class="icon-bank atk-text-bold atk-size-giga"></span></figure><span class="atk-cell atk-expand atk-text-bold atk-size-kilo">Banking</span><span class="atk-cell"><span class="icon-angle-right"></span></span></a>
                     <ul class="atk-section-xsmall atk-text-medium">
                       <li><a href="#" class="atk-padding atk-section-xsmall">Sample Subpage</a></li>
                       <li><a href="#" class="atk-padding atk-section-xsmall">Sample Subpage</a></li>
                       <li><a href="#" class="atk-padding atk-section-xsmall">Sample Subpage</a></li>
                     </ul>
                   </li>
-                  <li><a href="#" class="atk-cells atk-cells-gutter atk-padding atk-section-small"><span class="atk-cell"><span class="icon-table atk-text-bold atk-size-giga"></span></span><span class="atk-cell atk-expand atk-text-bold atk-size-kilo">Accounts</span><span class="atk-cell"><span class="icon-angle-right"></span></span></a>
+                  <li><a href="#" class="atk-cells atk-cells-gutter atk-padding atk-padding-right-small atk-section-small">
+                      <figure class="atk-cell"><span class="icon-table atk-text-bold atk-size-giga"></span></figure><span class="atk-cell atk-expand atk-text-bold atk-size-kilo">Accounts</span><span class="atk-cell"><span class="icon-angle-right"></span></span></a>
                     <ul class="atk-section-xsmall atk-text-medium">
                       <li><a href="#" class="atk-padding atk-section-xsmall">Sample Subpage</a></li>
                       <li><a href="#" class="atk-padding atk-section-xsmall">Sample Subpage</a></li>
                       <li><a href="#" class="atk-padding atk-section-xsmall">Sample Subpage</a></li>
                     </ul>
                   </li>
-                  <li><a href="#" class="atk-cells atk-cells-gutter atk-padding atk-section-small"><span class="atk-cell"><span class="icon-clock atk-text-bold atk-size-giga"></span></span><span class="atk-cell atk-expand atk-text-bold atk-size-kilo">Reports</span></a></li>
+                  <li><a href="#" class="atk-cells atk-cells-gutter atk-padding atk-padding-right-small atk-section-small">
+                      <figure class="atk-cell"><span class="icon-clock atk-text-bold atk-size-giga"></span></figure><span class="atk-cell atk-expand atk-text-bold atk-size-kilo">Reports</span></a></li>
                 </ul>
               </nav>
+              <div class="company-switch">
+                <div class="company-switch-collapsed atk-padding atk-padding-vertical-small atk-swatch-midnight">
+                  <hr class="atk-hr-reset"><span class="icon-cog atk-size-giga"></span>
+                </div>
+                <div class="company-switch-expanded atk-padding atk-padding-vertical-small atk-padding-right-small atk-swatch-midnight">
+                  <hr class="atk-hr-reset">
+                  <div class="atk-size-milli">Signed in</div>
+                  <div class="atk-cells atk-text-lead atk-cells-gutter">
+                    <div class="atk-cell atk-text-bold">Relate Software Industries</div>
+                    <figure class="atk-cell"><span class="atk-size-giga icon-cog"></span></figure>
+                  </div>
+                </div>
+              </div>
             </div>
           </aside>
           <main class="atk-layout-column atk-layout-expand">
-            <section style="background:#e5e8e9" class="atk-padding atk-section-xsmall atk-text-dimmed">
-              <div class="atk-cells">
-                <div class="atk-cell"><span class="icon-menu"></span><span class="atk-sep-xlarge">|</span><span class="atk-text-bold">Demonstration Company Inc.&nbsp;<span class="icon-angle-down"></span></span></div>
-                <div class="atk-cell atk-align-right atk-actions-large"><span>Trial ends in 10 days</span><strong>Ray Rogers</strong><span class="icon-angle-down"></span></div>
-              </div>
-            </section>
-            <hr class="atk-hr-reset atk-border-active">
-            <h1 class="atk-push-reset">Invoices</h1>
-            <hr>
-            <p class="atk-size-kilo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam dolores molestias animi quasi voluptates sequi mollitia ullam ad non beatae iste cupiditate aliquid facilis velit ut autem porro, cumque expedita.</p>
+            <ul class="atk-swatch-night atk-menu-horizontal atk-cells atk-expand nav-main">
+              <li class="atk-cell atk-swatch-midnight"><a href="javascript:void(0)" class="sidebar-trigger atk-padding-small atk-swatch-night"><span class="icon-collapse-left"></span><span class="icon-menu"></span></a></li>
+              <li class="atk-cell atk-swatch-midnight atk-menu-separated"><a href="javascript:void(0)" class="atk-swatch-night atk-move-left atk-padding atk-padding-right-small atk-section-small atk-text-bold atk-expand">Create New&nbsp;&nbsp;<span class="icon-angle-down"></span></a>
+                <ul class="atk-menu-vertical atk-text-medium atk-shape-rounded-bottom">
+                  <li><a href="javascript:void(0)" class="atk-padding atk-section-small atk-swatch-midnight"><span class="icon-plus atk-size-micro"></span>&nbsp;&nbsp;Invoice</a></li>
+                  <li><a href="javascript:void(0)" class="atk-padding atk-section-small atk-swatch-midnight"><span class="icon-plus atk-size-micro"></span>&nbsp;&nbsp;Credit Note</a></li>
+                  <li><a href="javascript:void(0)" class="atk-padding atk-section-small atk-swatch-midnight"><span class="icon-plus atk-size-micro"></span>&nbsp;&nbsp;Customer</a></li>
+                  <li><a href="javascript:void(0)" class="atk-padding atk-section-small atk-swatch-midnight atk-shape-rounded-bottom"><span class="icon-plus atk-size-micro"></span>&nbsp;&nbsp;Purchase Invoice</a></li>
+                </ul>
+              </li>
+              <li class="atk-cell atk-expand atk-align-right atk-padding atk-section-reset"><a href="javascript:void(0)" class="atk-button-small atk-border-outline atk-swatch-mint atk-size-milli">Trial ends in 10 days</a></li>
+              <li class="atk-cell atk-swatch-midnight atk-menu-separated"><a href="javascript:void(0)" class="atk-swatch-night atk-move-left atk-padding atk-padding-right-small atk-section-small atk-text-bold atk-expand">Jonathan Ross&nbsp;&nbsp;<span class="icon-angle-down"></span></a>
+                <ul data-menu-position="right" class="atk-menu-vertical atk-swatch-midnight atk-shape-rounded-bottom-left atk-text-medium">
+                  <li><a href="javascript:void(0)" class="atk-padding atk-section-small atk-swatch-midnight">Settings</a></li>
+                  <li><a href="javascript:void(0)" class="atk-padding atk-section-small atk-swatch-midnight">Support</a></li>
+                  <hr class="atk-hr-reset">
+                  <li><a href="javascript:void(0)" class="atk-swatch-midnight atk-cells atk-shape-rounded-bottom"><span class="atk-cell atk-padding atk-section-small atk-expand">Log Out</span><span class="atk-cell atk-padding-small"><span class="icon-off"></span></span></a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="content">
+              <h1 class="atk-push-reset">Invoices</h1>
+              <hr>
+              <p class="atk-size-kilo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam dolores molestias animi quasi voluptates sequi mollitia ullam ad non beatae iste cupiditate aliquid facilis velit ut autem porro, cumque expedita.</p>
+            </div>
           </main>
         </div>
       </div>
@@ -97,6 +123,8 @@
     <script src="js/jquery-ui/dialog.js"></script>
     <script src="js/jquery-ui/button.js"></script>
     <script src="js/jquery-ui/tooltip.js"></script>
+    <script src="js/select2.full.min.js"></script>
     <script src="js/surfaccounts.js"></script>
+    <script src="js/demo.js"></script>
   </body>
 </html>

@@ -4,134 +4,181 @@ block link
   -var selected = 'Contacts';
 
 block content
-  //- section.atk-padding.atk-section-small
-  //-   .atk-cells
-  //-     .atk-cell
-  //-       h1.atk-text-dimmed= selected
-  //-     .atk-cell.atk-align-right
-  //-       input(type="text" placeholder="Search Invoices...")
-  //- .atk-cells.atk-push
-  //-   .atk-cell
-  //-     a.atk-button.atk-swatch-mint(href='javascript:void(0)') Add Invoice
-  //-   .atk-cell.atk-align-right
-  //-     .atk-actions
-  //-       a(href='javascript:void(0)') Everyone (40)
-  //-       a(href='javascript:void(0)') Customers (40)
-  //-       a(href='javascript:void(0)') Blahblah (40)
-  //-       a(href='javascript:void(0)') Mehmeh (40)
-  .atk-padding.atk-section-small.atk-swatch-smoke
-    .atk-cells
+  .atk-wrapper.atk-section
+    .atk-cells.atk-push
       .atk-cell.atk-expand
         a.atk-button.atk-swatch-mint(href='#') Add Contact
       .atk-cell.atk-align-right.atk-text-nowrap
         .atk-cells.atk-cells-gutter
           .atk-cell
             span.atk-buttonset
-              a.atk-button #[span.icon-list-bullet]
-              a.atk-button #[span.icon-list]
+              a.atk-button.atk-button-active.tooltip(href='javascript:void(0)', title="Detailed View") #[span.icon-list-bullet]
+              a.atk-button.tooltip(href='javascript:void(0)', title="Compact View") #[span.icon-list]
+          .atk-cell
+            select(style="width:140px")
+              option All (120)
+              option Customers (80)
+              option Contacts (40)
           .atk-cell
             .atk-input-combo.atk-cells
               .atk-cell
                 input(type="text" placeholder="Search Contacts..." style="width:200px")
               .atk-cell
                 button.atk-button #[span.icon-search]
-  hr.atk-hr-reset
-  .atk-swatch-white-fill
-    .atk-cells.atk-expand.atk-padding.atk-section-small.atk-text-nowrap.atk-cells-gutter-xlarge
-      .atk-cell.atk-size-milli.atk-text-dimmed Customer
-      //- .atk-cell.atk-size-milli.atk-text-dimmed ANT0004
-      .atk-cell.atk-text-medium.atk-expand Antrim Dynamos
-      .atk-cell.atk-text-dimmed.atk-size-milli 353-72-708025
-      .atk-cell.atk-text-dimmed.atk-size-milli 353-72-708025
-      .atk-cell.atk-text-dimmed.atk-size-milli thomas@antrimdynamos.com
-      .atk-cell.atk-align-right €1,047.02
-    hr.atk-hr-disabled.atk-hr-reset
-    .atk-cells.atk-expand.atk-padding.atk-section-small.atk-text-nowrap.atk-cells-gutter-xlarge
-      .atk-cell.atk-size-milli.atk-text-dimmed Customer
-      //- .atk-cell.atk-size-milli.atk-text-dimmed ANT0004
-      .atk-cell.atk-text-medium.atk-expand Antrim Dynamos
-      .atk-cell.atk-text-dimmed.atk-size-milli 353-72-708025
-      .atk-cell.atk-text-dimmed.atk-size-milli 353-72-708025
-      .atk-cell.atk-text-dimmed.atk-size-milli thomas@antrimdynamos.com
-      .atk-cell.atk-align-right €1,047.02
-    hr.atk-hr-disabled.atk-hr-reset
-    .atk-cells.atk-expand.atk-padding.atk-section-small.atk-text-nowrap.atk-cells-gutter-xlarge
-      .atk-cell.atk-size-milli.atk-text-dimmed Customer
-      //- .atk-cell.atk-size-milli.atk-text-dimmed ANT0004
-      .atk-cell.atk-text-medium.atk-expand Antrim Dynamos
-      .atk-cell.atk-text-dimmed.atk-size-milli 353-72-708025
-      .atk-cell.atk-text-dimmed.atk-size-milli 353-72-708025
-      .atk-cell.atk-text-dimmed.atk-size-milli thomas@antrimdynamos.com
-      .atk-cell.atk-align-right €1,047.02
-    hr.atk-hr-disabled.atk-hr-reset
-    .atk-cells.atk-expand.atk-padding.atk-section-small.atk-text-nowrap.atk-cells-gutter-xlarge
-      .atk-cell.atk-size-milli.atk-text-dimmed Customer
-      //- .atk-cell.atk-size-milli.atk-text-dimmed ANT0004
-      .atk-cell.atk-text-medium.atk-expand Antrim Dynamos
-      .atk-cell.atk-text-dimmed.atk-size-milli 353-72-708025
-      .atk-cell.atk-text-dimmed.atk-size-milli 353-72-708025
-      .atk-cell.atk-text-dimmed.atk-size-milli thomas@antrimdynamos.com
-      .atk-cell.atk-align-right €1,047.02
-    hr.atk-hr-disabled.atk-hr-reset
-    .atk-cells.atk-expand.atk-padding.atk-section-small.atk-text-nowrap.atk-cells-gutter-xlarge
-      .atk-cell.atk-size-milli.atk-text-dimmed Customer
-      //- .atk-cell.atk-size-milli.atk-text-dimmed ANT0004
-      .atk-cell.atk-text-medium.atk-expand Antrim Dynamos
-      .atk-cell.atk-text-dimmed.atk-size-milli 353-72-708025
-      .atk-cell.atk-text-dimmed.atk-size-milli 353-72-708025
-      .atk-cell.atk-text-dimmed.atk-size-milli thomas@antrimdynamos.com
-      .atk-cell.atk-align-right €1,047.02
-    hr.atk-hr-disabled.atk-hr-reset
-    .atk-cells.atk-expand.atk-padding.atk-section-small.atk-text-nowrap.atk-cells-gutter-xlarge
-      .atk-cell.atk-size-milli.atk-text-dimmed Customer
-      //- .atk-cell.atk-size-milli.atk-text-dimmed ANT0004
-      .atk-cell.atk-text-medium.atk-expand Antrim Dynamos
-      .atk-cell.atk-text-dimmed.atk-size-milli 353-72-708025
-      .atk-cell.atk-text-dimmed.atk-size-milli 353-72-708025
-      .atk-cell.atk-text-dimmed.atk-size-milli thomas@antrimdynamos.com
-      .atk-cell.atk-align-right €1,047.02
-    hr.atk-hr-disabled.atk-hr-reset
-    .atk-cells.atk-expand.atk-padding.atk-section-small.atk-text-nowrap.atk-cells-gutter-xlarge
-      .atk-cell.atk-size-milli.atk-text-dimmed Customer
-      //- .atk-cell.atk-size-milli.atk-text-dimmed ANT0004
-      .atk-cell.atk-text-medium.atk-expand Antrim Dynamos
-      .atk-cell.atk-text-dimmed.atk-size-milli 353-72-708025
-      .atk-cell.atk-text-dimmed.atk-size-milli 353-72-708025
-      .atk-cell.atk-text-dimmed.atk-size-milli thomas@antrimdynamos.com
-      .atk-cell.atk-align-right €1,047.02
-    hr.atk-hr-disabled.atk-hr-reset
-    .atk-cells.atk-expand.atk-padding.atk-section-small.atk-text-nowrap.atk-cells-gutter-xlarge
-      .atk-cell.atk-size-milli.atk-text-dimmed Customer
-      //- .atk-cell.atk-size-milli.atk-text-dimmed ANT0004
-      .atk-cell.atk-text-medium.atk-expand Antrim Dynamos
-      .atk-cell.atk-text-dimmed.atk-size-milli 353-72-708025
-      .atk-cell.atk-text-dimmed.atk-size-milli 353-72-708025
-      .atk-cell.atk-text-dimmed.atk-size-milli thomas@antrimdynamos.com
-      .atk-cell.atk-align-right €1,047.02
-    hr.atk-hr-disabled.atk-hr-reset
-    .atk-cells.atk-expand.atk-padding.atk-section-small.atk-text-nowrap.atk-cells-gutter-xlarge
-      .atk-cell.atk-size-milli.atk-text-dimmed Customer
-      //- .atk-cell.atk-size-milli.atk-text-dimmed ANT0004
-      .atk-cell.atk-text-medium.atk-expand Antrim Dynamos
-      .atk-cell.atk-text-dimmed.atk-size-milli 353-72-708025
-      .atk-cell.atk-text-dimmed.atk-size-milli 353-72-708025
-      .atk-cell.atk-text-dimmed.atk-size-milli thomas@antrimdynamos.com
-      .atk-cell.atk-align-right €1,047.02
-    hr.atk-hr-disabled.atk-hr-reset
-    .atk-cells.atk-expand.atk-padding.atk-section-small.atk-text-nowrap.atk-cells-gutter-xlarge
-      .atk-cell.atk-size-milli.atk-text-dimmed Customer
-      //- .atk-cell.atk-size-milli.atk-text-dimmed ANT0004
-      .atk-cell.atk-text-medium.atk-expand Antrim Dynamos
-      .atk-cell.atk-text-dimmed.atk-size-milli 353-72-708025
-      .atk-cell.atk-text-dimmed.atk-size-milli 353-72-708025
-      .atk-cell.atk-text-dimmed.atk-size-milli thomas@antrimdynamos.com
-      .atk-cell.atk-align-right €1,047.02
-    hr.atk-hr-disabled.atk-hr-reset
-    .atk-cells.atk-expand.atk-padding.atk-section-small.atk-text-nowrap.atk-cells-gutter-xlarge
-      .atk-cell.atk-size-milli.atk-text-dimmed Customer
-      //- //- .atk-cell.atk-size-milli.atk-text-dimmed ANT0004
-      .atk-cell.atk-text-medium.atk-expand Antrim Dynamos
-      .atk-cell.atk-text-dimmed.atk-size-milli 353-72-708025
-      .atk-cell.atk-text-dimmed.atk-size-milli 353-72-708025
-      .atk-cell.atk-text-dimmed.atk-size-milli thomas@antrimdynamos.com
-      .atk-cell.atk-align-right €1,047.02
+    .atk-box.atk-padding-reset
+      .atk-table
+        table
+          thead
+            tr
+              th test
+              th test
+              th test
+              th test
+              th test
+          tbody
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+            tr
+              td Testing
+              td Testing
+              td Testing
+              td Testing
+              td Testing  
+#dialog
+  | Test
