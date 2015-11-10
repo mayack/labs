@@ -1429,10 +1429,10 @@ body .ui-tooltip {
   color: inherit;
 }
 .ui-widget-content a {
-  color: #005476;
+  color: #22acc9;
 }
 .ui-widget-content a:hover {
-  color: #003043;
+  color: #1a879e;
 }
 .ui-widget-overlay {
   opacity: 1;
@@ -1520,11 +1520,11 @@ body .ui-tooltip {
 .ui-datepicker .ui-datepicker-header .ui-datepicker-next span.ui-icon:before,
 .ui-datepicker .ui-datepicker-header .ui-datepicker-prev span.ui-icon:before {
   line-height: 1;
-  color: #005476;
+  color: #22acc9;
 }
 .ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover span.ui-icon:before,
 .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover span.ui-icon:before {
-  color: #003043;
+  color: #1a879e;
 }
 .ui-datepicker .ui-datepicker-header .ui-datepicker-next.ui-state-hover,
 .ui-datepicker .ui-datepicker-header .ui-datepicker-prev.ui-state-hover {
@@ -2681,12 +2681,12 @@ img::-moz-selection {
   background: transparent;
 }
 a {
-  color: #005476;
+  color: #22acc9;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #003043;
+  color: #1a879e;
 }
 .atk-overflow {
   overflow: hidden;
@@ -2741,6 +2741,9 @@ a:focus {
   opacity: 1;
   filter: alpha(opacity=100);
 }
+.atk-table {
+  position: relative;
+}
 .atk-table table {
   width: 100%;
 }
@@ -2788,6 +2791,17 @@ a:focus {
 .atk-table table tbody tr.atk-table-expander td {
   border-top: none;
 }
+.atk-table table tbody tr td.atk-table-row-icon {
+  position: absolute;
+  left: 100%;
+  margin-top: -1px;
+  opacity: 0;
+  vertical-align: middle;
+}
+.atk-table table tbody tr:hover td.atk-table-row-icon {
+  border: none;
+  opacity: 1;
+}
 .atk-table > *[class*=atk-box]:first-child {
   border-bottom: none;
   border-bottom-left-radius: 0;
@@ -2808,6 +2822,18 @@ a:focus {
 .atk-table.atk-table-bordered th,
 .atk-table.atk-table-bordered td {
   border: 1px solid #dadde0;
+}
+.atk-table[data-table-padding='large'] table thead th:not([class*=atk-padding]):not([class*=atk-section]):not(.atk-table-sort),
+.atk-table[data-table-padding='large'] table tbody td:not([class*=atk-padding]):not([class*=atk-section]):not(.atk-table-sort) {
+  padding-bottom: 0.8rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  padding-top: 0.8rem;
+}
+.atk-table[data-table-padding='large'] table thead th[class*=atk-section],
+.atk-table[data-table-padding='large'] table tbody td[class*=atk-section] {
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
 }
 .atk-pagination {
   font-size: 0;
@@ -5493,6 +5519,9 @@ html {
 }
 .sidebar-trigger.collapsed .icon-menu {
   opacity: 1;
+}
+.relative {
+  position: relative;
 }
 .select2-container--default .select2-results__option {
   padding: 0.5em 0.7em;
