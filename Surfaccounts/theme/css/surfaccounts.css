@@ -5591,7 +5591,7 @@ input.select2-container--default .select2-results__option:last-child {
   border-color: #959da6;
 }
 .scrollable {
-  overflow: auto;
+  overflow-y: auto;
 }
 @media screen and (min-width: 1025px) {
   .sidebar {
