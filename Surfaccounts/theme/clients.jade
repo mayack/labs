@@ -25,165 +25,183 @@ block content
                 input(type="text" placeholder="Search Contacts..." style="width:200px")
               .atk-cell
                 button.atk-button #[span.icon-search]
-    .atk-box.atk-padding-reset
+    .atk-box.atk-padding-reset.relative
+      #actions-dropdown.atk-box-xsmall.atk-padding-reset.atk-popover.atk-hide
+        .atk-popover-arrow
+        ul.atk-lister-nomargin.atk-list-nobullets.atk-text-nowrap
+          li #[a.atk-block.atk-padding-small.atk-padding-vertical-xsmall(href='javascript:void(0)') Some Action]
+          li #[a.atk-block.atk-padding-small.atk-padding-vertical-xsmall(href='javascript:void(0)') Other Action]
+          li #[a.atk-block.atk-padding-small.atk-padding-vertical-xsmall(href='javascript:void(0)') Edit]
+          li #[a.atk-block.atk-padding-small.atk-padding-vertical-xsmall.atk-effect-danger(href='javascript:void(0)') Delete]
       .atk-table.atk-text-nowrap(data-table-padding='large')
         table
-          //- thead
-          //-   tr
-          //-     th test
-          //-     th test
-          //-     th test
-          //-     th test
-          //-     th test
           tbody
             tr
               td #[a.atk-text-semibold(href='#') Antrim Dynamos]
               td.atk-text-dimmed ANT0004
-              td.atk-text-dimmed #[span.icon-phone] 00353-26-346457
-              td.atk-text-dimmed #[span.icon-mail] info@antrimdynamos.com
+              td.atk-text-dimmed 00353-26-346457
+              td.atk-text-dimmed info@antrimdynamos.com
               td.atk-align-right €1,047.02
-              td.atk-table-row-icon 
-                .relative #[a.textGray-60.icon-cog(href='#')]
-              //- td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo.atk-padding-xsmall.atk-border-outline.atk-shape-circle.atk-text-baseline-reset.atk-inline(href='#')]
+              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo.actions-trigger(href='#')]
             tr
               td #[a.atk-text-semibold(href='#') Antrim Dynamos]
               td.atk-text-dimmed ANT0004
               td.atk-text-dimmed 00353-26-346457
               td.atk-text-dimmed info@antrimdynamos.com
               td.atk-align-right €1,047.02
-              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo(href='#')]
+              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo.actions-trigger(href='#')]
             tr
               td #[a.atk-text-semibold(href='#') Antrim Dynamos]
               td.atk-text-dimmed ANT0004
               td.atk-text-dimmed 00353-59-380085
               td.atk-text-dimmed info@antrimdynamos.com
               td.atk-align-right €1,047.02
-              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo(href='#')]
+              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo.actions-trigger(href='#')]
             tr
               td #[a.atk-text-semibold(href='#') Antrim Dynamos]
               td.atk-text-dimmed ANT0004
               td.atk-text-dimmed 00353-26-346457
               td.atk-text-dimmed info@antrimdynamos.com
               td.atk-align-right €1,047.02
-              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo(href='#')]
+              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo.actions-trigger(href='#')]
             tr
               td #[a.atk-text-semibold(href='#') Antrim Dynamos]
               td.atk-text-dimmed ANT0004
               td.atk-text-dimmed 00353-26-346457
               td.atk-text-dimmed info@antrimdynamos.com
               td.atk-align-right €1,047.02
-              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo(href='#')]
+              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo.actions-trigger(href='#')]
             tr
               td #[a.atk-text-semibold(href='#') Antrim Dynamos]
               td.atk-text-dimmed ANT0004
               td.atk-text-dimmed 00353-59-380085
               td.atk-text-dimmed info@antrimdynamos.com
               td.atk-align-right €1,047.02
-              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo(href='#')]
+              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo.actions-trigger(href='#')]
             tr
               td #[a.atk-text-semibold(href='#') Antrim Dynamos]
               td.atk-text-dimmed ANT0004
               td.atk-text-dimmed 00353-26-346457
               td.atk-text-dimmed info@antrimdynamos.com
               td.atk-align-right €1,047.02
-              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo(href='#')]
+              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo.actions-trigger(href='#')]
             tr
               td #[a.atk-text-semibold(href='#') Antrim Dynamos]
               td.atk-text-dimmed ANT0004
               td.atk-text-dimmed 00353-26-346457
               td.atk-text-dimmed info@antrimdynamos.com
               td.atk-align-right €1,047.02
-              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo(href='#')]
+              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo.actions-trigger(href='#')]
             tr
               td #[a.atk-text-semibold(href='#') Antrim Dynamos]
               td.atk-text-dimmed ANT0004
               td.atk-text-dimmed 00353-59-380085
               td.atk-text-dimmed info@antrimdynamos.com
               td.atk-align-right €1,047.02
-              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo(href='#')]
+              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo.actions-trigger(href='#')]
             tr
               td #[a.atk-text-semibold(href='#') Antrim Dynamos]
               td.atk-text-dimmed ANT0004
               td.atk-text-dimmed 00353-26-346457
               td.atk-text-dimmed info@antrimdynamos.com
               td.atk-align-right €1,047.02
-              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo(href='#')]
+              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo.actions-trigger(href='#')]
             tr
               td #[a.atk-text-semibold(href='#') Antrim Dynamos]
               td.atk-text-dimmed ANT0004
               td.atk-text-dimmed 00353-26-346457
               td.atk-text-dimmed info@antrimdynamos.com
               td.atk-align-right €1,047.02
-              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo(href='#')]
+              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo.actions-trigger(href='#')]
             tr
               td #[a.atk-text-semibold(href='#') Antrim Dynamos]
               td.atk-text-dimmed ANT0004
               td.atk-text-dimmed 00353-59-380085
               td.atk-text-dimmed info@antrimdynamos.com
               td.atk-align-right €1,047.02
-              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo(href='#')]
+              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo.actions-trigger(href='#')]
             tr
               td #[a.atk-text-semibold(href='#') Antrim Dynamos]
               td.atk-text-dimmed ANT0004
               td.atk-text-dimmed 00353-26-346457
               td.atk-text-dimmed info@antrimdynamos.com
               td.atk-align-right €1,047.02
-              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo(href='#')]
+              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo.actions-trigger(href='#')]
             tr
               td #[a.atk-text-semibold(href='#') Antrim Dynamos]
               td.atk-text-dimmed ANT0004
               td.atk-text-dimmed 00353-26-346457
               td.atk-text-dimmed info@antrimdynamos.com
               td.atk-align-right €1,047.02
-              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo(href='#')]
+              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo.actions-trigger(href='#')]
             tr
               td #[a.atk-text-semibold(href='#') Antrim Dynamos]
               td.atk-text-dimmed ANT0004
               td.atk-text-dimmed 00353-59-380085
               td.atk-text-dimmed info@antrimdynamos.com
               td.atk-align-right €1,047.02
-              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo(href='#')]
+              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo.actions-trigger(href='#')]
             tr
               td #[a.atk-text-semibold(href='#') Antrim Dynamos]
               td.atk-text-dimmed ANT0004
               td.atk-text-dimmed 00353-26-346457
               td.atk-text-dimmed info@antrimdynamos.com
               td.atk-align-right €1,047.02
-              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo(href='#')]
+              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo.actions-trigger(href='#')]
             tr
               td #[a.atk-text-semibold(href='#') Antrim Dynamos]
               td.atk-text-dimmed ANT0004
               td.atk-text-dimmed 00353-26-346457
               td.atk-text-dimmed info@antrimdynamos.com
               td.atk-align-right €1,047.02
-              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo(href='#')]
+              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo.actions-trigger(href='#')]
             tr
               td #[a.atk-text-semibold(href='#') Antrim Dynamos]
               td.atk-text-dimmed ANT0004
               td.atk-text-dimmed 00353-59-380085
               td.atk-text-dimmed info@antrimdynamos.com
               td.atk-align-right €1,047.02
-              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo(href='#')]
+              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo.actions-trigger(href='#')]
             tr
               td #[a.atk-text-semibold(href='#') Antrim Dynamos]
               td.atk-text-dimmed ANT0004
               td.atk-text-dimmed 00353-26-346457
               td.atk-text-dimmed info@antrimdynamos.com
               td.atk-align-right €1,047.02
-              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo(href='#')]
+              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo.actions-trigger(href='#')]
             tr
               td #[a.atk-text-semibold(href='#') Antrim Dynamos]
               td.atk-text-dimmed ANT0004
               td.atk-text-dimmed 00353-26-346457
               td.atk-text-dimmed info@antrimdynamos.com
               td.atk-align-right €1,047.02
-              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo(href='#')]
+              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo.actions-trigger(href='#')]
             tr
               td #[a.atk-text-semibold(href='#') Antrim Dynamos]
               td.atk-text-dimmed ANT0004
               td.atk-text-dimmed 00353-59-380085
               td.atk-text-dimmed info@antrimdynamos.com
               td.atk-align-right €1,047.02
-              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo(href='#')]
-#dialog
-  | Test
+              td.atk-table-row-icon #[a.textGray-60.icon-cog.atk-size-kilo.actions-trigger(href='#')]
+  #company-switch.atk-hide(title="Company Select")
+    .atk-lister-small
+      .atk-cells
+        .atk-cell.atk-expand
+          | Relate Software Ltd.
+        .atk-cell
+          a.atk-button-small.atk-swatch-aqua(href='javascript:void(0)') Select
+      .atk-cells
+        .atk-cell.atk-expand
+          | Surfaccounts Ltd.
+        .atk-cell
+          a.atk-button-small.atk-swatch-aqua(href='javascript:void(0)') Select
+      .atk-cells
+        .atk-cell.atk-expand
+          | SIA Mayack
+        .atk-cell
+          a.atk-button-small.atk-swatch-aqua(href='javascript:void(0)') Select
+      .atk-cells
+        .atk-cell.atk-expand
+          | Random Industries PLC
+        .atk-cell
+          a.atk-button-small.atk-swatch-aqua(href='javascript:void(0)') Select

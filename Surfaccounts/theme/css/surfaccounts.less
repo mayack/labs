@@ -20,7 +20,7 @@
 @headingCase:             none; // Options: none, capitalize, uppercase, lowercase
 @headingColor:            @swatchGray-15;
 @headingFamily:           "Proxima Nova A W07", "Proxima Nova", "Helvetica Neue", "Helvetica", @jui-ffDefault;
-@headingWeight:           400;
+@headingWeight:           600;
 @headingBaseline:         1.2; // Minor Third
 
 @fontScatter:             0.5; // Multiplier that affects difference between heading sizes
@@ -40,10 +40,10 @@
 
 @blur:                    5px; // .atk-blur effect
 
-@borderDisabled:          lighten(@borderStatic, 10%);
+@borderDisabled:          lighten(@borderStatic, 5%);
 @borderStatic:            #dadde0;
 @borderClickable:         darken(@borderStatic, 10%);
-@borderOverlay:           darken(@borderStatic, 25%);
+@borderOverlay:           darken(@borderStatic, 20%);
 
 @atk-swatch-white:        #ffffff;   .createSwatch(atk-swatch-white);
 @atk-swatch-smoke:        #f3f4f5;   .createSwatch(atk-swatch-smoke);
@@ -68,7 +68,7 @@
 @linkColor:               darken(@atk-swatch-aqua,10%);
 @linkColorHover:          darken(@linkColor,10%);
 
-@dialogOverlay:           fade(#000, 25%); // Color of modal dialog's overlay
+@dialogOverlay:           fade(@atk-swatch-midnight, 75%); // Color of modal dialog's overlay
 
 @tooltipColor:            fade(@atk-swatch-midnight, 90%);
 
@@ -197,7 +197,7 @@ body, html {
     .position(@t:0, @l:0);
     height: 100%;
     width: 100%;
-    a, .company-switch-expanded, .company-switch-collapsed {
+    a, .company-switcher-expanded, .company-switcher-collapsed {
       color: @navLinkColor;
       &:hover {
         color: @navLinkHoverColor;
@@ -249,18 +249,22 @@ body, html {
           }
           >ul {
             display: none;
+            overflow: hidden;
             padding-left: 0;
             padding-top: 0;
+            li:last-child {
+              .atk-push-small;
+            }
           }
         }
       }
     }
-    .company-switch {
+    .company-switcher {
       .transition(.5s);
       background: transparent;
       cursor: pointer;
       width: 100%;
-      .company-switch-expanded, .company-switch-collapsed {
+      .company-switcher-expanded, .company-switcher-collapsed {
         .position(@b:0,@l:0);
         .transition(opacity .5s);
         hr {
@@ -271,14 +275,14 @@ body, html {
           background: @navExpandedColor;
         }
       }
-      .company-switch-expanded {
+      .company-switcher-expanded {
         min-width: @sidebarWidth;
         z-index: 1;
       }
-      .company-switch-collapsed {
+      .company-switcher-collapsed {
         line-height: 1;
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
         text-align: center;
         width: 100%;
         z-index: 2;
@@ -328,6 +332,19 @@ body, html {
 }
 .relative {
   position: relative;
+}
+.atk-table table tbody tr td.atk-table-row-icon.visible {
+  opacity: 1;
+}
+.atk-popover {
+  .elementShadow;
+}
+
+
+// Unique
+
+#actions-dropdown {
+  .position(@z:10);
 }
 
 
@@ -389,13 +406,17 @@ body, html {
     }
   }
   .select2-dropdown {
-    .box-shadow(0 5px 15px fade(@atk-swatch-night, 15%));
+    .elementShadow;
     border-color: @borderOverlay;
   }
 }
 
 
 // Mixins
+
+.elementShadow() {
+  .box-shadow(0 5px 15px fade(@atk-swatch-night, 15%));
+}
 .sidebar-expanded() {
   .sidebar-indicator {
     display: block;
@@ -422,12 +443,12 @@ body, html {
         }
       }
     }
-    .company-switch {
-      .company-switch-expanded {
+    .company-switcher {
+      .company-switcher-expanded {
         pointer-events: auto;
         opacity: 1;
       }
-      .company-switch-collapsed {
+      .company-switcher-collapsed {
         pointer-events: none;
         opacity: 0;
       }
@@ -453,19 +474,19 @@ body, html {
     .nav-sidebar {
       ul>li {
         >a {
-          padding-left: @margin/1.5;
+          padding-left: @margin/1.5 !important;
           >span {
             opacity: 0;
           }
         }
       }
     }
-    .company-switch {
-      .company-switch-expanded {
+    .company-switcher {
+      .company-switcher-expanded {
         pointer-events: none;
         opacity: 0;
       }
-      .company-switch-collapsed {
+      .company-switcher-collapsed {
         pointer-events: auto;
         opacity: 1;
       }
@@ -494,6 +515,10 @@ body, html {
 
 .scrollable {
   overflow-y: auto;
+}
+.ui-dialog {
+  .elementShadow;
+  border: none;
 }
 
 
