@@ -2815,11 +2815,13 @@ a:focus {
 .atk-table table tbody tr td.atk-table-row-icon {
   position: absolute;
   left: 100%;
+  background: none !important;
   border-color: transparent;
   opacity: 0;
   vertical-align: middle;
 }
 .atk-table table tbody tr:hover td.atk-table-row-icon {
+  background: none !important;
   opacity: 1;
 }
 .atk-table > *[class*=atk-box]:first-child {
@@ -5564,6 +5566,9 @@ html {
 }
 .atk-table table tbody tr td.atk-table-row-icon.visible {
   opacity: 1;
+}
+.atk-table.row-hover tbody tr:hover td {
+  background: #fafcfc !important;
 }
 .atk-popover {
   -webkit-box-shadow: 0 5px 15px rgba(36, 50, 62, 0.15);

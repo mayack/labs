@@ -13,6 +13,18 @@ $(function(){
     show: { duration: 300 }
   });
 
+  $('.atk-table.row-hover tbody').each(function(){
+    $(this).find('tr:first-child td:first-child').addClass('atk-shape-rounded-top-left');
+    $(this).find('tr:last-child td:first-child').addClass('atk-shape-rounded-bottom-left');
+    if ($(this).find('tr:last-child td.atk-table-row-icon').length > 0) {      
+      $(this).find('tr:first-child td:last-child').prev().addClass('atk-shape-rounded-top-right');
+      $(this).find('tr:last-child td:last-child').prev().addClass('atk-shape-rounded-bottom-right');
+    } else {
+      $(this).find('tr:first-child td:last-child').addClass('atk-shape-rounded-top-right');
+      $(this).find('tr:last-child td:last-child').addClass('atk-shape-rounded-bottom-right');
+    }
+
+  });
 
   // Sidebar
 
