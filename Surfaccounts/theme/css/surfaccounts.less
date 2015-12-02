@@ -43,7 +43,7 @@
 @borderDisabled:          lighten(@borderStatic, 5%);
 @borderStatic:            #dadde0;
 @borderClickable:         darken(@borderStatic, 10%);
-@borderOverlay:           darken(@borderStatic, 20%);
+@borderOverlay:           darken(@borderStatic, 15%);
 
 @atk-swatch-white:        #ffffff;   .createSwatch(atk-swatch-white);
 @atk-swatch-smoke:        #f3f4f5;   .createSwatch(atk-swatch-smoke);
@@ -304,8 +304,10 @@ body, html {
 // Objects
 
 *[class*=atk-button]:not([class*='active']) {
-  *[class*=icon] {
-    color: @swatchGray-50;
+  &:not([class*='atk-swatch']) {
+    *[class*=icon] {
+      color: @swatchGray-50;
+    }
   }
 }
 .atk-button-active {
@@ -345,6 +347,24 @@ body, html {
 
 #actions-dropdown {
   .position(@z:10);
+}
+.atk-table-row-icon {
+  &:after {
+    color: transparent;
+    content: 'n';
+  }
+  .actions-trigger {
+    .position(@t:50%,@l:50%);
+    // margin-top: -0.5em;
+    margin: 1px 0 0 0.25em;
+    transform: translate(-50%,-50%);
+  }
+  &.visible .actions-trigger.atk-border-outline {
+    &, &:hover, &:active {
+      background: @atk-swatch-aqua;
+      color: #fff;
+    }
+  }
 }
 
 
