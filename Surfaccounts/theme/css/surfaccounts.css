@@ -5568,7 +5568,7 @@ html {
   opacity: 1;
 }
 .atk-table.row-hover tbody tr:hover td {
-  background: #fafcfc !important;
+  background: #f5fafa !important;
 }
 .atk-popover {
   -webkit-box-shadow: 0 5px 15px rgba(36, 50, 62, 0.15);
