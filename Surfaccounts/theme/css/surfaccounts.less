@@ -350,6 +350,24 @@ body, html {
 .atk-popover {
   .elementShadow;
 }
+.ui-dialog {
+  .elementShadow;
+  border: none;
+  .ui-widget-header.ui-dialog-titlebar {
+    .atk-shape-rounded-top;
+    background: @atk-swatch-smoke;
+    border-bottom: 1px solid @borderStatic;
+    padding: @margin/2;
+    text-align: center;
+    &, .ui-dialog-title {
+      line-height: 1;
+    }
+  }
+  .dialog-scrollable {
+    max-height: 280px !important;
+    overflow: auto;
+  }
+}
 
 
 // Unique
@@ -544,9 +562,8 @@ body, html {
 .scrollable {
   overflow-y: auto;
 }
-.ui-dialog {
-  .elementShadow;
-  border: none;
+.disable {
+  pointer-events: none;
 }
 
 

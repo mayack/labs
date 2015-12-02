@@ -5575,6 +5575,39 @@ html {
   -moz-box-shadow: 0 5px 15px rgba(36, 50, 62, 0.15);
   box-shadow: 0 5px 15px rgba(36, 50, 62, 0.15);
 }
+.ui-dialog {
+  -webkit-box-shadow: 0 5px 15px rgba(36, 50, 62, 0.15);
+  -moz-box-shadow: 0 5px 15px rgba(36, 50, 62, 0.15);
+  box-shadow: 0 5px 15px rgba(36, 50, 62, 0.15);
+  border: none;
+}
+.ui-dialog .ui-widget-header.ui-dialog-titlebar {
+  background: #f3f4f5;
+  border-bottom: 1px solid #dadde0;
+  padding: 0.8rem;
+  text-align: center;
+}
+.ui-dialog .ui-widget-header.ui-dialog-titlebar,
+img.ui-dialog .ui-widget-header.ui-dialog-titlebar,
+input.ui-dialog .ui-widget-header.ui-dialog-titlebar {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.ui-dialog .ui-widget-header.ui-dialog-titlebar,
+.ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-dialog-title {
+  line-height: 1;
+}
+.ui-dialog .dialog-scrollable {
+  max-height: 280px !important;
+  overflow: auto;
+}
 #actions-dropdown {
   position: absolute;
   z-index: 10;
@@ -5695,11 +5728,8 @@ input.select2-container--default .select2-results__option:last-child {
 .scrollable {
   overflow-y: auto;
 }
-.ui-dialog {
-  -webkit-box-shadow: 0 5px 15px rgba(36, 50, 62, 0.15);
-  -moz-box-shadow: 0 5px 15px rgba(36, 50, 62, 0.15);
-  box-shadow: 0 5px 15px rgba(36, 50, 62, 0.15);
-  border: none;
+.disable {
+  pointer-events: none;
 }
 @media screen and (min-width: 1025px) {
   .sidebar {
