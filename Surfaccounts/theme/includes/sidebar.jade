@@ -4,74 +4,75 @@ block link
 -var menu = { 'Clients': 'clients', 'Invoices': 'invoices' };
 
 
-aside.sidebar.atk-layout-column.atk-swatch-midnight
+aside.sidebar.atk-layout-column.atk-swatch-aqua(data-border="right")
   .sidebar-indicator
   .sidebar-inner
-    .atk-align-center.atk-padding.logo
+    .logo(data-padding="all top-s bottom-s" data-align="center")
       a(href='/').atk-inline
-        span.logo-mask.atk-swatch-midnight
-        img(src='images/logo.svg' title="Surfaccounts" width="100")
-    hr.atk-hr-reset
-    nav.nav-sidebar.scrollable.atk-padding-top-small
-      ul.atk-list-nobullets.atk-menu-vertical.atk-text-baseline-reset
+        span.logo-mask.atk-swatch-aqua
+        img(src='images/logo-white.svg' title="Surfaccounts" width="100")
+    hr(data-margin="all-reset")
+    nav.nav-sidebar.scrollable(data-padding="top-s")
+      ul.atk-list.atk-menu(data-text="baseline-reset" data-menu="vertical" data-list="no-bullets")
         li
-          a(href="#").atk-cells.atk-cells-gutter.atk-padding-vertical-small.atk-padding
+          a.atk-cells(href="#" data-padding="all top-s bottom-s" data-cells="spacing")
             figure.atk-cell #[span.icon-gauge.atk-text-bold.atk-size-giga]
-            span.atk-cell.atk-expand.atk-text-bold.atk-size-kilo Dashboard
+            span.atk-cell.atk-expand.atk-size-kilo(data-text="bold") Dashboard
         li
-          a(href="#").atk-cells.atk-cells-gutter.atk-padding-vertical-small.atk-padding
+          a.atk-cells(href="#" data-padding="all top-s bottom-s" data-cells="spacing")
             figure.atk-cell #[span.icon-user.atk-text-bold.atk-size-giga]
-            span.atk-cell.atk-expand.atk-text-bold.atk-size-kilo Contacts
+            span.atk-cell.atk-expand.atk-size-kilo(data-text="bold") Contacts
         li
-          a(href="#").atk-cells.atk-cells-gutter.atk-padding.atk-padding-right-small.atk-padding-vertical-small
+          a.atk-cells(href="#" data-padding="top-s bottom-s left right-xs" data-cells="spacing")
             figure.atk-cell #[span.icon-doc-inv.atk-text-bold.atk-size-giga]
-            span.atk-cell.atk-expand.atk-text-bold.atk-size-kilo Invoices
+            span.atk-cell.atk-expand.atk-size-kilo(data-text="bold") Invoices
             span.atk-cell #[span.icon-angle-right]
           ul.atk-text-medium
-            li #[a(href="#").atk-padding.atk-padding-vertical-xsmall Sample Subpage]
-            li #[a(href="#").atk-padding.atk-padding-vertical-xsmall Sample Subpage]
-            li #[a(href="#").atk-padding.atk-padding-vertical-xsmall Sample Subpage]
+            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
+            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
+            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
         li
-          a(href="#").atk-cells.atk-cells-gutter.atk-padding.atk-padding-right-small.atk-padding-vertical-small
+          a.atk-cells(href="#" data-padding="top-s bottom-s left right-xs" data-cells="spacing")
             figure.atk-cell #[span.icon-chart-pie.atk-text-bold.atk-size-giga]
-            span.atk-cell.atk-expand.atk-text-bold.atk-size-kilo CRM
+            span.atk-cell.atk-expand.atk-size-kilo(data-text="bold") CRM
             span.atk-cell #[span.icon-angle-right]
           ul.atk-text-medium
-            li #[a(href="#").atk-padding.atk-padding-vertical-xsmall Sample Subpage]
-            li.active #[a(href="#").atk-padding.atk-padding-vertical-xsmall Sample Subpage]
-            li #[a(href="#").atk-padding.atk-padding-vertical-xsmall Sample Subpage]
-            li #[a(href="#").atk-padding.atk-padding-vertical-xsmall Sample Subpage]
+            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
+            li.active #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
+            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
+            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
         li
-          a(href="#").atk-cells.atk-cells-gutter.atk-padding.atk-padding-right-small.atk-padding-vertical-small
+          a.atk-cells(href="#" data-padding="top-s bottom-s left right-xs" data-cells="spacing")
             figure.atk-cell #[span.icon-bank.atk-text-bold.atk-size-giga]
-            span.atk-cell.atk-expand.atk-text-bold.atk-size-kilo Banking
+            span.atk-cell.atk-expand.atk-size-kilo(data-text="bold") Banking
             span.atk-cell #[span.icon-angle-right]
           ul.atk-text-medium
-            li #[a(href="#").atk-padding.atk-padding-vertical-xsmall Sample Subpage]
-            li #[a(href="#").atk-padding.atk-padding-vertical-xsmall Sample Subpage]
-            li #[a(href="#").atk-padding.atk-padding-vertical-xsmall Sample Subpage]
-            li #[a(href="#").atk-padding.atk-padding-vertical-xsmall Sample Subpage]
-            li #[a(href="#").atk-padding.atk-padding-vertical-xsmall Sample Subpage]
+            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
+            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
+            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
+            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
+            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
         li
-          a(href="#").atk-cells.atk-cells-gutter.atk-padding.atk-padding-right-small.atk-padding-vertical-small
+          a.atk-cells(href="#" data-padding="top-s bottom-s left right-xs" data-cells="spacing")
             figure.atk-cell #[span.icon-table.atk-text-bold.atk-size-giga]
-            span.atk-cell.atk-expand.atk-text-bold.atk-size-kilo Accounts
+            span.atk-cell.atk-expand.atk-size-kilo(data-text="bold") Accounts
             span.atk-cell #[span.icon-angle-right]
-          ul.atk-text-medium
-            li #[a(href="#").atk-padding.atk-padding-vertical-xsmall Sample Subpage]
-            li #[a(href="#").atk-padding.atk-padding-vertical-xsmall Sample Subpage]
-            li #[a(href="#").atk-padding.atk-padding-vertical-xsmall Sample Subpage]
+          ul(data-text="semibold")
+            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
+            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
+            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
         li
-          a(href="#").atk-cells.atk-cells-gutter.atk-padding.atk-padding-right-small.atk-padding-vertical-small
+          a.atk-cells(href="#" data-padding="all top-s bottom-s" data-cells="spacing")
             figure.atk-cell #[span.icon-clock.atk-text-bold.atk-size-giga]
-            span.atk-cell.atk-expand.atk-text-bold.atk-size-kilo Reports
-    .company-switcher
-      .company-switcher-collapsed.atk-padding.atk-padding-vertical-small.atk-swatch-midnight
-        hr.atk-hr-reset
-        span.icon-cog.atk-size-giga
-      .company-switcher-expanded.atk-padding.atk-padding-vertical-small.atk-padding-right-small.atk-swatch-midnight
-        hr.atk-hr-reset
-        .atk-size-milli Signed in
-        .atk-cells.atk-text-lead.atk-cells-gutter
-          .atk-cell.atk-text-bold Relate Software Industries
-          figure.atk-cell #[span.atk-size-giga.icon-cog]
+            span.atk-cell.atk-expand.atk-size-kilo(data-text="bold") Reports
+    footer#dialog-user-trigger.user
+      .user-collapsed
+        hr(data-margin="all-reset")
+        a.icon-cog.atk-size-giga.atk-swatch-aqua.atk-block(href="#" data-padding="all-s")
+      .user-expanded
+        hr(data-margin="all-reset")
+        a.atk-cells.atk-swatch-aqua(href="#" data-cells="spacing" data-padding="all-s")
+          span.atk-cell.atk-expand
+            span.atk-size-micro(data-text="caps semibold") Signed as
+            span.atk-block(data-text="bold") Ray Rogers
+          span.atk-cell #[span.atk-size-giga.icon-cog]

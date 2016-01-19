@@ -14,34 +14,76 @@ html
         .atk-layout.atk-layout-cell
           include sidebar
           main.atk-layout-column.atk-layout-expand
-            ul.atk-swatch-night.atk-menu-horizontal.atk-cells.atk-expand.nav-main
+            ul.atk-swatch-night.atk-menu.atk-cells.atk-expand.nav-main(data-menu="horizontal separated")
+              li.atk-cell
+                a.sidebar-trigger.atk-swatch-night(href='javascript:void(0)' data-padding="all-s") #[span.icon-collapse-left]#[span.icon-menu]
               li.atk-cell.atk-swatch-midnight
-                a.sidebar-trigger.atk-padding-small.atk-swatch-night(href='javascript:void(0)') #[span.icon-collapse-left]#[span.icon-menu]
-              li.atk-cell.atk-swatch-midnight.atk-menu-separated
-                a.atk-swatch-night.atk-move-left.atk-padding.atk-padding-right-small.atk-padding-vertical-small.atk-text-bold.atk-expand(href='javascript:void(0)') Create New&nbsp;&nbsp;#[span.icon-angle-down]
-                ul.atk-menu-vertical.atk-text-medium.atk-shape-rounded-bottom
+                a.atk-swatch-night.atk-move-left.atk-expand(href='javascript:void(0)' data-padding="all-s" data-text="bold") Create New&nbsp;&nbsp;#[span.icon-angle-down]
+                ul.atk-menu.atk-overflow(data-shape="rounded-bottom" data-text="semibold" data-menu="vertical")
                   li
-                    a.atk-padding.atk-padding-vertical-small.atk-swatch-midnight(href='javascript:void(0)') #[span.icon-plus.atk-size-micro]&nbsp;&nbsp;Invoice
+                    a.atk-swatch-midnight(href='javascript:void(0)' data-padding="all-s") #[span.icon-plus.atk-size-micro]&nbsp;&nbsp;Invoice
                   li
-                    a.atk-padding.atk-padding-vertical-small.atk-swatch-midnight(href='javascript:void(0)') #[span.icon-plus.atk-size-micro]&nbsp;&nbsp;Credit Note
+                    a.atk-swatch-midnight(href='javascript:void(0)' data-padding="all-s") #[span.icon-plus.atk-size-micro]&nbsp;&nbsp;Credit Note
                   li
-                    a.atk-padding.atk-padding-vertical-small.atk-swatch-midnight(href='javascript:void(0)') #[span.icon-plus.atk-size-micro]&nbsp;&nbsp;Customer
+                    a.atk-swatch-midnight(href='javascript:void(0)' data-padding="all-s") #[span.icon-plus.atk-size-micro]&nbsp;&nbsp;Customer
                   li
-                    a.atk-padding.atk-padding-vertical-small.atk-swatch-midnight.atk-shape-rounded-bottom(href='javascript:void(0)') #[span.icon-plus.atk-size-micro]&nbsp;&nbsp;Purchase Invoice
-              li.atk-cell.atk-expand.atk-align-right.atk-padding-horizontal
-                a.atk-button-small.atk-border-outline.atk-swatch-mint.atk-size-milli(href='javascript:void(0)') Trial ends in 10 days
-              li.atk-cell.atk-swatch-midnight.atk-menu-separated
-                a.atk-swatch-night.atk-move-left.atk-padding.atk-padding-right-small.atk-padding-vertical-small.atk-text-bold.atk-expand(href='javascript:void(0)') Jonathan Ross&nbsp;&nbsp;#[span.icon-angle-down]
-                ul(data-menu-position="right").atk-menu-vertical.atk-swatch-midnight.atk-shape-rounded-bottom-left.atk-text-medium
-                  li #[a.atk-padding.atk-padding-vertical-small.atk-swatch-midnight(href='javascript:void(0)') Settings]
-                  li #[a.atk-padding.atk-padding-vertical-small.atk-swatch-midnight(href='javascript:void(0)') Support]
-                  hr.atk-hr-reset
-                  li
-                    a.atk-swatch-midnight.atk-cells.atk-shape-rounded-bottom(href='javascript:void(0)')
-                      span.atk-cell.atk-padding.atk-padding-vertical-small.atk-expand Log Out
-                      span.atk-cell.atk-padding-small #[span.icon-off]
+                    a.atk-swatch-midnight(href='javascript:void(0)' data-padding="all-s") #[span.icon-plus.atk-size-micro]&nbsp;&nbsp;Purchase Invoice
+              li.atk-cell.atk-expand(data-align="right" data-padding="left right")
+                a.atk-button.atk-swatch-aqua.atk-size-milli(href='javascript:void(0)' data-button="spacing-s" data-border="outline") Trial ends in 10 days
+              li.atk-cell.atk-swatch-midnight
+                a.atk-swatch-night.atk-move-left.atk-expand#dialog-company-trigger(href='javascript:void(0)' data-padding="all-s" data-text="bold")
+                  span.icon-building(data-margin="right-xs")
+                  | Demo Company Ltd.
             .content
               block content
       //- include includes/footer
+    #dialog-user(title="Ray Rogers")
+      ul.atk-list.atk-lister.atk-size-mega(data-list="no-bullets" data-lister="spacing-reset" data-align="center")
+        li #[a.atk-swatch-default.atk-block(href='#' data-padding="all-s") Settings]
+        li #[a.atk-swatch-default.atk-block(href='#' data-padding="all-s") Billing]
+        li #[a.atk-swatch-default.atk-block(href='#' data-padding="all-s") Support]
+        li(data-border="top static") #[a.atk-swatch-default.atk-block(href='#' data-padding="all-s" data-text="semibold" data-shape="rounded-bottom") Log Out]
+    #dialog-company.dialog-scrollable.atk-hide(title="Company Select")
+      .atk-lister(data-lister="spacing-xs")
+        .atk-cells
+          .atk-cell.atk-expand
+            | Relate Software Industries.
+          .atk-cell
+            a.atk-button.atk-swatch-aqua.disable(href='javascript:void(0)' data-button="spacing-s blank") #[span.icon-ok] Current
+        .atk-cells
+          .atk-cell.atk-expand
+            | Surfaccounts Ltd.
+          .atk-cell
+            a.atk-button.atk-swatch-aqua(href='javascript:void(0)' data-button="spacing-s") Select
+        .atk-cells
+          .atk-cell.atk-expand
+            | SIA Mayack
+          .atk-cell
+            a.atk-button.atk-swatch-aqua(href='javascript:void(0)' data-button="spacing-s") Select
+        .atk-cells
+          .atk-cell.atk-expand
+            | Random Industries PLC
+          .atk-cell
+            a.atk-button.atk-swatch-aqua(href='javascript:void(0)' data-button="spacing-s") Select
+        .atk-cells
+          .atk-cell.atk-expand
+            | Relate Software Ltd.
+          .atk-cell
+            a.atk-button.atk-swatch-aqua(href='javascript:void(0)' data-button="spacing-s") Select
+        .atk-cells
+          .atk-cell.atk-expand
+            | Surfaccounts Ltd.
+          .atk-cell
+            a.atk-button.atk-swatch-aqua(href='javascript:void(0)' data-button="spacing-s") Select
+        .atk-cells
+          .atk-cell.atk-expand
+            | SIA Mayack
+          .atk-cell
+            a.atk-button.atk-swatch-aqua(href='javascript:void(0)' data-button="spacing-s") Select
+        .atk-cells
+          .atk-cell.atk-expand
+            | Random Industries PLC
+          .atk-cell
+            a.atk-button.atk-swatch-aqua(href='javascript:void(0)' data-button="spacing-s") Select
     include scripts
     //- include analytics
