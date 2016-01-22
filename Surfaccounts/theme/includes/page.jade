@@ -10,15 +10,15 @@ html
     include browsehappy
     .layout
       //- include header
-      .layout-row.layout-expand
-        .layout.layout-cell
+      .layout--row-expand
+        .layout.layout--cell
           include sidebar
-          main.layout-column.layout-expand
+          main.layout--column-expand
             ul.swatch--night.menu--horizontal--separated.cells.expand.nav-main
               li.cell
                 a.sidebar-trigger.swatch--night.padding--all-s(href='javascript:void(0)') #[span.icon-collapse-left]#[span.icon-menu]
               li.cell.swatch--midnight
-                a.swatch--night.move-left.expand.padding--all-s.text--bold(href='javascript:void(0)') Create New&nbsp;&nbsp;#[span.icon-angle-down]
+                a.swatch--night.move--left.expand.padding--all-s.text--bold(href='javascript:void(0)') Create New&nbsp;&nbsp;#[span.icon-angle-down]
                 ul.menu--vertical.text--semibold.shape--rounded-bottom.overflow
                   li
                     a.swatch--midnight.padding--all-s(href='javascript:void(0)') #[span.icon-plus.text--size-xs]&nbsp;&nbsp;Invoice
@@ -28,21 +28,21 @@ html
                     a.swatch--midnight.padding--all-s(href='javascript:void(0)') #[span.icon-plus.text--size-xs]&nbsp;&nbsp;Customer
                   li
                     a.swatch--midnight.padding--all-s(href='javascript:void(0)') #[span.icon-plus.text--size-xs]&nbsp;&nbsp;Purchase Invoice
-              li.cell.expand.padding--left.padding--right.align-right
+              li.cell.expand.padding--left.padding--right.align--right
                 a.swatch--aqua.text--size-s.border--outline.button--spacing-s(href='javascript:void(0)') Trial ends in 10 days
               li.cell.swatch--midnight
-                a.swatch--night.move-left.expand.padding--all-s.text--bold#dialog-company-trigger(href='javascript:void(0)')
+                a.swatch--night.move--left.expand.padding--all-s.text--bold#dialog-company-trigger(href='javascript:void(0)')
                   span.icon-building.margin--right-xs
                   | Demo Company Ltd.
             .content
               block content
       //- include includes/footer
     #dialog-user.padding--all-reset(title="Ray Rogers")
-      ul.list--nobullets.lister--spacing-none.text--size-xl.align-center
+      ul.list--nobullets.lister--spacing-none.text--size-xl.align--center
         li #[a.swatch--default.block.padding--all-s(href='#') Settings]
         li #[a.swatch--default.block.padding--all-s(href='#') Billing]
         li #[a.swatch--default.block.padding--all-s(href='#') Support]
-        li.border-top--static #[a.swatch--default.block.padding--all-s.text--semibold.shape--rounded-bottom(href='#') Log Out]
+        li.border--top--static #[a.swatch--default.block.padding--all-s.text--semibold.shape--rounded-bottom(href='#') Log Out]
     #dialog-company.dialog-scrollable.hide(title="Company Select")
       .lister--spacing-xs
         .cells

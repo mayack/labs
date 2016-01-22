@@ -55,7 +55,7 @@ $(function(){
   $('[class*=table][class*=hover] tbody').each(function(){
     $(this).find('tr:first-child td:first-child').addClass('shape-rounded--top--left');
     $(this).find('tr:last-child td:first-child').addClass('shape-rounded--bottom--left');
-    if ($(this).find('tr:last-child td.table-row-icon').length > 0) {      
+    if ($(this).find('tr:last-child td.table--row--icon').length > 0) {      
       $(this).find('tr:first-child td:last-child').prev().addClass('shape-rounded--top--right');
       $(this).find('tr:last-child td:last-child').prev().addClass('shape-rounded--bottom--right');
     } else {
@@ -117,7 +117,7 @@ $(function(){
       
       if (!dropdown) {
         $('#actions-dropdown').addClass('hide');
-        $('.table-row-icon.visible').removeClass('visible');
+        $('.table--row--icon.visible').removeClass('visible');
       }
 
   });
@@ -128,7 +128,7 @@ $(function(){
       var trigger = $(this);
       var dropdown = $('#actions-dropdown');
 
-      $('.table-row-icon.visible').removeClass('visible');
+      $('.table--row--icon.visible').removeClass('visible');
       $(this).parent().addClass('visible');
 
 
