@@ -1,0 +1,134 @@
+extend includes/page
+
+block link
+  -var selected = 'Invoice Add';
+
+block content
+  .wrapper.padding-top--m.padding-bottom--m
+    .cells.margin-bottom--s
+      .cell
+        h2 Sales Invoice #[span.text-normal TAL0001 Tallaght Town]
+      .cell.align-right.items--s
+        a.button.swatch-stone.border-outline(href='#') Cancel
+        a.button.swatch-mint(href='#') Save
+    .box.text-size--milli
+      .row.margin-bottom--m
+        .col-4
+          h5.comment.margin-all--reset.text-caps-normal Invoice Details
+          hr.margin-top--xs.margin-bottom--s
+          //- .cells-group(data-cells="spacing")
+          //-   .cells
+          //-     .cell(data-padding="bottom-xs")
+          //-       | Customer
+          //-     .cell(data-padding="bottom-xs")
+          //-       input(type='text' placeholder="Customer")
+          //-   .cells
+          //-     .cell(data-padding="bottom-s")
+          //-       | Invoice Number
+          //-     .cell(data-padding="bottom-s")
+          //-       input(type='text')
+          //-   .cells
+          //-     .cell(data-padding="bottom-s")
+          //-       | Ref. No.
+          //-     .cell(data-padding="bottom-s")
+          //-       input(type='text')
+          //-   .cells
+          //-     .cell(data-padding="bottom-s")
+          //-       | Quote/S.O. No.
+          //-     .cell(data-padding="bottom-s")
+          //-       input(type='text')
+          //-   .cells
+          //-     .cell
+          //-       | Invoice Date
+          //-     .cell
+          //-       input(type='text')
+          //-   .cells
+          //-     .cell
+          //-       | Account Manager
+          //-     .cell
+          //-       input(type='text')
+          .margin-bottom-xs #[input.expand(type='text')]
+          .margin-bottom-xs #[input.expand(type='text')]
+          .margin-bottom-xs #[input.expand(type='text')]
+        .col-4
+          h5.comment.margin-all--reset.text-caps-normal Address Details
+          hr.margin-top--xs.margin-bottom--s
+          #tabs
+            ul
+              li #[a(href='#tabs-1') Invoice]
+              li #[a(href='#tabs-2') Delivery]
+            #tabs-1
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores saepe praesentium aliquid, magnam beatae sequi. Iure, eius, dolores perferendis debitis unde odit quae porro asperiores numquam nostrum impedit error libero.
+            #tabs-2
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores saepe praesentium aliquid, magnam beatae sequi. Iure, eius, dolores perferendis debitis unde odit quae porro asperiores numquam nostrum impedit error libero.
+        .col-4
+          h5.comment.margin-all--reset.text-caps-normal Credit Control Info
+          hr.margin-top--xs.margin-bottom--s
+          .cells-group.expand
+            .cells
+              .cell.text-semibold Customer Balance
+              .cell.align-right 2,460.30
+            .cells
+              .cell.text-semibold Overdue Balance
+              .cell.align-right 2,460.30
+            .cells
+              .cell.text-semibold Last Payment Amount
+              .cell.align-right 0.00
+            .cells
+              .cell.text-semibold Last Payment Date
+              .cell.align-right 12/07/2015
+            .cells
+              .cell.text-semibold Credit Terms
+              .cell.align-right 30 days
+            .cells
+              .cell.text-semibold Payment Terms
+              .cell.align-right 90 days
+      .table.swatch-gray.table-semi-spacing-s
+        table
+          thead
+            tr
+              th Product
+              th Description
+              th Quantity
+              th Price
+              th Discount
+              th VAT %
+              th Nominal
+              th.align-right Net Amount
+          tbody
+            tr
+              td 1
+              td 2
+              td 3
+              td 4
+              td 5
+              td 6
+              td 7
+              td.align-right 8
+            tr
+              td 1
+              td 2
+              td 3
+              td 4
+              td 5
+              td 6
+              td 7
+              td.align-right 8
+            tr
+              td 1
+              td 2
+              td 3
+              td 4
+              td 5
+              td 6
+              td 7
+              td.align-right 8
+            tr
+              td 1
+              td 2
+              td 3
+              td 4
+              td 5
+              td 6
+              td 7
+              td.align-right 8

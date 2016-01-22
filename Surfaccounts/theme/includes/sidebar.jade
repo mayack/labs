@@ -4,75 +4,75 @@ block link
 -var menu = { 'Clients': 'clients', 'Invoices': 'invoices' };
 
 
-aside.sidebar.atk-layout-column.atk-swatch-aqua(data-border="right")
+aside.sidebar.layout-column.swatch-aqua.border-right
   .sidebar-indicator
   .sidebar-inner
-    .logo(data-padding="all top-s bottom-s" data-align="center")
-      a(href='/').atk-inline
-        span.logo-mask.atk-swatch-aqua
+    .logo.padding-all.padding-top--s.padding-bottom--s.align-center
+      a(href='/').inline
+        span.logo-mask.swatch-aqua
         img(src='images/logo-white.svg' title="Surfaccounts" width="100")
-    hr(data-margin="all-reset")
-    nav.nav-sidebar.scrollable(data-padding="top-s")
-      ul.atk-list.atk-menu(data-text="baseline-reset" data-menu="vertical" data-list="no-bullets")
+    hr.margin-all--reset
+    nav.nav-sidebar.scrollable.padding-top--s
+      ul.list-nobullets.menu-vertical.text-baseline--single
         li
-          a.atk-cells(href="#" data-padding="all top-s bottom-s" data-cells="spacing")
-            figure.atk-cell #[span.icon-gauge.atk-text-bold.atk-size-giga]
-            span.atk-cell.atk-expand.atk-size-kilo(data-text="bold") Dashboard
+          a.cells.padding-all.padding-top--s.padding-bottom--s.cells-spacing(href="#")
+            figure.cell #[span.icon-gauge.text-bold-size--xl]
+            span.cell.expand.text-bold-size--l Dashboard
         li
-          a.atk-cells(href="#" data-padding="all top-s bottom-s" data-cells="spacing")
-            figure.atk-cell #[span.icon-user.atk-text-bold.atk-size-giga]
-            span.atk-cell.atk-expand.atk-size-kilo(data-text="bold") Contacts
+          a.cells.padding-all.padding-top--s.padding-bottom--s.cells-spacing(href="#")
+            figure.cell #[span.icon-user.text-bold-size--xl]
+            span.cell.expand.text-bold-size--l Contacts
         li
-          a.atk-cells(href="#" data-padding="top-s bottom-s left right-xs" data-cells="spacing")
-            figure.atk-cell #[span.icon-doc-inv.atk-text-bold.atk-size-giga]
-            span.atk-cell.atk-expand.atk-size-kilo(data-text="bold") Invoices
-            span.atk-cell #[span.icon-angle-right]
-          ul.atk-text-medium
-            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
-            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
-            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
+          a.cells.padding-top--s.padding-bottom--s.padding-left.padding-right--xs.cells-spacing(href="#")
+            figure.cell #[span.icon-doc-inv.text-bold-size--xl]
+            span.cell.expand.text-bold-size--l Invoices
+            span.cell #[span.icon-angle-right]
+          ul.text-semibold
+            li #[a.padding-all.padding-top--xs.padding-bottom--xs(href="#") Sample Subpage]
+            li #[a.padding-all.padding-top--xs.padding-bottom--xs(href="#") Sample Subpage]
+            li #[a.padding-all.padding-top--xs.padding-bottom--xs(href="#") Sample Subpage]
         li
-          a.atk-cells(href="#" data-padding="top-s bottom-s left right-xs" data-cells="spacing")
-            figure.atk-cell #[span.icon-chart-pie.atk-text-bold.atk-size-giga]
-            span.atk-cell.atk-expand.atk-size-kilo(data-text="bold") CRM
-            span.atk-cell #[span.icon-angle-right]
-          ul.atk-text-medium
-            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
-            li.active #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
-            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
-            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
+          a.cells.padding-top--s.padding-bottom--s.padding-left.padding-right--xs.cells-spacing(href="#")
+            figure.cell #[span.icon-chart-pie.text-bold-size--xl]
+            span.cell.expand.text-bold-size--l CRM
+            span.cell #[span.icon-angle-right]
+          ul.text-semibold
+            li #[a.padding-all.padding-top--xs.padding-bottom--xs(href="#") Sample Subpage]
+            li.active #[a.padding-all.padding-top--xs.padding-bottom--xs(href="#") Sample Subpage]
+            li #[a.padding-all.padding-top--xs.padding-bottom--xs(href="#") Sample Subpage]
+            li #[a.padding-all.padding-top--xs.padding-bottom--xs(href="#") Sample Subpage]
         li
-          a.atk-cells(href="#" data-padding="top-s bottom-s left right-xs" data-cells="spacing")
-            figure.atk-cell #[span.icon-bank.atk-text-bold.atk-size-giga]
-            span.atk-cell.atk-expand.atk-size-kilo(data-text="bold") Banking
-            span.atk-cell #[span.icon-angle-right]
-          ul.atk-text-medium
-            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
-            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
-            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
-            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
-            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
+          a.cells.padding-top--s.padding-bottom--s.padding-left.padding-right--xs.cells-spacing(href="#")
+            figure.cell #[span.icon-bank.text-bold-size--xl]
+            span.cell.expand.text-bold-size--l Banking
+            span.cell #[span.icon-angle-right]
+          ul.text-semibold
+            li #[a.padding-all.padding-top--xs.padding-bottom--xs(href="#") Sample Subpage]
+            li #[a.padding-all.padding-top--xs.padding-bottom--xs(href="#") Sample Subpage]
+            li #[a.padding-all.padding-top--xs.padding-bottom--xs(href="#") Sample Subpage]
+            li #[a.padding-all.padding-top--xs.padding-bottom--xs(href="#") Sample Subpage]
+            li #[a.padding-all.padding-top--xs.padding-bottom--xs(href="#") Sample Subpage]
         li
-          a.atk-cells(href="#" data-padding="top-s bottom-s left right-xs" data-cells="spacing")
-            figure.atk-cell #[span.icon-table.atk-text-bold.atk-size-giga]
-            span.atk-cell.atk-expand.atk-size-kilo(data-text="bold") Accounts
-            span.atk-cell #[span.icon-angle-right]
-          ul(data-text="semibold")
-            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
-            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
-            li #[a(href="#" data-padding="all top-xs bottom-xs") Sample Subpage]
+          a.cells.padding-top--s.padding-bottom--s.padding-left.padding-right--xs.cells-spacing(href="#")
+            figure.cell #[span.icon-table.text-bold-size--xl]
+            span.cell.expand.text-bold-size--l Accounts
+            span.cell #[span.icon-angle-right]
+          ul.text-semibold
+            li #[a.padding-all.padding-top--xs.padding-bottom--xs(href="#") Sample Subpage]
+            li #[a.padding-all.padding-top--xs.padding-bottom--xs(href="#") Sample Subpage]
+            li #[a.padding-all.padding-top--xs.padding-bottom--xs(href="#") Sample Subpage]
         li
-          a.atk-cells(href="#" data-padding="all top-s bottom-s" data-cells="spacing")
-            figure.atk-cell #[span.icon-clock.atk-text-bold.atk-size-giga]
-            span.atk-cell.atk-expand.atk-size-kilo(data-text="bold") Reports
+          a.cells.padding-all.padding-top--s.padding-bottom--s.cells-spacing(href="#")
+            figure.cell #[span.icon-clock.text-bold-size--xl]
+            span.cell.expand.text-bold-size--l Reports
     footer#dialog-user-trigger.user
       .user-collapsed
-        hr(data-margin="all-reset")
-        a.icon-cog.atk-size-giga.atk-swatch-aqua.atk-block(href="#" data-padding="all-s")
+        hr.margin-all--reset
+        a.icon-cog.text-size--xl.swatch-aqua.block.padding-all--s(href="#")
       .user-expanded
-        hr(data-margin="all-reset")
-        a.atk-cells.atk-swatch-aqua(href="#" data-cells="spacing" data-padding="all-s")
-          span.atk-cell.atk-expand
-            span.atk-size-micro(data-text="caps semibold") Signed as
-            span.atk-block(data-text="bold") Ray Rogers
-          span.atk-cell #[span.atk-size-giga.icon-cog]
+        hr.margin-all--reset
+        a.cells.swatch-aqua.cells-spacing.padding-all--s(href="#")
+          span.cell.expand
+            span.text-caps-semibold-size--xs Signed as
+            span.block.text-bold Ray Rogers
+          span.cell #[span.text-size--xl.icon-cog]

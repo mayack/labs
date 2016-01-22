@@ -50,16 +50,17 @@ $(function(){
     hide: { duration: 300 },
     show: { duration: 300 }
   });
+  $('#tabs').tabs();
 
-  $('.atk-table[data-table*=hover] tbody').each(function(){
-    $(this).find('tr:first-child td:first-child').attr('data-shape','rounded-top-left');
-    $(this).find('tr:last-child td:first-child').attr('data-shape','rounded-bottom-left');
-    if ($(this).find('tr:last-child td.atk-table-row-icon').length > 0) {      
-      $(this).find('tr:first-child td:last-child').prev().attr('data-shape','rounded-top-right');
-      $(this).find('tr:last-child td:last-child').prev().attr('data-shape','rounded-bottom-right');
+  $('[class*=table][class*=hover] tbody').each(function(){
+    $(this).find('tr:first-child td:first-child').addClass('shape-rounded--top--left');
+    $(this).find('tr:last-child td:first-child').addClass('shape-rounded--bottom--left');
+    if ($(this).find('tr:last-child td.table-row-icon').length > 0) {      
+      $(this).find('tr:first-child td:last-child').prev().addClass('shape-rounded--top--right');
+      $(this).find('tr:last-child td:last-child').prev().addClass('shape-rounded--bottom--right');
     } else {
-      $(this).find('tr:first-child td:last-child').attr('data-shape','rounded-top-right');
-      $(this).find('tr:last-child td:last-child').attr('data-shape','rounded-top-right');
+      $(this).find('tr:first-child td:last-child').addClass('shape-rounded--top--right');
+      $(this).find('tr:last-child td:last-child').addClass('shape-rounded--top--right');
     }
 
   });
@@ -103,7 +104,7 @@ $(function(){
     $('#dialog-user').dialog({
       modal: true,
       width: 300
-    }).attr("data-padding","all-reset");
+    });
   });
 
 
@@ -115,8 +116,8 @@ $(function(){
       var dropdown = (e.target.id === 'actions-dropdown');
       
       if (!dropdown) {
-        $('#actions-dropdown').addClass('atk-hide');
-        $('.atk-table-row-icon.visible').removeClass('visible');
+        $('#actions-dropdown').addClass('hide');
+        $('.table-row-icon.visible').removeClass('visible');
       }
 
   });
@@ -127,11 +128,11 @@ $(function(){
       var trigger = $(this);
       var dropdown = $('#actions-dropdown');
 
-      $('.atk-table-row-icon.visible').removeClass('visible');
+      $('.table-row-icon.visible').removeClass('visible');
       $(this).parent().addClass('visible');
 
 
-      $(dropdown).removeClass('atk-hide').position({
+      $(dropdown).removeClass('hide').position({
         my: "center-1 top+10",
         at: "center bottom",
         of: trigger,
@@ -139,7 +140,7 @@ $(function(){
         using: function(obj, info){
           var item_top = (info.vertical!== "top"? "bottom" : "top");
           $(this).attr("data-popover", item_top + " center");
-          // $(this).removeClass("atk-popover-" + (item_top == "top"? "bottom" : "top") + " center");
+          // $(this).removeClass("popover-" + (item_top == "top"? "bottom" : "top") + " center");
           $(this).css({
             left: obj.left + 'px',
             top: obj.top + 'px'

@@ -31,7 +31,7 @@
 // ==========================================================
 
 .createSmartSwatch(
-    @sName:            atk-swatch-default,
+    @sName:            swatch-default,
     @sFill:            #fff,
     @sHeading:         @gray30,
     @sText:            @gray30,
@@ -41,30 +41,30 @@
     @sBorder:          @borderStatic
 );
 .createSmartSwatch(
-    @sName:            atk-swatch-night,
+    @sName:            swatch-night,
     @sFill:            @night
 );
 .createSmartSwatch(
-    @sName:            atk-swatch-midnight,
+    @sName:            swatch-midnight,
     @sFill:            @midnight,
     @sText:            #fff,
     @sLink:            #fff,
     @sLinkHover:       #fff
 );
 .createSmartSwatch(
-    @sName:            atk-swatch-stone,
+    @sName:            swatch-stone,
     @sFill:            #A9BCD0
 );
 .createSmartSwatch(
-    @sName:            atk-swatch-smoke,
+    @sName:            swatch-smoke,
     @sFill:            @night
 );
 .createSmartSwatch(
-    @sName:            atk-swatch-aqua,
+    @sName:            swatch-aqua,
     @sFill:            @aqua
 );
 .createSmartSwatch(
-    @sName:            atk-swatch-mint,
+    @sName:            swatch-mint,
     @sFill:            @mint
 );
 
@@ -131,28 +131,28 @@
 // // Styles & Colors
 // // ==========================================================
 
-// @bodyBackground:          @atk-swatch-smoke;
+// @bodyBackground:          @swatch-smoke;
 
 // @cornerRadius:            5px;
 
-// @textSelect:              @atk-swatch-midnight; // Text selection's color
+// @textSelect:              @swatch-midnight; // Text selection's color
 // @textDimmed:              lighten(@bodyColor, 40%);
 
-// @blur:                    5px; // .atk-blur effect
+// @blur:                    5px; // .blur effect
 
 // @borderDisabled:          lighten(@borderStatic, 5%);
 // @borderStatic:            #dadde0;
 // @borderClickable:         darken(@borderStatic, 10%);
 // @borderOverlay:           darken(@borderStatic, 15%);
 
-// @atk-swatch-white:        #ffffff;   .createSwatch(atk-swatch-white);
-// @atk-swatch-smoke:        #f3f4f5;   .createSwatch(atk-swatch-smoke);
-// @atk-swatch-asphalt:      #879699;   .createSwatch(atk-swatch-asphalt);
-// @atk-swatch-mint:         #46bc99;   .createSwatch(atk-swatch-mint);
-// @atk-swatch-aqua:         #29bcdb;   .createSwatch(atk-swatch-aqua);
-// @atk-swatch-ocean:        #0079a9;   .createSwatch(atk-swatch-ocean);
-// @atk-swatch-midnight:     #2f3f4d;   .createSwatch(atk-swatch-midnight);
-// @atk-swatch-night:        #24323e;   .createSwatch(atk-swatch-night, @borderColor: @atk-swatch-midnight);
+// @swatch-white:        #ffffff;   .createSwatch(swatch-white);
+// @swatch-smoke:        #f3f4f5;   .createSwatch(swatch-smoke);
+// @swatch-asphalt:      #879699;   .createSwatch(swatch-asphalt);
+// @swatch-mint:         #46bc99;   .createSwatch(swatch-mint);
+// @swatch-aqua:         #29bcdb;   .createSwatch(swatch-aqua);
+// @swatch-ocean:        #0079a9;   .createSwatch(swatch-ocean);
+// @swatch-midnight:     #2f3f4d;   .createSwatch(swatch-midnight);
+// @swatch-night:        #24323e;   .createSwatch(swatch-night, @borderColor: @swatch-midnight);
 // @swatchText:              50%; // Text color sensitivity based on swatch
 
 // @effectSuccess:           #25c425;
@@ -165,14 +165,14 @@
 // // Components & Widgets
 // // ==========================================================
 
-// @linkColor:               darken(@atk-swatch-aqua,10%);
+// @linkColor:               darken(@swatch-aqua,10%);
 // @linkColorHover:          darken(@linkColor,10%);
 
-// @dialogOverlay:           fade(@atk-swatch-midnight, 75%); // Color of modal dialog's overlay
+// @dialogOverlay:           fade(@swatch-midnight, 75%); // Color of modal dialog's overlay
 
-// @tooltipColor:            fade(@atk-swatch-midnight, 90%);
+// @tooltipColor:            fade(@swatch-midnight, 90%);
 
-// @menuActive:              @atk-swatch-ocean;
+// @menuActive:              @swatch-ocean;
 
 // @buttonDefault:           #fff;
 // @buttonHover:             #f5f5f5;
@@ -182,7 +182,7 @@
 
 // @formMandatory:           #ff0000;
 
-// @inputFocus:              @atk-swatch-aqua;
+// @inputFocus:              @swatch-aqua;
 // @inputFocusGlow:          0;
 
 // @popoverArrow:            12px;
@@ -231,7 +231,7 @@
 body, html {
   overflow-y: hidden;
 }
-.atk-layout {
+.layout {
   .content {
     height: 100%;
     overflow: auto;
@@ -318,7 +318,7 @@ body, html {
           .position(@t:-1px,@l:0);
           width: 100%;
         }
-        &.atk-swatch-midnight:hover {
+        &.swatch-midnight:hover {
           background: @navExpandedColor;
         }
       }
@@ -334,7 +334,7 @@ body, html {
         width: 100%;
         z-index: 2;
       }
-      >.atk-cells {
+      >.cells {
         position: relative;
       }
     }
@@ -380,14 +380,14 @@ body, html {
 
 // Objects
 
-*[class*=atk-button]:not([class*='active']) {
-  &:not([class*='atk-swatch']) {
+*[class*=button]:not([class*='active']) {
+  &:not([class*='swatch']) {
     *[class*=icon] {
       color: @swatchGray-50;
     }
   }
 }
-.atk-button-active {
+.button-active {
   &, *[class*=icon] {
     color: #fff !important;
   }
@@ -412,9 +412,9 @@ body, html {
 .relative {
   position: relative;
 }
-.atk-table {
+.table {
   table tbody tr {
-    td.atk-table-row-icon.visible {
+    td.table-row-icon.visible {
       opacity: 1;
     }
   }
@@ -424,14 +424,14 @@ body, html {
   //   }
   // }
 }
-.atk-popover {
+.popover {
   .elementShadow;
 }
 .ui-dialog {
   .elementShadow;
   border: none;
   .ui-widget-header.ui-dialog-titlebar {
-    &:extend([data-shape*=rounded-top]);
+    .shape-rounded--top;
     background: @smoke;
     border-bottom: 1px solid @borderStatic;
     padding: @margin/2;
@@ -461,7 +461,7 @@ body, html {
     padding: @inputPadding;
     padding-right: 2em;
     &:last-child {
-      &:extend([data-shape*=rounded-bottom]);
+      .shape-rounded--bottom;
     }
   }
   .select2-results__option[aria-selected=true] {
@@ -469,7 +469,7 @@ body, html {
     background: none;
     color: @aqua !important;
     &:before {
-      .atk-size-nano;
+      &:extend([class*=text][class*=size--xs]);
       left: auto;
       right: 0.6em;
     }

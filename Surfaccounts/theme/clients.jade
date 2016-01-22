@@ -4,67 +4,67 @@ block link
   -var selected = 'Contacts';
 
 block content
-  .atk-wrapper(data-padding="top bottom")
-    h1 Contacts #[span.atk-comment(data-text="normal") 312]
-    div(data-border="static" data-shape="rounded" data-margin="bottom")
-      .atk-cells.textGray-50(data-cells="justified")
-        .atk-cell(data-padding="all-s")
-          .atk-cells(data-cells="spacing-s")
-            .atk-cell
-              .atk-swatch-stone.atk-size-kilo(data-shape="circle" data-padding="all-s" data-text="baseline-reset")
+  .wrapper.padding-top.padding-bottom
+    h1 Contacts #[span.comment.text-normal 312]
+    .border-static.shape-rounded.margin-bottom
+      .cells-justified.textGray-50
+        .cell.padding-all--s
+          .cells-spacing--s
+            .cell
+              .swatch-stone.text-baseline--single-size--l.shape-circle.padding-all--s
                 span.icon-euro
-            .atk-cell.atk-expand
-              .atk-size-micro(data-text="caps") Month to date
-              .atk-size-kilo(data-text="semibold") €16,850.00
-        .atk-cell(data-padding="all-s" data-border="left static")
-          .atk-cells(data-cells="spacing-s")
-            .atk-cell
-              .atk-swatch-stone.atk-size-kilo(data-shape="circle" data-padding="all-s" data-text="baseline-reset")
+            .cell.expand
+              .text-caps-size--xs Month to date
+              .text-semibold-size--l €16,850.00
+        .cell.padding-all--s.border-left.border-static
+          .cells-spacing--s
+            .cell
+              .swatch-stone.text-baseline--single-size--l.shape-circle.padding-all--s
                 span.icon-euro
-            .atk-cell.atk-expand
-              .atk-size-micro(data-text="caps") Year to date
-              .atk-size-kilo(data-text="semibold") €83,300.00
-        .atk-cell(data-padding="all-s" data-border="left static")
-          .atk-cells(data-cells="spacing-s")
-            .atk-cell
-              .atk-swatch-stone.atk-size-kilo(data-shape="circle" data-padding="all-s" data-text="baseline-reset")
+            .cell.expand
+              .text-caps-size--xs Year to date
+              .text-semibold-size--l €83,300.00
+        .cell.padding-all--s.border-left.border-static
+          .cells-spacing--s
+            .cell
+              .swatch-stone.text-baseline--single-size--l.shape-circle.padding-all--s
                 span.icon-clock
-            .atk-cell.atk-expand
-              .atk-size-micro(data-text="caps") Unpaid
-              .atk-size-kilo(data-text="semibold") €12,624.00
-        .atk-cell(data-padding="all-s" data-border="left static")
-          .atk-cells(data-cells="spacing-s")
-            .atk-cell
-              .atk-swatch-stone.atk-size-kilo(data-shape="circle" data-padding="all-s" data-text="baseline-reset")
+            .cell.expand
+              .text-caps-size--xs Unpaid
+              .text-semibold-size--l €12,624.00
+        .cell.padding-all--s.border-left.border-static
+          .cells-spacing--s
+            .cell
+              .swatch-stone.text-baseline--single-size--l.shape-circle.padding-all--s
                 span.icon-doc-inv
-            .atk-cell.atk-expand
-              .atk-size-micro(data-text="caps") Invoices due
-              .atk-size-kilo(data-text="semibold") #[a(href='#') 3 invoices]
-    .atk-cells(data-margin="bottom")
-      .atk-cell.atk-expand
-        a.atk-button.atk-swatch-mint(href='#') Add Contact
-      .atk-cell.atk-align-right.atk-text-nowrap
-        .atk-cells(data-cells="spacing-s")
-          .atk-cell
+            .cell.expand
+              .text-caps-size--xs Invoices due
+              .text-semibold-size--l #[a(href='#') 3 invoices]
+    .cells.margin-bottom
+      .cell.expand
+        a.button.swatch-mint(href='#') Add Contact
+      .cell.align-right.text-nowrap
+        .cells-spacing--s
+          .cell
             select(style="width:140px")
               option All (120)
               option Customers (80)
               option Contacts (40)
-          .atk-cell
-            .atk-input-combo.atk-cells
-              .atk-cell
+          .cell
+            .input-combo.cells
+              .cell
                 input(type="text" placeholder="Search Contacts..." style="width:200px")
-              .atk-cell
-                button.atk-button #[span.icon-search]
-    .atk-box.relative(data-padding="all-reset")
-      #actions-dropdown.atk-box-xsmall.atk-popover.atk-hide(data-padding="all-reset" data-popover="top center")
-        .atk-popover-arrow
-        ul.atk-lister.atk-list(data-text="nowrap" data-lister="spacing-reset" data-list="no-bullets")
-          li #[a.atk-block.atk-swatch-default(href='javascript:void(0)' data-padding="all-s top-xs bottom-xs" data-shape="rounded-top") Some Action]
-          li #[a.atk-block.atk-swatch-default(href='javascript:void(0)' data-padding="all-s top-xs bottom-xs") Other Action]
-          li #[a.atk-block.atk-swatch-default(href='javascript:void(0)' data-padding="all-s top-xs bottom-xs") Edit]
-          li #[a.atk-block.atk-swatch-default.atk-effect-danger(href='javascript:void(0)' data-padding="all-s top-xs bottom-xs" data-shape="rounded-bottom") Delete]
-      .atk-table(data-table='semi-spacing bordered hover' data-text="nowrap")
+              .cell
+                button.button #[span.icon-search]
+    .box.relative.padding-all--reset
+      #actions-dropdown.box.hide.padding-all--reset.popover-top-center
+        .popover-arrow
+        ul.lister-spacing--none.list-nobullets.text-nowrap
+          li #[a.block.swatch-default.padding-all--s.padding-top--xs.padding-bottom--xs.shape-rounded--top(href='javascript:void(0)') Some Action]
+          li #[a.block.swatch-default.padding-all--s.padding-top--xs.padding-bottom--xs(href='javascript:void(0)') Other Action]
+          li #[a.block.swatch-default.padding-all--s.padding-top--xs.padding-bottom--xs(href='javascript:void(0)') Edit]
+          li #[a.block.swatch-default.padding-all--s.padding-top--xs.padding-bottom--xs.shape-rounded--bottom.effect-danger(href='javascript:void(0)') Delete]
+      .table-separated-hover-spacing--semi.text-nowrap
         table
           thead.textGray-60
             tr

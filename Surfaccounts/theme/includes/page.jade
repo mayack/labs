@@ -8,82 +8,82 @@ html
   include head
   body
     include browsehappy
-    .atk-layout
+    .layout
       //- include header
-      .atk-layout-row.atk-layout-expand
-        .atk-layout.atk-layout-cell
+      .layout-row.layout-expand
+        .layout.layout-cell
           include sidebar
-          main.atk-layout-column.atk-layout-expand
-            ul.atk-swatch-night.atk-menu.atk-cells.atk-expand.nav-main(data-menu="horizontal separated")
-              li.atk-cell
-                a.sidebar-trigger.atk-swatch-night(href='javascript:void(0)' data-padding="all-s") #[span.icon-collapse-left]#[span.icon-menu]
-              li.atk-cell.atk-swatch-midnight
-                a.atk-swatch-night.atk-move-left.atk-expand(href='javascript:void(0)' data-padding="all-s" data-text="bold") Create New&nbsp;&nbsp;#[span.icon-angle-down]
-                ul.atk-menu.atk-overflow(data-shape="rounded-bottom" data-text="semibold" data-menu="vertical")
+          main.layout-column.layout-expand
+            ul.swatch-night.menu-horizontal-separated.cells.expand.nav-main
+              li.cell
+                a.sidebar-trigger.swatch-night.padding-all--s(href='javascript:void(0)') #[span.icon-collapse-left]#[span.icon-menu]
+              li.cell.swatch-midnight
+                a.swatch-night.move-left.expand.padding-all--s.text-bold(href='javascript:void(0)') Create New&nbsp;&nbsp;#[span.icon-angle-down]
+                ul.menu-vertical.text-semibold.shape-rounded--bottom.overflow
                   li
-                    a.atk-swatch-midnight(href='javascript:void(0)' data-padding="all-s") #[span.icon-plus.atk-size-micro]&nbsp;&nbsp;Invoice
+                    a.swatch-midnight.padding-all--s(href='javascript:void(0)') #[span.icon-plus.text-size--xs]&nbsp;&nbsp;Invoice
                   li
-                    a.atk-swatch-midnight(href='javascript:void(0)' data-padding="all-s") #[span.icon-plus.atk-size-micro]&nbsp;&nbsp;Credit Note
+                    a.swatch-midnight.padding-all--s(href='javascript:void(0)') #[span.icon-plus.text-size--xs]&nbsp;&nbsp;Credit Note
                   li
-                    a.atk-swatch-midnight(href='javascript:void(0)' data-padding="all-s") #[span.icon-plus.atk-size-micro]&nbsp;&nbsp;Customer
+                    a.swatch-midnight.padding-all--s(href='javascript:void(0)') #[span.icon-plus.text-size--xs]&nbsp;&nbsp;Customer
                   li
-                    a.atk-swatch-midnight(href='javascript:void(0)' data-padding="all-s") #[span.icon-plus.atk-size-micro]&nbsp;&nbsp;Purchase Invoice
-              li.atk-cell.atk-expand(data-align="right" data-padding="left right")
-                a.atk-button.atk-swatch-aqua.atk-size-milli(href='javascript:void(0)' data-button="spacing-s" data-border="outline") Trial ends in 10 days
-              li.atk-cell.atk-swatch-midnight
-                a.atk-swatch-night.atk-move-left.atk-expand#dialog-company-trigger(href='javascript:void(0)' data-padding="all-s" data-text="bold")
-                  span.icon-building(data-margin="right-xs")
+                    a.swatch-midnight.padding-all--s(href='javascript:void(0)') #[span.icon-plus.text-size--xs]&nbsp;&nbsp;Purchase Invoice
+              li.cell.expand.padding-left.padding-right.align-right
+                a.swatch-aqua.text-size--s.border-outline.button-spacing--s(href='javascript:void(0)') Trial ends in 10 days
+              li.cell.swatch-midnight
+                a.swatch-night.move-left.expand.padding-all--s.text-bold#dialog-company-trigger(href='javascript:void(0)')
+                  span.icon-building.margin-right--xs
                   | Demo Company Ltd.
             .content
               block content
       //- include includes/footer
-    #dialog-user(title="Ray Rogers")
-      ul.atk-list.atk-lister.atk-size-mega(data-list="no-bullets" data-lister="spacing-reset" data-align="center")
-        li #[a.atk-swatch-default.atk-block(href='#' data-padding="all-s") Settings]
-        li #[a.atk-swatch-default.atk-block(href='#' data-padding="all-s") Billing]
-        li #[a.atk-swatch-default.atk-block(href='#' data-padding="all-s") Support]
-        li(data-border="top static") #[a.atk-swatch-default.atk-block(href='#' data-padding="all-s" data-text="semibold" data-shape="rounded-bottom") Log Out]
-    #dialog-company.dialog-scrollable.atk-hide(title="Company Select")
-      .atk-lister(data-lister="spacing-xs")
-        .atk-cells
-          .atk-cell.atk-expand
+    #dialog-user.padding-all--reset(title="Ray Rogers")
+      ul.list-nobullets.lister-spacing--none.text-size--xl.align-center
+        li #[a.swatch-default.block.padding-all--s(href='#') Settings]
+        li #[a.swatch-default.block.padding-all--s(href='#') Billing]
+        li #[a.swatch-default.block.padding-all--s(href='#') Support]
+        li.border-top.border-static #[a.swatch-default.block.padding-all--s.text-semibold.shape-rounded--bottom(href='#') Log Out]
+    #dialog-company.dialog-scrollable.hide(title="Company Select")
+      .lister-spacing--xs
+        .cells
+          .cell.expand
             | Relate Software Industries.
-          .atk-cell
-            a.atk-button.atk-swatch-aqua.disable(href='javascript:void(0)' data-button="spacing-s blank") #[span.icon-ok] Current
-        .atk-cells
-          .atk-cell.atk-expand
+          .cell
+            a.button-spacing--s-blank.swatch-aqua.disable(href='javascript:void(0)') #[span.icon-ok] Current
+        .cells
+          .cell.expand
             | Surfaccounts Ltd.
-          .atk-cell
-            a.atk-button.atk-swatch-aqua(href='javascript:void(0)' data-button="spacing-s") Select
-        .atk-cells
-          .atk-cell.atk-expand
+          .cell
+            a.button-spacing--s.swatch-aqua(href='javascript:void(0)') Select
+        .cells
+          .cell.expand
             | SIA Mayack
-          .atk-cell
-            a.atk-button.atk-swatch-aqua(href='javascript:void(0)' data-button="spacing-s") Select
-        .atk-cells
-          .atk-cell.atk-expand
+          .cell
+            a.button-spacing--s.swatch-aqua(href='javascript:void(0)') Select
+        .cells
+          .cell.expand
             | Random Industries PLC
-          .atk-cell
-            a.atk-button.atk-swatch-aqua(href='javascript:void(0)' data-button="spacing-s") Select
-        .atk-cells
-          .atk-cell.atk-expand
+          .cell
+            a.button-spacing--s.swatch-aqua(href='javascript:void(0)') Select
+        .cells
+          .cell.expand
             | Relate Software Ltd.
-          .atk-cell
-            a.atk-button.atk-swatch-aqua(href='javascript:void(0)' data-button="spacing-s") Select
-        .atk-cells
-          .atk-cell.atk-expand
+          .cell
+            a.button-spacing--s.swatch-aqua(href='javascript:void(0)') Select
+        .cells
+          .cell.expand
             | Surfaccounts Ltd.
-          .atk-cell
-            a.atk-button.atk-swatch-aqua(href='javascript:void(0)' data-button="spacing-s") Select
-        .atk-cells
-          .atk-cell.atk-expand
+          .cell
+            a.button-spacing--s.swatch-aqua(href='javascript:void(0)') Select
+        .cells
+          .cell.expand
             | SIA Mayack
-          .atk-cell
-            a.atk-button.atk-swatch-aqua(href='javascript:void(0)' data-button="spacing-s") Select
-        .atk-cells
-          .atk-cell.atk-expand
+          .cell
+            a.button-spacing--s.swatch-aqua(href='javascript:void(0)') Select
+        .cells
+          .cell.expand
             | Random Industries PLC
-          .atk-cell
-            a.atk-button.atk-swatch-aqua(href='javascript:void(0)' data-button="spacing-s") Select
+          .cell
+            a.button-spacing--s.swatch-aqua(href='javascript:void(0)') Select
     include scripts
     //- include analytics
