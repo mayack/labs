@@ -31,7 +31,7 @@
 // ==========================================================
 
 .createSmartSwatch(
-    @sName:            swatch-default,
+    @sName:            default,
     @sFill:            #fff,
     @sHeading:         @gray30,
     @sText:            @gray30,
@@ -41,30 +41,30 @@
     @sBorder:          @borderStatic
 );
 .createSmartSwatch(
-    @sName:            swatch-night,
+    @sName:            night,
     @sFill:            @night
 );
 .createSmartSwatch(
-    @sName:            swatch-midnight,
+    @sName:            midnight,
     @sFill:            @midnight,
     @sText:            #fff,
     @sLink:            #fff,
     @sLinkHover:       #fff
 );
 .createSmartSwatch(
-    @sName:            swatch-stone,
+    @sName:            stone,
     @sFill:            #A9BCD0
 );
 .createSmartSwatch(
-    @sName:            swatch-smoke,
+    @sName:            smoke,
     @sFill:            @night
 );
 .createSmartSwatch(
-    @sName:            swatch-aqua,
+    @sName:            aqua,
     @sFill:            @aqua
 );
 .createSmartSwatch(
-    @sName:            swatch-mint,
+    @sName:            mint,
     @sFill:            @mint
 );
 
@@ -412,7 +412,7 @@ body, html {
 .relative {
   position: relative;
 }
-.table {
+[class*="table"] {
   table tbody tr {
     td.table-row-icon.visible {
       opacity: 1;
@@ -431,7 +431,7 @@ body, html {
   .elementShadow;
   border: none;
   .ui-widget-header.ui-dialog-titlebar {
-    .shape-rounded--top;
+    .shape--rounded-top;
     background: @smoke;
     border-bottom: 1px solid @borderStatic;
     padding: @margin/2;
@@ -461,7 +461,7 @@ body, html {
     padding: @inputPadding;
     padding-right: 2em;
     &:last-child {
-      .shape-rounded--bottom;
+      .shape--rounded-bottom;
     }
   }
   .select2-results__option[aria-selected=true] {
@@ -469,7 +469,7 @@ body, html {
     background: none;
     color: @aqua !important;
     &:before {
-      &:extend([class*=text][class*=size--xs]);
+      &:extend([class*=text][class*="--size-xs"]);
       left: auto;
       right: 0.6em;
     }

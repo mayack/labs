@@ -139,8 +139,8 @@ $(function(){
         collision: "flip",
         using: function(obj, info){
           var item_top = (info.vertical!== "top"? "bottom" : "top");
-          $(this).attr("data-popover", item_top + " center");
-          // $(this).removeClass("popover-" + (item_top == "top"? "bottom" : "top") + " center");
+          $(this).addClass("popover--" + item_top + "-center");
+          $(this).removeClass("popover--" + (item_top === "top"? "bottom" : "top") + "-center");
           $(this).css({
             left: obj.left + 'px',
             top: obj.top + 'px'

@@ -4,47 +4,47 @@ block link
   -var selected = 'Contacts';
 
 block content
-  .wrapper.padding-top.padding-bottom
-    h1 Contacts #[span.comment.text-normal 312]
-    .border-static.shape-rounded.margin-bottom
-      .cells-justified.textGray-50
-        .cell.padding-all--s
-          .cells-spacing--s
+  .wrapper.padding--top.padding--bottom
+    h1 Contacts #[span.comment.text--normal 312]
+    .border--static.shape--rounded.margin--bottom
+      .cells--justified.textGray-50
+        .cell.padding--all-s
+          .cells--spacing-s
             .cell
-              .swatch-stone.text-baseline--single-size--l.shape-circle.padding-all--s
+              .swatch--stone.text--baseline-single--size-l.shape--circle.padding--all-s
                 span.icon-euro
             .cell.expand
-              .text-caps-size--xs Month to date
-              .text-semibold-size--l €16,850.00
-        .cell.padding-all--s.border-left.border-static
-          .cells-spacing--s
+              .text--caps--size-xs Month to date
+              .text--semibold--size-l €16,850.00
+        .cell.padding--all-s.border-left--static
+          .cells--spacing-s
             .cell
-              .swatch-stone.text-baseline--single-size--l.shape-circle.padding-all--s
+              .swatch--stone.text--baseline-single--size-l.shape--circle.padding--all-s
                 span.icon-euro
             .cell.expand
-              .text-caps-size--xs Year to date
-              .text-semibold-size--l €83,300.00
-        .cell.padding-all--s.border-left.border-static
-          .cells-spacing--s
+              .text--caps--size-xs Year to date
+              .text--semibold--size-l €83,300.00
+        .cell.padding--all-s.border-left--static
+          .cells--spacing-s
             .cell
-              .swatch-stone.text-baseline--single-size--l.shape-circle.padding-all--s
+              .swatch--stone.text--baseline-single--size-l.shape--circle.padding--all-s
                 span.icon-clock
             .cell.expand
-              .text-caps-size--xs Unpaid
-              .text-semibold-size--l €12,624.00
-        .cell.padding-all--s.border-left.border-static
-          .cells-spacing--s
+              .text--caps--size-xs Unpaid
+              .text--semibold--size-l €12,624.00
+        .cell.padding--all-s.border-left--static
+          .cells--spacing-s
             .cell
-              .swatch-stone.text-baseline--single-size--l.shape-circle.padding-all--s
+              .swatch--stone.text--baseline-single--size-l.shape--circle.padding--all-s
                 span.icon-doc-inv
             .cell.expand
-              .text-caps-size--xs Invoices due
-              .text-semibold-size--l #[a(href='#') 3 invoices]
-    .cells.margin-bottom
+              .text--caps--size-xs Invoices due
+              .text--semibold--size-l #[a(href='#') 3 invoices]
+    .cells.margin--bottom
       .cell.expand
-        a.button.swatch-mint(href='#') Add Contact
-      .cell.align-right.text-nowrap
-        .cells-spacing--s
+        a.button.swatch--mint(href='#') Add Contact
+      .cell.align-right.text--nowrap
+        .cells--spacing-s
           .cell
             select(style="width:140px")
               option All (120)
@@ -56,15 +56,15 @@ block content
                 input(type="text" placeholder="Search Contacts..." style="width:200px")
               .cell
                 button.button #[span.icon-search]
-    .box.relative.padding-all--reset
-      #actions-dropdown.box.hide.padding-all--reset.popover-top-center
+    .box.relative.padding--all-reset
+      #actions-dropdown.box.hide.padding--all-reset
         .popover-arrow
-        ul.lister-spacing--none.list-nobullets.text-nowrap
-          li #[a.block.swatch-default.padding-all--s.padding-top--xs.padding-bottom--xs.shape-rounded--top(href='javascript:void(0)') Some Action]
-          li #[a.block.swatch-default.padding-all--s.padding-top--xs.padding-bottom--xs(href='javascript:void(0)') Other Action]
-          li #[a.block.swatch-default.padding-all--s.padding-top--xs.padding-bottom--xs(href='javascript:void(0)') Edit]
-          li #[a.block.swatch-default.padding-all--s.padding-top--xs.padding-bottom--xs.shape-rounded--bottom.effect-danger(href='javascript:void(0)') Delete]
-      .table-separated-hover-spacing--semi.text-nowrap
+        ul.lister--spacing-none.list--nobullets.text--nowrap
+          li #[a.block.swatch--default.padding--all-s.padding--top-xs.padding--bottom-xs.shape--rounded-top(href='javascript:void(0)') Some Action]
+          li #[a.block.swatch--default.padding--all-s.padding--top-xs.padding--bottom-xs(href='javascript:void(0)') Other Action]
+          li #[a.block.swatch--default.padding--all-s.padding--top-xs.padding--bottom-xs(href='javascript:void(0)') Edit]
+          li #[a.block.swatch--default.padding--all-s.padding--top-xs.padding--bottom-xs.shape--rounded-bottom.effect-danger(href='javascript:void(0)') Delete]
+      .table--separated--hover--spacing-semi.text--nowrap
         table
           thead.textGray-60
             tr
@@ -72,7 +72,7 @@ block content
                 a(href="#") Name #[span.icon-down-dir]
               th #[a(href="#") Code]
               th #[a(href="#") Pending Invoices]
-              th(data-align="right") #[a(href="#") Balance]
+              th.align-right #[a(href="#") Balance]
           tbody
             include includes/row-demo
             include includes/row-demo
