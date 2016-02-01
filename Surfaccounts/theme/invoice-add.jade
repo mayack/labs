@@ -4,131 +4,185 @@ block link
   -var selected = 'Invoice Add';
 
 block content
-  .wrapper.padding-top--m.padding-bottom--m
-    .cells.margin-bottom--s
-      .cell
-        h2 Sales Invoice #[span.text-normal TAL0001 Tallaght Town]
-      .cell.align--right.items--s
-        a.button.swatch-stone.border-outline(href='#') Cancel
-        a.button.swatch-mint(href='#') Save
-    .box.text-size--milli
-      .row.margin-bottom--m
-        .col-4
-          h5.comment.margin-all--reset.text-caps-normal Invoice Details
-          hr.margin-top--xs.margin-bottom--s
-          //- .cells-group(data-cells="spacing")
-          //-   .cells
-          //-     .cell(data-padding="bottom-xs")
-          //-       | Customer
-          //-     .cell(data-padding="bottom-xs")
-          //-       input(type='text' placeholder="Customer")
-          //-   .cells
-          //-     .cell(data-padding="bottom-s")
-          //-       | Invoice Number
-          //-     .cell(data-padding="bottom-s")
-          //-       input(type='text')
-          //-   .cells
-          //-     .cell(data-padding="bottom-s")
-          //-       | Ref. No.
-          //-     .cell(data-padding="bottom-s")
-          //-       input(type='text')
-          //-   .cells
-          //-     .cell(data-padding="bottom-s")
-          //-       | Quote/S.O. No.
-          //-     .cell(data-padding="bottom-s")
-          //-       input(type='text')
-          //-   .cells
-          //-     .cell
-          //-       | Invoice Date
-          //-     .cell
-          //-       input(type='text')
-          //-   .cells
-          //-     .cell
-          //-       | Account Manager
-          //-     .cell
-          //-       input(type='text')
-          .margin-bottom-xs #[input.expand(type='text')]
-          .margin-bottom-xs #[input.expand(type='text')]
-          .margin-bottom-xs #[input.expand(type='text')]
-        .col-4
-          h5.comment.margin-all--reset.text-caps-normal Address Details
-          hr.margin-top--xs.margin-bottom--s
-          #tabs
+  .atk-wrapper.atk-padding-top--l.atk-padding-bottom--l
+    .atk-cells.atk-margin-bottom
+      .atk-cell
+        h1 Sales Invoice #[span.atk-text-normal TAL0001 Tallaght Town]
+      .atk-cell
+        | Some Text Here
+      //- .atk-cell.atk-align-right.atk-items-spacing--xs.atk-text-size--l
+      //-   a.atk-button.atk-swatch-stone.atk-border-outline(href="#") Cancel
+      //-   a.atk-button.atk-swatch-mint(href="#") Save
+    
+    .atk-box.atk-effect-success.atk-shape-rounded--top.atk-padding-all--s.atk-align-center.atk-text-bold-caps
+        span.icon-lock.atk-margin-right--xs
+        | Transaction Locked
+    .atk-box.atk-padding-all--none.atk-margin-bottom.atk-shape-rounded--bottom.atk-border-top--none
+      .atk-padding-all--l.atk-padding-top.atk-padding-bottom
+        .atk-row.atk-margin-bottom
+          .atk-col-7
+            h5.atk-comment.atk-margin-all--none.atk-text-caps-normal Invoice Details
+            hr.atk-margin-top--xs.atk-margin-bottom--s
+            .atk-cells-spacing.atk-align-top
+              .atk-cell.atk-col-8
+                .atk-margin-bottom--s
+                  label.atk-text-bold-caps-size--xs.atk-margin-bottom--xs.atk-inline-block(for="input") Customer
+                  .atk-inputIcon.atk-expand.datepicker
+                    input.atk-input-spacing--s(type="text")
+                    a.icon-search.atk-comment(href="#")
+                .atk-margin-bottom--s.atk-cells-spacing--s-justified
+                  .atk-cell
+                    label.atk-text-bold-caps-size--xs.atk-margin-bottom--xs.atk-inline-block(for="input") Invoice Date
+                    .atk-inputIcon.atk-expand.invoice-issued
+                      input.atk-input-spacing--s(type="text")
+                      a.icon-calendar.atk-comment(href="#")
+                  .atk-cell
+                    label.atk-text-bold-caps-size--xs.atk-margin-bottom--xs.atk-inline-block(for="input") Due Date
+                    .atk-inputIcon.atk-expand.invoice-due
+                      input.atk-input-spacing--s(type="text")
+                      a.icon-calendar.atk-comment(href="#")
+                .atk-margin-bottom--s
+                  label.atk-text-bold-caps-size--xs.atk-margin-bottom--xs.atk-inline-block(for="input") Account Manager
+                  input.atk-input-spacing--s.atk-expand(type="text")
+              .atk-cell.atk-col-4
+                .atk-margin-bottom--s
+                  label.atk-text-bold-caps-size--xs.atk-margin-bottom--xs.atk-inline-block(for="input") Invoice No.
+                  input.atk-input-spacing--s.atk-expand(type="text")
+                .atk-margin-bottom--s
+                  label.atk-text-bold-caps-size--xs.atk-margin-bottom--xs.atk-inline-block(for="input") Reference No.
+                  input.atk-input-spacing--s.atk-expand(type="text")
+                .atk-margin-bottom--s
+                  label.atk-text-bold-caps-size--xs.atk-margin-bottom--xs.atk-inline-block(for="input") Quote/S.O. No.
+                  input.atk-input-spacing--s.atk-expand(type="text")
+
+          .atk-col-1
+          .atk-col-4
+            h5.atk-comment.atk-margin-all--none.atk-text-caps-normal Credit Control Info
+            hr.atk-margin-top--xs.atk-margin-bottom--s
+            .atk-lister-spacing--xs.atk-text-size--s
+              .atk-cells
+                .atk-cell.atk-text-semibold Customer Balance
+                .atk-cell.atk-align-right 2,460.30
+              .atk-cells
+                .atk-cell.atk-text-semibold Overdue Balance
+                .atk-cell.atk-align-right 2,460.30
+              .atk-cells
+                .atk-cell.atk-text-semibold Last Payment Amount
+                .atk-cell.atk-align-right 0.00
+              .atk-cells
+                .atk-cell.atk-text-semibold Last Payment Date
+                .atk-cell.atk-align-right 12/07/2015
+              .atk-cells
+                .atk-cell.atk-text-semibold Credit Terms
+                .atk-cell.atk-align-right 30 days
+            hr.atk-margin-top--s.atk-margin-bottom--s
+            a.atk-text-bold-caps-size--xs(href="#") #[span.icon-plus] Add Payment Terms
+        .invoice-table.atk-table-separated--all-nosides-spacing--none-hover.atk-swatch-gray.atk-text-nowrap-size--s.atk-margin-bottom--s
+          table
+            thead.atk-text-baseline--single
+              tr.atk-swatch-smoke.atk-overflow
+                th(style="min-width:6em") Product
+                th.atk-expand Description
+                th(style="min-width:6em") Quantity
+                th(style="min-width:6em") Price
+                th(style="min-width:6em") Discount
+                th(style="min-width:6em") VAT %
+                th(style="min-width:6em") Nominal
+                th.atk-align-right(style="min-width:6em") Net
+            tbody
+              tr
+                td
+                  .atk-tableAction
+                    a.invoice-row-advanced.tooltip.atk-button.atk-swatch-aqua.atk-padding-all--xs.atk-shape-circle.atk-border-outline(href="#" title="Advanced Settings") #[span.icon-cog]
+                  input(type="text" value="CONES")
+                td #[input(type="text" value="Cones")]
+                td #[input(type="text" value="6.00")]
+                td #[input(type="text" value="9.99")]
+                td #[input(type="text" value="0.00")]
+                td #[input(type="text" value="A 23.00")]
+                td #[input(type="text" value="005")]
+                td
+                  .atk-tableAction
+                    a.tooltip.invoice-row-delete.atk-button.atk-swatch-aqua.atk-padding-all--xs.atk-shape-circle.atk-border-outline(href="#" title="Delete Row") #[span.icon-cancel]
+                  input.atk-align-right(type="text" value="59.94")
+              tr
+                td
+                  .atk-tableAction
+                    a.invoice-row-advanced.tooltip.atk-button.atk-swatch-aqua.atk-padding-all--xs.atk-shape-circle.atk-border-outline(href="#" title="Advanced Settings") #[span.icon-cog]
+                  input(type="text" value="CONES")
+                td #[input(type="text" value="Cones")]
+                td #[input(type="text" value="6.00")]
+                td #[input(type="text" value="9.99")]
+                td #[input(type="text" value="0.00")]
+                td #[input(type="text" value="A 23.00")]
+                td #[input(type="text" value="005")]
+                td
+                  .atk-tableAction
+                    a.tooltip.invoice-row-delete.atk-button.atk-swatch-aqua.atk-padding-all--xs.atk-shape-circle.atk-border-outline(href="#" title="Delete Row") #[span.icon-cancel]
+                  input.atk-align-right(type="text" value="59.94")
+              tr
+                td
+                  .atk-tableAction
+                    a.invoice-row-advanced.tooltip.atk-button.atk-swatch-aqua.atk-padding-all--xs.atk-shape-circle.atk-border-outline(href="#" title="Advanced Settings") #[span.icon-cog]
+                  input(type="text" value="CONES")
+                td #[input(type="text" value="Cones")]
+                td #[input(type="text" value="6.00")]
+                td #[input(type="text" value="9.99")]
+                td #[input(type="text" value="0.00")]
+                td #[input(type="text" value="A 23.00")]
+                td #[input(type="text" value="005")]
+                td
+                  .atk-tableAction
+                    a.tooltip.invoice-row-delete.atk-button.atk-swatch-aqua.atk-padding-all--xs.atk-shape-circle.atk-border-outline(href="#" title="Delete Row") #[span.icon-cancel]
+                  input.atk-align-right(type="text" value="59.94")
+        
+        .atk-row
+          .atk-col-8
+            .atk-cells.atk-margin-bottom
+                a.atk-button-spacing--xs.atk-swatch-aqua(href="#") #[span.icon-plus] Add New Line
+                //- a.atk-button-blank.atk-swatch-aqua Show VAT Breakdown
+            //- a.atk-text-bold-caps-size--s(href="#") #[span.icon-file] Attach a Document
+            //- .atk-cells
+            //-   .atk-cell
+            //-     .atk-button.atk-border-static Attachments
+            //-   .atk-cell
+            //-     input(type="file")
+          .atk-col-4.atk-padding-right--xs
+            .atk-cells
+              .atk-cell
+                | Net
+              .atk-cell.atk-align-right.atk-text-semibold
+                | 587.06
+            .atk-cells
+              .atk-cell
+                | VAT
+              .atk-cell.atk-align-right.atk-text-semibold
+                | 135.03
+            hr.atk-margin-top--xs.atk-margin-bottom--xs.border-black
+            .atk-cells.atk-text-bold-size--l
+              .atk-cell
+                | Total EUR
+              .atk-cell.atk-align-right
+                | 722.09
+      .atk-cells-justified.atk-border-top-static.atk-align-top
+        .atk-cell.atk-padding-top--s.atk-padding-bottom.atk-padding-left--l.atk-padding-right--l
+          #tabs-address.tabs-minimal
             ul
-              li #[a(href='#tabs-1') Invoice]
-              li #[a(href='#tabs-2') Delivery]
+              li #[a.atk-inputLabel-spacing--xs.atk-text-semibold-caps-size--s(href='#tabs-1') Invoice Address]
+              li #[a.atk-inputLabel-spacing--xs.atk-text-semibold-caps-size--s(href='#tabs-2') Delivery Address]
             #tabs-1
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores saepe praesentium aliquid, magnam beatae sequi. Iure, eius, dolores perferendis debitis unde odit quae porro asperiores numquam nostrum impedit error libero.
+              textarea.atk-text-size--s.atk-input-spacing--s.atk-expand(rows="4")!= "Whitestown Way,\nTallaght,\nDublin 24,\nIreland"
             #tabs-2
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores saepe praesentium aliquid, magnam beatae sequi. Iure, eius, dolores perferendis debitis unde odit quae porro asperiores numquam nostrum impedit error libero.
-        .col-4
-          h5.comment.margin-all--reset.text-caps-normal Credit Control Info
-          hr.margin-top--xs.margin-bottom--s
-          .cells-group.expand
-            .cells
-              .cell.text-semibold Customer Balance
-              .cell.align--right 2,460.30
-            .cells
-              .cell.text-semibold Overdue Balance
-              .cell.align--right 2,460.30
-            .cells
-              .cell.text-semibold Last Payment Amount
-              .cell.align--right 0.00
-            .cells
-              .cell.text-semibold Last Payment Date
-              .cell.align--right 12/07/2015
-            .cells
-              .cell.text-semibold Credit Terms
-              .cell.align--right 30 days
-            .cells
-              .cell.text-semibold Payment Terms
-              .cell.align--right 90 days
-      .table.swatch-gray.table-semi-spacing-s
-        table
-          thead
-            tr
-              th Product
-              th Description
-              th Quantity
-              th Price
-              th Discount
-              th VAT %
-              th Nominal
-              th.align--right Net Amount
-          tbody
-            tr
-              td 1
-              td 2
-              td 3
-              td 4
-              td 5
-              td 6
-              td 7
-              td.align--right 8
-            tr
-              td 1
-              td 2
-              td 3
-              td 4
-              td 5
-              td 6
-              td 7
-              td.align--right 8
-            tr
-              td 1
-              td 2
-              td 3
-              td 4
-              td 5
-              td 6
-              td 7
-              td.align--right 8
-            tr
-              td 1
-              td 2
-              td 3
-              td 4
-              td 5
-              td 6
-              td 7
-              td.align--right 8
+              textarea.atk-text-size--s.atk-input-spacing--s.atk-expand(rows="4")!= "Greystown Way,\nTallaght,\nDublin 24,\nIreland"
+        .atk-cell.atk-border-left-static.atk-padding-top--s.atk-padding-bottom.atk-padding-left--l.atk-padding-right--l
+          label.atk-block.atk-margin-bottom--s.atk-inputLabel-spacing--xs.atk-text-semibold-caps-size--s Add a note to the recipient
+          textarea.atk-text-size--s.atk-input-spacing--s.atk-expand(rows="4")
+    .atk-cells
+      .atk-cell
+        .atk-comment.atk-text-semibold Actions here?
+      .atk-cell.atk-align-right.atk-items-spacing--xs.atk-text-size--l
+        a.atk-button.atk-swatch-stone.atk-border-outline(href="#") Cancel
+        a.atk-button.atk-swatch-mint(href="#") Save
+
+  #row-advanced(title="Advanced Options")
+    | Form + History goes here

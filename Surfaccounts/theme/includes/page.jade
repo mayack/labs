@@ -1,89 +1,89 @@
 doctype html
-<!--[if lt IE 7]<html lang="en" class="oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if IE 7]><html lang="en" class="oldie lt-ie9 lt-ie8"><![endif]-->
-<!--[if IE 8]><html lang="en" class="oldie lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!-->
+<!-[if lt IE 7]<html lang="en" class="oldie lt-ie9 lt-ie8 lt-ie7"><![endif]->
+<!-[if IE 7]><html lang="en" class="oldie lt-ie9 lt-ie8"><![endif]->
+<!-[if IE 8]><html lang="en" class="oldie lt-ie9"><![endif]->
+<!-[if gt IE 8]><!->
 html
-  <!--<![endif]-->
+  <!-<![endif]->
   include head
   body
     include browsehappy
-    .layout
+    .atk-layout
       //- include header
-      .layout--row-expand
-        .layout.layout--cell
+      .atk-layoutRow.atk-layoutExpand
+        .atk-layout.atk-layoutCell
           include sidebar
-          main.layout--column-expand
-            ul.swatch--night.menu--horizontal--separated.cells.expand.nav-main
-              li.cell
-                a.sidebar-trigger.swatch--night.padding--all-s(href='javascript:void(0)') #[span.icon-collapse-left]#[span.icon-menu]
-              li.cell.swatch--midnight
-                a.swatch--night.move--left.expand.padding--all-s.text--bold(href='javascript:void(0)') Create New&nbsp;&nbsp;#[span.icon-angle-down]
-                ul.menu--vertical.text--semibold.shape--rounded-bottom.overflow
+          main.atk-layoutColumn.atk-layoutExpand
+            ul.atk-swatch-night.atk-menu-horizontal-separated.atk-cells.atk-expand.nav-main
+              li.atk-cell
+                a.sidebar-trigger.atk-swatch-night.atk-padding-all--s(href='javascript:void(0)') #[span.icon-collapse-left]#[span.icon-menu]
+              li.atk-cell.atk-swatch-midnight
+                a.atk-swatch-night.atk-move-left.atk-expand.atk-padding-all--s.atk-text-bold(href='javascript:void(0)') Create New&nbsp;&nbsp;#[span.icon-angle-down]
+                ul.atk-menu-vertical.atk-text-semibold.atk-shape-rounded--bottom.atk-overflow
                   li
-                    a.swatch--midnight.padding--all-s(href='javascript:void(0)') #[span.icon-plus.text--size-xs]&nbsp;&nbsp;Invoice
+                    a.atk-swatch-midnight.atk-padding-all--s(href='javascript:void(0)') #[span.icon-plus.atk-text-size--xs]&nbsp;&nbsp;Invoice
                   li
-                    a.swatch--midnight.padding--all-s(href='javascript:void(0)') #[span.icon-plus.text--size-xs]&nbsp;&nbsp;Credit Note
+                    a.atk-swatch-midnight.atk-padding-all--s(href='javascript:void(0)') #[span.icon-plus.atk-text-size--xs]&nbsp;&nbsp;Credit Note
                   li
-                    a.swatch--midnight.padding--all-s(href='javascript:void(0)') #[span.icon-plus.text--size-xs]&nbsp;&nbsp;Customer
+                    a.atk-swatch-midnight.atk-padding-all--s(href='javascript:void(0)') #[span.icon-plus.atk-text-size--xs]&nbsp;&nbsp;Customer
                   li
-                    a.swatch--midnight.padding--all-s(href='javascript:void(0)') #[span.icon-plus.text--size-xs]&nbsp;&nbsp;Purchase Invoice
-              li.cell.expand.padding--left.padding--right.align--right
-                a.swatch--aqua.text--size-s.border--outline.button--spacing-s(href='javascript:void(0)') Trial ends in 10 days
-              li.cell.swatch--midnight
-                a.swatch--night.move--left.expand.padding--all-s.text--bold#dialog-company-trigger(href='javascript:void(0)')
-                  span.icon-building.margin--right-xs
+                    a.atk-swatch-midnight.atk-padding-all--s(href='javascript:void(0)') #[span.icon-plus.atk-text-size--xs]&nbsp;&nbsp;Purchase Invoice
+              li.atk-cell.atk-expand.atk-padding-left.atk-padding-right.atk-align-right
+                a.atk-swatch-aqua.atk-text-size--s.atk-border-outline.atk-button-spacing--xs(href='javascript:void(0)') Trial ends in 10 days
+              li.atk-cell.atk-swatch-midnight
+                a.atk-swatch-night.atk-move-left.atk-expand.atk-padding-all--s.atk-text-bold#dialog-company-trigger(href='javascript:void(0)')
+                  span.icon-building.atk-margin-right--xs
                   | Demo Company Ltd.
             .content
               block content
       //- include includes/footer
-    #dialog-user.padding--all-reset(title="Ray Rogers")
-      ul.list--nobullets.lister--spacing-none.text--size-xl.align--center
-        li #[a.swatch--default.block.padding--all-s(href='#') Settings]
-        li #[a.swatch--default.block.padding--all-s(href='#') Billing]
-        li #[a.swatch--default.block.padding--all-s(href='#') Support]
-        li.border--top--static #[a.swatch--default.block.padding--all-s.text--semibold.shape--rounded-bottom(href='#') Log Out]
-    #dialog-company.dialog-scrollable.hide(title="Company Select")
-      .lister--spacing-xs
-        .cells
-          .cell.expand
+    #dialog-user.atk-padding-all--none(title="Ray Rogers")
+      ul.atk-list-nobullets.atk-lister-spacing--none.atk-text-size--xl.atk-align-center
+        li #[a.atk-swatch-default.atk-block.atk-padding-all--s(href='#') Settings]
+        li #[a.atk-swatch-default.atk-block.atk-padding-all--s(href='#') Billing]
+        li #[a.atk-swatch-default.atk-block.atk-padding-all--s(href='#') Support]
+        li.atk-border-top-static #[a.atk-swatch-default.atk-block.atk-padding-all--s.atk-text-semibold.atk-shape-rounded--bottom(href='#') Log Out]
+    #dialog-company.dialog-scrollable(title="Company Select")
+      .atk-lister-spacing--xs
+        .atk-cells
+          .atk-cell.atk-expand
             | Relate Software Industries.
-          .cell
-            a.button--spacing-s--blank.swatch--aqua.disable(href='javascript:void(0)') #[span.icon-ok] Current
-        .cells
-          .cell.expand
+          .atk-cell
+            a.atk-button-spacing--s-blank.atk-swatch-aqua.disable(href='javascript:void(0)') #[span.icon-ok] Current
+        .atk-cells
+          .atk-cell.atk-expand
             | Surfaccounts Ltd.
-          .cell
-            a.button--spacing-s.swatch--aqua(href='javascript:void(0)') Select
-        .cells
-          .cell.expand
+          .atk-cell
+            a.atk-button-spacing--s.atk-swatch-aqua(href='javascript:void(0)') Select
+        .atk-cells
+          .atk-cell.atk-expand
             | SIA Mayack
-          .cell
-            a.button--spacing-s.swatch--aqua(href='javascript:void(0)') Select
-        .cells
-          .cell.expand
+          .atk-cell
+            a.atk-button-spacing--s.atk-swatch-aqua(href='javascript:void(0)') Select
+        .atk-cells
+          .atk-cell.atk-expand
             | Random Industries PLC
-          .cell
-            a.button--spacing-s.swatch--aqua(href='javascript:void(0)') Select
-        .cells
-          .cell.expand
+          .atk-cell
+            a.atk-button-spacing--s.atk-swatch-aqua(href='javascript:void(0)') Select
+        .atk-cells
+          .atk-cell.atk-expand
             | Relate Software Ltd.
-          .cell
-            a.button--spacing-s.swatch--aqua(href='javascript:void(0)') Select
-        .cells
-          .cell.expand
+          .atk-cell
+            a.atk-button-spacing--s.atk-swatch-aqua(href='javascript:void(0)') Select
+        .atk-cells
+          .atk-cell.atk-expand
             | Surfaccounts Ltd.
-          .cell
-            a.button--spacing-s.swatch--aqua(href='javascript:void(0)') Select
-        .cells
-          .cell.expand
+          .atk-cell
+            a.atk-button-spacing--s.atk-swatch-aqua(href='javascript:void(0)') Select
+        .atk-cells
+          .atk-cell.atk-expand
             | SIA Mayack
-          .cell
-            a.button--spacing-s.swatch--aqua(href='javascript:void(0)') Select
-        .cells
-          .cell.expand
+          .atk-cell
+            a.atk-button-spacing--s.atk-swatch-aqua(href='javascript:void(0)') Select
+        .atk-cells
+          .atk-cell.atk-expand
             | Random Industries PLC
-          .cell
-            a.button--spacing-s.swatch--aqua(href='javascript:void(0)') Select
+          .atk-cell
+            a.atk-button-spacing--s.atk-swatch-aqua(href='javascript:void(0)') Select
     include scripts
     //- include analytics

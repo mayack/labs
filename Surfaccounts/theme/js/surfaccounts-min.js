@@ -1,5 +1,5 @@
 function removeExpanded() {
-  $('.sidebar ul li.expanded').removeClass('expanded').find('ul').slideUp(200, 'linear');
+  $('.sidebar ul li.opened').removeClass('opened').find('ul').slideUp(200, 'linear');
 }
 
 function resizeUpdate() {
@@ -7,16 +7,16 @@ function resizeUpdate() {
   var navHeight = $('.nav-main').outerHeight();
   var navSidebarHeight;
   var logoHeight = $('.sidebar .logo').outerHeight();
-  var companySwitchHeightExpanded = $('.sidebar .company-switcher .company-switcher-expanded').outerHeight();
-  var companySwitchHeightCollapsed = $('.sidebar .company-switcher .company-switcher-collapsed').outerHeight();
+  var companySwitchHeightExpanded = $('.sidebar footer .footer-expanded').outerHeight();
+  var companySwitchHeightCollapsed = $('.sidebar footer .footer-collapsed').outerHeight();
   var contentHeight = windowHeight - navHeight;
 
   if ( $('.sidebar-indicator').is(':hidden') ) {
-    $('.sidebar .company-switcher').height(companySwitchHeightCollapsed);
+    $('.sidebar .footer').height(companySwitchHeightCollapsed);
     navSidebarHeight = windowHeight - logoHeight - companySwitchHeightCollapsed - 2;
     $('.sidebar .nav-sidebar').outerHeight(navSidebarHeight);
   } else {
-    $('.sidebar .company-switcher').height(companySwitchHeightExpanded);
+    $('.sidebar .footer').height(companySwitchHeightExpanded);
     navSidebarHeight = windowHeight - logoHeight - companySwitchHeightExpanded - 2;
     $('.sidebar .nav-sidebar').outerHeight(navSidebarHeight);
   }
@@ -32,40 +32,39 @@ function showSidebar() {
 
 function hideSidebar() {
   $('.sidebar, .sidebar-trigger').addClass('collapsed').removeClass('expanded');
-  $('.sidebar ul li.expanded').removeClass('expanded').find('ul').slideUp(200, 'linear');
+  $('.sidebar ul li.opened').removeClass('opened').find('ul').slideUp(200, 'linear');
   removeExpanded();
   resizeUpdate();
 }
 
 $(function(){
 
-  resizeUpdate();
 
+  // -------------------------------------------------
   // General
+  // -------------------------------------------------
+
+  resizeUpdate();
 
   $('select').select2({
     minimumResultsForSearch: -1
   });
   $('.tooltip').tooltip({
     hide: { duration: 300 },
-    show: { duration: 300 }
-  });
-  $('#tabs').tabs();
-
-  $('[class*=table][class*=hover] tbody').each(function(){
-    $(this).find('tr:first-child td:first-child').addClass('shape-rounded--top--left');
-    $(this).find('tr:last-child td:first-child').addClass('shape-rounded--bottom--left');
-    if ($(this).find('tr:last-child td.table--row--icon').length > 0) {      
-      $(this).find('tr:first-child td:last-child').prev().addClass('shape-rounded--top--right');
-      $(this).find('tr:last-child td:last-child').prev().addClass('shape-rounded--bottom--right');
-    } else {
-      $(this).find('tr:first-child td:last-child').addClass('shape-rounded--top--right');
-      $(this).find('tr:last-child td:last-child').addClass('shape-rounded--top--right');
+    show: {
+      delay: 1000,
+      duration: 300,
+    },
+    position: {
+      my: "center top+10",
+      at: "center bottom"
     }
-
   });
 
+
+  // -------------------------------------------------
   // Sidebar
+  // -------------------------------------------------
 
   $('.scrollable').bind('mousewheel DOMMouseScroll', function (e) {
       var e0 = e.originalEvent,
@@ -77,12 +76,12 @@ $(function(){
   $('.nav-sidebar>ul>li>ul>li.active').parents('li').addClass('has-active');
   $('.nav-sidebar>ul>li').click(function(e){
     if($(this).children('ul').length) {
-      if ($(this).is('.expanded')) {
+      if ($(this).is('.opened')) {
         removeExpanded();
       } else {
         showSidebar();
-        $('.nav-sidebar li.expanded').removeClass('expanded').find('ul').slideUp();
-        $(this).addClass('expanded').find('ul').slideDown(200, 'linear');
+        $('.nav-sidebar li.opened').removeClass('opened').find('ul').slideUp();
+        $(this).addClass('opened').find('ul').slideDown(200, 'linear');
       }
       e.preventDefault();
     }
@@ -108,39 +107,41 @@ $(function(){
   });
 
 
-  // Actions Dropdown
+  // -------------------------------------------------
+  // Clients
+  // -------------------------------------------------
 
+  // Actions Dropdown
   $(document).click(function(e) {
 
       var $target = $(e.target);
       var dropdown = (e.target.id === 'actions-dropdown');
       
       if (!dropdown) {
-        $('#actions-dropdown').addClass('hide');
-        $('.table--row--icon.visible').removeClass('visible');
+        $('#actions-dropdown').addClass('atk-hide');
+        $('.atk-tableAction.visible').removeClass('visible');
       }
 
   });
-
   $('.actions-trigger').click(function(e) {
       e.stopPropagation();
 
       var trigger = $(this);
       var dropdown = $('#actions-dropdown');
 
-      $('.table--row--icon.visible').removeClass('visible');
+      $('.atk-tableAction.visible').removeClass('visible');
       $(this).parent().addClass('visible');
 
 
-      $(dropdown).removeClass('hide').position({
+      $(dropdown).removeClass('atk-hide').position({
         my: "center-1 top+10",
         at: "center bottom",
         of: trigger,
         collision: "flip",
         using: function(obj, info){
           var item_top = (info.vertical!== "top"? "bottom" : "top");
-          $(this).addClass("popover--" + item_top + "-center");
-          $(this).removeClass("popover--" + (item_top === "top"? "bottom" : "top") + "-center");
+          $(this).addClass("atk-popover-" + item_top + "-center");
+          $(this).removeClass("atk-popover-" + (item_top === "top"? "bottom" : "top") + "-center");
           $(this).css({
             left: obj.left + 'px',
             top: obj.top + 'px'
@@ -149,6 +150,35 @@ $(function(){
       });
 
   });
+
+
+  // -------------------------------------------------
+  // Invoice Add
+  // -------------------------------------------------
+
+  // Invoice Details
+  $('.invoice-issued input').datepicker().datepicker('setDate', new Date());
+  $('.invoice-issued>a').click(function(){
+    $(this).siblings('input').datepicker("show");
+  });
+  $('.invoice-due input').datepicker();
+  $('.invoice-due>a').click(function(){
+    $(this).siblings('input').datepicker("show");
+  });
+
+  // Invoice Table
+  $('.invoice-row-delete').click(function(){
+    $(this).parents('tr').remove();
+  });
+  $('.invoice-row-advanced').click(function(){
+    $('#row-advanced').dialog({
+      modal: true,
+      width: 600
+    });
+  });
+
+  // Invoice Addresses
+  $('#tabs-address').tabs();
 
 }); // document ready ends
 
