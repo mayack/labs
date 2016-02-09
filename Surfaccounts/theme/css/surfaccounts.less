@@ -32,10 +32,10 @@
 .createSmartSwatch(
     @sName:            default,
     @sFill:            #fff,
-    @sHeading:         @gray30,
-    @sText:            @gray30,
-    @sComment:         @gray60,
-    @sLink:            @aqua,
+    @sHeading:         #45484d,
+    @sText:            #45484d,
+    @sComment:         @darkStone,
+    @sLink:            darken(@aqua,5%),
     @sBorderIntensity: 5%,
     @sBorder:          #dadde0,
     @sCustomStyles:    {
@@ -106,8 +106,8 @@
 @buttonPaddingRatio:   1.5;
 
 @effectSuccess:        @mint;
-@effectWarning:        #f7a600;
-@effectDanger:         #ff2d1a;
+@effectWarning:        @orange;
+@effectDanger:         @peach;
 @effectInfo:           @aqua;
 
 @inputColor:           #fff;
@@ -124,37 +124,17 @@
 // Custom
 // ==========================================================
 
+@asphalt:     #1f2326;
+@ash:         #39434d;
+@stone:       #acb5bf;
+@darkStone:   desaturate(darken(@stone, 15%), 2%);
 @smoke:       #f3f4f5;
 @aqua:        #29bcdb;
 @midnight:    #2f3f4d;
 @mint:        #46bc99;
 @night:       #24323e;
-
-@gray10:      lighten(#000, 10%);
-@gray20:      lighten(#000, 20%); .text-gray20 { &, & a { color: @gray20 !important; }}
-@gray30:      lighten(#000, 30%); .text-gray30 { &, & a { color: @gray30 !important; }}
-@gray40:      lighten(#000, 40%);
-@gray50:      lighten(#000, 50%);
-@gray60:      lighten(#000, 60%);
-@gray70:      lighten(#000, 70%);
-@gray80:      lighten(#000, 80%);
-@gray90:      lighten(#000, 90%);
-@gray97:      lighten(#000, 97%);
-
-@green:       #009766;  .text-green   { &, & a { color: @green !important; }}
-@blue:        #4281A4;  .text-blue    { &, & a { color: @blue !important; }}
-@red:         #E56757;  .text-red     { &, & a { color: @red !important; }}
-@yellow:      #DE9151;  .text-yellow  { &, & a { color: @yellow !important; }}
-@violet:      #63628C;  .text-violet  { &, & a { color: @violet !important; }}
-@stone:       #A9BCD0;
-
-// Variables
-@swatchGray-15: #1f2326;
-@swatchGray-30: #39434d;
-@swatchGray-40: #4d5a66;
-@swatchGray-50: #667380;
-@swatchGray-60: #8a9299;
-
+@orange:      #f7a600;
+@peach:       #ff5533;
 
 // Layout
 body, html {
@@ -293,54 +273,24 @@ body, html {
   }
 }
 
-// Styling
-.textGray-15 {
-  &, & a {
-    color: @swatchGray-15 !important;
-  }
-}
-.textGray-30 {
-  &, & a {
-    color: @swatchGray-30 !important;
-  }
-}
-.textGray-40 {
-  &, & a {
-    color: @swatchGray-40 !important;
-  }
-}
-.textGray-50 {
-  &, & a {
-    color: @swatchGray-50 !important;
-  }
-}
-.textGray-60 {
-  &, & a {
-    color: @swatchGray-60 !important;
-  }
-  & a:hover, a&:hover {
-    color: darken(@swatchGray-60, 10%) !important;
-  }
-}
-
 // Objects
 .select2-dropdown, .ui-datepicker, [class*="atk-popover-"], .ui-dialog {
   .elementShadow;
 }
-[class*="atk-table"] {
+[class*="atk-table"]:not(.invoice-table) {
   table {
-    // thead, tbody {
-    //   tr:first-child {
-    //     th, td {
-    //       &:first-child {
-    //         &:extend(.atk-shape-rounded--top--left);
-    //       }
-    //       &:last-child {
-    //         &:extend(.atk-shape-rounded--top--right);
-    //       }
-    //     }
-    //   }
-    // }
+    thead, tbody {
+      tr:first-child {
+        th, td {
+          &:first-child {
+            &:extend(.atk-shape-rounded--top--left);
+          }
+          &:last-child {
+            &:extend(.atk-shape-rounded--top--right);
+          }
+        }
+      }
+    }
     thead + tbody tr:first-child {
       td:first-child, td:last-child {
         &:extend(.atk-shape-rectangle);
@@ -350,20 +300,20 @@ body, html {
       .atk-tableAction.visible {
         opacity: 1 !important;
       }
-      // &:last-child td {
-      //   &:first-child {
-      //     &:extend(.atk-shape-rounded--bottom--left);
-      //   }
-      //   &:last-child {
-      //     &:extend(.atk-shape-rounded--bottom--right);
-      //   }
-      // }
+      &:last-child td {
+        &:first-child {
+          &:extend(.atk-shape-rounded--bottom--left);
+        }
+        &:last-child {
+          &:extend(.atk-shape-rounded--bottom--right);
+        }
+      }
     }
   }
 }
 .invoice-table {
   thead tr th {
-    padding: @space-xs !important;
+    padding: @space-xs/2 !important;
   }
   tbody tr td {
     input {
@@ -382,6 +332,35 @@ body, html {
     }
   }
 }
+[class*="invoice-status"] {
+  .position(@t:45px,@r:45px);
+  .rotate(45deg);
+  color: #fff;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: -15px -100px 0 0;
+  width: 200px;
+  &[class*="invoice-status--success"] {
+    background: @mint;
+  }
+  &[class*="invoice-status--warning"] {
+    background: @orange;
+  }
+  &[class*="invoice-status--danger"] {
+    background: @peach;
+  }
+}
+.page-actions {
+  .position(relative,@z:2);
+}
+.file-browser {
+  position: relative;
+  input {
+    .position(@t:0,@l:0);
+    visibility: hidden;
+  }
+}
 
 // jQueryUI
 .ui-dialog {
@@ -396,10 +375,12 @@ body, html {
   }
 }
 .ui-tabs.tabs-minimal {
+  background: none !important;
   ul.ui-tabs-nav {
     border: none;
     margin-bottom: @space-s !important;
     li.ui-state-default {
+      background: none !important;
       border: none;
       border-radius: 0;
       margin: 0;
@@ -480,7 +461,7 @@ textarea {
         .position(@t:0, @l:0);
         .icon-generator('\e8b0');
         border: none;
-        color: @swatchGray-50;
+        color: @darkStone;
         height: 100%;
         margin: 0;
         position: absolute !important;

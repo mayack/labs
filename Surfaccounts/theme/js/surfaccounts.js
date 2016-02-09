@@ -9,7 +9,16 @@ function resizeUpdate() {
   var logoHeight = $('.sidebar .logo').outerHeight();
   var companySwitchHeightExpanded = $('.sidebar footer .footer-expanded').outerHeight();
   var companySwitchHeightCollapsed = $('.sidebar footer .footer-collapsed').outerHeight();
-  var contentHeight = windowHeight - navHeight;
+  var contentHeight;
+  var actionsHeight;
+
+  if ( $('.page-actions').length > 0 ) {
+    actionsHeight = companySwitchHeightExpanded - 1;
+    contentHeight = windowHeight - navHeight - actionsHeight;
+    $('.page-actions>.atk-cells').height(actionsHeight);
+  } else {
+    contentHeight = windowHeight - navHeight;
+  }
 
   if ( $('.sidebar-indicator').is(':hidden') ) {
     $('.sidebar .footer').height(companySwitchHeightCollapsed);
@@ -59,6 +68,9 @@ $(function(){
       my: "center top+10",
       at: "center bottom"
     }
+  });
+  $(".file-browser a").click(function(){
+    $(this).siblings("input").click();
   });
 
 
@@ -179,6 +191,20 @@ $(function(){
 
   // Invoice Addresses
   $('#tabs-address').tabs();
+
+  // Vat Analysis
+  $('#vat-analysis-trigger').hover(
+    function(){
+      var trigger = $(this);
+      $('#vat-analysis').removeClass('atk-hide').position({
+        my: "center bottom-10",
+        at: "center top",
+        of: trigger
+      });
+    }, function() {
+      $('#vat-analysis').addClass('atk-hide');
+    }
+  );
 
 }); // document ready ends
 

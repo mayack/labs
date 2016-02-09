@@ -71,12 +71,8 @@
                 </ul>
               </nav>
               <footer id="dialog-user-trigger">
-                <div class="footer-collapsed">
-                  <hr class="atk-margin-all--none"><a href="#" class="icon-cog atk-text-size--xxl atk-swatch-aqua atk-block atk-padding-all--s"></a>
-                </div>
-                <div class="footer-expanded">
-                  <hr class="atk-margin-all--none"><a href="#" class="atk-cells-spacing atk-swatch-aqua atk-padding-all--s"><span class="atk-cell atk-expand"><span class="atk-text-caps-semibold-size--xs">Signed as</span><span class="atk-block atk-text-bold">Ray Rogers</span></span><span class="atk-cell"><span class="atk-text-size--xxl icon-cog"></span></span></a>
-                </div>
+                <div class="footer-collapsed"><a href="#" class="icon-cog atk-text-size--xxl atk-swatch-aqua atk-block atk-padding-all--s"></a></div>
+                <div class="footer-expanded atk-border-top-static"><a href="#" class="atk-cells-spacing atk-swatch-aqua atk-padding-all--s"><span class="atk-cell atk-expand"><span class="atk-text-caps-semibold-size--xs">Signed as</span><span class="atk-block atk-text-bold">Ray Rogers</span></span><span class="atk-cell"><span class="atk-text-size--xxl icon-cog"></span></span></a></div>
               </footer>
             </div>
           </aside>
@@ -100,11 +96,11 @@
                   <div class="atk-cell">
                     <h1>Sales Invoice <span class="atk-text-normal">TAL0001 Tallaght Town</span></h1>
                   </div>
-                  <div class="atk-cell">Some Text Here</div>
+                  <div class="atk-cell atk-align-right">Template Set</div>
                 </div>
-                <div class="atk-box atk-effect-success atk-shape-rounded--top atk-padding-all--s atk-align-center atk-text-bold-caps"><span class="icon-lock atk-margin-right--xs"></span>Transaction Locked</div>
-                <div class="atk-box atk-padding-all--none atk-margin-bottom atk-shape-rounded--bottom atk-border-top--none">
-                  <div class="atk-padding-all--l atk-padding-top atk-padding-bottom">
+                <div class="atk-box atk-padding-all--none atk-overflow atk-relative">
+                  <div class="invoice-status--success atk-text-caps-semibold-size--l">Paid</div>
+                  <div class="atk-padding-all--l">
                     <div class="atk-row atk-margin-bottom">
                       <div class="atk-col-7">
                         <h5 class="atk-comment atk-margin-all--none atk-text-caps-normal">Invoice Details</h5>
@@ -184,100 +180,110 @@
                     <div class="invoice-table atk-table-separated--all-nosides-spacing--none-hover atk-swatch-gray atk-text-nowrap-size--s atk-margin-bottom--s">
                       <table>
                         <thead class="atk-text-baseline--single">
-                          <tr class="atk-swatch-smoke atk-overflow">
-                            <th style="min-width:6em">Product</th>
+                          <tr class="atk-overflow atk-swatch-smoke">
+                            <th style="min-width:8em">Product</th>
                             <th class="atk-expand">Description</th>
-                            <th style="min-width:6em">Quantity</th>
-                            <th style="min-width:6em">Price</th>
-                            <th style="min-width:6em">Discount</th>
-                            <th style="min-width:6em">VAT %</th>
-                            <th style="min-width:6em">Nominal</th>
+                            <th>Divisions</th>
+                            <th style="min-width:5em">Qty</th>
+                            <th style="min-width:5.5em">Price</th>
+                            <th style="min-width:5em">Discount</th>
+                            <th style="min-width:5em">VAT %</th>
+                            <th style="min-width:5em">Nominal</th>
                             <th style="min-width:6em" class="atk-align-right">Net</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <td>
-                              <div class="atk-tableAction"><a href="#" title="Advanced Settings" class="invoice-row-advanced tooltip atk-button atk-swatch-aqua atk-padding-all--xs atk-shape-circle atk-border-outline"><span class="icon-cog"></span></a></div>
-                              <input type="text" value="CONES">
+                              <input type="text" value="CONES" class="atk-input-spacing--xs">
+                              <div class="atk-tableAction"><a href="#" title="Advanced Settings" tabindex="-1" class="invoice-row-advanced tooltip atk-button atk-swatch-aqua atk-padding-all--xs atk-shape-circle atk-border-outline"><span class="icon-cog"></span></a></div>
                             </td>
                             <td>
-                              <input type="text" value="Cones">
+                              <input type="text" value="Cones" class="atk-input-spacing--xs">
                             </td>
                             <td>
-                              <input type="text" value="6.00">
+                              <input type="text" value="ABC 1" class="atk-input-spacing--xs">
                             </td>
                             <td>
-                              <input type="text" value="9.99">
+                              <input type="text" value="6.00" class="atk-input-spacing--xs">
                             </td>
                             <td>
-                              <input type="text" value="0.00">
+                              <input type="text" value="9.99" class="atk-input-spacing--xs">
                             </td>
                             <td>
-                              <input type="text" value="A 23.00">
+                              <input type="text" value="0.00" class="atk-input-spacing--xs">
                             </td>
                             <td>
-                              <input type="text" value="005">
+                              <input type="text" value="A 23.00" class="atk-input-spacing--xs">
                             </td>
                             <td>
-                              <div class="atk-tableAction"><a href="#" title="Delete Row" class="tooltip invoice-row-delete atk-button atk-swatch-aqua atk-padding-all--xs atk-shape-circle atk-border-outline"><span class="icon-cancel"></span></a></div>
-                              <input type="text" value="59.94" class="atk-align-right">
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="atk-tableAction"><a href="#" title="Advanced Settings" class="invoice-row-advanced tooltip atk-button atk-swatch-aqua atk-padding-all--xs atk-shape-circle atk-border-outline"><span class="icon-cog"></span></a></div>
-                              <input type="text" value="CONES">
+                              <input type="text" value="005" class="atk-input-spacing--xs">
                             </td>
                             <td>
-                              <input type="text" value="Cones">
-                            </td>
-                            <td>
-                              <input type="text" value="6.00">
-                            </td>
-                            <td>
-                              <input type="text" value="9.99">
-                            </td>
-                            <td>
-                              <input type="text" value="0.00">
-                            </td>
-                            <td>
-                              <input type="text" value="A 23.00">
-                            </td>
-                            <td>
-                              <input type="text" value="005">
-                            </td>
-                            <td>
-                              <div class="atk-tableAction"><a href="#" title="Delete Row" class="tooltip invoice-row-delete atk-button atk-swatch-aqua atk-padding-all--xs atk-shape-circle atk-border-outline"><span class="icon-cancel"></span></a></div>
-                              <input type="text" value="59.94" class="atk-align-right">
+                              <input type="text" value="59.94" class="atk-align-right atk-input-spacing--xs">
+                              <div class="atk-tableAction"><a href="#" title="Delete Row" tabindex="-1" class="tooltip invoice-row-delete atk-button atk-swatch-aqua atk-padding-all--xs atk-shape-circle atk-border-outline"><span class="icon-cancel"></span></a></div>
                             </td>
                           </tr>
                           <tr>
                             <td>
-                              <div class="atk-tableAction"><a href="#" title="Advanced Settings" class="invoice-row-advanced tooltip atk-button atk-swatch-aqua atk-padding-all--xs atk-shape-circle atk-border-outline"><span class="icon-cog"></span></a></div>
-                              <input type="text" value="CONES">
+                              <input type="text" value="CONES" class="atk-input-spacing--xs">
+                              <div class="atk-tableAction"><a href="#" title="Advanced Settings" tabindex="-1" class="invoice-row-advanced tooltip atk-button atk-swatch-aqua atk-padding-all--xs atk-shape-circle atk-border-outline"><span class="icon-cog"></span></a></div>
                             </td>
                             <td>
-                              <input type="text" value="Cones">
+                              <input type="text" value="Cones" class="atk-input-spacing--xs">
                             </td>
                             <td>
-                              <input type="text" value="6.00">
+                              <input type="text" value="ABC 2" class="atk-input-spacing--xs">
                             </td>
                             <td>
-                              <input type="text" value="9.99">
+                              <input type="text" value="6.00" class="atk-input-spacing--xs">
                             </td>
                             <td>
-                              <input type="text" value="0.00">
+                              <input type="text" value="9.99" class="atk-input-spacing--xs">
                             </td>
                             <td>
-                              <input type="text" value="A 23.00">
+                              <input type="text" value="0.00" class="atk-input-spacing--xs">
                             </td>
                             <td>
-                              <input type="text" value="005">
+                              <input type="text" value="A 23.00" class="atk-input-spacing--xs">
                             </td>
                             <td>
-                              <div class="atk-tableAction"><a href="#" title="Delete Row" class="tooltip invoice-row-delete atk-button atk-swatch-aqua atk-padding-all--xs atk-shape-circle atk-border-outline"><span class="icon-cancel"></span></a></div>
-                              <input type="text" value="59.94" class="atk-align-right">
+                              <input type="text" value="005" class="atk-input-spacing--xs">
+                            </td>
+                            <td>
+                              <input type="text" value="59.94" class="atk-align-right atk-input-spacing--xs">
+                              <div class="atk-tableAction"><a href="#" title="Delete Row" tabindex="-1" class="tooltip invoice-row-delete atk-button atk-swatch-aqua atk-padding-all--xs atk-shape-circle atk-border-outline"><span class="icon-cancel"></span></a></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input type="text" value="CONES" class="atk-input-spacing--xs">
+                              <div class="atk-tableAction"><a href="#" title="Advanced Settings" tabindex="-1" class="invoice-row-advanced tooltip atk-button atk-swatch-aqua atk-padding-all--xs atk-shape-circle atk-border-outline"><span class="icon-cog"></span></a></div>
+                            </td>
+                            <td>
+                              <input type="text" value="Cones" class="atk-input-spacing--xs">
+                            </td>
+                            <td>
+                              <input type="text" value="ABC 3" class="atk-input-spacing--xs">
+                            </td>
+                            <td>
+                              <input type="text" value="6.00" class="atk-input-spacing--xs">
+                            </td>
+                            <td>
+                              <input type="text" value="9.99" class="atk-input-spacing--xs">
+                            </td>
+                            <td>
+                              <input type="text" value="0.00" class="atk-input-spacing--xs">
+                            </td>
+                            <td>
+                              <input type="text" value="A 23.00" class="atk-input-spacing--xs">
+                            </td>
+                            <td>
+                              <input type="text" value="005" class="atk-input-spacing--xs">
+                            </td>
+                            <td>
+                              <input type="text" value="59.94" class="atk-align-right atk-input-spacing--xs">
+                              <div class="atk-tableAction"><a href="#" title="Delete Row" tabindex="-1" class="tooltip invoice-row-delete atk-button atk-swatch-aqua atk-padding-all--xs atk-shape-circle atk-border-outline"><span class="icon-cancel"></span></a></div>
                             </td>
                           </tr>
                         </tbody>
@@ -285,19 +291,21 @@
                     </div>
                     <div class="atk-row">
                       <div class="atk-col-8">
-                        <div class="atk-cells atk-margin-bottom"><a href="#" class="atk-button-spacing--xs atk-swatch-aqua"><span class="icon-plus"></span> Add New Line</a>
+                        <div class="atk-margin-bottom--s"><a href="#" class="atk-button-spacing--xs atk-swatch-aqua"><span class="icon-plus"></span> Add New Line</a><a href="#" class="atk-button-blank">Test</a></div>
+                        <div class="file-browser"><a href="#" class="atk-cells-spacing--s"><span class="atk-cell"><span class="icon-attach atk-text-size--5xl"></span></span><span class="atk-cell atk-expand"><span class="atk-block atk-text-semibold">Add Attachment</span><span class="atk-comment atk-text-italic">Max file size 500kb.</span></span></a>
+                          <input type="file">
                         </div>
                       </div>
-                      <div class="atk-col-4 atk-padding-right--xs">
+                      <div class="atk-col-4">
                         <div class="atk-cells">
                           <div class="atk-cell">Net</div>
                           <div class="atk-cell atk-align-right atk-text-semibold">587.06</div>
                         </div>
                         <div class="atk-cells">
-                          <div class="atk-cell">VAT</div>
+                          <div class="atk-cell">VAT <a id="vat-analysis-trigger" href="#" class="icon-info-circled"></a></div>
                           <div class="atk-cell atk-align-right atk-text-semibold">135.03</div>
                         </div>
-                        <hr class="atk-margin-top--xs atk-margin-bottom--xs border-black">
+                        <hr class="atk-margin-top--s atk-margin-bottom--s border-black">
                         <div class="atk-cells atk-text-bold-size--l">
                           <div class="atk-cell">Total EUR</div>
                           <div class="atk-cell atk-align-right">722.09</div>
@@ -313,13 +321,13 @@
                           <li><a href="#tabs-2" class="atk-inputLabel-spacing--xs atk-text-semibold-caps-size--s">Delivery Address</a></li>
                         </ul>
                         <div id="tabs-1">
-                          <textarea rows="4" class="atk-text-size--s atk-input-spacing--s atk-expand">Whitestown Way,
+                          <textarea rows="4" class="atk-input-spacing--s atk-expand">Whitestown Way,
 Tallaght,
 Dublin 24,
 Ireland</textarea>
                         </div>
                         <div id="tabs-2">
-                          <textarea rows="4" class="atk-text-size--s atk-input-spacing--s atk-expand">Greystown Way,
+                          <textarea rows="4" class="atk-input-spacing--s atk-expand">Greystown Way,
 Tallaght,
 Dublin 24,
 Ireland</textarea>
@@ -328,19 +336,62 @@ Ireland</textarea>
                     </div>
                     <div class="atk-cell atk-border-left-static atk-padding-top--s atk-padding-bottom atk-padding-left--l atk-padding-right--l">
                       <label class="atk-block atk-margin-bottom--s atk-inputLabel-spacing--xs atk-text-semibold-caps-size--s">Add a note to the recipient</label>
-                      <textarea rows="4" class="atk-text-size--s atk-input-spacing--s atk-expand"></textarea>
+                      <textarea rows="4" class="atk-input-spacing--s atk-expand"></textarea>
+                    </div>
+                  </div>
+                  <div id="vat-analysis" class="atk-popover-bottom-center atk-hide atk-box atk-swatch-midnight atk-padding-all--none atk-text-size--s">
+                    <div class="atk-popoverArrow"></div>
+                    <div class="atk-table-spacingSemi--xs-separated atk-align-right">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th class="atk-align-left">VAT Rate</th>
+                            <th>Net</th>
+                            <th>VAT</th>
+                            <th>Gross</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="atk-align-left">0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                          </tr>
+                          <tr>
+                            <td class="atk-align-left">13.50</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                          </tr>
+                          <tr>
+                            <td class="atk-align-left">23.50</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                            <td>0.00</td>
+                          </tr>
+                        </tbody>
+                        <tfoot class="atk-text-bold">
+                          <tr>
+                            <td class="atk-border-top-static"></td>
+                            <td class="atk-border-top-static">0.00</td>
+                            <td class="atk-border-top-static">0.00</td>
+                            <td class="atk-border-top-static">0.00</td>
+                          </tr>
+                        </tfoot>
+                      </table>
                     </div>
                   </div>
                 </div>
-                <div class="atk-cells">
-                  <div class="atk-cell">
-                    <div class="atk-comment atk-text-semibold">Actions here?</div>
-                  </div>
-                  <div class="atk-cell atk-align-right atk-items-spacing--xs atk-text-size--l"><a href="#" class="atk-button atk-swatch-stone atk-border-outline">Cancel</a><a href="#" class="atk-button atk-swatch-mint">Save</a></div>
-                </div>
               </div>
-              <div id="row-advanced" title="Advanced Options">Form + History goes here</div>
             </div>
+            <footer class="page-actions atk-border-top-static atk-text-size--l">
+              <div class="atk-cells">
+                <div class="atk-cell atk-padding-left atk-text-semibold atk-items-spacing"><a href="#" class="atk-comment"><span class="icon-print atk-margin-right--xs"></span>Print</a><a href="#" class="atk-comment"><span class="icon-mail atk-margin-right--xs"></span>Send via Email</a><a href="#" class="atk-comment"><span class="icon-trash atk-margin-right--xs"></span>Delete</a></div>
+                <div class="atk-cell atk-align-right atk-items-spacing--xs atk-padding-right"><a href="#" class="atk-button atk-swatch-stone atk-border-outline">Cancel</a><a href="#" class="atk-button atk-swatch-mint">Save</a></div>
+              </div>
+            </footer>
+            <div id="row-advanced" title="Advanced Options" class="atk-hide">Form + History goes here</div>
           </main>
         </div>
       </div>
