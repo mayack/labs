@@ -218,7 +218,7 @@ $(function(){
     e.stopPropagation();
     var trigger = $(this);
     $('#templates').removeClass('atk-hide').position({
-        my: "right+10 top+12",
+        my: "right top+12",
         at: "right bottom",
         of: trigger
     });

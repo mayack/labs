@@ -7380,6 +7380,9 @@ a.text-darkGray:not([class*="atk-button"]):not([class*="atk-swatch"]):hover,
   border-color: #737980 !important;
   color: #fff !important;
 }
+#templates {
+  transform: translate(10px, 0);
+}
 .ui-dialog {
   border: none;
 }
@@ -7426,6 +7429,7 @@ a.text-darkGray:not([class*="atk-button"]):not([class*="atk-swatch"]):hover,
 }
 .ui-datepicker {
   margin: 4px 0;
+  z-index: 999 !important;
 }
 .scrollable {
   overflow-y: auto;

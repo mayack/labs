@@ -90,7 +90,17 @@
                     <h1>Sales Invoice</h1>
                   </div>
                   <div class="atk-cell"><span class="atk-text-size--xxl-nowrap atk-comment">TAL0001 Tallaght Town</span></div>
-                  <div class="atk-cell atk-align-right atk-expand atk-text-semibold atk-text-size--l"><span class="atk-margin-right--xs">Template:</span><a id="templates-trigger" href="#">Default <span class="icon-angle-down"></span></a></div>
+                  <div class="atk-cell atk-expand atk-relative">
+                    <div class="atk-text-semibold atk-text-size--l atk-align-right"><span class="atk-margin-right--xs">Template:</span><a id="templates-trigger" href="#">Default <span class="icon-angle-down"></span></a></div>
+                    <div id="templates" class="popover-actions atk-popover-top-right atk-box atk-hide">
+                      <div class="atk-popoverArrow"></div>
+                      <ul class="atk-lister-spacing--none atk-list-nobullets">
+                        <li class="active"><a href="javascript:void(0)" class="atk-swatch-default">Default</a></li>
+                        <li><a href="javascript:void(0)" class="atk-swatch-default">Basic</a></li>
+                        <li><a href="javascript:void(0)" class="atk-swatch-default">Advanced</a></li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
                 <div class="atk-box atk-padding-all--none atk-overflow atk-relative">
                   <div class="invoice-status--success atk-text-caps-semibold-size--l">Paid</div>
@@ -355,14 +365,6 @@ Ireland</textarea>
               </div>
             </footer>
             <div id="row-advanced" title="Advanced Options" class="atk-hide">Form + History goes here</div>
-            <div id="templates" class="popover-actions atk-popover-top-right atk-box atk-hide">
-              <div class="atk-popoverArrow"></div>
-              <ul class="atk-lister-spacing--none atk-list-nobullets">
-                <li class="active"><a href="javascript:void(0)" class="atk-swatch-default">Default</a></li>
-                <li><a href="javascript:void(0)" class="atk-swatch-default">Basic</a></li>
-                <li><a href="javascript:void(0)" class="atk-swatch-default">Advanced</a></li>
-              </ul>
-            </div>
             <div id="vat-analysis" class="atk-popover-bottom-center atk-hide atk-box atk-swatch-midnight atk-padding-all--none atk-text-size--s">
               <div class="atk-popoverArrow"></div>
               <div class="atk-table-spacingSemi--xs-separated atk-align-right">
