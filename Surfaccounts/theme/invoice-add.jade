@@ -5,19 +5,16 @@ block link
 
 block content
   .content
-    .atk-wrapper.atk-padding-top--l.atk-padding-bottom--l
-      .atk-cells.atk-margin-bottom
+    .atk-wrapper.atk-padding-top.atk-padding-bottom
+      .atk-cells-spacing--s.atk-margin-bottom
+        .atk-cell.atk-text-nowrap
+          h1 Sales Invoice
         .atk-cell
-          h1 Sales Invoice #[span.atk-text-normal TAL0001 Tallaght Town]
-        .atk-cell.atk-align-right
-          | Template Set
-        //- .atk-cell.atk-align-right.atk-items-spacing--xs.atk-text-size--l
-        //-   a.atk-button.atk-swatch-stone.atk-border-outline(href="#") Cancel
-        //-   a.atk-button.atk-swatch-mint(href="#") Save
-      
-      //- .atk-box.atk-effect-success.atk-shape-rounded--top.atk-padding-all--s.atk-align-center.atk-text-bold-caps
-      //-     span.icon-lock.atk-margin-right--xs
-      //-     | Transaction Locked
+          span.atk-text-size--xxl-nowrap.atk-comment TAL0001 Tallaght Town
+        .atk-cell.atk-align-right.atk-expand.atk-text-semibold.atk-text-size--l
+          span.atk-margin-right--xs
+            | Template:
+          a#templates-trigger(href="#") Default #[span.icon-angle-down]
       .atk-box.atk-padding-all--none.atk-overflow.atk-relative
         .invoice-status--success.atk-text-caps-semibold-size--l Paid
         //- .invoice-status--success.atk-text-caps-semibold-size--l Part Paid
@@ -81,7 +78,7 @@ block content
                   .atk-cell.atk-align-right 30 days
               hr.atk-margin-top--s.atk-margin-bottom--s
               a.atk-text-bold-caps-size--xs(href="#") #[span.icon-plus] Add Payment Terms
-          .invoice-table.atk-table-separated--all-nosides-spacing--none-hover.atk-swatch-gray.atk-text-nowrap-size--s.atk-margin-bottom--s
+          .invoice-table.atk-table-separated--all-nosides-spacing--none-hover.atk-text-nowrap-size--s.atk-margin-bottom--s
             table
               thead.atk-text-baseline--single
                 tr.atk-overflow.atk-swatch-smoke
@@ -186,38 +183,6 @@ block content
           .atk-cell.atk-border-left-static.atk-padding-top--s.atk-padding-bottom.atk-padding-left--l.atk-padding-right--l
             label.atk-block.atk-margin-bottom--s.atk-inputLabel-spacing--xs.atk-text-semibold-caps-size--s Add a note to the recipient
             textarea.atk-input-spacing--s.atk-expand(rows="4")
-        #vat-analysis.atk-popover-bottom-center.atk-hide.atk-box.atk-swatch-midnight.atk-padding-all--none.atk-text-size--s
-          .atk-popoverArrow
-          .atk-table-spacingSemi--xs-separated.atk-align-right
-            table
-              thead
-                tr
-                  th.atk-align-left VAT Rate
-                  th Net
-                  th VAT
-                  th Gross
-              tbody
-                tr
-                  td.atk-align-left 0.00
-                  td 0.00
-                  td 0.00
-                  td 0.00
-                tr
-                  td.atk-align-left 13.50
-                  td 0.00
-                  td 0.00
-                  td 0.00
-                tr
-                  td.atk-align-left 23.50
-                  td 0.00
-                  td 0.00
-                  td 0.00
-              tfoot.atk-text-bold
-                tr
-                  td.atk-border-top-static
-                  td.atk-border-top-static 0.00
-                  td.atk-border-top-static 0.00
-                  td.atk-border-top-static 0.00
   footer.page-actions.atk-border-top-static.atk-text-size--l
     .atk-cells
       .atk-cell.atk-padding-left.atk-text-semibold.atk-items-spacing
@@ -231,7 +196,48 @@ block content
           span.icon-trash.atk-margin-right--xs
           | Delete
       .atk-cell.atk-align-right.atk-items-spacing--xs.atk-padding-right
-        a.atk-button.atk-swatch-stone.atk-border-outline(href="#") Cancel
+        a.atk-button.atk-swatch-gray.atk-border-outline(href="#") Cancel
         a.atk-button.atk-swatch-mint(href="#") Save
   #row-advanced.atk-hide(title="Advanced Options")
     | Form + History goes here
+  #templates.popover-actions.atk-popover-top-right.atk-box.atk-hide
+    .atk-popoverArrow
+    ul.atk-lister-spacing--none.atk-list-nobullets
+      li.active
+        a.atk-swatch-default(href="javascript:void(0)") Default
+      li
+        a.atk-swatch-default(href="javascript:void(0)") Basic
+      li
+        a.atk-swatch-default(href="javascript:void(0)") Advanced
+  #vat-analysis.atk-popover-bottom-center.atk-hide.atk-box.atk-swatch-midnight.atk-padding-all--none.atk-text-size--s
+    .atk-popoverArrow
+    .atk-table-spacingSemi--xs-separated.atk-align-right
+      table
+        thead
+          tr
+            th.atk-align-left VAT Rate
+            th Net
+            th VAT
+            th Gross
+        tbody
+          tr
+            td.atk-align-left 0.00
+            td 0.00
+            td 0.00
+            td 0.00
+          tr
+            td.atk-align-left 13.50
+            td 0.00
+            td 0.00
+            td 0.00
+          tr
+            td.atk-align-left 23.50
+            td 0.00
+            td 0.00
+            td 0.00
+        tfoot.atk-text-bold
+          tr
+            td.atk-border-top-static
+            td.atk-border-top-static 0.00
+            td.atk-border-top-static 0.00
+            td.atk-border-top-static 0.00

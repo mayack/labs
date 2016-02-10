@@ -5,42 +5,45 @@ block link
 
 block content
   .content
-    .atk-wrapper.atk-padding-top--l.atk-padding-bottom--l
-      h1 Contacts #[span.atk-comment.atk-text-normal 312]
-      .atk-border-static.atk-shape-rounded.atk-margin-bottom
-        .atk-cells-justified
-          .atk-cell.atk-padding-all--s
-            .atk-cells-spacing--s
-              .atk-cell
-                .atk-swatch-stone.atk-text-baseline--single-size--l.atk-shape-circle.atk-padding-all--s
-                  span.icon-euro
-              .atk-cell.atk-expand
-                .atk-text-caps-size--xs Month to date
-                .atk-text-semibold-size--l €16,850.00
-          .atk-cell.atk-padding-all--s.atk-border-left-static
-            .atk-cells-spacing--s
-              .atk-cell
-                .atk-swatch-stone.atk-text-baseline--single-size--l.atk-shape-circle.atk-padding-all--s
-                  span.icon-euro
-              .atk-cell.atk-expand
-                .atk-text-caps-size--xs Year to date
-                .atk-text-semibold-size--l €83,300.00
-          .atk-cell.atk-padding-all--s.atk-border-left-static
-            .atk-cells-spacing--s
-              .atk-cell
-                .atk-swatch-stone.atk-text-baseline--single-size--l.atk-shape-circle.atk-padding-all--s
-                  span.icon-clock
-              .atk-cell.atk-expand
-                .atk-text-caps-size--xs Unpaid
-                .atk-text-semibold-size--l €12,624.00
-          .atk-cell.atk-padding-all--s.atk-border-left-static
-            .atk-cells-spacing--s
-              .atk-cell
-                .atk-swatch-stone.atk-text-baseline--single-size--l.atk-shape-circle.atk-padding-all--s
-                  span.icon-doc-inv
-              .atk-cell.atk-expand
-                .atk-text-caps-size--xs Invoices due
-                .atk-text-semibold-size--l #[a(href='#') 3 invoices]
+    .atk-wrapper.atk-padding-top.atk-padding-bottom
+      .atk-cells-spacing--s.atk-margin-bottom--s
+        .atk-cell.atk-text-nowrap
+          h1 Contacts
+        .atk-cell.atk-expand
+          span.atk-text-size--xxl-nowrap.atk-comment 312
+      .text-darkGray.atk-border-static.atk-margin-bottom.atk-cells-justified.atk-shape-rounded
+        .atk-cell.atk-padding-all--s
+          .atk-cells-spacing--s
+            .atk-cell
+              .atk-swatch-gray.atk-text-size--l-baseline--single.atk-padding-all--xs.atk-shape-circle
+                span.icon-euro
+            .atk-cell.atk-expand
+              .atk-text-caps-size--xs Month to date
+              .atk-text-semibold-size--l €16,850.00
+        .atk-cell.atk-padding-all--s.atk-border-left-static
+          .atk-cells-spacing--s
+            .atk-cell
+              .atk-swatch-gray.atk-text-size--l-baseline--single.atk-padding-all--xs.atk-shape-circle
+                span.icon-euro
+            .atk-cell.atk-expand
+              .atk-text-caps-size--xs Year to date
+              .atk-text-semibold-size--l €83,300.00
+        .atk-cell.atk-padding-all--s.atk-border-left-static
+          .atk-cells-spacing--s
+            .atk-cell
+              .atk-swatch-gray.atk-text-size--l-baseline--single.atk-padding-all--xs.atk-shape-circle
+                span.icon-clock
+            .atk-cell.atk-expand
+              .atk-text-caps-size--xs Unpaid
+              .atk-text-semibold-size--l €12,624.00
+        .atk-cell.atk-padding-all--s.atk-border-left-static
+          .atk-cells-spacing--s
+            .atk-cell
+              .atk-swatch-gray.atk-text-size--l-baseline--single.atk-padding-all--xs.atk-shape-circle
+                span.icon-doc-inv
+            .atk-cell.atk-expand
+              .atk-text-caps-size--xs Invoices due
+              .atk-text-semibold-size--l #[a(href='#') 3 invoices]
       .atk-cells.atk-margin-bottom
         .atk-cell.atk-expand
           a.atk-button.atk-swatch-mint(href='#') Add Contact
@@ -52,28 +55,30 @@ block content
                 option Customers (80)
                 option Contacts (40)
             .atk-cell
-              .atk-cells
-                .atk-cell.atk-expand
-                  input.atk-shape-rounded--left(type="text" placeholder="Search Contacts..." style="width:200px")
-                .atk-cell.atk-text-nowrap
-                  button.atk-block.atk-shape-rounded--right.atk-border-left--none.atk-button #[span.icon-search]
+              .atk-inputIcon
+                input(type="text" placeholder="Search Contacts..." style="width:200px")
+                a.icon-search.atk-comment(href="#")
       .atk-box.atk-relative.atk-padding-all--none
-        #actions-dropdown.atk-box.atk-hide.atk-padding-all--none
+        #actions-dropdown.popover-actions.atk-popover-top-right.atk-box.atk-hide
           .atk-popoverArrow
-          ul.atk-lister-spacing--none.atk-list-nobullets.atk-text-nowrap
-            li #[a.atk-block.atk-swatch-default.atk-padding-all--s.atk-padding-top--xs.atk-padding-bottom--xs.atk-shape-rounded--top(href='javascript:void(0)') Some Action]
-            li #[a.atk-block.atk-swatch-default.atk-padding-all--s.atk-padding-top--xs.atk-padding-bottom--xs(href='javascript:void(0)') Other Action]
-            li #[a.atk-block.atk-swatch-default.atk-padding-all--s.atk-padding-top--xs.atk-padding-bottom--xs(href='javascript:void(0)') Edit]
-            li #[a.atk-block.atk-swatch-default.atk-padding-all--s.atk-padding-top--xs.atk-padding-bottom--xs.atk-shape-rounded--bottom.atk-effect-danger(href='javascript:void(0)') Delete]
+          ul.atk-lister-spacing--none.atk-list-nobullets
+            li
+              a.atk-swatch-default(href="javascript:void(0)") Some Action
+            li
+              a.atk-swatch-default(href="javascript:void(0)") Other Action
+            li
+              a.atk-swatch-default(href="javascript:void(0)") Edit
+            li
+              a.atk-swatch-default.atk-effect-danger(href="javascript:void(0)") Delete
         .atk-table-separated-hover-spacingSemi.atk-text-nowrap
           table
             thead
               tr
                 th 
-                  a.atk-swatch-stone--text(href="#") Name #[span.icon-down-dir]
-                th #[a.atk-swatch-stone--text(href="#") Code]
-                th #[a.atk-swatch-stone--text(href="#") Pending Invoices]
-                th.atk-align-right #[a.atk-swatch-stone--text(href="#") Balance]
+                  a.atk-comment(href="#") Name #[span.icon-down-dir]
+                th #[a.atk-comment(href="#") Code]
+                th #[a.atk-comment(href="#") Pending Invoices]
+                th.atk-align-right #[a.atk-comment(href="#") Balance]
             tbody
               include includes/row-demo
               include includes/row-demo

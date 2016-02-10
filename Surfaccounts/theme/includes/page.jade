@@ -9,28 +9,27 @@ html
   body
     include browsehappy
     .atk-layout
-      //- include header
       .atk-layoutRow.atk-layoutExpand
         .atk-layout.atk-layoutCell
           include sidebar
           main.atk-layoutColumn.atk-layoutExpand
-            ul.atk-swatch-night.atk-menu-horizontal-separated.atk-cells.atk-expand.nav-main
+            ul#nav-main.atk-swatch-night.atk-menu-horizontal-separated.atk-cells.atk-expand
               li.atk-cell
-                a.sidebar-trigger.atk-swatch-night.atk-padding-all--s(href='javascript:void(0)') #[span.icon-collapse-left]#[span.icon-menu]
+                a#sidebar-trigger.atk-swatch-night.atk-padding-all--s(href='javascript:void(0)') #[span.icon-collapse-left]#[span.icon-menu]
               li.atk-cell.atk-swatch-midnight
                 a.atk-swatch-night.atk-move-left.atk-expand.atk-padding-all--s.atk-text-bold(href='javascript:void(0)') Create New&nbsp;&nbsp;#[span.icon-angle-down]
                 ul.atk-menu-vertical.atk-text-semibold.atk-shape-rounded--bottom.atk-overflow
                   li
-                    a.atk-swatch-midnight.atk-padding-all--s(href='javascript:void(0)') #[span.icon-plus.atk-text-size--xs]&nbsp;&nbsp;Invoice
+                    a.atk-swatch-midnight(href='javascript:void(0)') #[span.icon-plus]Invoice
                   li
-                    a.atk-swatch-midnight.atk-padding-all--s(href='javascript:void(0)') #[span.icon-plus.atk-text-size--xs]&nbsp;&nbsp;Credit Note
+                    a.atk-swatch-midnight(href='javascript:void(0)') #[span.icon-plus]Credit Note
                   li
-                    a.atk-swatch-midnight.atk-padding-all--s(href='javascript:void(0)') #[span.icon-plus.atk-text-size--xs]&nbsp;&nbsp;Customer
+                    a.atk-swatch-midnight(href='javascript:void(0)') #[span.icon-plus]Customer
                   li
-                    a.atk-swatch-midnight.atk-padding-all--s(href='javascript:void(0)') #[span.icon-plus.atk-text-size--xs]&nbsp;&nbsp;Purchase Invoice
+                    a.atk-swatch-midnight(href='javascript:void(0)') #[span.icon-plus]Purchase Invoice
               li.atk-cell.atk-expand.atk-padding-left.atk-padding-right.atk-align-right
                 a.atk-swatch-aqua.atk-text-size--s.atk-border-outline.atk-button-spacing--xs(href='javascript:void(0)') Trial ends in 10 days
-              li.atk-cell.atk-swatch-midnight
+              li.atk-cell
                 a.atk-swatch-night.atk-move-left.atk-expand.atk-padding-all--s.atk-text-bold#dialog-company-trigger(href='javascript:void(0)')
                   span.icon-building.atk-margin-right--xs
                   | Demo Company Ltd.
