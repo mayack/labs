@@ -5,17 +5,17 @@ block link
 
 block content
   .content
-    .atk-wrapper.atk-padding-top.atk-padding-bottom
+    .atk-wrapper.atk-padding-top.atk-padding-bottom.atk-relative
       .atk-cells-spacing--s.atk-margin-bottom
         .atk-cell.atk-text-nowrap
           h1 Sales Invoice
         .atk-cell
           span.atk-text-size--xxl-nowrap.atk-comment TAL0001 Tallaght Town
-        .atk-cell.atk-expand.atk-relative
+        .atk-cell.atk-expand
           .atk-text-semibold.atk-text-size--l.atk-align-right
             span.atk-margin-right--xs
               | Template:
-            a#templates-trigger(href="#") Default #[span.icon-angle-down]
+            a#templates-trigger.atk-inline-block(href="#") Default #[span.icon-angle-down]
           #templates.popover-actions.atk-popover-top-right.atk-box.atk-hide
             .atk-popoverArrow
             ul.atk-lister-spacing--none.atk-list-nobullets
@@ -39,8 +39,8 @@ block content
                 .atk-cell.atk-col-8
                   .atk-margin-bottom--s
                     label.atk-text-bold-caps-size--xs.atk-margin-bottom--xs.atk-inline-block(for="input") Customer
-                    .atk-inputIcon.atk-expand.datepicker
-                      input.atk-input-spacing--s(type="text")
+                    .atk-inputIcon.atk-expand
+                      input#project.atk-input-spacing--s(type="text")
                       a.icon-search.atk-comment(href="#")
                   .atk-margin-bottom--s.atk-cells-spacing--s-justified
                     .atk-cell
