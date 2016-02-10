@@ -320,6 +320,17 @@ body, html {
     padding: @space-xs/2 !important;
   }
   tbody tr td {
+    .select2-container--default .select2-selection--single {
+      background: none;
+      border: none;
+      border-radius: 0;
+      .select2-selection__rendered {
+        padding: 0.3em 0.4em;
+      }
+      // .select2-selection__arrow {
+      //   display: none;
+      // }
+    }
     input {
       .border-radius(0~'!important');
       .box-shadow(none~'!important');
@@ -327,13 +338,29 @@ body, html {
       border: none !important;
       display: inline-block;
       width: 100%;
-      &:focus {
-        background: #fff !important;
-        box-shadow: 0 0 0 2px @inputFocus !important;
-        position: relative;
-        z-index: 2;
-      }
     }
+    .select2-container--default.select2-container--open, input:focus {
+      background: #fff !important;
+      box-shadow: 0 0 0 2px @inputFocus !important;
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+.select2-dropdown.invoice-dropdown {
+  .atk-text-size--s;
+  ul.select2-results__options {
+    li.select2-results__option {
+      padding-bottom: 0.3em;
+      padding-left: 0.4em;
+      padding-top: 0.3em;
+    }
+  }
+  &.select2-dropdown--above {
+    margin-top: -2px;
+  }
+  &.select2-dropdown--below {
+    margin-top: 2px;
   }
 }
 [class*="invoice-status"] {
@@ -511,12 +538,24 @@ textarea {
 
 // Select2
 .select2-container--default {
+  .select2-dropdown.select2-dropdown--above {
+    .select2-results__option {
+      &:first-child {
+        &:extend(.atk-shape-rounded--top);
+      }
+    }
+  }
+  .select2-dropdown.select2-dropdown--below {
+    .select2-results__option {
+      &:last-child {
+        &:extend(.atk-shape-rounded--bottom);
+      }
+    }
+  }
   .select2-results__option {
     padding: @inputPadding;
     padding-right: 2em;
-    &:last-child {
-      &:extend(.atk-shape-rounded--bottom);
-    }
+    white-space: nowrap;
   }
   .select2-results__option[aria-selected=true] {
     .icon-generator('\e81d');
@@ -537,6 +576,7 @@ textarea {
     border-radius: @cornerRadius;
     height: auto;
     .select2-selection__rendered {
+      color: @black;
       line-height: @bodyBaseline;
       padding: @inputPadding;
       padding-right: 2em;

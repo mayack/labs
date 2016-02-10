@@ -191,6 +191,10 @@ $(function(){
       width: 600
     });
   });
+  $('select.invoice-select').select2({
+    dropdownCssClass: "invoice-dropdown",
+    minimumResultsForSearch: -1
+  });
 
   // Invoice Addresses
   $('#tabs-address').tabs();

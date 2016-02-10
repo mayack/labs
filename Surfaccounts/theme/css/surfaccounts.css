@@ -2710,7 +2710,8 @@ input.atk-shape-rectangle,
   border-radius: 5px;
 }
 .atk-shape-rounded--top,
-.popover-actions.atk-box ul li:first-child a {
+.popover-actions.atk-box ul li:first-child a,
+.select2-container--default .select2-dropdown.select2-dropdown--above .select2-results__option:first-child {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -2723,7 +2724,7 @@ input.atk-shape-rectangle,
 }
 .atk-shape-rounded--bottom,
 .popover-actions.atk-box ul li:last-child a,
-.select2-container--default .select2-results__option:last-child {
+.select2-container--default .select2-dropdown.select2-dropdown--below .select2-results__option:last-child {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -7252,6 +7253,14 @@ a.text-darkGray:not([class*="atk-button"]):not([class*="atk-swatch"]):hover,
 .invoice-table thead tr th {
   padding: 0.25rem !important;
 }
+.invoice-table tbody tr td .select2-container--default .select2-selection--single {
+  background: none;
+  border: none;
+  border-radius: 0;
+}
+.invoice-table tbody tr td .select2-container--default .select2-selection--single .select2-selection__rendered {
+  padding: 0.3em 0.4em;
+}
 .invoice-table tbody tr td input {
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
@@ -7264,11 +7273,26 @@ a.text-darkGray:not([class*="atk-button"]):not([class*="atk-swatch"]):hover,
   display: inline-block;
   width: 100%;
 }
+.invoice-table tbody tr td .select2-container--default.select2-container--open,
 .invoice-table tbody tr td input:focus {
   background: #fff !important;
   box-shadow: 0 0 0 2px #00b5d9 !important;
   position: relative;
   z-index: 2;
+}
+.select2-dropdown.invoice-dropdown {
+  font-size: 0.72040835rem;
+}
+.select2-dropdown.invoice-dropdown ul.select2-results__options li.select2-results__option {
+  padding-bottom: 0.3em;
+  padding-left: 0.4em;
+  padding-top: 0.3em;
+}
+.select2-dropdown.invoice-dropdown.select2-dropdown--above {
+  margin-top: -2px;
+}
+.select2-dropdown.invoice-dropdown.select2-dropdown--below {
+  margin-top: 2px;
 }
 [class*="invoice-status"] {
   position: absolute;
@@ -7415,6 +7439,7 @@ textarea {
 .select2-container--default .select2-results__option {
   padding: 0.5em;
   padding-right: 2em;
+  white-space: nowrap;
 }
 .select2-container--default .select2-results__option[aria-selected=true] {
   position: relative;
@@ -7449,6 +7474,7 @@ textarea {
   height: auto;
 }
 .select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #1f2326;
   line-height: 1.618;
   padding: 0.5em;
   padding-right: 2em;
