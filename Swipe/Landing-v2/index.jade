@@ -19,36 +19,36 @@ html
     .atk-layout
       #header.atk-layoutRow
         .atk-layoutCell
-          header.atk-swatch-ink
+          header
             .atk-wrapper.atk-padding-top--s.atk-padding-bottom--s
               .atk-cells
                 .atk-cell.atk-text-font--clear
                   a.atk-inline-block(href="#")
-                    img(src="images/logo-white.svg" title="Swipe" width="100" height="40")
+                    img(src="images/logo.svg" title="Swipe" width="100")
                 .atk-cell.atk-align-right
                   | Some Actions
       .atk-layoutRow.atk-layoutExpand
         .atk-layout.atk-layoutCell
           .atk-layout-column.atk-layout-expand
-            section#hero.atk-swatch-aqua
+            section#hero
                 #hero-slider
-                  .atk-wrapper
+                  #hero-slide-invoicing.atk-wrapper
                     span.rsTmb
-                      .icon-attention
-                      | Invoicing
-                    .atk-row.atk-padding-top--xl.atk-padding-bottom--xl
-                      .atk-col-6
-                        h1 Free Invoicing
+                      .icon-smile.atk-text-size--3xl
+                      .atk-text-caps-size--xs-semibold Invoicing
+                    .atk-row
+                      .atk-col-6.atk-padding-top--xl.atk-padding-bottom--xl
+                        h1.atk-margin-top--xl Free Invoicing
                         p.atk-text-size--l Using free Swipe invoicing you can create and deliver an invoice to your client to any device in a minute. Do not believe us? Check it out! And by the way, if your merchant profile is verified they can be paid in 2 clicks.
                         .atk-items-spacing--s.atk-text-caps
-                          a.atk-button-spacing--xl.atk-border-outline(href="#") Issue an Invoice
-                          a.atk-button-spacing--xl.atk-border-outline(href="#") Sign Up
+                          a.atk-button-spacing--xl.atk-swatch-aqua(href="#") Issue an Invoice
+                          a.atk-button-spacing--xl.atk-swatch-aqua.atk-border-outline(href="#") Sign Up
                       .atk-col-6
-                        | img
+                        figure #[img(src="images/ipad-invoice.png" width="409" height="430")]
                   .atk-wrapper
                     span.rsTmb
-                      .icon-attention
-                      | Subscriptions
+                      .icon-smile.atk-text-size--3xl
+                      .atk-text-caps-size--xs-semibold Subscription
                     .atk-row.atk-padding-top--xl.atk-padding-bottom--xl
                       .atk-col-6
                         h1 Automated Subscriptions
@@ -60,8 +60,8 @@ html
                         | img
                   .atk-wrapper
                     span.rsTmb
-                      .icon-attention
-                      | Payments
+                      .icon-smile.atk-text-size--3xl
+                      .atk-text-caps-size--xs-semibold Payments
                     .atk-row.atk-padding-top--xl.atk-padding-bottom--xl
                       .atk-col-6
                         h1 Payments
@@ -73,8 +73,8 @@ html
                         | img
                   .atk-wrapper
                     span.rsTmb
-                      .icon-attention
-                      | Notifications
+                      .icon-smile.atk-text-size--3xl
+                      .atk-text-caps-size--xs-semibold Notifications
                     .atk-row.atk-padding-top--xl.atk-padding-bottom--xl
                       .atk-col-6
                         h1 Notifications
@@ -86,8 +86,8 @@ html
                         | img
                   .atk-wrapper
                     span.rsTmb
-                      .icon-attention
-                      | API
+                      .icon-smile.atk-text-size--3xl
+                      .atk-text-caps-size--xs-semibold API
                     .atk-row.atk-padding-top--xl.atk-padding-bottom--xl
                       .atk-col-6
                         h1 API
@@ -97,7 +97,7 @@ html
                           a.atk-button-spacing--xl.atk-border-outline(href="#") Sign Up
                       .atk-col-6
                         | img
-            section.atk-swatch-default.atk-padding-top.atk-padding-bottom
+            section.atk-swatch-black.atk-padding-top.atk-padding-bottom
               .atk-wrapper.atk-align-center
                 form
                   input(type="text")
