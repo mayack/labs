@@ -106,6 +106,7 @@
 @popoverArrow:         12px;
 @buttonPadding:        0.5em;
 @buttonPaddingRatio:   1.5;
+@spaceRatio:           2;
 
 @effectSuccess:        @mint;
 @effectWarning:        @orange;
@@ -135,7 +136,7 @@
 
 @night:       #24323e;
 @midnight:    #2f3f4d;
-@aqua:        #00b5d9;
+@aqua:        #0079a9;
 @mint:        #46bc99;
 @orange:      #f7a600;
 @red:         #ff5533;
@@ -392,8 +393,8 @@ body, html {
   }
 }
 .popover-actions.atk-box {
+  .position(@z:10);
   padding: 0;
-  z-index: 10;
   ul li {
     a.atk-swatch-default:not([class*="atk-button"]) {
       display: block;
