@@ -1,0 +1,76 @@
+block link
+  -var selected = 'Clients'; // by default
+
+-var menu = { 'Clients': 'clients', 'Invoices': 'invoices' };
+
+
+aside#sidebar.atk-layoutColumn.atk-swatch-aqua.atk-border-right-static
+  #sidebar-indicator
+  #sidebar-inner
+    #logo.atk-padding.atk-padding-top--s.atk-padding-bottom--s.atk-align-center
+      a(href='/').atk-inline-block
+        span#logo-mask.atk-swatch-aqua
+        img(src='images/logo-white.svg' title="Surfaccounts" width="100")
+    hr.atk-margin--none
+    nav#nav-sidebar.scrollable.atk-padding-top--s
+      ul.atk-list-nobullets.atk-menu-vertical
+        li
+          a.atk-cells-spacing(href="#")
+            span.atk-cell #[span.icon-gauge]
+            span.atk-cell.atk-expand Dashboard
+        li
+          a.atk-cells-spacing
+            span.atk-cell #[span.icon-user]
+            span.atk-cell.atk-expand Contacts
+        li
+          a.atk-cells-spacing(href="#")
+            span.atk-cell #[span.icon-doc-inv]
+            span.atk-cell.atk-expand Invoices
+            span.atk-cell #[span.icon-angle-right]
+          ul
+            li #[a(href="#") Sample Subpage]
+            li #[a(href="#") Sample Subpage]
+            li #[a(href="#") Sample Subpage]
+        li
+          a.atk-cells-spacing(href="#")
+            span.atk-cell #[span.icon-chart-pie]
+            span.atk-cell.atk-expand CRM
+            span.atk-cell #[span.icon-angle-right]
+          ul.atk-text-semibold
+            li #[a(href="#") Sample Subpage]
+            li.active #[a(href="#") Sample Subpage]
+            li #[a(href="#") Sample Subpage]
+            li #[a(href="#") Sample Subpage]
+        li
+          a.atk-cells-spacing(href="#")
+            span.atk-cell #[span.icon-bank]
+            span.atk-cell.atk-expand Banking
+            span.atk-cell #[span.icon-angle-right]
+          ul.atk-text-semibold
+            li #[a(href="#") Sample Subpage]
+            li #[a(href="#") Sample Subpage]
+            li #[a(href="#") Sample Subpage]
+            li #[a(href="#") Sample Subpage]
+            li #[a(href="#") Sample Subpage]
+        li
+          a.atk-cells-spacing(href="#")
+            span.atk-cell #[span.icon-table]
+            span.atk-cell.atk-expand Accounts
+            span.atk-cell #[span.icon-angle-right]
+          ul.atk-text-semibold
+            li #[a(href="#") Sample Subpage]
+            li #[a(href="#") Sample Subpage]
+            li #[a(href="#") Sample Subpage]
+        li
+          a.atk-cells-spacing(href="#")
+            span.atk-cell #[span.icon-clock]
+            span.atk-cell.atk-expand Reports
+    footer#dialog-user-trigger
+      .footer-collapsed.atk-border-top-static
+        a.icon-cog.atk-text-size--xxl.atk-swatch-aqua.atk-block.atk-padding--s(href="#")
+      .footer-expanded.atk-border-top-static
+        a.atk-cells-spacing.atk-swatch-aqua.atk-padding--s(href="#")
+          span.atk-cell.atk-expand
+            span.atk-text-caps-semibold-size--xs Signed as
+            span.atk-block.atk-text-bold Ray Rogers
+          span.atk-cell #[span.atk-text-size--xxl.icon-cog]
