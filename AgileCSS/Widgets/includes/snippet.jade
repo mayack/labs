@@ -1,0 +1,64 @@
+= '<?xml version="1.0"?>'
+br
+= '<response value="ok" xml:lang="en">'
+br
+= '  <text>Ok</text>'
+br
+= '  <comment html_allowed="true"/>'
+br
+= '  <ns1:description><![CDATA['
+br
+= '  CDATA is <not> magical.'
+br
+= '  ]]></ns1:description>'
+br
+= '  <a></a> <a/>'
+br
+= '</response>'
+br
+br
+= '<!DOCTYPE html>'
+br
+= '<title>Title</title>'
+br
+= '<style>body {width: 500px;}</style>'
+br
+= '<script type="application/javascript">'
+br
+= '  function $init() {return true;}'
+br
+= '</script>'
+br
+= '<body>'
+br
+= '  <p checked class="title" id="title">Title</p>'
+br
+= '  <!-- here goes the rest of the page -->'
+br
+= '</body>'
+br
+= '<script>'
+br
+= 'if ($("body").width() < 640) {'
+br
+= '    if (state !== "mobile") {'
+br
+= '        state = "mobile";'
+br
+= '        var options = {'
+br
+= '            gutter: "6px"'
+br
+= '        }'
+br
+= '    }'
+br
+= '    $(function() {'
+br
+= '        '
+br
+= '    });'
+br
+= '}'
+br
+= '</script>'

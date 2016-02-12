@@ -1,0 +1,31 @@
+doctype html
+<!--[if lt IE 7]<html lang="en" class="oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en" class="oldie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="oldie lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+html
+  <!--<![endif]-->
+  head
+    meta(charset='utf-8')
+    <!--[if IE]><!-->
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    <!--<![endif]-->
+    meta(name='description', content='')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title Agile CSS
+    link(rel='stylesheet', href='css/atk-default.css')
+  body
+    .atk-layout
+      .atk-layoutRow
+        .atk-layoutCell
+          .atk-wrapper
+            | Header Area
+      .atk-layoutRow.atk-layoutExpand
+        .atk-layout.atk-layoutCell
+          .atk-layoutColumn.atk-layoutExpand
+            .atk-wrapper
+              | Content Area
+      .atk-layoutRow
+        .atk-layoutCell
+          .atk-wrapper
+            | Footer Area
