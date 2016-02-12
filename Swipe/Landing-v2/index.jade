@@ -106,12 +106,18 @@ html
                           a.atk-button-spacing--xl.atk-border-outline(href="#") Sign Up
                       .atk-col-6
                         | img
-            section.atk-swatch-black.atk-padding-top.atk-padding-bottom
-              .atk-wrapper.atk-align-center
-                form
-                  input(type="text")
-                  input(type="text")
-                  input(type="button" value="Sign Up")
+            section.atk-swatch-black.atk-padding-top--l.atk-padding-bottom--l
+              .atk-wrapper
+                .atk-cells.atk-move-center
+                  .atk-cell
+                    h2 Sign up for free
+                  .atk-cell.atk-text-size--7xl-light.atk-align-center.atk-padding-left--l.atk-padding-right--l.atk-swatch-aqua--text
+                    | /
+                  .atk-cell.atk-text-nowrap
+                    form.form-minimal.atk-items-spacing--s
+                      input(type="email" placeholder="Email address")
+                      input(type="password" placeholder="Password")
+                      button.atk-swatch-aqua.atk-button-spacing--l.atk-text-size--s Continue
             section.atk-swatch-gray.atk-padding-top--xl.atk-padding-bottom--xl
               .atk-wrapper.atk-align-center
                 .atk-margin-bottom--l

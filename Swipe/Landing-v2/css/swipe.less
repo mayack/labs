@@ -39,7 +39,14 @@
 );
 .createSmartSwatch(
     @sName:            black,
-    @sFill:            @swatchGray-15
+    @sFill:            @swatchGray-15,
+    @sHeading:         #fff,
+    @sText:            #fff,
+    @sCustomStyles:    {
+      [class*="atk-button"][class*="atk-swatch-aqua"] {
+        color: @sFill !important;
+      }
+    }
 );
 .createSmartSwatch(
     @sName:            gray,
@@ -49,7 +56,8 @@
     @sName:            aqua,
     @sFill:            @swatchAqua,
     @sHeading:         #fff,
-    @sText:            #fff
+    @sText:            #fff,
+    @sBorderActive:    @swatchAqua
 );
 
 
@@ -250,15 +258,39 @@ body {
   }
 }
 
+// Objects
+.form-minimal {
+  input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-shape"]) {
+    .transition(.4s);
+    background: none;
+    border-radius: 0;
+    border-color: rgba(255,255,255,0.5);
+    border-width: 0 0 1px 0;
+    // box-shadow: 0 1px 0 fade(@swatchAqua, 0%);
+    color: rgba(255,255,255,1);
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    &:focus {
+      border-color: @swatchAqua !important;
+      border-bottom-width: 2px;
+      box-shadow: 0 1px 0 @swatchAqua;
+      outline: none;
+    }
+    .placeholder(rgba(255,255,255,0.5));
+  }
+}
+
 // Amendments
 h1 {
   .atk-text-size--7xl;
   font-weight: 400;
   margin-bottom: @space/1.5;
 }
-a[class*="atk-button"]:not([class*="atk-shape"]) {
-  .atk-text-caps;
-  border-radius: 2rem;
+[class*="atk-button"]:not([class*="atk-shape"]) {
+  a&, button&, input& {
+    .atk-text-caps;
+    border-radius: 2rem;
+  }
 }
 
 
