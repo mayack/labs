@@ -5941,15 +5941,16 @@ body {
   right: 0;
 }
 .page-index #hero #hero-slider .rsArrow {
-  font-size: 2.32119916rem;
+  font-size: 2.617924rem;
   position: absolute;
   top: 0;
   color: #c0cccc;
   line-height: 1;
   font-family: fontello;
   height: 100%;
+  opacity: 0.7;
   text-align: center;
-  width: 50px;
+  width: 60px;
 }
 .page-index #hero #hero-slider .rsArrow .rsArrowIcn {
   position: absolute;
