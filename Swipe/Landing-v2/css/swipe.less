@@ -31,7 +31,7 @@
 .createSmartSwatch(
     @sName:            default,
     @sFill:            #fff,
-    @sHeading:         @swatchGray-15,
+    @sHeading:         @swatchGray-33,
     @sText:            @swatchGray-33,
     @sComment:         @swatchGray-60,
     @sLink:            blue,
@@ -193,21 +193,31 @@ body {
       }
       .rsArrow {
         .atk-text-size--6xl;
-        .position(@t:50%);
+        .position(@t:0);
+        color: @swatchGray-80;
         line-height: 1;
         font-family: fontello;
-        transform: translate(0,-50%);
+        height: 100%;
+        text-align: center;
+        width: 50px;
+        .rsArrowIcn {
+          .position(@t:50%, @l:50%);
+          transform: translate(-50%,-50%);
+        }
         &.rsArrowLeft {
-            left: 15px;
-            &:before {
+            left: 0;
+            .rsArrowIcn:before {
               &:extend(.icon-angle-left:before);
             }
         }
         &.rsArrowRight {
-            right: 15px;
-            &:before {
+            right: 0;
+            .rsArrowIcn:before {
               &:extend(.icon-angle-right:before);
             }
+        }
+        &:hover {
+          color: @swatchGray-60;
         }
       }
       .rsNav {

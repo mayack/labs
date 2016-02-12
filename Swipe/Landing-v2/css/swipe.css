@@ -3089,12 +3089,12 @@ a {
 }
 /* '' */
 .icon-angle-left:before,
-.page-index #hero #hero-slider .rsArrow.rsArrowLeft:before {
+.page-index #hero #hero-slider .rsArrow.rsArrowLeft .rsArrowIcn:before {
   content: '\e878';
 }
 /* '' */
 .icon-angle-right:before,
-.page-index #hero #hero-slider .rsArrow.rsArrowRight:before {
+.page-index #hero #hero-slider .rsArrow.rsArrowRight .rsArrowIcn:before {
   content: '\e879';
 }
 /* '' */
@@ -5188,7 +5188,7 @@ body h6,
 .atk-swatch-default h6,
 [class*="atk-swatch"]:not(.atk-swatch-default) .box:not([class*="atk-swatch"]) h6,
 [class*="atk-swatch"]:not(.atk-swatch-default) .atk-swatch-default h6 {
-  color: #212626;
+  color: #3f5555;
 }
 body .atk-comment,
 .atk-swatch-default .atk-comment,
@@ -5943,16 +5943,28 @@ body {
 .page-index #hero #hero-slider .rsArrow {
   font-size: 2.32119916rem;
   position: absolute;
-  top: 50%;
+  top: 0;
+  color: #c0cccc;
   line-height: 1;
   font-family: fontello;
-  transform: translate(0, -50%);
+  height: 100%;
+  text-align: center;
+  width: 50px;
+}
+.page-index #hero #hero-slider .rsArrow .rsArrowIcn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .page-index #hero #hero-slider .rsArrow.rsArrowLeft {
-  left: 15px;
+  left: 0;
 }
 .page-index #hero #hero-slider .rsArrow.rsArrowRight {
-  right: 15px;
+  right: 0;
+}
+.page-index #hero #hero-slider .rsArrow:hover {
+  color: #869898;
 }
 .page-index #hero #hero-slider .rsNav {
   position: absolute;
