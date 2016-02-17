@@ -12,7 +12,7 @@
 // ==========================================================
 
 @bodyFamily:           "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-@bodySize:             1rem;
+@bodySize:             0.875rem;
 @bodyBaseline:         1.618;
 
 @headingCase:          none;
@@ -24,28 +24,47 @@
 
 
 // ==========================================================
-// Swatches
+// Swatches & Effects
 // ==========================================================
 
+// Swatches
 .createSmartSwatch(
     @sName:            default,
     @sFill:            #fff,
-    @sHeading:         #363842,
-    @sText:            #363842,
-    @sLink:            #34aadc,
+    @sHeading:         #1f2a32,
+    @sText:            #1f2a32,
+    @sLink:            #509de6,
     @sBorderIntensity: 5%
 );
 .createSmartSwatch(
     @sName:            ink,
-    @sFill:            #1c2933
+    @sFill:            #1f2a32
 );
 .createSmartSwatch(
     @sName:            gray,
-    @sFill:            #f6f6f7
+    @sFill:            #f0f2f3
 );
 .createSmartSwatch(
     @sName:            blue,
-    @sFill:            #34aadc
+    @sFill:            #509de6
+);
+
+// Effects
+.createEffect(
+    @name:  success,
+    @color: #6ccb4e
+);
+.createEffect(
+    @name:  info,
+    @color: #509de6
+);
+.createEffect(
+    @name:  warning,
+    @color: #f8a633
+);
+.createEffect(
+    @name:  danger,
+    @color: #fa635a
 );
 
 
@@ -55,26 +74,21 @@
 
 @bodyBackground:       #fff;
 @cornerRadius:         5px;
-@textSelect:           #000;
-@dialogOverlay:        fade(#000, 25%);
-@tooltipColor:         fade(#000, 90%);
+@textSelect:           #1f2a32;
+@dialogOverlay:        fade(#1f2a32, 25%);
+@tooltipColor:         fade(#1f2a32, 90%);
 @popoverArrow:         12px;
 @buttonPadding:        0.5em;
 @buttonPaddingRatio:   2;
-@spaceRatio:           1.5;
-
-@effectSuccess:        #25c425;
-@effectWarning:        #f7a600;
-@effectDanger:         #ff2d1a;
-@effectInfo:           #2bacd7;
+@spaceRatio:           2;
 
 @inputColor:           #fff;
-@inputText:            #000;
-@inputFocus:           #0095ff;
+@inputText:            #172128;
+@inputFocus:           #509de6;
 @inputFocusGlow:       3px;
 @inputPadding:         0.5em;
 @inputPaddingRatio:    3;
-@inputPlaceholder:     lighten(#000, 40%);
+@inputPlaceholder:     lighten(#000, 70%);
 @inputInnerShadow:     0 3px 0 rgba(0, 0, 0, 0.03) inset;
 
 

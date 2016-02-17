@@ -1,0 +1,43 @@
+doctype html
+<!--[if lt IE 7]<html lang="en" class="oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en" class="oldie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="oldie lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+html
+  <!--<![endif]-->
+  head
+    meta(charset='utf-8')
+    <!--[if IE]><!-->
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    <!--<![endif]-->
+    meta(name='description', content='')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title Agile CSS
+    link(rel='stylesheet', href='../Default/css/atk-default.css')
+  body
+    .atk-layout
+      .atk-layoutRow.atk-layoutExpand
+        .atk-layout.atk-layoutCell
+          .atk-layoutColumn.atk-layoutExpand.atk-align-middle
+            .atk-wrapper.atk-padding-top--xl.atk-padding-bottom--xl
+              h1.atk-margin-bottom--l.atk-align-center Login Form
+              .atk-row
+                .atk-col-5.atk-move-center
+                  .atk-box.atk-shape-rounded--top
+                    h2.atk-margin-bottom--s Welcome back!
+                    form
+                      .atk-margin-bottom--xs
+                        input.atk-expand(type="email" placeholder="Email address")
+                      .atk-margin-bottom--xs
+                        input.atk-expand(type="password" placeholder="Password")
+                      .atk-cells.atk-margin-bottom
+                        .atk-cell
+                          input(type="checkbox" id="checkbox")
+                          label.atk-comment(for="checkbox") &nbsp;Remember me
+                        .atk-cell.atk-align-right
+                          a(href="#") Forgot password?
+                      button.atk-button-spacing--xl.atk-expand.atk-text-caps.atk-swatch-blue
+                        | Log In
+                  .atk-box.atk-shape-rounded--bottom.atk-border-top--none.atk-swatch-gray.atk-padding--s.atk-align-center.atk-comment
+                    | Don't have an account?
+                    a.atk-text-semibold.atk-margin-left--xs(href="#") Sign up#[span.icon-angle-right]

@@ -1,0 +1,37 @@
+<!DOCTYPE html><!--[if lt IE 7]<html lang="en" class="oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en" class="oldie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="oldie lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html><!--<![endif]-->
+  <head>
+    <meta charset="utf-8"><!--[if IE]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]-->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agile CSS</title>
+    <link rel="stylesheet" href="css/widgets.css">
+  </head>
+  <body>
+    <div class="atk-layout">
+      <div class="atk-layoutRow atk-layoutExpand">
+        <div class="atk-layout atk-layoutCell">
+          <main class="atk-layoutColumn atk-layoutExpand atk-align-middle">
+            <header id="toolbar" class="atk-padding--xs atk-text-caps-semibold-baseline--single atk-comment"><a href="index.html" class="atk-cells-spacing--xs atk-move-left"><span class="atk-cell"><span class="icon-angle-left atk-text-size--l"></span></span><span class="atk-cell"><span class="atk-text-size--xs">Widget Gallery</span></span></a><a id="inspector-trigger" href="javascript:void(0)" class="atk-cells-spacing--xs atk-move-right"><span class="atk-cell"><span class="atk-text-size--xs">Show Code</span></span><span class="atk-cell"><span class="icon-code atk-text-size--l"></span></span></a></header>
+            <iframe src="../Social Feed/index.html" width="100%" height="100%" frameborder="0" class="atk-text-font--clear"></iframe>
+          </main>
+          <aside id="inspector" class="atk-layoutColumn">
+            <div id="inspector-inner" class="atk-border-left-overlay atk-swatch-ink">
+              <header class="atk-text-caps-size--xs-semibold atk-border-bottom-disabled atk-align-center atk-padding--xs"><a id="inspector-hide" href="javascript:void(0)" class="atk-text-size--l icon-cancel"></a>HTML Code</header>
+              <pre><code class="html"></code></pre>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script src="codemirror/codemirror.js"></script>
+    <script src="codemirror/htmlmixed.js"></script>
+    <script src="js/widgets.js"></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+.tip-overlay.ui-widget-overlay(style="display:none")
+#tour-dialog.atk-align-center
+  h1 Welcome to the #[br] new Surf Accounts
+  p.atk-text-size--l Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione placeat temporibus eligendi, quisquam veniam rem atque ut, praesentium quas eveniet.
+  button#tour-start(data-tip-target="#dialog-company-trigger" data-tip="#tip-1" data-tip-position="right bottom;right-3 top+3").atk-button.atk-swatch-mint.atk-text-size--xl Take a Tour
+  .atk-margin-top--s
+    a#tour-dialog-close.atk-text-semibold-size--l.atk-comment(href="javascript:void(0)") No, Thanks
+#tip-1.tip-popover.atk-popover-top-right.atk-box.atk-swatch-orange.atk-padding--none(style="display:none")
+  .atk-popoverArrow
+  .atk-padding--s
+    h4.atk-margin--none.atk-text-baseline Tip #1
+    p.atk-text-semibold Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro odio earum vitae expedita! Iusto nisi doloremque optio ipsam.
+  .atk-padding--s.atk-border-top-disabled.atk-cells
+    button.tour-destroy.atk-button-blank.atk-border-outline.atk-move-right Ok, I got it!
+    button.atk-button.atk-border-outline(data-tip-target="#quick-add" data-tip="#tip-2" data-tip-position="left bottom;left top+3") Next Tip
+#tip-2.tip-popover.atk-popover-top-left.atk-box.atk-swatch-orange.atk-padding--none(style="display:none")
+  .atk-popoverArrow
+  .atk-padding--s
+    h4.atk-margin--none.atk-text-baseline Tip #2
+    p.atk-text-semibold Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro odio earum vitae expedita! Iusto nisi doloremque optio ipsam.
+  .atk-padding--s.atk-border-top-disabled
+    button.tour-destroy.atk-button-blank.atk-border-outline.atk-move-right Ok, I got it!
+    button.atk-button.atk-border-outline(data-tip-target="#nav-sidebar" data-tip="#tip-3" data-tip-position="right top;left+5 top+10") Next Tip
+#tip-3.tip-popover.atk-popover-left-top.atk-box.atk-swatch-orange.atk-padding--none(style="display:none")
+  .atk-popoverArrow
+  .atk-padding--s
+    h4.atk-margin--none.atk-text-baseline Tip #3
+    p.atk-text-semibold Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro odio earum vitae expedita! Iusto nisi doloremque optio ipsam.
+  .atk-padding--s.atk-border-top-disabled
+    button.tour-destroy.atk-button-blank.atk-border-outline.atk-move-right Ok, I got it!
+    button.atk-button.atk-border-outline(data-tip-target="#dialog-user-trigger" data-tip="#tip-4" data-tip-position="right center;left+5 bottom+20") Next Tip
+#tip-4.tip-popover.atk-popover-left-bottom.atk-box.atk-swatch-orange.atk-padding--none(style="display:none")
+  .atk-popoverArrow
+  .atk-padding--s
+    h4.atk-margin--none.atk-text-baseline Tip #4
+    p.atk-text-semibold Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro odio earum vitae expedita! Iusto nisi doloremque optio ipsam.
+  .atk-padding--s.atk-border-top-disabled.atk-align-center
+    button.tour-destroy.atk-button.atk-border-outline(href="#") Let's Get Started

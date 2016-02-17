@@ -31,11 +31,17 @@
 .createSmartSwatch(
     @sName:            default,
     @sFill:            #fff,
-    @sHeading:         #000,
-    @sText:            #444,
-    @sComment:         #999,
-    @sLink:            blue,
-    @sBorderIntensity: 5%
+    @sHeading:         #363842,
+    @sText:            #363842,
+    @sLink:            #45b8f3,
+    @sBorderIntensity: 5%,
+    @sCustomStyles:    {
+        #inspector {
+            &:before {
+                background: @sFill;
+            }
+        }
+    }
 );
 .createSmartSwatch(
     @sName:            ink,
@@ -49,12 +55,35 @@
     }
 );
 .createSmartSwatch(
-    @sName:            gray,
-    @sFill:            #f5f6f7
+    @sName:            red,
+    @sFill:            #fb635b,
+    @sBorder:          #fb635b
+);
+.createSmartSwatch(
+    @sName:            orange,
+    @sFill:            #f7a632,
+    @sBorder:          #f7a632
+);
+.createSmartSwatch(
+    @sName:            yellow,
+    @sFill:            #f4ce31,
+    @sBorder:          #f4ce31,
+    @sSwatchSensitivity: 65%
+);
+.createSmartSwatch(
+    @sName:            green,
+    @sFill:            #6ccb4e,
+    @sBorder:          #6ccb4e
 );
 .createSmartSwatch(
     @sName:            blue,
-    @sFill:            #0095ff
+    @sFill:            #45b8f3,
+    @sBorder:          #45b8f3
+);
+.createSmartSwatch(
+    @sName:            violet,
+    @sFill:            #d089e1,
+    @sBorder:          #d089e1
 );
 
 
@@ -113,7 +142,7 @@ main {
     .transition(.5s);
     min-width: 0px;
     overflow: hidden;
-    width: 0px;
+    width: 0;
     #inspector-inner {
         .position(@t:0,@l:0);
         height: 100%;
@@ -122,7 +151,6 @@ main {
     header {
         position: relative;
         #inspector-hide {
-            .atk-text-size--l;
             .position(@t:50%,@l:@space-xs);
             transform: translate(0,-50%);
         }
@@ -140,6 +168,27 @@ main {
         width: @inspectorWidth;
     }
 }
+.widget-box {
+    height: 250px;
+    position: relative;
+    a {
+        .filler;
+        background-image: url(../images/widget-social-feed.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: table;
+        >figure {
+            display: table-cell;
+            text-align: center;
+            vertical-align: bottom;
+        }
+    }
+}
+.separator {
+    color: #d4d5d8;
+    font-weight: 300;
+    padding: 0 @space-s;
+}
 
 
 // ==========================================================
@@ -148,10 +197,19 @@ main {
 
 // Important: list .createViewport functions in the right order based on @min and @max values otherwise styles get overridden
 .createViewport(
+    @wrapperMargin:    @space-xl,
+    @colsGutter:       @space,
+    @cols:             12,
+    @viewportMinWidth: 1201px,
+    @wrapperMinWidth:  1100px,
+    @wrapperMaxWidth:  1100px
+);
+.createViewport(
 	@wrapperMargin:    @space-xl,
 	@colsGutter:       @space,
 	@cols:             12,
 	@viewportMinWidth: 0px,
-	@wrapperMinWidth:  800px,
-	@wrapperMaxWidth:  800px
+    @viewportMaxWidth: 1199px,
+	@wrapperMinWidth:  960px,
+	@wrapperMaxWidth:  960px
 );

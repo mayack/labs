@@ -7,7 +7,6 @@ html
   <!-<![endif]->
   include head
   body
-    include browsehappy
     .atk-layout
       .atk-layoutRow.atk-layoutExpand
         .atk-layout.atk-layoutCell
@@ -17,8 +16,8 @@ html
               li.atk-cell
                 a#sidebar-trigger.atk-swatch-night.atk-padding--s(href='javascript:void(0)') #[span.icon-collapse-left]#[span.icon-menu]
               li.atk-cell.atk-swatch-midnight
-                a.atk-swatch-night.atk-move-left.atk-expand.atk-padding--s.atk-text-bold(href='javascript:void(0)') Create New&nbsp;&nbsp;#[span.icon-angle-down]
-                ul.atk-menu-vertical.atk-text-semibold.atk-shape-rounded--bottom.atk-overflow
+                a#quick-add.atk-swatch-night.atk-move-left.atk-expand.atk-padding--s.atk-text-bold(href='javascript:void(0)') Create New&nbsp;&nbsp;#[span.icon-angle-down]
+                ul.atk-menu-vertical.atk-text-semibold.atk-shape-rounded-bottom.atk-overflow
                   li
                     a.atk-swatch-midnight(href='javascript:void(0)') #[span.icon-plus]Invoice
                   li
@@ -34,14 +33,14 @@ html
                   span.icon-building.atk-margin-right--xs
                   | Demo Company Ltd.
             block content
-      //- include includes/footer
-    #dialog-user.atk-padding--none(title="Ray Rogers")
+    include help-tour
+    #dialog-user.atk-padding--none(title="Ray Rogers" style="display:none")
       ul.atk-list-nobullets.atk-lister-spacing--none.atk-text-size--xl.atk-align-center
         li #[a.atk-swatch-default.atk-block.atk-padding--s(href='#') Settings]
         li #[a.atk-swatch-default.atk-block.atk-padding--s(href='#') Billing]
         li #[a.atk-swatch-default.atk-block.atk-padding--s(href='#') Support]
-        li.atk-border-top-static #[a.atk-swatch-default.atk-block.atk-padding--s.atk-text-semibold.atk-shape-rounded--bottom(href='#') Log Out]
-    #dialog-company.dialog-scrollable(title="Company Select")
+        li.atk-border-top-static #[a.atk-swatch-default.atk-block.atk-padding--s.atk-text-semibold.atk-shape-rounded-bottom(href='#') Log Out]
+    #dialog-company.dialog-scrollable(title="Company Select" style="display:none")
       .atk-lister-spacing--xs
         .atk-cells
           .atk-cell.atk-expand
@@ -84,4 +83,3 @@ html
           .atk-cell
             a.atk-button-spacing--s.atk-swatch-aqua(href='javascript:void(0)') Select
     include scripts
-    //- include analytics

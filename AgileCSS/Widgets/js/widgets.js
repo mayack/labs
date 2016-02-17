@@ -22,3 +22,8 @@ $(function(){
 $(window).resize(function() {
     resizeUpdate();
 });
+
+var myCodeMirror = CodeMirror(document.body, {
+  value: "function myScript(){return 100;}\n",
+  mode:  "html"
+});

@@ -11,12 +11,7 @@
     <meta name="description" content="">
     <link rel="stylesheet" href="css/surfaccounts.css">
   </head>
-  <body><!--[if lt IE 8]>
-    <p class="browsehappy">
-      You are using an <strong>outdated</strong> browser.
-      Please <a href="http://browsehappy.com/">upgrade your browser</a>
-      to improve your experience.
-    </p><![endif]-->
+  <body>
     <div class="atk-layout">
       <div class="atk-layoutRow atk-layoutExpand">
         <div class="atk-layout atk-layoutCell">
@@ -72,8 +67,8 @@
           <main class="atk-layoutColumn atk-layoutExpand">
             <ul id="nav-main" class="atk-swatch-night atk-menu-horizontal-separated atk-cells atk-expand">
               <li class="atk-cell"><a id="sidebar-trigger" href="javascript:void(0)" class="atk-swatch-night atk-padding--s"><span class="icon-collapse-left"></span><span class="icon-menu"></span></a></li>
-              <li class="atk-cell atk-swatch-midnight"><a href="javascript:void(0)" class="atk-swatch-night atk-move-left atk-expand atk-padding--s atk-text-bold">Create New&nbsp;&nbsp;<span class="icon-angle-down"></span></a>
-                <ul class="atk-menu-vertical atk-text-semibold atk-shape-rounded--bottom atk-overflow">
+              <li class="atk-cell atk-swatch-midnight"><a id="quick-add" href="javascript:void(0)" class="atk-swatch-night atk-move-left atk-expand atk-padding--s atk-text-bold">Create New&nbsp;&nbsp;<span class="icon-angle-down"></span></a>
+                <ul class="atk-menu-vertical atk-text-semibold atk-shape-rounded-bottom atk-overflow">
                   <li><a href="javascript:void(0)" class="atk-swatch-midnight"><span class="icon-plus"></span>Invoice</a></li>
                   <li><a href="javascript:void(0)" class="atk-swatch-midnight"><span class="icon-plus"></span>Credit Note</a></li>
                   <li><a href="javascript:void(0)" class="atk-swatch-midnight"><span class="icon-plus"></span>Customer</a></li>
@@ -87,7 +82,7 @@
               <div class="atk-wrapper atk-padding-top atk-padding-bottom atk-relative">
                 <div class="atk-cells-spacing--s atk-margin-bottom">
                   <div class="atk-cell atk-text-nowrap">
-                    <h1>Sales Invoice</h1>
+                    <h2>Sales Invoice</h2>
                   </div>
                   <div class="atk-cell"><span class="atk-text-size--xxl-nowrap atk-comment">TAL0001 Tallaght Town</span></div>
                   <div class="atk-cell atk-expand">
@@ -389,15 +384,65 @@ Ireland</textarea>
         </div>
       </div>
     </div>
-    <div id="dialog-user" title="Ray Rogers" class="atk-padding--none">
+    <div style="display:none" class="tip-overlay ui-widget-overlay"></div>
+    <div id="tour-dialog" class="atk-align-center">
+      <h1>Welcome to the <br> new Surf Accounts</h1>
+      <p class="atk-text-size--l">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione placeat temporibus eligendi, quisquam veniam rem atque ut, praesentium quas eveniet.</p>
+      <button id="tour-start" data-tip-target="#dialog-company-trigger" data-tip="#tip-1" data-tip-position="right bottom;right-3 top+3" class="atk-button atk-swatch-mint atk-text-size--xl">Take a Tour</button>
+      <div class="atk-margin-top--s"><a id="tour-dialog-close" href="javascript:void(0)" class="atk-text-semibold-size--l atk-comment">No, Thanks</a></div>
+    </div>
+    <div id="tip-1" style="display:none" class="tip-popover atk-popover-top-right atk-box atk-swatch-orange atk-padding--none">
+      <div class="atk-popoverArrow"></div>
+      <div class="atk-padding--s">
+        <h4 class="atk-margin--none atk-text-baseline">Tip #1</h4>
+        <p class="atk-text-semibold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro odio earum vitae expedita! Iusto nisi doloremque optio ipsam.</p>
+      </div>
+      <div class="atk-padding--s atk-border-top-disabled atk-cells">
+        <button class="tour-destroy atk-button-blank atk-border-outline atk-move-right">Ok, I got it!</button>
+        <button data-tip-target="#quick-add" data-tip="#tip-2" data-tip-position="left bottom;left top+3" class="atk-button atk-border-outline">Next Tip</button>
+      </div>
+    </div>
+    <div id="tip-2" style="display:none" class="tip-popover atk-popover-top-left atk-box atk-swatch-orange atk-padding--none">
+      <div class="atk-popoverArrow"></div>
+      <div class="atk-padding--s">
+        <h4 class="atk-margin--none atk-text-baseline">Tip #2</h4>
+        <p class="atk-text-semibold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro odio earum vitae expedita! Iusto nisi doloremque optio ipsam.</p>
+      </div>
+      <div class="atk-padding--s atk-border-top-disabled">
+        <button class="tour-destroy atk-button-blank atk-border-outline atk-move-right">Ok, I got it!</button>
+        <button data-tip-target="#nav-sidebar" data-tip="#tip-3" data-tip-position="right top;left+5 top+10" class="atk-button atk-border-outline">Next Tip</button>
+      </div>
+    </div>
+    <div id="tip-3" style="display:none" class="tip-popover atk-popover-left-top atk-box atk-swatch-orange atk-padding--none">
+      <div class="atk-popoverArrow"></div>
+      <div class="atk-padding--s">
+        <h4 class="atk-margin--none atk-text-baseline">Tip #3</h4>
+        <p class="atk-text-semibold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro odio earum vitae expedita! Iusto nisi doloremque optio ipsam.</p>
+      </div>
+      <div class="atk-padding--s atk-border-top-disabled">
+        <button class="tour-destroy atk-button-blank atk-border-outline atk-move-right">Ok, I got it!</button>
+        <button data-tip-target="#dialog-user-trigger" data-tip="#tip-4" data-tip-position="right center;left+5 bottom+20" class="atk-button atk-border-outline">Next Tip</button>
+      </div>
+    </div>
+    <div id="tip-4" style="display:none" class="tip-popover atk-popover-left-bottom atk-box atk-swatch-orange atk-padding--none">
+      <div class="atk-popoverArrow"></div>
+      <div class="atk-padding--s">
+        <h4 class="atk-margin--none atk-text-baseline">Tip #4</h4>
+        <p class="atk-text-semibold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro odio earum vitae expedita! Iusto nisi doloremque optio ipsam.</p>
+      </div>
+      <div class="atk-padding--s atk-border-top-disabled atk-align-center">
+        <button href="#" class="tour-destroy atk-button atk-border-outline">Let's Get Started</button>
+      </div>
+    </div>
+    <div id="dialog-user" title="Ray Rogers" style="display:none" class="atk-padding--none">
       <ul class="atk-list-nobullets atk-lister-spacing--none atk-text-size--xl atk-align-center">
         <li><a href="#" class="atk-swatch-default atk-block atk-padding--s">Settings</a></li>
         <li><a href="#" class="atk-swatch-default atk-block atk-padding--s">Billing</a></li>
         <li><a href="#" class="atk-swatch-default atk-block atk-padding--s">Support</a></li>
-        <li class="atk-border-top-static"><a href="#" class="atk-swatch-default atk-block atk-padding--s atk-text-semibold atk-shape-rounded--bottom">Log Out</a></li>
+        <li class="atk-border-top-static"><a href="#" class="atk-swatch-default atk-block atk-padding--s atk-text-semibold atk-shape-rounded-bottom">Log Out</a></li>
       </ul>
     </div>
-    <div id="dialog-company" title="Company Select" class="dialog-scrollable">
+    <div id="dialog-company" title="Company Select" style="display:none" class="dialog-scrollable">
       <div class="atk-lister-spacing--xs">
         <div class="atk-cells">
           <div class="atk-cell atk-expand">Relate Software Industries.</div>

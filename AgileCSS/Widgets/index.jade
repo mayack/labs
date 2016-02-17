@@ -5,41 +5,82 @@ doctype html
 <!--[if gt IE 8]><!-->
 html
   <!--<![endif]-->
-  head
-    meta(charset='utf-8')
-    <!--[if IE]><!-->
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    <!--<![endif]-->
-    meta(name='description', content='')
-    meta(name="viewport", content="width=device-width, initial-scale=1")
-    title Agile CSS
-    link(rel='stylesheet', href='css/widgets.css')
+  include includes/head
   body
     .atk-layout
       .atk-layoutRow.atk-layoutExpand
         .atk-layout.atk-layoutCell
-          main.atk-layoutColumn.atk-layoutExpand.atk-align-middle
-            header#toolbar.atk-padding--xs.atk-text-caps-semibold-baseline--single.atk-comment
-              a.atk-cells-spacing--xs.atk-move-left(href="javascript:void(0)")
-                span.atk-cell
-                  span.icon-angle-left.atk-text-size--l
-                span.atk-cell
-                  span.atk-text-size--xs Widget Gallery
-              a#inspector-trigger.atk-cells-spacing--xs.atk-move-right(href="javascript:void(0)")
-                span.atk-cell
-                  span.atk-text-size--xs Show Code
-                span.atk-cell
-                  span.icon-code.atk-text-size--l
-            iframe.atk-text-font--clear(src="../Social Feed/index.html" width="100%" height="100%" frameborder="0")
-          aside#inspector.atk-layoutColumn.atk-swatch-ink
-            #inspector-inner
-              header.atk-text-caps-size--xs-semibold.atk-border-bottom-disabled.atk-align-center.atk-padding--xs
-                a#inspector-hide.icon-cancel(href="javascript:void(0)")
-                | HTML Code
-              pre
-                code.html
-                  include includes/snippet.jade
-    script(src="js/jquery-2.1.4.min.js")
-    script(src="js/highlight.pack.js")
-    script(src="js/widgets.js")
+          main.atk-layoutColumn.atk-layoutExpand
+            .atk-wrapper.atk-padding-top--l.atk-padding-bottom--l
+              header.atk-margin-bottom--l.atk-cells
+                .atk-cell.atk-text-size--5xl
+                  span.icon-atk
+                  span.separator /
+                  | Widget Gallery
+                .atk-cell.atk-align-right
+                  a.atk-button.atk-border-outline.atk-swatch-ink(href="#") Download AgileCSS v0.92
+              .atk-row.atk-grid-spacing--xs
+                .atk-col-4.widget-box
+                  a.atk-padding--xs.atk-swatch-red.atk-box(href="widget.html")
+                    figure
+                      span.atk-block.atk-caps.atk-text-semibold Social Feed
+                      span.atk-comment 3 views
+                .atk-col-4.widget-box
+                  a.atk-padding--xs.atk-swatch-blue.atk-box(href="widget.html")
+                    figure
+                      span.atk-block.atk-caps.atk-text-semibold Login Form
+                      span.atk-comment 3 views
+                .atk-col-4.widget-box
+                  a.atk-padding--xs.atk-swatch-blue.atk-box(href="widget.html")
+                    figure
+                      span.atk-block.atk-caps.atk-text-semibold Payment Form
+                      span.atk-comment 3 views
+                .atk-col-4.widget-box
+                  a.atk-padding--xs.atk-swatch-blue.atk-box(href="widget.html")
+                    figure
+                      span.atk-block.atk-caps.atk-text-semibold Login Form
+                      span.atk-comment 3 views
+                .atk-col-4.widget-box
+                  a.atk-padding--xs.atk-swatch-blue.atk-box(href="widget.html")
+                    figure
+                      span.atk-block.atk-caps.atk-text-semibold Payment Form
+                      span.atk-comment 3 views
+                .atk-col-4.widget-box
+                  a.atk-padding--xs.atk-swatch-blue.atk-box(href="widget.html")
+                    figure
+                      span.atk-block.atk-caps.atk-text-semibold Payment Form
+                      span.atk-comment 3 views
+                .atk-col-4.widget-box
+                  a.atk-padding--xs.atk-swatch-blue.atk-box(href="widget.html")
+                    figure
+                      span.atk-block.atk-caps.atk-text-semibold Social Feed
+                      span.atk-comment 3 views
+                .atk-col-4.widget-box
+                  a.atk-padding--xs.atk-swatch-blue.atk-box(href="widget.html")
+                    figure
+                      span.atk-block.atk-caps.atk-text-semibold Login Form
+                      span.atk-comment 3 views
+                .atk-col-4.widget-box
+                  a.atk-padding--xs.atk-swatch-blue.atk-box(href="widget.html")
+                    figure
+                      span.atk-block.atk-caps.atk-text-semibold Payment Form
+                      span.atk-comment 3 views
+                .atk-col-4.widget-box
+                  a.atk-padding--xs.atk-swatch-blue.atk-box(href="widget.html")
+                    figure
+                      span.atk-block.atk-caps.atk-text-semibold Login Form
+                      span.atk-comment 3 views
+                .atk-col-4.widget-box
+                  a.atk-padding--xs.atk-swatch-blue.atk-box(href="widget.html")
+                    figure
+                      span.atk-block.atk-caps.atk-text-semibold Payment Form
+                      span.atk-comment 3 views
+                .atk-col-4.widget-box
+                  a.atk-padding--xs.atk-swatch-blue.atk-box(href="widget.html")
+                    figure
+                      span.atk-block.atk-caps.atk-text-semibold Payment Form
+                      span.atk-comment 3 views
+
+
+    include includes/scripts
 

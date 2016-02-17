@@ -1,0 +1,35 @@
+doctype html
+<!--[if lt IE 7]<html lang="en" class="oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en" class="oldie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="oldie lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+html
+  <!--<![endif]-->
+  include includes/head
+  body
+    .atk-layout
+      .atk-layoutRow.atk-layoutExpand
+        .atk-layout.atk-layoutCell
+          main.atk-layoutColumn.atk-layoutExpand.atk-align-middle
+            header#toolbar.atk-padding--xs.atk-text-caps-semibold-baseline--single.atk-comment
+              a.atk-cells-spacing--xs.atk-move-left(href="index.html")
+                span.atk-cell
+                  span.icon-angle-left.atk-text-size--l
+                span.atk-cell
+                  span.atk-text-size--xs Widget Gallery
+              a#inspector-trigger.atk-cells-spacing--xs.atk-move-right(href="javascript:void(0)")
+                span.atk-cell
+                  span.atk-text-size--xs Show Code
+                span.atk-cell
+                  span.icon-code.atk-text-size--l
+            iframe.atk-text-font--clear(src="../Social Feed/index.html" width="100%" height="100%" frameborder="0")
+          aside#inspector.atk-layoutColumn
+            #inspector-inner.atk-border-left-overlay.atk-swatch-ink
+              header.atk-text-caps-size--xs-semibold.atk-border-bottom-disabled.atk-align-center.atk-padding--xs
+                a#inspector-hide.atk-text-size--l.icon-cancel(href="javascript:void(0)")
+                | HTML Code
+              pre
+                code.html
+                  include includes/snippet.jade
+    include includes/scripts
+

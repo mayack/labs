@@ -7,13 +7,13 @@ function resizeUpdate() {
   var navHeight = $('#nav-main').outerHeight();
   var navSidebarHeight;
   var logoHeight = $('#sidebar #logo').outerHeight();
-  var companySwitchHeightExpanded = $('#sidebar footer .footer-expanded').outerHeight();
-  var companySwitchHeightCollapsed = $('#sidebar footer .footer-collapsed').outerHeight();
+  var userSwitchHeightExpanded = $('#sidebar footer .footer-expanded').outerHeight();
+  var userSwitchHeightCollapsed = $('#sidebar footer .footer-collapsed').outerHeight();
   var contentHeight;
   var actionsHeight;
 
   if ( $('.page-actions').length > 0 ) {
-    actionsHeight = companySwitchHeightExpanded - 1;
+    actionsHeight = userSwitchHeightExpanded - 1;
     contentHeight = windowHeight - navHeight - actionsHeight;
     $('.page-actions>.atk-cells').height(actionsHeight);
   } else {
@@ -21,13 +21,15 @@ function resizeUpdate() {
   }
 
   if ( $('#sidebar-indicator').is(':hidden') ) {
-    $('#sidebar .footer').height(companySwitchHeightCollapsed);
-    navSidebarHeight = windowHeight - logoHeight - companySwitchHeightCollapsed - 2;
+    $('#sidebar .footer').height(userSwitchHeightCollapsed);
+    navSidebarHeight = windowHeight - logoHeight - userSwitchHeightCollapsed - 2;
     $('#sidebar #nav-sidebar').outerHeight(navSidebarHeight);
+    $('#sidebar footer').outerHeight(userSwitchHeightCollapsed);
   } else {
-    $('#sidebar .footer').height(companySwitchHeightExpanded);
-    navSidebarHeight = windowHeight - logoHeight - companySwitchHeightExpanded - 2;
+    $('#sidebar .footer').height(userSwitchHeightExpanded);
+    navSidebarHeight = windowHeight - logoHeight - userSwitchHeightExpanded - 2;
     $('#sidebar #nav-sidebar').outerHeight(navSidebarHeight);
+    $('#sidebar footer').outerHeight(userSwitchHeightExpanded);
   }
 
   $('.content').outerHeight(contentHeight);
@@ -44,6 +46,52 @@ function hideSidebar() {
   $('#sidebar ul li.opened').removeClass('opened').find('ul').slideUp(200, 'linear');
   removeExpanded();
   resizeUpdate();
+}
+
+var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+function tipSwitch() {
+  var target = $(this).attr("data-tip-target");
+  var tip = $(this).attr("data-tip");
+  var posArray = $(this).attr("data-tip-position");
+  var pos = new Array();
+  pos = posArray.split(";");
+
+  if($('.tip-visible').length > 0) {
+    $(".tip-overlay").removeClass("fadeIn").addClass("fadeOut").one(animationEnd, function(){
+      $(".tip-target").removeClass("tip-target");
+      if($(target).parents("#sidebar").length > 0) {
+        $(target).parents("#sidebar").addClass("tip-target");
+      } else {
+        $(target).addClass("tip-target");
+      }
+      $('.tip-overlay').removeClass("fadeOut").addClass("fadeIn");
+    });
+    $(".tip-visible").removeClass("tip-visible fadeIn").addClass("fadeOut").one(animationEnd, function(){
+      $(tip).show().position({
+        at: pos[0],
+        my: pos[1],
+        of: target
+      }).addClass("tip-visible animated fadeIn");
+    });
+  } else {
+    setTimeout(function(){
+      $('.tip-overlay').show().addClass("animated fadeIn");
+      $(tip).show().position({
+        at: pos[0],
+        my: pos[1],
+        of: target
+      }).addClass("tip-visible animated fadeIn");
+    }, 400);
+  }
+
+}
+function tourDestroy() {
+  $(".tip-overlay").removeClass("fadeIn").addClass("fadeOut").one(animationEnd, function(){
+    $(this).remove();
+    $(".tip-target").removeClass("tip-target");
+  });
+  $(".tip-visible").removeClass("fadeIn").addClass("fadeOut").one(animationEnd, function(){$(this).remove();});
+  $(".tip-popover").not(".tip-visible").remove();
 }
 
 $(function(){
@@ -72,6 +120,67 @@ $(function(){
   $(".file-browser a").click(function(){
     $(this).siblings("input").click();
   });
+  $(".help-box .icon-cancel").click(function(){
+    $(this).parent().slideUp(200);
+  });
+
+
+  // -------------------------------------------------
+  // Help Tour
+  // -------------------------------------------------
+
+  $('#tour-dialog').dialog({
+    closeOnEscape: false,
+    dialogClass: "no-title",
+    draggable: false,
+    modal: true,
+    width: 350
+  });
+  $('#tour-dialog-close').click(function(){
+    $('#tour-dialog').dialog("close").remove();
+    tourDestroy();
+  });
+  $('#tour-start').click(function(){
+    $('#tour-dialog').dialog("close").remove();
+  });
+  $('[data-tip]').click(tipSwitch);
+  $('.tour-destroy').click(tourDestroy);
+  // $('#tour-tip-3').position({
+  //   at: "right+5 top",
+  //   my: "left top",
+  //   of: $("#nav-sidebar")
+  // });
+  //   $('#tour-tip-4').position({
+  //   at: "right+5 center+20",
+  //   my: "left bottom",
+  //   of: $("#dialog-user-trigger")
+  // });
+  // $('#tour-start').click(function(){
+  //   $('#tour-dialog').dialog("destroy");
+  //   $('.tour-overlay').addClass("animated");
+  //   $('.tour-popover').each(function(){
+  //     $(this).addClass("animated");
+  //   });
+  //   $('#tour-tip-1').show().position({
+  //     at: "right-5 top-3",
+  //     my: "right bottom",
+  //     of: $("#dialog-company-trigger")
+  //   });
+  //   $("#dialog-company-trigger").addClass("tour-target");
+  //   $('.tour-overlay').show().addClass("fadeIn");
+  //   $('#tour-tip-1').show().addClass("fadeIn");
+  // });
+  // $('#tour-next-tip-2').click(function(){
+  //   $('.tour-target').removeClass("tour-target");
+  //   $('#tour-tip-1').addClass("fadeOut");
+  //   $("#quick-add").addClass("tour-target");
+  //   $('#tour-tip-2').show().addClass("fadeIn");
+  //   $('#tour-tip-2').position({
+  //     at: "left top-3",
+  //     my: "left bottom",
+  //     of: $("#quick-add")
+  //   });
+  // });
 
 
   // -------------------------------------------------
@@ -107,12 +216,14 @@ $(function(){
   });
   $('#dialog-company-trigger').click(function(){
     $('#dialog-company').dialog({
+      draggable: false,
       modal: true,
       width: 400
     });
   });
   $('#dialog-user-trigger').click(function(){
     $('#dialog-user').dialog({
+      draggable: false,
       modal: true,
       width: 300
     });
@@ -227,6 +338,7 @@ $(function(){
   });
   $('.invoice-row-advanced').click(function(){
     $('#row-advanced').dialog({
+      draggable: false,
       modal: true,
       width: 600
     });
