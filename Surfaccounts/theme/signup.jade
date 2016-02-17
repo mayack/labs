@@ -1,0 +1,51 @@
+doctype html
+<!-[if lt IE 7]<html lang="en" class="oldie lt-ie9 lt-ie8 lt-ie7"><![endif]->
+<!-[if IE 7]><html lang="en" class="oldie lt-ie9 lt-ie8"><![endif]->
+<!-[if IE 8]><html lang="en" class="oldie lt-ie9"><![endif]->
+<!-[if gt IE 8]><!->
+html
+  <!-<![endif]->
+  include includes/head
+  body
+    .atk-layout
+      .atk-layoutRow.atk-layoutExpand
+        .atk-layout.atk-layoutCell
+          main.atk-layoutColumn.atk-layoutExpand.atk-align-middle.atk-swatch-aqua
+            .atk-wrapper.atk-padding-top--l.atk-padding-bottom--l
+              .atk-margin-bottom.atk-align-center
+                img(src="images/logo-white.svg" alt="Surfaccounts" width="160")
+              .atk-row
+                .atk-col-10.atk-move-center
+                  .atk-box.atk-swatch-default.atk-shape-rounded-top.atk-border--none
+                    h2.atk-margin-bottom--s Create your account
+                    hr.atk-border-disabled.atk-margin-top--none
+                    form
+                      .atk-row
+                        .atk-col-6
+                          .atk-margin-bottom--s
+                            select.atk-expand(data-placeholder="Select your location")
+                              option
+                              option Galway
+                              option Dublin
+                              option Cork
+                          input.atk-expand.atk-margin-bottom--s(type="text" placeholder="Full Name")
+                          input.atk-expand.atk-margin-bottom--s(type="email" placeholder="Email address")
+                          input.atk-expand(type="text" placeholder="Phone number")
+                        .atk-col-6
+                          input.atk-expand.atk-margin-bottom--s(type="text" placeholder="Password")
+                          input.atk-expand.atk-margin-bottom--s(type="text" placeholder="Confirm Password")
+                          img.atk-expand(src="temp/recaptcha.png")
+                    hr.atk-border-disabled
+                    .atk-cells-spacing--l
+                      .atk-cell.atk-expand.atk-comment 
+                        | By clicking Sign Up button you accept and agree#[br]to our #[a(href="#") Terms &amp; Conditions].
+                      .atk-cell.atk-items-spacing--xs.atk-align-right.atk-text-nowrap
+                        button.atk-button.atk-text-size--l Cancel
+                        button.atk-button.atk-text-size--l.atk-swatch-mint Sign Up
+                  .atk-box.atk-shape-rounded-bottom.atk-border--none.atk-border-top--static.atk-swatch-smoke.atk-padding--s.atk-align-center
+                    .atk-comment
+                      | Already an existing customer?
+                      a.atk-text-semibold.atk-margin-left--xs(href='login.html')
+                        | Log in
+                        span.icon-angle-right
+    include includes/scripts

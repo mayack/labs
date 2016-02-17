@@ -102,7 +102,8 @@ $(function(){
   resizeUpdate();
 
   $('select').select2({
-    minimumResultsForSearch: -1
+    minimumResultsForSearch: -1,
+    placeholder: $(this).data("placeholder")
   });
   $('.tooltip').tooltip({
     hide: { duration: 300 },
