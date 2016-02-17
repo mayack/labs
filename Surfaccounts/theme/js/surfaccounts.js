@@ -47,7 +47,6 @@ function hideSidebar() {
   removeExpanded();
   resizeUpdate();
 }
-
 var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 function tipSwitch() {
   var target = $(this).attr("data-tip-target");
@@ -55,40 +54,34 @@ function tipSwitch() {
   var posArray = $(this).attr("data-tip-position");
   var pos = new Array();
   pos = posArray.split(";");
-
+  function tipPosition() {
+    $(tip).show().position({
+      at: pos[0],
+      my: pos[1],
+      of: target
+    }).addClass("tip-visible animated fadeIn"); 
+  }
+  function tipParents() {
+    if($(target).parents("#sidebar").length > 0) {
+      $(target).parents("#sidebar").addClass("tip-target");
+    } else {
+      $(target).addClass("tip-target");
+    }
+  }
   if($('.tip-visible').length > 0) {
     $(".tip-overlay").removeClass("fadeIn").addClass("fadeOut").one(animationEnd, function(){
       $(".tip-target").removeClass("tip-target");
-      if($(target).parents("#sidebar").length > 0) {
-        $(target).parents("#sidebar").addClass("tip-target");
-      } else {
-        $(target).addClass("tip-target");
-      }
+      tipParents();
       $('.tip-overlay').removeClass("fadeOut").addClass("fadeIn");
     });
-    $(".tip-visible").removeClass("tip-visible fadeIn").addClass("fadeOut").one(animationEnd, function(){
-      $(tip).show().position({
-        at: pos[0],
-        my: pos[1],
-        of: target
-      }).addClass("tip-visible animated fadeIn");
-    });
+    $(".tip-visible").removeClass("tip-visible fadeIn").addClass("fadeOut").one(animationEnd, tipPosition);
   } else {
     setTimeout(function(){
       $('.tip-overlay').show().addClass("animated fadeIn");
-      if($(target).parents("#sidebar").length > 0) {
-        $(target).parents("#sidebar").addClass("tip-target");
-      } else {
-        $(target).addClass("tip-target");
-      }
-      $(tip).show().position({
-        at: pos[0],
-        my: pos[1],
-        of: target
-      }).addClass("tip-visible animated fadeIn");
+      tipParents();
+      tipPosition();
     }, 400);
   }
-
 }
 function tourDestroy() {
   $(".tip-overlay").removeClass("fadeIn").addClass("fadeOut").one(animationEnd, function(){
