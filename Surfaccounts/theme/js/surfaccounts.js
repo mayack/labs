@@ -76,6 +76,11 @@ function tipSwitch() {
   } else {
     setTimeout(function(){
       $('.tip-overlay').show().addClass("animated fadeIn");
+      if($(target).parents("#sidebar").length > 0) {
+        $(target).parents("#sidebar").addClass("tip-target");
+      } else {
+        $(target).addClass("tip-target");
+      }
       $(tip).show().position({
         at: pos[0],
         my: pos[1],
