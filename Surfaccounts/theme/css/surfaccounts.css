@@ -7197,6 +7197,8 @@ input.atk-effect-danger {
   -ms-transition: height 0.3s;
   -o-transition: height 0.3s;
   transition: height 0.3s;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 #sidebar #sidebar-inner #nav-sidebar > ul {
   line-height: 1;
